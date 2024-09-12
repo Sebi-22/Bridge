@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  color: white;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 1.25em;
+}
+
+h2 {
+  font-size: 2.25em;
+  margin-bottom: 1.25em;
+}
+
+p {
+  font-size: 1.125em;
+  line-height: 1.5;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0.625em 1.25em;
+  cursor: pointer;
+  color: white;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #ff007f;
+  border-color: #ff007f;
+}
+
+.hero, .album-section, .new-album, .video-section, .discography, footer {
+  background-color: black;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  padding: 1.25em;
+}
+
+.hero-background .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content, .album-info, .discography p {
+  max-width: 75em;
+  margin-left: 3.125em;
+}
+
+.band-logo, .navigation, .buy-now {
+  position: absolute;
+  top: 1.25em;
+}
+
+.band-logo {
+  left: 1.25em;
+  font-size: 1.5em;
+}
+
+.navigation {
+  right: 1.25em;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 1.25em;
+  list-style: none;
+}
+
+.album-title {
+  font-size: 4.5em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.album-subtitle, .song-title, .artist-name, .tracklist li span {
+  font-size: 1.5em;
+}
+
+.action-buttons, .download-buttons {
+  display: flex;
+  gap: 0.625em;
+}
+
+.store-button, .buy-button, .play-btn {
+  background-color: black;
+  border-radius: 0.313em;
+  padding: 0.625em 1.25em;
+}
+
+.store-link img, .download-buttons img, .album img {
+  width: 9.375em;
+  height: auto;
+}
+
+footer, .footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.125em 1.25em;
+  color: white;
+}
+
+.footer-left, .footer-middle, .footer-right {
+  flex: 1;
+  margin: 0 1.25em;
+}
+
+.footer-left h2, .footer-middle h3, .footer-right h3 {
+  font-size: 1.5em;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 1.25em;
+  font-size: 0.75em;
+  color: #a8a8a8;
+}
+
+.album-section, .discography {
+  padding: 3.125em 1.25em;
+  text-align: center;
+}
+
+.albums {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.album {
+  width: 20%;
+  margin: 1.25em;
+}
+
