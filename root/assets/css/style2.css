@@ -1,167 +1,424 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-  color: white;
-}
-
-h1, h2, h3, p {
-  margin: 0;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: 3em;
-  margin-bottom: 1.25em;
-}
-
-h2 {
-  font-size: 2.25em;
-  margin-bottom: 1.25em;
-}
-
-p {
-  font-size: 1.125em;
-  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background-color: #121212;
+  line-height: 1.6;
 }
 
 a {
-  color: white;
   text-decoration: none;
+  color: inherit;
 }
 
-a:hover {
-  text-decoration: underline;
+ul {
+  list-style: none;
 }
 
-button {
-  background-color: transparent;
-  border: 1px solid #fff;
-  padding: 0.625em 1.25em;
-  cursor: pointer;
-  color: white;
-  font-size: 1em;
-}
-
-button:hover {
-  background-color: #ff007f;
-  border-color: #ff007f;
-}
-
-.hero, .album-section, .new-album, .video-section, .discography, footer {
-  background-color: black;
-}
-
+/* Hero Section */
 .hero {
+  position: relative;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  position: relative;
-  padding: 1.25em;
+  text-align: center;
 }
 
-.hero-background .background-image {
+.hero-background img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  filter: brightness(0.5);
 }
 
-.hero-content, .album-info, .discography p {
-  max-width: 75em;
-  margin-left: 3.125em;
-}
-
-.band-logo, .navigation, .buy-now {
-  position: absolute;
-  top: 1.25em;
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .band-logo {
-  left: 1.25em;
-  font-size: 1.5em;
-}
-
-.navigation {
-  right: 1.25em;
-}
-
-.navigation ul {
-  display: flex;
-  gap: 1.25em;
-  list-style: none;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  font-weight: 700;
 }
 
 .album-title {
-  font-size: 4.5em;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
 
-.album-subtitle, .song-title, .artist-name, .tracklist li span {
-  font-size: 1.5em;
+.album-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
-.action-buttons, .download-buttons {
+.action-buttons img {
+  height: 50px;
+  margin: 0 10px;
+}
+
+.buy-button {
+  display: inline-block;
+  background-color: #ff5722;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #ff784e;
+}
+
+.demo-info {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* Navigation */
+.navigation ul {
   display: flex;
-  gap: 0.625em;
+  gap: 20px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.store-button, .buy-button, .play-btn {
-  background-color: black;
-  border-radius: 0.313em;
-  padding: 0.625em 1.25em;
+.navigation a {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: bold;
 }
 
-.store-link img, .download-buttons img, .album img {
-  width: 9.375em;
-  height: auto;
+/* Music Player Section */
+.player {
+  background-color: #1f1f1f;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 50px 0;
 }
 
-footer, .footer-container {
+.song-details img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.song-info {
+  color: #fff;
+}
+
+.song-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.artist-name {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #a5a5a5;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 5px;
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  width: 40%;
+  height: 100%;
+  background-color: #ff5722;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #a5a5a5;
+}
+
+/* Album Section */
+.album-section {
+  display: flex;
+  gap: 20px;
+  margin: 50px 0;
+}
+
+.album-cover img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.album-info {
+  color: #fff;
+}
+
+.tracklist ul {
+  color: #fff;
+}
+
+.tracklist li {
   display: flex;
   justify-content: space-between;
-  padding: 3.125em 1.25em;
-  color: white;
+  align-items: center;
+  padding: 10px;
+  background-color: #292929;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.footer-left, .footer-middle, .footer-right {
-  flex: 1;
-  margin: 0 1.25em;
+.tracklist button {
+  background: none;
+  border: none;
+  color: #ff5722;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.footer-left h2, .footer-middle h3, .footer-right h3 {
-  font-size: 1.5em;
-}
-
-.copyright {
+/* New Album Section */
+.new-album {
   text-align: center;
-  margin-top: 1.25em;
-  font-size: 0.75em;
-  color: #a8a8a8;
+  color: #fff;
+  margin: 50px 0;
 }
 
-.album-section, .discography {
-  padding: 3.125em 1.25em;
+.divider {
+  width: 50px;
+  height: 5px;
+  background-color: #ff5722;
+  margin: 20px auto;
+}
+
+/* Image Grid Section */
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Tour Dates Section */
+.tour-dates {
   text-align: center;
+  margin: 50px 0;
+  color: #fff;
+}
+
+.tour-dates ul {
+  list-style: none;
+}
+
+.tour-dates li {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-dates .date {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.buy-ticket {
+  background-color: #000000;
+  padding: 8px 15px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.buy-ticket:hover {
+  background-color: #000000;
+}
+
+.view-all {
+  margin-top: 20px;
+  background-color: #444;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.view-all:hover {
+  background-color: #000000;
+}
+
+/* Blog Posts Section */
+.blog-posts {
+  color: #fff;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.posts-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.post h3 {
+  margin: 10px 0;
+}
+
+/* Video Section */
+.video-container {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  max-width: 100%;
+  z-index: 22;
+}
+
+.video-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.play-button a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: #000000;
+}
+
+/* Discography Section */
+.discography {
+  text-align: center;
+  color: #fff;
+  margin: 50px 0;
 }
 
 .albums {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.album {
-  width: 20%;
-  margin: 1.25em;
+.albums .album {
+  text-align: center;
 }
 
+.albums .album img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #000000;
+  border:#000000;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff;
+}
+
+/* Footer Section */
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-right: 15px;
+}
+
+.footer-middle h3,
+.footer-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-right ul {
+  list-style: none;
+}
+
+.footer-right ul li {
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 30px;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
