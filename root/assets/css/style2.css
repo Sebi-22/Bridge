@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #000000;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: #fff;
-  background-color: #121212;
   line-height: 1.6;
 }
 
@@ -71,7 +71,7 @@ ul {
 
 .buy-button {
   display: inline-block;
-  background-color: #ff5722;
+  background-color: #000000;
   color: #fff;
   padding: 15px 25px;
   border-radius: 25px;
@@ -81,7 +81,7 @@ ul {
 }
 
 .buy-button:hover {
-  background-color: #ff784e;
+  background-color: #ffffff;
 }
 
 .demo-info {
@@ -109,7 +109,6 @@ ul {
 
 /* Music Player Section */
 .player {
-  background-color: #1f1f1f;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -157,7 +156,7 @@ ul {
 .progress-bar .progress {
   width: 40%;
   height: 100%;
-  background-color: #ff5722;
+  background-color: #ffffff;
 }
 
 .time {
@@ -190,7 +189,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #292929;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -198,7 +196,7 @@ ul {
 .tracklist button {
   background: none;
   border: none;
-  color: #ff5722;
+  color: #ffffff;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -213,7 +211,7 @@ ul {
 .divider {
   width: 50px;
   height: 5px;
-  background-color: #ff5722;
+  background-color: #ffffff;
   margin: 20px auto;
 }
 
@@ -248,7 +246,6 @@ ul {
 }
 
 .tour-dates li {
-  background-color: #1f1f1f;
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -264,29 +261,19 @@ ul {
 }
 
 .buy-ticket {
-  background-color: #000000;
   padding: 8px 15px;
   border-radius: 25px;
   color: #fff;
   font-weight: bold;
 }
 
-.buy-ticket:hover {
-  background-color: #000000;
-}
-
 .view-all {
   margin-top: 20px;
-  background-color: #444;
   padding: 10px 20px;
   border-radius: 25px;
   color: #fff;
   font-weight: bold;
   transition: background 0.3s ease;
-}
-
-.view-all:hover {
-  background-color: #000000;
 }
 
 /* Blog Posts Section */
@@ -330,7 +317,6 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.7);
   padding: 15px 30px;
   border-radius: 30px;
   color: #000000;
@@ -348,7 +334,6 @@ ul {
   justify-content: space-around;
   gap: 20px;
 }
-
 .albums .album {
   text-align: center;
 }
@@ -359,7 +344,6 @@ ul {
 }
 
 button {
-  background-color: #000000;
   border:#000000;
   color: #000000;
   padding: 10px 20px;
@@ -375,7 +359,6 @@ button:hover {
 
 /* Footer Section */
 footer {
-  background-color: #000000;
   color: #fff;
   padding: 50px 0;
 }
