@@ -20,10 +20,33 @@ a {
   color: inherit;
 }
 
-ul {
-  list-style: none;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 /* Hero Section */
 .hero {
   position: relative;
@@ -86,23 +109,6 @@ ul {
   background-color: #fff;
 }
 
-/* Navigation */
-.navigation ul {
-  display: flex;
-  gap: 1,2500em;
-  position: absolute;
-  top:  1,2500em;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.navigation a {
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0,0750em;
-  font-weight: bold;
-}
 
 /* Music Player Section */
 .player {
