@@ -370,3 +370,46 @@ header {
             text-decoration: none;
             border-radius: 5px;
         }
+        .BLOG {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .header p {
+            font-size: 16px;
+            color: #ffffff;
+        }
+        .header hr {
+            width: 50px;
+            border: 1px solid #fff;
+            margin: 10px auto;
+        }
+        .blog-posts {
+            display: flex;
+            justify-content: space-between;
+        }
+        .blog-post {
+            width: 30%;
+            text-align: center;
+        }
+        .blog-post img {
+            width: 100%;
+            height: auto;
+        }
+        .blog-post h2 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+        .blog-post p {
+            font-size: 14px;
+            color: #aaa;
+            margin: 0;
+        }
