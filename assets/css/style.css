@@ -325,7 +325,7 @@ p {
   padding: 0;
 }
 .blog-post img {
-  width: 85%;
+  width: 80%;
   height: auto;
 }
 .blog-post-title {
@@ -343,8 +343,8 @@ p {
   position: relative;
   width: 100%;
   height: 75vh;
-  margin-top: 20%;
-  background: url(../images/h1-img-7.jpg);
+  margin-top: 10%;
+  background-image: url(../images/h1-img-7.jpg);
 }
 .overlay {
   position: absolute;
@@ -358,7 +358,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3.125em;
+  font-size: 0.625em;
   color: white;
   cursor: pointer;
 }
@@ -408,45 +408,44 @@ p {
   margin-right: 0.313em;
 }
 .our-discography{
-width: 80%;
-margin: 0 auto;
-padding: 3.125em 0;
-text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
 }
 .our-discography h1 {
-font-size: 2.25em;
-font-weight: bold;
+  font-size: 36px;
+  font-weight: bold;
 }
 .underline {
-width: 3.125em;
-height: 0.125em;
-background-color: #fff;
-margin: 1.25em auto;
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+  margin: 20px auto;
 }
 .our-discography p {
-font-size: 0.875em;
-line-height: 1.5;
-margin-bottom: 3.125em;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 50px;
 }
 .albums {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-.album {
-width: 23%;
+.albumes {
+  width: 35%;
 }
-.album img {
-width: 100%;
-height: auto;
+.albumes img {
+  width: 70%;
+  height: auto;
 }
 .show-more {
-display: inline-block;
-padding: 0.625em 1.25em;
-border: 0.063em solid #fff;
-text-transform: uppercase;
-font-size: 0.875em;
-margin-top: 1.875em;
-cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 30px;
 }
 .footer {
   display: flex;
@@ -482,9 +481,13 @@ cursor: pointer;
   color: #fff;
   font-size: 1.25em;
   margin-right: 0.625em;
-}
-.contact-info i {
-  margin-right: 0.625em;
+  display: inline-block;
+  width: 2em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  border: 0.125em solid #fff;
+  border-radius: 50%;
 }
 .footer-bottom {
   text-align: center;
