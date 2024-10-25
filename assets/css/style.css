@@ -410,42 +410,42 @@ p {
 .our-discography{
   width: 100%;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 3.125em 0;
   text-align: center;
 }
 .our-discography h1 {
-  font-size: 36px;
+  font-size: 2.25em;
   font-weight: bold;
 }
 .underline {
-  width: 50px;
-  height: 2px;
+  width: 3.125em;
+  height: 0.125em;
   background-color: #fff;
-  margin: 20px auto;
+  margin: 1.25em auto;
 }
 .our-discography p {
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.6;
-  margin-bottom: 50px;
+  margin-bottom: 3.125em;
 }
 .albums {
   display: flex;
   justify-content: space-between;
 }
 .albumes {
-  width: 35%;
+  width: 23%;
 }
 .albumes img {
-  width: 70%;
+  width: 80%;
   height: auto;
 }
 .show-more {
   display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #fff;
+  padding: 0.625em 1.25em;
+  border: 0.063em solid #fff;
   color: #fff;
   text-decoration: none;
-  margin-top: 30px;
+  margin-top: 1.875em;
 }
 .footer {
   display: flex;
