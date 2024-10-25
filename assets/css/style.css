@@ -50,7 +50,6 @@ body {
   text-orientation: mixed;
 }
 
-
 .new-album {
   position: absolute;
   bottom: 10%;
@@ -151,6 +150,7 @@ body {
   background-image:url(../images/h1-img-8.jpg) ;
   display: flex;
   padding: 1.25em;
+  
 }
 
 .album-cover {
