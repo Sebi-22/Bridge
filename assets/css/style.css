@@ -43,10 +43,10 @@ body {
   position: absolute;
   top: 50%;
   left: 10%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(180deg); 
   font-size: 6.25em;
   font-weight: bold;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-rl; 
   text-orientation: mixed;
 }
 
@@ -78,28 +78,25 @@ body {
   max-width: 50em;
   padding: 0.625em;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #fff;
 }
 .left {
   display: flex;
   align-items: center;
-  margin-right: 0.625em
+  margin-right:0.625em;
 }
 .left img {
   width: 3.125em;
-  height: 3.125em;
-  margin-right:0.625em
+  height:3.125em;
+  margin-right:0.625em;
 }
 .title {
   font-size: 1em;
   font-weight: bold;
-  margin: 0;
-  color: black;
 }
 .subtitle {
   font-size: 0.75em;
   color: #888;
-  margin: 0;
 }
 .controls {
   display: flex;
@@ -117,11 +114,10 @@ body {
 }
 .progress-bar {
   flex-grow: 1;
-  height: 1.25em;
+  height: 0.313em;
   background-color: #ddd;
   margin: 0 0.625em;
   position: relative;
-  
 }
 .fill {
   height: 100%;
@@ -129,18 +125,17 @@ body {
   width: 0;
 }
 .time {
-  font-size:0.75em;
+  font-size: 0.75em;
   color: #888;
 }
 .volume {
   display: flex;
   align-items: center;
   margin-left: 0.625em;
-  background-color: white;
 }
 .volume i {
-  font-size: 0.75em;
-  margin-right: 0.313em;
+  font-size: 1em;
+  margin: right 0.313em;;
 }
 .volume input[type="range"] {
   width: 6.25em;
@@ -152,7 +147,6 @@ body {
   padding: 1.25em;
   
 }
-
 .album-cover {
     flex: 1;
     text-align: center;
@@ -314,46 +308,58 @@ width: 80%;
 margin: 0 auto;
 padding:  1.25em 0;
 }
+
+.blog{
+text-align: left;
+}
+
 h1 {
-font-size: 2.25em;
-font-weight: bold;
-margin-bottom: 0.625em;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
 }
 .underline {
-width: 3.125em;
-height: 0.125em;
-background-color: #fff;
-margin-bottom: 1.25em;
+  width: 3.125em;
+  height: 0.125em;
+  background-color: white;
+  margin: 1.25em 0;
 }
-.description {
-font-size: 1em;
-line-height: 1.5;
-margin-bottom: 2.5em;
+p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 0;
 }
 .blog-posts {
-display: flex;
-justify-content: space-between;
-}
-.blog-post {
-width: 30%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.25em;
+  text-align: center;
+  margin: 0.625em;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 0;
 }
 .blog-post img {
-width: 100%;
-height: auto;
+  width: 100%;
+  height: auto;
 }
 .blog-post-title {
-font-size: 1.125em;
-font-weight: bold;
-margin: 0.625em 0 0.313em;
+  font-size: 1.125em;
+  font-weight: bold;
+  margin:  0.625em 0 0.313em;
 }
 .blog-post-date {
-font-size: 0.875em;
-color: #ccc;
+  font-size: 0.875em;
+  margin-top: auto;
+  margin-left: 2em;
+  color: #aaa;
 }
 .video-section {
   position: relative;
   width: 100%;
   height: 100vh;
+  margin-top: 50%;
   background: url(../images/h1-img-7.jpg);
 }
 .overlay {
