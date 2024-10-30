@@ -69,22 +69,19 @@ body {
 .album {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 50em;
   padding: 0.625em;
-  box-sizing: border-box;
   background-color: #fff;
-  margin-left: 10%;
 }
 .left {
   display: flex;
   align-items: center;
-  margin-right:0.625em;
+  margin-right: 1em;
+  margin-left: 5%;
 }
 .left img {
   width: 3.125em;
-  height:3.125em;
-  margin-right:0.625em;
+  height: 3.125em;
+  margin-right: 0.625em;
 }
 .title {
   font-size: 1em;
@@ -101,45 +98,43 @@ body {
   flex-grow: 1;
 }
 .controls button {
+  background: none;
   border: none;
+  font-size: 1em;
+  margin: 0 0.3125em;
   cursor: pointer;
-  margin: 0 0.313em;
-}
-.controls i {
-  font-size: 1.25em;
 }
 .progress-bar {
   flex-grow: 1;
-  height: 0.313em;
+  height: 0.312em;
   background-color: #ddd;
-  margin: 0 0.625em;
   position: relative;
+  margin: 1  0.625em;
 }
 .fill {
   height: 100%;
+  background-color: #000;
   width: 0;
 }
 .time {
   font-size: 0.75em;
   color: #888;
+  margin-left: 0.625em;
 }
 .volume {
   display: flex;
   align-items: center;
-  margin-left: 0.625em;
-}
-.volume i {
-  font-size: 1em;
-  margin: right 0.313em;;
+  margin-left: 5%;
 }
 .volume input[type="range"] {
-  width: 6.25em;
+  width: 7.125em;
+  margin-left: 5.125em;
 }
 .album-info {
   background-image:url(../images/h1-img-8.jpg) ;
   display: flex;
   padding: 1.25em;
-  height: 100vh;
+  height: 140vh;
 }
 .album-cover {
     flex: 1;
@@ -171,18 +166,21 @@ body {
     margin-left: 1.25em;
 }
 .tracklist ol {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 .tracklist li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.625em 0;
-    border-bottom: 0.063em solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625em 0;
+  border-bottom: 0.063em solid #333;
+}
+.tracklist li span {
+  font-size: 0.875em;
 }
 .tracklist li i {
-    margin-left: 0.625em;
+  color: #fff;
 }
 
 .Texto {
