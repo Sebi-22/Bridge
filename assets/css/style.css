@@ -135,7 +135,7 @@ body {
   background-image:url(../images/h1-img-8.jpg) ;
   display: flex;
   padding: 1.25em;
-  height: 120vh;
+  height: 140vh;
 }
 .album-cover {
     flex: 1;
@@ -161,23 +161,61 @@ body {
 .tracklist {
     flex: 1;
     margin-left: 1.25em;
+   
 }
 .tracklist ol {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
+
 .tracklist li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.625em 0;
-  border-bottom: 0.063em solid #333;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  color: #bbb;
 }
-.tracklist li span {
-  font-size: 0.875em;
+
+/* Título de la canción */
+.track-title {
+  color: #bbb;
+  flex-grow: 1;
+  transition: color 0.3s;
 }
-.tracklist li i {
-  color: #fff;
+
+.track-title:hover {
+  color: #fff; /* Cambia a blanco al pasar el ratón */
+}
+
+/* Contenedor de iconos y tiempo */
+.track-icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Tiempo de la canción */
+.track-icons span {
+  color: #bbb;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.track-icons span:hover {
+  color: #fff; /* Cambia a blanco al pasar el ratón */
+}
+
+/* Iconos de play y video */
+.track-icons i {
+  color: #bbb;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.track-icons i:hover {
+  color: #fff; /* Cambia a blanco al pasar el ratón */
 }
 .Texto {
   text-align: center;
