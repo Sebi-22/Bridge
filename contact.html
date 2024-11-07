@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <section class="container">
+        <section class="contactos">
             <div class="background-image">
             </div>
             <div class="navbar">
@@ -39,9 +39,7 @@
               </a>
              </div>
             </div>
-        <h2>
-            Contact Us
-        </h2>
+            <h2 class="contactos2" >Contact Us</h2>
         </section>
         <section class="contact">
             <div class="contact-section">
@@ -81,13 +79,12 @@
                 </div>
             </div>
             <div class="right-section">
-                <input type="text" placeholder="Your Name*">
-                <input type="email" placeholder="Your Email*">
-                <textarea placeholder="Your Message*"></textarea>
-                <button>SEND MESSAGE</button>
+                <input type="text" id="name" placeholder="Your Name*">
+                <input type="email" id="email" placeholder="Your Email*">
+                <textarea id="message" placeholder="Your Message*"></textarea>
+                <button onclick="sendMessage()">SEND MESSAGE</button>
             </div>
-        </div>
-      </section>
+        </section>
       <footer>
         <div class="footer">
             <div class="footer-column">
@@ -125,6 +122,7 @@
         </div>
     </footer>
 
+    <script src="assets/JS/script.js"></script>
 
 </body>
 </html>

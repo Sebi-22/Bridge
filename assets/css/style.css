@@ -245,23 +245,29 @@ body {
   gap: 0.5em;
   padding: 1em;
   box-sizing: border-box;
+  
 }
 .image {
   overflow: hidden;
   border-radius: 0.5em;
+  
 }
 .image.large {
   grid-column: span 1;
   height: 20em;
-  width:35em ;
+  width:45em ;
+  
 }
 .image.small {
   height: 20em;
   width: 25em;
-}
+  grid-column: span 1 ; /* Ocupa una columna */
+  grid-row: span 1; /* Ocupa una fila */
+  flex-direction: row-reverse;
+  }
 .image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 .overlay {
@@ -320,13 +326,13 @@ left: 0.625em;
 }
 .view-all {
   text-align: center;
-  padding: 20px 0;
+  padding: 1.25em 0;
 }
 .view-all a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  border: 1px solid #fff;
-  padding: 10px 20px;
+  border:0.063em solid #fff;
+  padding: 0.625em 1.25em;
   display: inline-block;
 }
 .view-all a:hover {
@@ -428,7 +434,7 @@ p {
   padding: 0.625em  1.25em;
   display: flex;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 0.063em;
 }
 .info-box .demos {
   font-size:  1.25em;
@@ -538,81 +544,111 @@ p {
   padding: 1.25em;
   border-top: 0.063em solid #333;
 }
-.articulos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-.articulos article {
-  position: relative;
-  width: 25%;
-  height: 100%;
-}
-.articulos .foto img {
-  width: 140%;
-  height: 100%;
-  object-fit: cover;
-}
-.transparencia {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-article:hover .transparencia {
-  opacity: 1;
-}
-.transparencia h3 {
-  margin: 0;
-  font-size: 1.5em;
-}
-.transparencia p {
-  margin: 0.313em 0;
-  font-size: 1.125em;
-}
-.transparencia .social {
-  margin-top: 0.625em;
-}
-.transparencia .social i {
-  margin: 0 0.313em;
-  font-size: 1.25em;
-}
-.breadcrumb {
-  padding: 20px;
-  font-size: 14px;
-}
-.breadcrumb a {
-  color: #fff;
-  text-decoration: none;
-}
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-.content {
-  display: flex;
-  gap: 1.25em; 
-}
-.content img {
-  width: 100%;
-  max-width: 21.25em;
-  height: auto;
-}
-.map {
-  width: 100%;
-  max-width: 31.25em; 
-  height: 25em; 
-}
+     /* Estilos para la sección de artículos */
+     .articulos {
+      display: flex;
+      justify-content: center;
+      padding: 3.125em 0;
+      background-color: #000;
+      overflow: hidden;
+  }
+
+  /* Estilos para cada artículo */
+  .articulos article {
+      position: relative;
+      width: 105%; /* Ajusta el ancho para que haya 4 artículos en pantalla completa */
+      height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
+      overflow: hidden;
+  }
+
+  /* Imagen */
+  .articulos .foto img {
+      width: 130%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      padding:0%;
+  }
+
+  /* Efecto de zoom en la imagen */
+  .articulos article:hover .foto img {
+      transform: scale(1.1);
+  }
+
+  /* Capa de transparencia */
+  .transparencia {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+  }
+
+  /* Mostrar la capa de transparencia al pasar el cursor */
+  .articulos article:hover .transparencia {
+      opacity: 1;
+  }
+
+  /* Estilos para el nombre y rol */
+  .transparencia h3 {
+      margin: 0;
+      font-size: 1.5em;
+      text-transform: uppercase;
+  }
+
+  .transparencia p {
+      margin:0.313em 0 0.313em;
+      font-size: 0.313em;
+      color: #ccc;
+  }
+
+  /* Iconos de redes sociales */
+  .transparencia .social {
+      display: flex;
+      gap: 0.313em;
+  }
+
+  .transparencia .social i {
+      color: white;
+      font-size: 1.25em;
+      transition: color 0.3s ease;
+  }
+
+  .transparencia .social i:hover {
+      color: #1DA1F2; /* Ejemplo: color de Twitter */
+  }
+  .breadcrumb {
+    padding: 0.625em;
+    font-size: 0.875em;
+  
+  }
+
+  /* Estilos para la sección de contenido */
+  .content {
+    display: flex; /* Para colocar la imagen y el mapa uno al lado del otro */
+    justify-content: space-between; /* Para distribuir el espacio entre ambos */
+    padding: 1.25em;
+  }
+  
+  /* Estilos para la imagen */
+  .content img {
+    max-width: 50%; /* La imagen ocupará como máximo el 50% del ancho disponible */
+
+  }
+  
+  /* Estilos para el mapa */
+  .content iframe {
+    width: 40%; /* El mapa ocupará el 40% del ancho disponible */
+    height: 18.75em; /* Ajusta la altura según tus necesidades */
+  }
 .detalles {
   display: flex;
   justify-content: space-between;
@@ -860,4 +896,210 @@ p {
 .images img {
   width: 90%;
   height: auto;
+}
+
+.about_us{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  background-image:  url(../images/about-title-area.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  position: relative;
+  margin-right: 26%;
+}
+
+/* Fondo semi-transparente sobre la imagen para mejorar la visibilidad del texto */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Estilo del texto */
+.hero h1 {
+  position: relative;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 3em;
+  color: white;
+  z-index: 2;
+  padding: 1.25em 1.25em;
+  border-radius: 0.5em;
+}
+.tour{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  background-image:  url(../images/tour-title-area.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.about1 {
+  max-width: 37.5em; /* 600px / 16 */
+  margin: 0 auto;
+}
+
+h2, h3 {
+  font-weight: normal;
+  color: #fff;
+}
+
+.about-album, .lyrics-section {
+  margin-bottom: 1.875em; /* 30px / 16 */
+}
+
+.about-album p, .about-album ul {
+  font-size: 0.875em; /* 14px / 16 */
+  line-height: 1.6;
+}
+
+.about-album ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lyrics-section h3 {
+  cursor: pointer;
+  background-color: #222;
+  padding: 0.625em; /* 10px / 16 */
+  margin: 0;
+  border-top: 0.0625em solid #444; /* 1px / 16 */
+}
+
+.lyrics-section h3:hover {
+  background-color: #333;
+}
+
+.lyrics-content {
+  display: none;
+  padding: 0.625em; /* 10px / 16 */
+  background-color: #333;
+  font-size: 0.875em; /* 14px / 16 */
+}
+
+.review-section {
+  max-width: 37.5em; /* 600px / 16 */
+  margin: 0 auto;
+  background-color: #222;
+  padding: 1.25em; /* 20px / 16 */
+  color: #ccc;
+  position: relative;
+}
+
+.review-section h2 {
+  color: #ffa500;
+  font-weight: bold;
+  margin-bottom: 0.625em; /* 10px / 16 */
+}
+
+.review-text {
+  font-style: italic;
+  font-size: 0.875em; /* 14px / 16 */
+  line-height: 1.6;
+  margin-bottom: 0.625em; /* 10px / 16 */
+}
+
+.review-source {
+  font-weight: bold;
+  color: #eee;
+  font-size: 0.875em; /* 14px / 16 */
+}
+
+.nav-icons {
+  position: absolute;
+  bottom: 0.625em; /* 10px / 16 */
+  right: 0.625em; /* 10px / 16 */
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.nav-icons span {
+  cursor: pointer;
+  margin: 0 0.3125em; /* 5px / 16 */
+}
+
+.nav-icons span:hover {
+  color: #fff;
+}
+
+.available-on {
+  text-align: left;
+  margin-bottom: 1.25em; /* 20px / 16 */
+}
+
+.available-on h2 {
+  font-size: 1.125em; /* 18px / 16 */
+  color: #fff;
+  margin-bottom: 0.625em; /* 10px / 16 */
+}
+
+.platform-icons img {
+  width: 3.125em; /* 50px / 16 */
+  margin-right: 0.625em; /* 10px / 16 */
+}
+
+.latest-video {
+  margin-bottom: 2.5em; /* 40px / 16 */
+}
+
+.latest-video h2 {
+  font-size: 1.125em; /* 18px / 16 */
+  color: #fff;
+  margin-bottom: 0.625em; /* 10px / 16 */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  background-color: #000;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+  background-image:  url(../images/contact-us-title.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  color: white;
 }
