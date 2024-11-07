@@ -126,6 +126,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 5%;
+
 }
 .volume input[type="range"] {
   width: 7.125em;
@@ -142,7 +143,7 @@ body {
     text-align: center;
 }
 .album-cover img {
-    width: 70%;
+    width: 60%;
 
 }
 .album-details {
@@ -150,18 +151,16 @@ body {
 }
 .album-title {
     margin: 0.625em 0;
-    font-weight: bold;
-
+    font-weight: bold;  
 }
 .album-description {
     color: #aaa;
-    font-size: 14px;
+    font-size: 0.875em;
     line-height: 1.5;
 }
 .tracklist {
     flex: 1;
     margin-left: 1.25em;
-   
 }
 .tracklist ol {
   list-style: none;
@@ -173,8 +172,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #333;
+  padding: 0.625em 0;
+  border-bottom: 0.063em solid #333;
   color: #bbb;
 }
 
@@ -198,7 +197,7 @@ body {
 /* Tiempo de la canción */
 .track-icons span {
   color: #bbb;
-  margin-right: 10px;
+  margin-right: 0.625em;
   transition: color 0.3s;
 }
 
@@ -209,7 +208,7 @@ body {
 /* Iconos de play y video */
 .track-icons i {
   color: #bbb;
-  margin-left: 10px;
+  margin-left: 0.625em;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -218,7 +217,7 @@ body {
   color: #fff; /* Cambia a blanco al pasar el ratón */
 }
 .Texto {
-  text-align: center;
+  text-align: left;
   margin: 5%;
 }
 .Texto h1 {
@@ -232,6 +231,7 @@ body {
   background-color: #fff;
   border: none;
   margin: 1.25em auto;
+
 }
 .Texto p {
   font-size: 1em;
