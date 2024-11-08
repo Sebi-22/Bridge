@@ -1,3 +1,4 @@
+//Fecha Adicional de View All
 document.getElementById("view-all-btn").addEventListener("click", function(event) {
     event.preventDefault(); // Evita el salto de página
     
@@ -55,7 +56,7 @@ document.getElementById("view-all-btn").addEventListener("click", function(event
     // Oculta el botón después de agregar las fechas
     event.target.style.display = "none";
 });
-
+//Boton del video que no anda
 document.querySelector('.play-button').addEventListener('click', function() {
     const videoIframe = document.getElementById('videoIframe');
     videoIframe.src = "https://player.vimeo.com/video/124943519?title=0&byline=0&portrait=0&autoplay=1";
@@ -72,6 +73,7 @@ document.getElementById('cerrarModal').addEventListener('click', function() {
     videoIframe.src = ""; // Limpiar el src para detener el video
 });
 
+//Formulario de contacto
 
 function toggleLyrics(id) {
     var content = document.getElementById(id);
