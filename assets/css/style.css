@@ -1,3 +1,8 @@
+img{
+  width: 100%;
+  height: auto;
+}
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -22,11 +27,10 @@ body {
 .navbar {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   padding: 1.25em 3.125em;
-  background:transparent;
 }
 .navbar a {
   color: white;
@@ -60,13 +64,10 @@ body {
 }
 .Apps {
   display: flex;
-  justify-content: flex-end;
+  justify-content:left;
   margin-top: 1.25em;
 }
-.Apps img {
-  width: 9.375em;
-  margin: 0 0.625em;
-}
+
 .album {
   display: flex;
   align-items: center;
@@ -135,28 +136,29 @@ body {
 .album-info {
   background-image:url(../images/h1-img-8.jpg) ;
   display: flex;
-  padding: 1.25em;
-  height: 140vh;
+  padding: 5.25em;
+  height: 100vh;
 }
 .album-cover {
     flex: 1;
-    text-align: center;
 }
 .album-cover img {
-    width: 60%;
+    width: 80%;
 
 }
 .album-details {
-    margin-top: 1.25em;
+    margin-top: 3.25em;
 }
 .album-title {
     margin: 0.625em 0;
-    font-weight: bold;  
+    font-weight: bold; 
+    text-align: left; 
 }
 .album-description {
     color: #aaa;
-    font-size: 0.875em;
+    font-size: 1.2em;
     line-height: 1.5;
+    text-align: justify;
 }
 .tracklist {
     flex: 1;
@@ -172,7 +174,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.625em 0;
+  padding: 1.225em 0;
   border-bottom: 0.063em solid #333;
   color: #bbb;
 }
@@ -239,28 +241,28 @@ body {
   margin: 0;
 }
 .Gallery {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 0.5em;
-  padding: 1em;
   box-sizing: border-box;
   
 }
 .image {
   overflow: hidden;
-  border-radius: 0.5em;
-  
+}
+.image.large:hover, .image.small:hover{
+  opacity: 50%;
 }
 .image.large {
   grid-column: span 1;
   height: 20em;
-  width:45em ;
+  width:50%;
   
 }
 .image.small {
   height: 20em;
-  width: 25em;
+  width: 25%;
   grid-column: span 1 ; /* Ocupa una columna */
   grid-row: span 1; /* Ocupa una fila */
   flex-direction: row-reverse;
@@ -365,7 +367,7 @@ p {
 }
 .blog-posts {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1.25em;
   text-align: center;
   margin: 0.625em;
@@ -373,11 +375,18 @@ p {
   color: #fff;
   font-family: Arial, sans-serif;
   padding: 0;
+  overflow: hidden;
+    
 }
 .blog-post img {
   width: 80%;
   height: auto;
+transition: transform 0.2s ease-out;
 }
+.blog-post img:hover {
+  transform: scale(1.1);
+}     
+
 .blog-post-title {
   font-size: 1.125em;
   font-weight: bold;
