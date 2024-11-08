@@ -475,6 +475,7 @@ transition: transform 0.2s ease-out;
 .our-discography h1 {
   font-size: 2.25em;
   font-weight: bold;
+  text-align: left;
 }
 .underline {
   width: 3.125em;
