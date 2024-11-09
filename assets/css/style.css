@@ -1197,7 +1197,7 @@ h2, h3 {
   right: 2em;
   width: 3em;
   height: 3em;
-  background-color: #333;
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 50%;
@@ -1206,6 +1206,11 @@ h2, h3 {
   display: none; /* Oculto por defecto */
   z-index: 1000;
 }
+#scrollToTopBtn:hover {
+  background-color: white;
+  color: #222;
+}
+
 
 /* Muestra el botón solo cuando haces scroll hacia abajo */
 body.scrolled #scrollToTopBtn {
