@@ -57,6 +57,7 @@
             </div>
            </section>
     <main>
+        
         <section class="album">
             <div class="left">
                 <img src="assets/images/album-16-150x150.jpg" alt="Logo">
@@ -65,18 +66,21 @@
                     <span class="subtitle">Terrible</span>
                 </div>
             </div>
-            <div class="controles">
-                <button><i class="fas fa-step-backward"></i></button>
-                <button><i class="fas fa-play"></i></button>
-                <button><i class="fas fa-step-forward"></i></button>
-                <div class="progress-bar">
-                    <div class="fill"></div>
+            <div class="controls">
+                <i class="fas fa-step-backward" id="backward"></i>
+                <i class="fas fa-play" id="play-pause"></i>
+                <i class="fas fa-step-forward" id="forward"></i>
+            </div>
+            <div class="progress-container">
+                <span class="time" id="current-time">00:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
                 </div>
-                <span class="time">00:00/00:31</span>
-                <div class="volume">
-                    <i class="fas fa volume-up"></i>
-                    <input type="range" min="0" max="100" value="50">
-                </div>
+                <span class="time" id="duration">00:31</span>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="1">
             </div>
         </section>
         
@@ -194,24 +198,32 @@
 </html>
 <section class="Gallery">
     <div class="image large">
-        <img alt="Band performing on stage with red lights" src="assets/images/h1-img-1.jpg" width="50"/>
+        <img class = "clase" alt="Band performing on stage with red lights" src="assets/images/h1-img-1.jpg" width="50"/>
        
     </div>
     <div class="image small">
-        <img alt="Guitarist sitting on an amplifier" src="assets/images/h1-img-2.jpg"width="25"/>
+        <img class = "clase" alt="Guitarist sitting on an amplifier" src="assets/images/h1-img-2.jpg"width="25"/>
     </div>
     <div class="image small">
-        <img alt="Guitarist and singer performing" src="assets/images/h1-img-3.jpg"width="25"/>
+        <img class = "clase" alt="Guitarist and singer performing" src="assets/images/h1-img-3.jpg"width="25"/>
     </div>
     <div class="image small">
-        <img alt="Singer performing on stage with crowd" src="assets/images/h1-img-4.jpg"width="25"/>
+        <img class = "clase" alt="Singer performing on stage with crowd" src="assets/images/h1-img-4.jpg"width="25"/>
     </div>
     <div class="image small">
-        <img alt="Drummer playing drums" src="assets/images/h1-img-5.jpg"width="25"/>
+        <img class = "clase" alt="Drummer playing drums" src="assets/images/h1-img-5.jpg"width="25"/>
     </div>
     <div class="image large">
-        <img alt="Guitarist performing with green lights" src="assets/images/h1-img-6.jpg" width="50"/>
+        <img class = "clase"alt="Guitarist performing with green lights" src="assets/images/h1-img-6.jpg" width="50"/>
     </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+    
 </section>
 
             <section id="datos" class="fechas">
@@ -323,27 +335,57 @@
 
          <section class="our-discography">
     <h1> OUR DISCOGRAPHY </h1>
-    <div class="underline">
-    </div>
+    <div class="underline"></div>
     <p>
      Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
     </p>
     <div class="albums">
-     <div class="albumes">
-      <img alt="Album cover with neon lights and text 'Be - Doo Be - Doo'" height="300" src="assets/images/album-1.jpg" width="300"/>
-     </div>
-     <div class="albumes">
-      <img alt="Album cover with a road sign and text 'Make It Go Away'" height="300" src="assets/images/album-2.jpg" width="300"/>
-     </div>
-     <div class="albumes">
-      <img alt="Album cover with neon sign and text 'today was a good day' and 'The Best Off'" height="300" src="assets/images/album-3.jpg" width="300"/>
-     </div>
-     <div class="albumes">
-      <img alt="Album cover with a dancer and text 'FOND OF HER' and 'Fond Of Her'" height="300" src="assets/images/album-4.jpg" width="300"/>
-     </div>
+        <!-- Primer Álbum -->
+        <article class="albumes">
+            <figure>
+                <img src="assets/images/album-1.jpg" alt="Album cover with neon lights and text 'Be - Doo Be - Doo'">
+                <figcaption>
+                    <h3>BE-DOO</h3>
+                    <p>Caller</p>
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Segundo Álbum -->
+        <article class="albumes">
+            <figure>
+                <img src="assets/images/album-2.jpg" alt="Album cover with a road sign and text 'Make It Go Away'">
+                <figcaption>
+                    <h3>FREE SPIRIT</h3>
+                    <p>Go Away</p>
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Tercer Álbum -->
+        <article class="albumes">
+            <figure>
+                <img src="assets/images/album-3.jpg" alt="Album cover with neon sign and text 'Today Was A Good Day'">
+                <figcaption>
+                    <h3>DEPRESSED DAYS</h3>
+                    <p>Ritual Spirit</p>
+                </figcaption>
+            </figure>
+        </article>
+
+        <!-- Cuarto Álbum -->
+        <article class="albumes">
+            <figure>
+                <img src="assets/images/album-4.jpg" alt="Album cover with a dancer and text 'FOND OF HER'">
+                <figcaption>
+                    <h3>WRONG MOTION</h3>
+                    <p>Love Hate</p>
+                </figcaption>
+            </figure>
+        </article>
     </div>
     <div class="view-all">
-        <a href="#">SHOW MORE  </a>
+        <a href="#" id="show-MORE">SHOW MORE</a>
     </div>
    </section>
            
@@ -386,6 +428,8 @@
         </div>
     </footer>
     <script src="assets/JS/script.js"></script>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
 </body>
 </html>
 
