@@ -815,7 +815,7 @@ figcaption p {
 
 /* Estilos para la imagen */
 .content img {
-  width: 25%; /* Ajusta al 40% del contenedor */
+  width:29%; /* Ajusta al 40% del contenedor */
   height: auto;
   object-fit: cover;
   margin-left: 5%; /* Margen izquierdo para centrar mejor */
@@ -823,162 +823,226 @@ figcaption p {
 
 /* Estilos para el mapa */
 .content .map {
-  width: 50%; /* Ancho del mapa */
-  height: 25em; /* Altura ajustada */
+  width: 60%; /* Ancho del mapa */
+  height: 35em; /* Altura ajustada */
   border: 0;
   filter: grayscale(100%); /* Escala de grises para un estilo más estilizado */
   flex-shrink: 0; /* Evita que se encoja más allá de este tamaño */
 }
 .detalles {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.25em; /* 20px */
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: 1.25em; /* 20px */
+    margin-left: 5%;
+
 }
 .details, .about {
-  width: 45%;
+    width: 45%;
+}
+.link {
+  color: #ffffff; /* Color blanco */
+  text-decoration: none; /* Quita el subrayado predeterminado */
+  font-size: 1.2em; /* 16px */
+  
+}
+.link:hover {
+  text-decoration: underline; /* Añade subrayado al pasar el cursor */
+  color: #ffffff; /* Cambia el color al pasar el cursor */
 }
 .details h2, .about h2, .follow h2 {
-  font-size: 1.5em; /* 24px */
-  margin-bottom: 0.625em; /* 10px */
+    font-size: 1.5em; /* 1.5em es aproximadamente 24px si el tamaño base es 16px */
+    margin-bottom: 0.625em; /* 10px */
 }
+
 .details p, .about p {
-  font-size: 1em; /* 16px */
-  line-height: 1.5;
+    font-size: 1.2em; /* 16px */
+    line-height: 1.5; /* Equivalente a 24px de altura de línea si el tamaño de fuente es 16px */
 }
-.buy-tickets {
+.about{
+  margin-right: 10%;
+}
+.Ticket {
+  text-align: left;
+  padding: 1.25em 0;
+}
+.Ticket a {
   display: inline-block;
-  padding: 0.625em 1.25em; /* 10px 20px */
-  border: 0.0625em solid #fff; /* 1px */
+  padding: 1em 3em; /* Tamaño del botón */
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
   text-decoration: none;
-  color: #fff;
-  margin-top: 1.25em; /* 20px */
+  font-size: 0.875em; /* Tamaño del texto del botón */
 }
+
+.Ticket a:hover {
+  background-color:rgb(255, 255, 255); 
+  color: #000;
+}
+
 .follow {
-  margin-top: 1.25em; /* 20px */
+    margin-top: 1.25em; /* 20px */
 }
+
 .follow i {
-  font-size: 1.5em; /* 24px */
-  margin-right: 0.625em; /* 10px */
+    font-size: 1.5em; /* 1.5em es aproximadamente 24px */
+    margin-right: 0.625em; /* 10px */
+    color: #adadad;
+}
+
+.follow i:hover {
+    color: #ffffff;
 }
 .image-container {
   position: relative;
+  width: 20em;
+  margin: 1em auto;
 }
+
 .image-container img {
-  width: 31.25em; /* 500px */
+  width: 100%;
   height: auto;
+  border-radius: 0.5em;
 }
-.image-container .text-overlay {
+
+.album-title {
   position: absolute;
-  bottom: 1.25em; /* 20px */
-  left: 1.25em; /* 20px */
-  font-size: 3em; /* 48px */
+  bottom: 1em;
+  left: 1em;
+  font-size: 1.5em;
   font-weight: bold;
-  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2em 0.5em;
+  border-radius: 0.2em;
 }
-.about-album {
-  padding: 1.25em; /* 20px */
+
+.player {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
 }
-h1 {
-  font-size: 1.5em; /* 24px */
-  font-weight: bold;
+
+.controls i {
+  font-size: 1.5em;
+  cursor: pointer;
 }
-p {
-  font-size: 1em; /* 16px */
+
+.about1 {
+  max-width: 30em;
+  margin: 1em auto;
   line-height: 1.5;
 }
-.details {
-  margin-top: 1.25em; /* 20px */
+
+.about-album h2, .lyrics-section h2, .review-section h2, .available-on h2, .latest-video h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
-.details p {
-  margin: 0.3125em 0; /* 5px */
+
+.about-album p, .review-section .review-text {
+  font-size: 0.9em;
+  color: #bbb;
+  margin-bottom: 1em;
 }
-.player {
-  background-color: #333;
-  padding: 1.25em; /* 20px */
-  border-radius: 0.3125em; /* 5px */
-  width: 25em; /* 400px */
+
+.about-album ul {
+  list-style: none;
+  font-size: 0.9em;
+}
+
+.lyrics-section h3 {
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 0.5em;
+  color: #ddd;
+}
+
+.lyrics-content {
+  display: none;
+  margin-left: 1em;
+  font-size: 0.9em;
+}
+
+.tracklist ol {
+  list-style: none;
+  font-size: 1em;
+  max-width: 30em;
+  margin: 1em auto;
+  padding: 0;
+}
+
+.tracklist li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  border-bottom: 0.05em solid #444;
+}
+
+.track-title {
+  font-size: 0.95em;
+}
+
+.track-icons {
+  display: flex;
+  gap: 0.5em;
+}
+
+.review-section {
+  max-width: 30em;
+  margin: 2em auto;
   text-align: center;
 }
-.controls {
+
+.review-source {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.nav-icons {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.625em; /* 10px */
-}
-.controls div {
-  flex: 1;
-  padding: 0.625em; /* 10px */
-  cursor: pointer;
-}
-.controls div:hover {
-  background-color: #444;
-}
-.controls div i {
-  font-size: 1.5em; /* 24px */
-}
-.info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 0.0625em solid #555; /* 1px */
-  padding-top: 0.625em; /* 10px */
-}
-.info .title {
-  text-align: left;
-}
-.info .title h3 {
-  margin: 0;
-  font-size: 1em; /* 16px */
-}
-.info .title p {
-  margin: 0;
-  font-size: 0.75em; /* 12px */
+  justify-content: center;
+  gap: 1em;
+  font-size: 1.2em;
   color: #aaa;
 }
-.info .time {
-  text-align: right;
-  font-size: 0.75em; /* 12px */
-  color: #aaa;
-}
-.review-container {
-  background-color: #222;
-  padding: 1.25em;
-  border-radius: 0.3125em;
-  width: 25em;
-  text-align: left;
-}
-.review-container h1 {
-  font-size: 1.25em;
-  margin-bottom: 0.625em;
-}
-.review-container p {
-  font-size: 0.875em;
-  line-height: 1.6;
-}
-.review-container .author {
-  font-size: 0.875em;
-  font-weight: bold;
-  margin-top: 0.625em;
-}
-.review-container .navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.625em;
-}
-.review-container .navigation i {
-  cursor: pointer;
-}
+
 .available-on {
-  font-size: 1.5em; /* 24px */
-  margin-bottom: 1.25em; /* 20px */
+  max-width: 30em;
+  margin: 2em auto;
+  text-align: center;
 }
+
+.available-on h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.platform-icons a img {
+  width: 9.375em; /* Approximately 150px */
+  height: auto;
+}
+
+.latest-video {
+  max-width: 30em;
+  margin: 2em auto;
+  text-align: center;
+}
+
 .video-container {
+  width: 100%;
+  padding-top: 56.25%;
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
 }
+
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -986,6 +1050,7 @@ p {
   width: 100%;
   height: 100%;
 }
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -1078,196 +1143,12 @@ p {
   height: auto;
 }
 
-.about_us{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 80vh;
-  background-image:  url(../images/about-title-area.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-  position: relative;
-  margin-right: 26%;
-}
 
-/* Fondo semi-transparente sobre la imagen para mejorar la visibilidad del texto */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
 
-/* Estilo del texto */
-.hero h1 {
-  position: relative;
-  font-size: 3em;
-  text-transform: uppercase;
-  letter-spacing: 3em;
-  color: white;
-  z-index: 2;
-  padding: 1.25em 1.25em;
-  border-radius: 0.5em;
-}
-.tour{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 80vh;
-  background-image:  url(../images/tour-title-area.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.about1 {
-  max-width: 37.5em; /* 600px / 16 */
-  margin: 0 auto;
-}
 
-h2, h3 {
-  font-weight: normal;
-  color: #fff;
-}
 
-.about-album, .lyrics-section {
-  margin-bottom: 1.875em; /* 30px / 16 */
-}
 
-.about-album p, .about-album ul {
-  font-size: 0.875em; /* 14px / 16 */
-  line-height: 1.6;
-}
 
-.about-album ul {
-  list-style: none;
-  padding: 0;
-}
-
-.lyrics-section h3 {
-  cursor: pointer;
-  background-color: #222;
-  padding: 0.625em; /* 10px / 16 */
-  margin: 0;
-  border-top: 0.0625em solid #444; /* 1px / 16 */
-}
-
-.lyrics-section h3:hover {
-  background-color: #333;
-}
-
-.lyrics-content {
-  display: none;
-  padding: 0.625em; /* 10px / 16 */
-  background-color: #333;
-  font-size: 0.875em; /* 14px / 16 */
-}
-
-.review-section {
-  max-width: 37.5em; /* 600px / 16 */
-  margin: 0 auto;
-  background-color: #222;
-  padding: 1.25em; /* 20px / 16 */
-  color: #ccc;
-  position: relative;
-}
-
-.review-section h2 {
-  color: #ffa500;
-  font-weight: bold;
-  margin-bottom: 0.625em; /* 10px / 16 */
-}
-
-.review-text {
-  font-style: italic;
-  font-size: 0.875em; /* 14px / 16 */
-  line-height: 1.6;
-  margin-bottom: 0.625em; /* 10px / 16 */
-}
-
-.review-source {
-  font-weight: bold;
-  color: #eee;
-  font-size: 0.875em; /* 14px / 16 */
-}
-
-.nav-icons {
-  position: absolute;
-  bottom: 0.625em; /* 10px / 16 */
-  right: 0.625em; /* 10px / 16 */
-  font-size: 1.2em;
-  color: #ccc;
-}
-
-.nav-icons span {
-  cursor: pointer;
-  margin: 0 0.3125em; /* 5px / 16 */
-}
-
-.nav-icons span:hover {
-  color: #fff;
-}
-
-.available-on {
-  text-align: left;
-  margin-bottom: 1.25em; /* 20px / 16 */
-}
-
-.available-on h2 {
-  font-size: 1.125em; /* 18px / 16 */
-  color: #fff;
-  margin-bottom: 0.625em; /* 10px / 16 */
-}
-
-.platform-icons img {
-  width: 3.125em; /* 50px / 16 */
-  margin-right: 0.625em; /* 10px / 16 */
-}
-
-.latest-video {
-  margin-bottom: 2.5em; /* 40px / 16 */
-}
-
-.latest-video h2 {
-  font-size: 1.125em; /* 18px / 16 */
-  color: #fff;
-  margin-bottom: 0.625em; /* 10px / 16 */
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-  background-color: #000;
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 .contactos {
   display: flex;
   flex-direction: column;

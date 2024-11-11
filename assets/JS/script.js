@@ -274,5 +274,20 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Selección de todos los botones de acordeón
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function () {
+        // Alternar la visibilidad de los paneles
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+});
 
   
