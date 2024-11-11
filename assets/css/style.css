@@ -248,6 +248,37 @@ body {
   font-weight: 300;
   margin: 0;
 }
+.Texto2 {
+  color: #ccc; /* Color de texto gris claro */
+  text-align: left; /* Texto alineado a la izquierda */
+  padding: 5em ; /* Espaciado alrededor del contenido */
+  max-width: 70em; /* Ancho máximo para limitar la extensión del texto */
+  margin: 0 auto; /* Centrar la sección horizontalmente */
+}
+
+.Texto2 h1 {
+  font-size: 2.5em; /* Tamaño del título */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  color: #fff; /* Color del título en blanco */
+  margin-bottom: 0.5em; /* Espaciado debajo del título */
+  font-weight: bold; /* Hace el título más grueso */
+}
+
+.Texto2 hr {
+  width: 3em; /* Ancho de la línea horizontal */
+  border: 1px solid #fff; /* Color y grosor de la línea */
+  margin: 0; /* Elimina margen extra */
+  margin-bottom: 1em; /* Espaciado debajo de la línea */
+}
+
+.Texto2 p {
+  font-size: 1em; /* Tamaño del texto del párrafo */
+  line-height: 1.8em; /* Altura de línea para mejorar la legibilidad */
+  color: #ccc; /* Color de texto gris claro */
+  margin-top: 1em; /* Espacio por encima del párrafo */
+  max-width: 60em; /* Limita el ancho del párrafo */
+}
+
 .Gallery {
   display: flex;
   flex-wrap: wrap;
@@ -575,6 +606,62 @@ transition: transform 0.2s ease-out;
   margin: 0;
   padding: 0.3125em; /* 5px = 0.3125em */
 }
+.Fotitos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+  gap: 1em; /* Espacio entre álbumes */
+  padding: 1em; /* Margen interno alrededor de la cuadrícula */
+  margin-top: 5%;
+}
+
+.Fotones {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.Fotones:hover {
+  transform: scale(1.05);
+}
+
+.Fotones img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Fotones:hover img {
+  opacity: 0.4;
+}
+
+.Fotones figcaption {
+  position: absolute;
+  bottom: 1em; /* Ajusta según sea necesario */
+  left: 1em; /* Ajusta según sea necesario */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.Fotones:hover figcaption {
+  opacity: 1;
+}
+
+figcaption h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+figcaption p {
+  font-size: 0.7em;
+  margin: 0.25em 0 0;
+  color: #a09d9d;;
+}
 .show-more {
   display: inline-block;
   padding: 0.625em 1.25em;
@@ -634,17 +721,17 @@ transition: transform 0.2s ease-out;
      .articulos {
       display: flex;
       justify-content: center;
-      padding: 3.125em 0;
-      background-color: #000;
+      padding: 0;
       overflow: hidden;
   }
 
   /* Estilos para cada artículo */
   .articulos article {
       position: relative;
-      width: 105%; /* Ajusta el ancho para que haya 4 artículos en pantalla completa */
       height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
       overflow: hidden;
+      margin: 0;
+      padding: 0;
   }
 
   /* Imagen */
@@ -652,16 +739,8 @@ transition: transform 0.2s ease-out;
       width: 130%;
       height: 100%;
       object-fit: cover;
-      display: block;
       transition: transform 0.5s ease;
-      padding:0%;
   }
-
-  /* Efecto de zoom en la imagen */
-  .articulos article:hover .foto img {
-      transform: scale(1.1);
-  }
-
   /* Capa de transparencia */
   .transparencia {
       position: absolute;
@@ -675,7 +754,6 @@ transition: transform 0.2s ease-out;
       justify-content: center;
       align-items: center;
       opacity: 0;
-      transition: opacity 0.5s ease;
   }
 
   /* Mostrar la capa de transparencia al pasar el cursor */
@@ -691,8 +769,8 @@ transition: transform 0.2s ease-out;
   }
 
   .transparencia p {
-      margin:0.313em 0 0.313em;
-      font-size: 0.313em;
+      margin:0.5em;
+      font-size: 1em;
       color: #ccc;
   }
 
@@ -704,37 +782,53 @@ transition: transform 0.2s ease-out;
 
   .transparencia .social i {
       color: white;
-      font-size: 1.25em;
+      font-size: 1em;
       transition: color 0.3s ease;
   }
 
-  .transparencia .social i:hover {
-      color: #1DA1F2; /* Ejemplo: color de Twitter */
-  }
-  .breadcrumb {
-    padding: 0.625em;
-    font-size: 0.875em;
-  
-  }
+  .menu {
+    padding: 1.25em; /* Equivalente a 20px */
+}
+ /* Estilos para el breadcrumb */
+ .breadcrumb {
+  color: #ccc; /* Texto gris claro */
+  font-size: 1em; /* Tamaño de texto */
+  text-align: left; /* Alineación del texto a la izquierda */
+  margin: 0; /* Sin espacio extra alrededor */
+  margin-top:9%;
+  top: 0;
+  width: 90%;
+  display: flex;
+}
 
-  /* Estilos para la sección de contenido */
-  .content {
-    display: flex; /* Para colocar la imagen y el mapa uno al lado del otro */
-    justify-content: space-between; /* Para distribuir el espacio entre ambos */
-    padding: 1.25em;
-  }
-  
-  /* Estilos para la imagen */
-  .content img {
-    max-width: 50%; /* La imagen ocupará como máximo el 50% del ancho disponible */
+.breadcrumb a {
+  color: #ccc; /* Color de los enlaces */
+}
 
-  }
-  
-  /* Estilos para el mapa */
-  .content iframe {
-    width: 40%; /* El mapa ocupará el 40% del ancho disponible */
-    height: 18.75em; /* Ajusta la altura según tus necesidades */
-  }
+/* Estilos para la sección principal */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7em;
+}
+
+/* Estilos para la imagen */
+.content img {
+  width: 25%; /* Ajusta al 40% del contenedor */
+  height: auto;
+  object-fit: cover;
+  margin-left: 5%; /* Margen izquierdo para centrar mejor */
+}
+
+/* Estilos para el mapa */
+.content .map {
+  width: 50%; /* Ancho del mapa */
+  height: 25em; /* Altura ajustada */
+  border: 0;
+  filter: grayscale(100%); /* Escala de grises para un estilo más estilizado */
+  flex-shrink: 0; /* Evita que se encoja más allá de este tamaño */
+}
 .detalles {
   display: flex;
   justify-content: space-between;
