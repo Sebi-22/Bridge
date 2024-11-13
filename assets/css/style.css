@@ -22,9 +22,15 @@ body,#scrollToTopBtn  {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
   text-align: center;
   flex-direction: column;
+}
+.container,.contactos,.about_us,.tour,.transparencia,.progress-bar,.modal-content,.video-section,.albumes,.Fotones   
+,.articulos article,.image-foto,.video-container {
+position: relative;
+}
+.container,.contactos,.about_us,.tour,.transparencia,.modal,.articulos,.player,.nav-icons,.platform-icons,
+.navigation .dots {
   justify-content: center;
 }
 .container,.contactos,.about_us,.tour,.transparencia,.album,.left ,.controls,.progress-container,.volume-control,.track-icons
@@ -129,7 +135,6 @@ align-items:center;
   height: 0.188em;
   background-color: #ddd;
   margin: 0.625em;
-  position: relative;
 }
 .progress-bar,.track-icons i,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.right-section button 
 ,#scrollToTopBtn {
@@ -204,8 +209,10 @@ align-items:center;
 .track-icons i {
   margin-left: 0.625em;
 }
-.Texto {
+.Texto,.our-discography h1,.our-discography p,.Ticket {
   text-align: left;
+}
+.Texto {
   margin: 5%;
 }
 .Texto h1 {
@@ -218,7 +225,6 @@ align-items:center;
   height: 0.125em;
   border: none;
   margin: 1.25em auto;
-
 }
 .Texto p {
   font-weight: 300;
@@ -231,14 +237,12 @@ align-items:center;
   max-width: 70em; /* Ancho máximo para limitar la extensión del texto */
   margin: 0 auto; /* Centrar la sección horizontalmente */
 }
-
 .Texto2 h1 {
   font-size: 2.5em; /* Tamaño del título */
   text-transform: uppercase; /* Texto en mayúsculas */
   margin-bottom: 0.5em; /* Espaciado debajo del título */
   font-weight: bold; /* Hace el título más grueso */
 }
-
 .Texto2 hr {
   width: 3em; /* Ancho de la línea horizontal */
   border: 1px solid #fff; /* Color y grosor de la línea */
@@ -253,13 +257,11 @@ align-items:center;
   margin-top: 1em; /* Espacio por encima del párrafo */
   max-width: 60em; /* Limita el ancho del párrafo */
 }
-
 .Gallery {
   flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
 }
 .image {
   overflow: hidden;
@@ -291,10 +293,8 @@ align-items:center;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
 }
 .modal-content {
-  position: relative;
   max-width: 60%;
   max-height: 80%;
   overflow: auto;
@@ -431,7 +431,6 @@ transition: transform 0.2s ease-out;
   color: #aaa;
 }
 .video-section {
-  position: relative;
   height: 75vh;
   margin-top: 10%;
   background-image: url(../images/h1-img-7.jpg);
@@ -490,7 +489,6 @@ transition: transform 0.2s ease-out;
 .our-discography h1 {
   font-size: 2.25em;
   font-weight: bold;
-  text-align: left;
 }
 .underline {
   width: 3.125em;
@@ -501,14 +499,12 @@ transition: transform 0.2s ease-out;
   font-size: 0.875em;
   line-height: 1.6;
   margin-bottom: 3.125em;
-  text-align: left;
 }
 .albums {
   justify-content: space-between;
   gap: 1.25em; /* 20px = 1.25em */
 }
 .albumes {
-  position: relative;
   width: 23%;
   overflow: hidden; /* Oculta el texto cuando no se muestra */
 }
@@ -539,7 +535,6 @@ transition: transform 0.2s ease-out;
   display: grid;
 }
 .Fotones {
-  position: relative;
   overflow: hidden;
   border-radius: 0.5em;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
@@ -612,13 +607,11 @@ figcaption p {
 }
      /* Estilos para la sección de artículos */
      .articulos {
-      justify-content: center;
       padding: 0;
       overflow: hidden;
   }
   /* Estilos para cada artículo */
   .articulos article {
-      position: relative;
       height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
       overflow: hidden;
       margin: 0;
@@ -711,7 +704,6 @@ figcaption p {
   margin-right: 10%;
 }
 .Ticket {
-  text-align: left;
   padding: 1.25em 0;
 }
 .Ticket a {
@@ -734,7 +726,6 @@ figcaption p {
     color: #adadad;
 }
 .image-foto {
-  position: relative;
   width: 20em;
   margin: 1em auto;
 }
@@ -750,7 +741,6 @@ figcaption p {
   border-radius: 0.2em;
 }
 .player {
-  justify-content: center;
   gap: 1em;
   margin: 1em 0;
 }
@@ -794,7 +784,6 @@ figcaption p {
   color: #888;
 }
 .nav-icons {
-  justify-content: center;
   gap: 1em;
   font-size: 1.2em;
   color: #aaa;
@@ -808,7 +797,6 @@ figcaption p {
   margin-bottom: 1em;
 }
 .platform-icons {
-  justify-content: center;
   gap: 1.5em;
 }
 .platform-icons a img {
@@ -821,7 +809,6 @@ figcaption p {
 }
 .video-container {
   padding-top: 56.25%;
-  position: relative;
 }
 .video-container iframe {
   top: 0;
@@ -830,9 +817,6 @@ figcaption p {
 .navigation {
   justify-content: space-between;
   margin-top: 1.25em; /* 20px */
-}
-.navigation .dots {
-  justify-content: center;
 }
 .navigation .dots i {
   margin: 0 0.3125em; /* 5px */
