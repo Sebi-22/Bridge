@@ -2,6 +2,10 @@ img{
   width: 100%;
   height: auto;
 }
+.container,.navbar,.Apps{
+  display: flex;
+
+}
 
 body {
   margin: 0;
@@ -10,7 +14,6 @@ body {
   color: #fff;
 }
 .container {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -28,7 +31,6 @@ body {
   position: absolute;
   top: 0;
   width: 90%;
-  display: flex;
   justify-content: space-between;
   padding: 1.25em 3.125em;
 }
@@ -63,13 +65,11 @@ body {
   margin: 0;
 }
 .Apps {
-  display: flex;
   justify-content:left;
   margin-top: 1.25em;
 }
 
 .album {
-  display: flex;
   align-items: center;
   padding: 0.625em;
   background-color: #fff;
@@ -157,10 +157,11 @@ body {
 .album-details {
     margin-top: 3.25em;
 }
-.album-title {
+.album-titulo {
     margin: 0.625em 0;
     font-weight: bold; 
     text-align: left; 
+    font-size: 2em;
 }
 .album-description {
     color: #aaa;
@@ -786,9 +787,7 @@ figcaption p {
       transition: color 0.3s ease;
   }
 
-  .menu {
-    padding: 1.25em; /* Equivalente a 20px */
-}
+
  /* Estilos para el breadcrumb */
  .breadcrumb {
   color: #ccc; /* Texto gris claro */
@@ -896,13 +895,13 @@ figcaption p {
 .follow i:hover {
     color: #ffffff;
 }
-.image-container {
+.image-foto {
   position: relative;
   width: 20em;
   margin: 1em auto;
 }
 
-.image-container img {
+.image-foto img {
   width: 100%;
   height: auto;
   border-radius: 0.5em;
@@ -966,20 +965,6 @@ figcaption p {
   font-size: 0.9em;
 }
 
-.tracklist ol {
-  list-style: none;
-  font-size: 1em;
-  max-width: 30em;
-  margin: 1em auto;
-  padding: 0;
-}
-
-.tracklist li {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5em 0;
-  border-bottom: 0.05em solid #444;
-}
 
 .track-title {
   font-size: 0.95em;
@@ -1143,13 +1128,7 @@ figcaption p {
   height: auto;
 }
 
-
-
-
-
-
-
-.contactos {
+.contactos,.about_us,.tour {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1163,6 +1142,13 @@ figcaption p {
   position: relative;
   text-align: center;
   color: white;
+}
+.about_us{
+background-image:  url(../images/about-title-area.jpg);
+}
+.tour{
+  background-image:  url(../images/tour-title-area.jpg);
+
 }
 
 /* Estilo del botón para ir al inicio */
