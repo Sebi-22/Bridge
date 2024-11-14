@@ -79,7 +79,19 @@ function toggleLyrics(id) {
     var content = document.getElementById(id);
     content.style.display = content.style.display === "block" ? "none" : "block";
 }
+function toggleLyrics(id) {
+    const content = document.getElementById(id);
+    const header = content.previousElementSibling;
 
+    // Toggle display of lyrics content
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        header.classList.add("active");
+    } else {
+        content.style.display = "none";
+        header.classList.remove("active");
+    }
+}
 
 function sendMessage() {
     // Capturar los valores de los campos
@@ -230,8 +242,6 @@ showMoreButton.addEventListener("click", function(event) {
         showMoreButton.style.display = "block"; // Muestra el botón nuevamente
     }, 300); // Retraso opcional de 300ms para suavizar el efecto de aparición
 });
-
-
 
 //Boton de ir a arriba 
 // Detecta cuando el usuario hace scroll y muestra el botón si no está en el header
