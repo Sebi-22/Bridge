@@ -177,85 +177,61 @@ function sendMessage() {
       }
   });
 
-  //Show more Boton
-  document.getElementById("show-MORE").addEventListener("click", function(event) {
+// Arreglo de objetos con los datos de las nuevas imágenes
+const newAlbums = [
+    { src: "assets/images/album-5.jpg", title: "FALLEN", description: "Harmony" },
+    { src: "assets/images/album-6.jpg", title: "JOY", description: "Eclipse" },
+    { src: "assets/images/album-7.jpg", title: "FREE YOUR MIND", description: "Ocean" },
+    { src: "assets/images/album-8.jpg", title: "LOW BASS", description: "Shadows" },
+];
+
+// Selecciona el botón "SHOW MORE"
+const showMoreButton = document.getElementById("show-MORE");
+
+showMoreButton.addEventListener("click", function(event) {
     event.preventDefault(); // Evita el salto de página
     
-    // Álbumes adicionales a añadir
-    const albumesAdicionales = [
-        {
-            src: "assets/images/album-5.jpg",
-            title: "NEW VIBES",
-            description: "Harmony"
-        },
-        {
-            src: "assets/images/album-6.jpg",
-            title: "SUNSET DREAMS",
-            description: "Eclipse"
-        },
-        {
-            src: "assets/images/album-7.jpg",
-            title: "SOUL WAVES",
-            description: "Ocean"
-        },
-        {
-            src: "assets/images/album-8.jpg",
-            title: "MOONLIGHT",
-            description: "Shadows"
-        },
-        {
-            src: "assets/images/album-9.jpg",
-            title: "SOUND OF TIME",
-            description: "Echoes"
-        },
-        {
-            src: "assets/images/album-10.jpg",
-            title: "DREAMSCAPE",
-            description: "Whispers"
-        }
-    ];
-
+    // Selecciona el contenedor de álbumes principal
     const albumsContainer = document.querySelector(".albums");
 
-    // Oculta el botón temporalmente
-    const showMoreButton = document.getElementById("show-MORE");
-    showMoreButton.style.display = "none";
+    // Crea nuevos elementos de álbumes y los agrega al contenedor
+    newAlbums.forEach(album => {
+        const article = document.createElement("article");
+        article.classList.add("albumes");
 
-    // Genera y añade los nuevos álbumes
-    let counter = 0; // Contador para asegurar que sean de a 4 álbumes por fila
-    let albumRow;
+        const figure = document.createElement("figure");
 
-    // Si es el primer clic, aseguramos que las imágenes adicionales se agreguen debajo
-    albumesAdicionales.forEach(album => {
-        if (counter % 4 === 0) {
-            // Crea una nueva fila solo cuando se ha añadido 4 elementos
-            albumRow = document.createElement("div");
-            albumRow.classList.add("album-row"); // Añade clase para el estilo (si es necesario)
-            albumsContainer.appendChild(albumRow); // Añade la fila al contenedor
-        }
+        const img = document.createElement("img");
+        img.src = album.src;
+        img.alt = `Album cover with text '${album.title}'`;
 
-        const albumItem = document.createElement("article");
-        albumItem.classList.add("albumes"); // Aplica la misma clase para el estilo
+        const figcaption = document.createElement("figcaption");
 
-        albumItem.innerHTML = `
-            <figure>
-                <img src="${album.src}" alt="Album cover with text '${album.title}'">
-                <figcaption>
-                    <h3>${album.title}</h3>
-                    <p>${album.description}</p>
-                </figcaption>
-            </figure>
-        `;
+        const h3 = document.createElement("h3");
+        h3.textContent = album.title;
 
-        albumRow.appendChild(albumItem); // Añade el álbum a la fila actual
-        counter++;
+        const p = document.createElement("p");
+        p.textContent = album.description;
+
+        // Añadir los elementos al DOM
+        figcaption.appendChild(h3);
+        figcaption.appendChild(p);
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+        article.appendChild(figure);
+        albumsContainer.appendChild(article);
     });
 
-    // Vuelve a mostrar el botón después de añadir los álbumes
+    // Oculta el botón después de agregar las nuevas imágenes
+    showMoreButton.style.display = "none";
+
+    // Retraso opcional para mostrar el botón nuevamente (si se quiere)
     setTimeout(() => {
         showMoreButton.style.display = "block"; // Muestra el botón nuevamente
     }, 300); // Retraso opcional de 300ms para suavizar el efecto de aparición
 });
+
+
 
 //Boton de ir a arriba 
 // Detecta cuando el usuario hace scroll y muestra el botón si no está en el header
@@ -274,20 +250,6 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Selección de todos los botones de acordeón
-const accordions = document.querySelectorAll(".accordion");
 
-accordions.forEach((accordion) => {
-    accordion.addEventListener("click", function () {
-        // Alternar la visibilidad de los paneles
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-});
 
   

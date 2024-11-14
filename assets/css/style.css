@@ -146,22 +146,24 @@ body {
   background-image:url(../images/h1-img-8.jpg) ;
   display: flex;
   padding: 5.25em;
-  height: 100vh;
+  height: 120vh;
 }
 .album-cover {
     flex: 1;
 }
 .album-cover img {
     width: 80%;
-
 }
 .album-details {
     margin-top: 3.25em;
-}
-.album-title {
+    width: 80%;
+    font-size: 1.2em;
+  }
+.Titulo-Album {
     margin: 0.625em 0;
     font-weight: bold; 
     text-align: left; 
+    font-size: 1.5em;
 }
 .album-description {
     color: #aaa;
@@ -172,6 +174,7 @@ body {
 .tracklist {
     flex: 1;
     margin-left: 1.25em;
+    font-size: 1.5em;
 }
 .tracklist ol {
   list-style: none;
@@ -544,69 +547,94 @@ transition: transform 0.2s ease-out;
 .info-box .buy-button i {
   margin-right: 0.313em;
 }
-.our-discography{
+.our-discography {
   width: 100%;
   margin: 0 auto;
   padding: 3.125em 0;
   text-align: center;
 }
+
 .our-discography h1 {
   font-size: 2.25em;
   font-weight: bold;
   text-align: left;
 }
+
 .underline {
   width: 3.125em;
   height: 0.125em;
   background-color: #fff;
   margin: 1.25em auto;
 }
+
 .our-discography p {
   font-size: 0.875em;
   line-height: 1.6;
   margin-bottom: 3.125em;
   text-align: left;
 }
+
 .albums {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.25em; /* 20px = 1.25em */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 1.25em; /* Espacio entre los elementos de 1.25em */
+  justify-items: center;
 }
 
 .albumes {
   position: relative;
-  width: 23%;
-  overflow: hidden; /* Oculta el texto cuando no se muestra */
+  overflow: hidden;
   cursor: pointer;
 }
 
 .albumes img {
   width: 100%;
   height: auto;
-  transition: opacity 0.3s ease-in-out; /* Transición para la opacidad */
+  display: block;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .albumes:hover img {
-  opacity: 0.4; /* Reduce la opacidad al pasar el ratón */
+  opacity: 0.4;
 }
 
 .albumes figcaption {
   position: absolute;
-  bottom: 0.625em; /* 10px = 0.625em */
-  left: 0.625em; /* 10px = 0.625em */
+  bottom: 0.625em;
   opacity: 0;
   color: white;
-  transition: opacity 0.3s ease-in-out; /* Transición para mostrar el texto */
+  transition: opacity 0.3s ease-in-out;
 }
 
 .albumes:hover figcaption {
-  opacity: 1; /* Muestra el texto cuando el ratón está sobre el artículo */
+  opacity: 1;
 }
 
-.albumes h3, .albumes p {
+.albumes h3,
+.albumes p {
   margin: 0;
-  padding: 0.3125em; /* 5px = 0.3125em */
+  padding: 0.3125em;
 }
+
+.view-all {
+  margin-top: 2em;
+}
+
+#show-MORE {
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#show-MORE:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
 .Fotitos {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
