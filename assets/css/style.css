@@ -9,6 +9,7 @@ body {
   background-color: #000000;
   color: #fff;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -1142,13 +1143,6 @@ figcaption p {
   width: 90%;
   height: auto;
 }
-
-
-
-
-
-
-
 .contactos {
   display: flex;
   flex-direction: column;
