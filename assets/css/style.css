@@ -815,7 +815,9 @@ figcaption p {
       transition: color 0.3s ease;
   }
 
-
+  .menu {
+    padding: 1.25em; /* Equivalente a 20px */
+}
  /* Estilos para el breadcrumb */
  .breadcrumb {
   color: #ccc; /* Texto gris claro */
@@ -1169,7 +1171,7 @@ figcaption p {
   width: 90%;
   height: auto;
 }
-.contactos,.about_us,.tour {
+.contactos,.tour,.about_us {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1184,13 +1186,13 @@ figcaption p {
   text-align: center;
   color: white;
 }
+.tour {
+  background-image: url(..//images/tour-title-area.jpg);
+}
 .about_us{
-background-image:  url(../images/about-title-area.jpg);
-}
-.tour{
-  background-image:  url(../images/tour-title-area.jpg);
-}
+  background-image: url(..//images/about-title-area.jpg);
 
+}
 /* Estilo del botón para ir al inicio */
 #scrollToTopBtn {
   position: fixed;
@@ -1212,7 +1214,6 @@ background-image:  url(../images/about-title-area.jpg);
   color: #222;
 }
 
-
 /* Muestra el botón solo cuando haces scroll hacia abajo */
 body.scrolled #scrollToTopBtn {
   display: block;
@@ -1222,62 +1223,154 @@ body.scrolled #scrollToTopBtn {
 header #scrollToTopBtn {
   display: none;
 }
-.image-foto{
-  width: 30%;
+.albumesss {
+  display: flex;
+  gap: 2em; /* Espacio entre la imagen y la información del álbum */
+  max-width: 80em; /* Ancho máximo del contenedor principal */
+  margin: 0 auto;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para la sección de la imagen del álbum */
+.image-foto img {
+  width: 100%;
+  max-width: 25em; /* Tamaño máximo de la imagen en em */
   margin-left: 10%;
   margin-top: 5%;
-}
-.musica {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #222;
-  padding: 20px;
-  width: 300px;
-  color: #fff;
-  border-radius: 8px;
+  height: auto;
+  object-fit: cover;
 }
 
-/* Estilos para los controles */
+/* Estilos para la sección de información del álbum */
+.about1 {
+  max-width: 35em; /* Ancho máximo para la sección de información */
+  margin-right: 1%;
+}
+
+/* Estilos para el título */
+.about-album h2 {
+  font-size: 1.5em; /* Aproximadamente 24px */
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8em;
+}
+
+/* Párrafo descriptivo */
+.about-album p {
+  font-size: 1em; /* Aproximadamente 16px */
+  line-height: 1.6em;
+  margin-bottom: 1.2em;
+}
+
+/* Lista de información del álbum */
+.about-album ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1em;
+}
+
+.about-album ul li {
+  margin-bottom: 0.6em;
+}
+
+.about-album ul li strong {
+  font-weight: bold;
+}
+/* Contenedor principal */
+.available-on {
+  text-align: center;
+  color: white;
+  margin-left: 6%;
+}
+
+/* Título */
+.available-on h2 {
+  font-family: Arial, sans-serif;
+  font-size: 1.5em; /* Tamaño de fuente */
+  letter-spacing: 0.06em; /* Espaciado entre letras */
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* Contenedor de los íconos de las plataformas */
+.platform-icons {
+  display: inline-flex;
+  gap: 0.5em; /* Espacio entre los íconos */
+}
+
+/* Estilo de los íconos de la App Store y Google Play */
+.platform-icons a img {
+  width: 9.375em; /* Ancho de 150px equivalente en em (asumiendo font-size base de 16px) */
+  height: 3.125em; /* Altura de 50px equivalente en em */
+}
+
+/* Contenedor principal */
+.musica {
+  background-color: #1a1a1a;
+  padding: 1.25em; /* 20px equivalente */
+  width: 25em; /* 350px equivalente */
+  margin: 1.25em auto; /* 20px equivalente */
+  border-radius: 0.5em; /* 8px equivalente */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  margin-left: 10%;
+  align-items: center;
+}
+
+/* Controles en la parte superior */
 .Controles {
   display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
+  justify-content: space-around;
+  margin-bottom: 1.25em; /* 20px equivalente */
 }
-
-/* Botón individual de control */
 .Controles div {
-  font-size: 24px;
-  color: #fff;
+  font-size: 1.25em; /* 20px equivalente */
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .Controles div:hover {
-  color: #bbb;
+  color: #888;
 }
 
-/* Información de la pista */
-.track-info {
-  text-align: center;
-  margin-top: 15px;
+.song-list {
+  color: #fff; /* texto blanco */
+  font-family: Arial, sans-serif;
+  padding: 1.25em;
+  max-width: 25em;
+  flex: 1;
+  margin-left: 6.25em;
+  font-size: 1.3em;
 }
 
-.track-titulo {
-  font-size: 18px;
+.song-list h1 {
+  font-size: 2.125em; 
   font-weight: bold;
+  margin-bottom: 0.125em;
+  color: #fff;
 }
 
-.artist-name {
-  font-size: 14px;
-  color: #aaa;
+.song-list ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
-
-/* Temporizador */
-.timer {
-  margin-top: 10px;
-  font-size: 12px;
-  color: #aaa;
+.song-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.625em ;
+  border-bottom: 0.063em solid #333;
+}
+.track-title {
+  font-size: 1em;
+}
+.buy-track {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.725em ;
+}
+.buy-track:hover {
+  text-decoration: underline;
 }
