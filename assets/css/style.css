@@ -815,9 +815,7 @@ figcaption p {
       transition: color 0.3s ease;
   }
 
-  .menu {
-    padding: 1.25em; /* Equivalente a 20px */
-}
+
  /* Estilos para el breadcrumb */
  .breadcrumb {
   color: #ccc; /* Texto gris claro */
@@ -1171,7 +1169,7 @@ figcaption p {
   width: 90%;
   height: auto;
 }
-.contactos {
+.contactos,.about_us,.tour {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1185,6 +1183,12 @@ figcaption p {
   position: relative;
   text-align: center;
   color: white;
+}
+.about_us{
+background-image:  url(../images/about-title-area.jpg);
+}
+.tour{
+  background-image:  url(../images/tour-title-area.jpg);
 }
 
 /* Estilo del botón para ir al inicio */
@@ -1217,4 +1221,63 @@ body.scrolled #scrollToTopBtn {
 /* Oculta el botón en el header */
 header #scrollToTopBtn {
   display: none;
+}
+.image-foto{
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.musica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  width: 300px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Estilos para los controles */
+.Controles {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Botón individual de control */
+.Controles div {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.Controles div:hover {
+  color: #bbb;
+}
+
+/* Información de la pista */
+.track-info {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.track-titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.artist-name {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Temporizador */
+.timer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
 }
