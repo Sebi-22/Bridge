@@ -26,6 +26,9 @@ justify-content: center;
 .container,.album,.musica,.iconos-abajo,.content,.contactos,.tour,.about_us,.navigation ,.info-box .buy-button ,.info-box,.date-item,.left,.modal ,.controls,.progress-container,.volume-control,.tracklist li,.track-icons,.navigation .dots {
 align-items: center;
 }
+.container,.contactos,.tour,.about_us,.video-container,.lyrics-section h3,.image-container,.articulos article,.Fotones,.albumes,.video-section,.modal-content,.progress-bar{
+  position: relative;
+}
 .container {
   flex-direction: column;
   height: 100vh;
@@ -33,7 +36,6 @@ align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 .container,.overlay,.view-all,.blog-posts,.our-discography,.social-icons a,.footer-bottom,.Ticket a,.available-on,.latest-video,.contact-section,.contactos,.tour,.about_us,.review-section {
   text-align: center;
@@ -122,7 +124,6 @@ font-weight: bold;
   height: 0.188em;
   background-color: #ddd;
   margin: 0.625em;
-  position: relative;
 }
 .progress-bar-fill {
   height: 100%;
@@ -276,7 +277,6 @@ font-size: 1.5em;
   height: 100%;
 }
 .modal-content {
-  position: relative;
   max-width: 60%;
   max-height: 80%;
   overflow: auto;
@@ -382,7 +382,6 @@ transition: transform 0.2s ease-out;
   color: #aaa;
 }
 .video-section {
-  position: relative;
   height: 75vh;
   margin-top: 10%;
   background-image: url(../images/h1-img-7.jpg);
@@ -450,7 +449,6 @@ transition: transform 0.2s ease-out;
   justify-items: center;
 }
 .albumes {
-  position: relative;
   overflow: hidden;
 }
 .albumes img {
@@ -488,7 +486,6 @@ transition: transform 0.2s ease-out;
   margin-top: 5%;
 }
 .Fotones {
-  position: relative;
   overflow: hidden;
   border-radius: 0.5em;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
@@ -567,13 +564,11 @@ figcaption p {
   padding: 1.25em;
   border-top: 0.063em solid #333;
 }
-
      .articulos {
       padding: 0;
       overflow: hidden;
   }
   .articulos article {
-      position: relative;
       height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
       overflow: hidden;
       padding: 0;
@@ -683,7 +678,6 @@ figcaption p {
     color: #adadad;
 }
 .image-container {
-  position: relative;
   width: 20em;
   margin: 1em auto;
 }
@@ -725,7 +719,6 @@ figcaption p {
   padding-right: 2em;
   margin: 1em ;
   font-size: 1.125em;
-  position: relative;
   border-bottom: 0.063em solid #444; 
 }
 .lyrics-section {
@@ -790,7 +783,6 @@ figcaption p {
 }
 .video-container {
   padding-top: 56.25%;
-  position: relative;
 }
 .video-container iframe {
   top: 0;
@@ -863,7 +855,6 @@ figcaption p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 .tour {
   background-image: url(..//images/tour-title-area.jpg);
