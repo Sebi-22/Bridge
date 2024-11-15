@@ -259,3 +259,48 @@ window.addEventListener('scroll', function() {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+//Funcion slider de Album(section)
+const sliderContent = [
+    { text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »", source: "- NYLON MAGAZINE" },
+    { text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »", source: "- ROLLING STONE" },
+    { text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »", source: "- BILLBOARD" }
+];
+
+let currentPos = 0;
+
+const reviewText = document.getElementById("review-text");
+const reviewSource = document.getElementById("review-source");
+const leftBtn = document.getElementById("leftBtn");
+const rightBtn = document.getElementById("rightBtn");
+
+function updateSliderContent(pos) {
+    // Asegura que el índice esté dentro del rango del array
+    if (pos < 0) {
+        currentPos = sliderContent.length - 1;
+    } else if (pos >= sliderContent.length) {
+        currentPos = 0;
+    } else {
+        currentPos = pos;
+    }
+    // Actualiza el contenido de la reseña en el slider
+    reviewText.innerText = sliderContent[currentPos].text;
+    reviewSource.innerText = sliderContent[currentPos].source;
+}
+function handleButtonClick(event) {
+    const direction = event.target.getAttribute("direction");
+    
+    if (direction === "true") {
+        currentPos--; // Mover a la izquierda
+    } else {
+        currentPos++; // Mover a la derecha
+    }
+    
+    updateSliderContent(currentPos);
+}
+
+// Asigna los eventos a los botones
+leftBtn.addEventListener("click", handleButtonClick);
+rightBtn.addEventListener("click", handleButtonClick);
+
+// Inicializa el slider con la primera reseña
+updateSliderContent(currentPos);

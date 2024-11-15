@@ -1,83 +1,94 @@
-img{
-  width: 100%;
-  height: auto;
+*{
+font-family: 'Arial', sans-serif;
 }
-
-body {
+img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.albumes img ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
+  width: 100%;
+}
+img,.image img,.blog-post img,.albumes img,.Fotones img,.content img,.image-container img,.images img,.image-foto img  {
+height: auto;
+}
+body,.container,.navbar a,.track-title:hover,.track-icons span:hover,.track-icons i:hover,.Texto2 h1,.buy-tickets,.buy-track,.song-list h1,.song-list,.musica,.available-on,.albumesss,#scrollToTopBtn,.contactos,.tour,.about_us,.right-section input, .right-section textarea ,.link:hover,.view-all a,.follow i:hover.Ticket a,.link,.detalles, .transparencia .social i,.social-icons a,.footer-column a,.show-more,.Fotones figcaption ,#show-MORE,.albumes figcaption,.info-box .buy-button,.side-text,.play-button,.blog-posts,.review-section,.review-section h2,.review-source,.nav-button:hover,.flecha,.punto{
+color: #fff;
+}
+body,.modal,.blog-posts,#show-MORE,.footer,.form,.right-section input, .right-section textarea,#scrollToTopBtn{
+background-color: #000000;
+}
+body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.Texto h1,.Texto p,.Texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3,.articulos article, .transparencia h3 
+ {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #000000;
-  color: #fff;
 }
-
-.container {
+.container,.nav-icons,.navbar,.Apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.Gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.Controles,.song-list li,.iconos-abajo {
   display: flex;
+}
+.container,.modal,.overlay, .articulos,.player,.platform-icons,.navigation .dots,.contactos,.tour,.about_us,.nav-icons ,.iconos-abajo{
+justify-content: center;
+}
+.container,.album,.musica,.iconos-abajo,.content,.contactos,.tour,.about_us,.navigation ,.info-box .buy-button ,.info-box,.date-item,.left,.modal ,.controls,.progress-container,.volume-control,.tracklist li,.track-icons,.navigation .dots {
+align-items: center;
+}
+.container {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   height: 100vh;
   background-image:  url(../images/slider-img-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+}
+.container,.overlay,.view-all,.blog-posts,.our-discography,.social-icons a,.footer-bottom,.Ticket a,.available-on,.latest-video,.contact-section,.contactos,.tour,.about_us,.review-section {
   text-align: center;
-  color: white;
+}
+.navbar,.vertical-name,.new-album,.close,.overlay,.play-button,.side-text,.info-box,.albumes figcaption,.Fotones figcaption,.album-title,.video-container iframe,h3::after{
+position:absolute;
+}
+.navbar,.tracklist li,.date-item,.blog-posts,.footer,.content,.detalles,.navigation,.form,.song-list li{
+justify-content: space-between;
 }
 .navbar {
-  position: absolute;
   top: 0;
   width: 90%;
-  display: flex;
-  justify-content: space-between;
   padding: 1.25em 3.125em;
 }
+.navbar a,.title,.Texto p,.Texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
+  font-size:1em;
+}
 .navbar a {
-  color: white;
   text-decoration: none;
   margin: 0 0.938em;
-  font-size:1em;
 }
 .navbar a:hover {
   text-decoration: underline;
 }
+.vertical-name,.title,.our-discography h1,.Titulo-Album,.Texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.Ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
+font-weight: bold;
+}
 .vertical-name {
-  position: absolute;
   top: 50%;
   left: 10%;
   transform: translateY(-50%) rotate(180deg); 
   font-size: 6.25em;
-  font-weight: bold;
   writing-mode: vertical-rl; 
   text-orientation: mixed;
 }
-
 .new-album {
-  position: absolute;
   bottom: 10%;
   right: 15%;
   text-align: right;
 }
 .new-album h2 {
   font-size: 2.5em;
-  margin: 0;
 }
 .Apps {
-  display: flex;
   justify-content:left;
   margin-top: 1.25em;
 }
-
-.album {
-  display: flex;
-  align-items: center;
-  padding: 0.625em;
+.album,.Texto hr,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.Ticket a:hover    {
   background-color: #fff;
 }
+.album {
+  padding: 0.625em;
+}
 .left {
-  display: flex;
-  align-items: center;
   margin-right: 1em;
   margin-left: 5%;
 }
@@ -86,10 +97,10 @@ body {
   height: 3.125em;
   margin-right: 0.625em;
 }
-.title {
-  font-size: 1em;
-  font-weight: bold;
+.title,.controls,.volume-control,.close:hover,.view-all a:hover,#show-MORE:hover ,.Ticket a:hover,.right-section button{
   color: #000;
+}
+.title {
   margin-right: 2%;
 }
 .subtitle {
@@ -97,54 +108,40 @@ body {
   color: #888;
 }
 .controls {
-  display: flex;
-  align-items: center;
   gap: 0.938em;
-  color: #000;
   margin-right:2%;
 }
-
 .progress-container {
   flex: 1;
-  display: flex;
-  align-items: center;
   margin:0.625em;
 }
-
+.progress-bar,.track-icons i,.nav-button,.Controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
+  cursor: pointer;
+}
 .progress-bar {
-  width: 100%;
-  height: 3px;
+  height: 0.188em;
   background-color: #ddd;
   margin: 0.625em;
   position: relative;
-  cursor: pointer;
 }
-
 .progress-bar-fill {
   height: 100%;
   background-color: #555;
   width: 0%;
 }
-
 .time {
   font-size: 0.75em;
   color: #666;
 }
-
 .volume-control {
-  display: flex;
-  align-items: center;
   gap: 0.313em;
-  color: #000;
   margin-right: 5%;;
 }
-
 .volume-slider {
   width: 5em;
 }
 .album-info {
   background-image:url(../images/h1-img-8.jpg) ;
-  display: flex;
   padding: 5.25em;
   height: 120vh;
 }
@@ -154,142 +151,100 @@ body {
 .album-cover img {
     width: 80%;
 }
+.album-details,.album-description,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
+  font-size: 1.2em;
+}
 .album-details {
     margin-top: 3.25em;
     width: 80%;
-    font-size: 1.2em;
-  }
+}
+.Titulo-Album,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
+font-size: 1.5em;
+}
+.Titulo-Album,.Texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.Texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.Ticket  {
+  text-align: left; 
+}
 .Titulo-Album {
     margin: 0.625em 0;
-    font-weight: bold; 
-    text-align: left; 
-    font-size: 1.5em;
+    
 }
 .album-description {
     color: #aaa;
-    font-size: 1.2em;
     line-height: 1.5;
     text-align: justify;
 }
 .tracklist {
     flex: 1;
     margin-left: 1.25em;
-    font-size: 1.5em;
 }
 .tracklist ol {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-
 .tracklist li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1.225em 0;
   border-bottom: 0.063em solid #333;
   color: #bbb;
 }
-
 /* Título de la canción */
 .track-title {
   color: #bbb;
   flex-grow: 1;
   transition: color 0.3s;
 }
-
-.track-title:hover {
-  color: #fff; /* Cambia a blanco al pasar el ratón */
-}
-
-/* Contenedor de iconos y tiempo */
-.track-icons {
-  display: flex;
-  align-items: center;
-}
-
-/* Tiempo de la canción */
 .track-icons span {
   color: #bbb;
   margin-right: 0.625em;
   transition: color 0.3s;
 }
-
-.track-icons span:hover {
-  color: #fff; /* Cambia a blanco al pasar el ratón */
-}
-
-/* Iconos de play y video */
 .track-icons i {
   color: #bbb;
   margin-left: 0.625em;
-  cursor: pointer;
   transition: color 0.3s;
 }
-
-.track-icons i:hover {
-  color: #fff; /* Cambia a blanco al pasar el ratón */
-}
 .Texto {
-  text-align: left;
   margin: 5%;
 }
 .Texto h1 {
   font-size: 3em;
   font-weight: 700;
-  margin: 0;
 }
 .Texto hr {
   width: 3.125em;
   height: 0.125em;
-  background-color: #fff;
   border: none;
   margin: 1.25em auto;
-
 }
 .Texto p {
-  font-size: 1em;
   font-weight: 300;
-  margin: 0;
 }
 .Texto2 {
   color: #ccc; /* Color de texto gris claro */
-  text-align: left; /* Texto alineado a la izquierda */
   padding: 5em ; /* Espaciado alrededor del contenido */
   max-width: 70em; /* Ancho máximo para limitar la extensión del texto */
   margin: 0 auto; /* Centrar la sección horizontalmente */
 }
-
 .Texto2 h1 {
   font-size: 2.5em; /* Tamaño del título */
   text-transform: uppercase; /* Texto en mayúsculas */
-  color: #fff; /* Color del título en blanco */
   margin-bottom: 0.5em; /* Espaciado debajo del título */
-  font-weight: bold; /* Hace el título más grueso */
 }
-
 .Texto2 hr {
   width: 3em; /* Ancho de la línea horizontal */
   border: 1px solid #fff; /* Color y grosor de la línea */
-  margin: 0; /* Elimina margen extra */
   margin-bottom: 1em; /* Espaciado debajo de la línea */
 }
-
 .Texto2 p {
-  font-size: 1em; /* Tamaño del texto del párrafo */
   line-height: 1.8em; /* Altura de línea para mejorar la legibilidad */
   color: #ccc; /* Color de texto gris claro */
   margin-top: 1em; /* Espacio por encima del párrafo */
   max-width: 60em; /* Limita el ancho del párrafo */
 }
-
 .Gallery {
-  display: flex;
   flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   box-sizing: border-box;
-  
 }
 .image {
   overflow: hidden;
@@ -301,7 +256,6 @@ body {
   grid-column: span 1;
   height: 20em;
   width:50%;
-  
 }
 .image.small {
   height: 20em;
@@ -311,8 +265,6 @@ body {
   flex-direction: row-reverse;
   }
 .image img {
-  width: 100%;
-  height: auto;
   object-fit: cover;
 }
 .modal {
@@ -321,49 +273,29 @@ body {
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
 }
-
 .modal-content {
   position: relative;
   max-width: 60%;
   max-height: 80%;
   overflow: auto;
 }
-
 .modal-content img {
   width: 90%;
   border-radius: 0.5em;
 }
-
 .close {
-  position: absolute;
   bottom: 0.625em;
   right: 0.625em;
-  font-size: 1.5em;
-  cursor: pointer;
   color: #666;
 }
-
-.close:hover {
-  color: #000;
-}
 .overlay {
-position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
 background-color: rgba(0, 0, 0, 0.5);
-font-size: 1.5em;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
 }
 .overlay span {
 display: block;
@@ -377,10 +309,8 @@ left: 0.625em;
   margin: 0 auto;
   padding: 1.25em 0;
 }
+
 .date-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom:0.063em solid #333;
   padding: 1.25em 0;
 }
@@ -389,7 +319,6 @@ left: 0.625em;
 }
 .date {
   font-size: 2.25em;
-  font-weight: bold;
 }
 .day {
   font-size: 0.875em;
@@ -401,77 +330,50 @@ left: 0.625em;
 }
 .buy-tickets {
   font-size: 0.875em;
-  font-weight: bold;
   text-transform: uppercase;
-  color: #fff;
   text-decoration: none;
 }
 .view-all {
-  text-align: center;
   padding: 1.25em 0;
 }
 .view-all a {
-  color: rgb(255, 255, 255);
   text-decoration: none;
   border:0.063em solid #fff;
   padding: 0.625em 1.25em;
   display: inline-block;
-}
-.view-all a:hover {
-  background-color:rgb(255, 255, 255); 
-  color: #000;
 }
 .blog{
 width: 80%;
 margin: 0 auto;
 padding:  1.25em 0;
 }
-.blog{
-text-align: left;
-}
 h1 {
   font-size: 3em;
-  font-weight: bold;
-  margin: 0;
 }
 .underline {
   width: 3.125em;
   height: 0.125em;
-  background-color: white;
   margin: 0 auto 20px auto;
-
 }
 p {
-  font-size: 1.2em;
   line-height: 1.5em;
-  margin: 0;
 }
 .blog-posts {
-  display: flex;
-  justify-content: space-between;
   padding: 1.25em;
-  text-align: center;
   margin: 0.625em;
-  background-color: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
   padding: 0;
   overflow: hidden;
-    
 }
 .blog-post img {
   width: 80%;
-  height: auto;
 transition: transform 0.2s ease-out;
 }
 .blog-post img:hover {
   transform: scale(1.1);
-}     
-
+}    
 .blog-post-title {
   font-size: 1.125em;
-  font-weight: bold;
-  margin:  0.625em 0 0.313em;
+  margin:0.625em 0 0.313em;
 }
 .blog-post-date {
   font-size: 0.875em;
@@ -481,54 +383,35 @@ transition: transform 0.2s ease-out;
 }
 .video-section {
   position: relative;
-  width: 100%;
   height: 75vh;
   margin-top: 10%;
   background-image: url(../images/h1-img-7.jpg);
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 .play-button {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.625em;
-  color: white;
-  cursor: pointer;
 }
 .play-button i {
   font-size: 6.25em;
 }
 .side-text {
-  position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
   writing-mode: vertical-rl;
   text-orientation: mixed;
   font-size: 5em;
-  color: white;
-  font-weight: bold;
 }
 .info-box {
-  position: absolute;
   bottom: 1.25em;
   right:  1.25em;
-  background: white;
   padding: 0.625em  1.25em;
-  display: flex;
-  align-items: center;
   border-radius: 0.063em;
 }
 .info-box .demos {
   font-size:  1.25em;
-  font-weight: bold;
   margin-right: 0.625em ;
 }
 .info-box .demos span {
@@ -536,105 +419,67 @@ transition: transform 0.2s ease-out;
 }
 .info-box .buy-button {
   background: #e6005c;
-  color: white;
   padding:0.625em 1.25em;
   border-radius: 0.313em;
   text-decoration: none;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
 }
 .info-box .buy-button i {
   margin-right: 0.313em;
 }
 .our-discography {
-  width: 100%;
   margin: 0 auto;
   padding: 3.125em 0;
-  text-align: center;
 }
-
 .our-discography h1 {
   font-size: 2.25em;
-  font-weight: bold;
-  text-align: left;
 }
-
 .underline {
   width: 3.125em;
   height: 0.125em;
-  background-color: #fff;
   margin: 1.25em auto;
 }
-
 .our-discography p {
   font-size: 0.875em;
   line-height: 1.6;
   margin-bottom: 3.125em;
-  text-align: left;
 }
-
 .albums {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas */
   gap: 1.25em; /* Espacio entre los elementos de 1.25em */
   justify-items: center;
 }
-
 .albumes {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
-
 .albumes img {
-  width: 100%;
-  height: auto;
   display: block;
   transition: opacity 0.3s ease-in-out;
 }
-
 .albumes:hover img {
   opacity: 0.4;
 }
-
 .albumes figcaption {
-  position: absolute;
   bottom: 0.625em;
   opacity: 0;
-  color: white;
   transition: opacity 0.3s ease-in-out;
 }
-
 .albumes:hover figcaption {
   opacity: 1;
 }
-
-.albumes h3,
-.albumes p {
-  margin: 0;
-  padding: 0.3125em;
+.albumes h3,.albumes p {
+  padding:0.3125em;
 }
-
 .view-all {
   margin-top: 2em;
 }
-
 #show-MORE {
-  font-size: 1.2em;
-  color: #fff;
   text-decoration: none;
-  background-color: #000;
   padding: 0.5em 1em;
-  border-radius: 5px;
+  border-radius: 0.313em;
   transition: background-color 0.3s ease-in-out;
 }
-
-#show-MORE:hover {
-  background-color: #ffffff;
-  color: #000;
-}
-
 .Fotitos {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
@@ -642,50 +487,35 @@ transition: transform 0.2s ease-out;
   padding: 1em; /* Margen interno alrededor de la cuadrícula */
   margin-top: 5%;
 }
-
 .Fotones {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   border-radius: 0.5em;
   box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
   transition: transform 0.3s;
 }
-
 .Fotones:hover {
   transform: scale(1.05);
 }
-
 .Fotones img {
-  width: 100%;
-  height: auto;
   display: block;
   transition: opacity 0.3s ease-in-out;
 }
-
 .Fotones:hover img {
   opacity: 0.4;
 }
-
 .Fotones figcaption {
-  position: absolute;
   bottom: 1em; /* Ajusta según sea necesario */
   left: 1em; /* Ajusta según sea necesario */
-  color: white;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
 .Fotones:hover figcaption {
   opacity: 1;
 }
-
 figcaption h3 {
-  font-size: 1em;
-  margin: 0;
   padding: 0;
 }
-
 figcaption p {
   font-size: 0.7em;
   margin: 0.25em 0 0;
@@ -695,22 +525,17 @@ figcaption p {
   display: inline-block;
   padding: 0.625em 1.25em;
   border: 0.063em solid #fff;
-  color: #fff;
   text-decoration: none;
   margin-top: 1.875em;
 }
 .footer {
-  display: flex;
-  justify-content: space-between;
   padding: 2.5em;
-  background-color: #000;
 }
 .footer-column {
   flex: 1;
   margin: 0 1.25em;
 }
 .footer-column h2 {
-  font-size: 1.5em;
   margin-bottom: 1.25em;
 }
 .footer-column p {
@@ -718,7 +543,6 @@ figcaption p {
   line-height: 1.6;
 }
 .footer-column a {
-  color: #fff;
   text-decoration: none;
   display: block;
   margin-bottom: 0.625em;
@@ -730,40 +554,30 @@ figcaption p {
   margin-top: 1.25em;
 }
 .social-icons a {
-  color: #fff;
   font-size: 1.25em;
   margin-right: 0.625em;
   display: inline-block;
   width: 2em;
   height: 2.5em;
   line-height: 2.5em;
-  text-align: center;
   border: 0.125em solid #fff;
   border-radius: 50%;
 }
 .footer-bottom {
-  text-align: center;
   padding: 1.25em;
   border-top: 0.063em solid #333;
 }
-     /* Estilos para la sección de artículos */
+
      .articulos {
-      display: flex;
-      justify-content: center;
       padding: 0;
       overflow: hidden;
   }
-
-  /* Estilos para cada artículo */
   .articulos article {
       position: relative;
       height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
       overflow: hidden;
-      margin: 0;
       padding: 0;
   }
-
-  /* Imagen */
   .articulos .foto img {
       width: 130%;
       height: 100%;
@@ -778,79 +592,49 @@ figcaption p {
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.6);
-      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       opacity: 0;
   }
-
-  /* Mostrar la capa de transparencia al pasar el cursor */
   .articulos article:hover .transparencia {
       opacity: 1;
   }
-
-  /* Estilos para el nombre y rol */
   .transparencia h3 {
-      margin: 0;
       font-size: 1.5em;
       text-transform: uppercase;
   }
-
   .transparencia p {
       margin:0.5em;
-      font-size: 1em;
       color: #ccc;
   }
-
   /* Iconos de redes sociales */
   .transparencia .social {
-      display: flex;
       gap: 0.313em;
   }
-
   .transparencia .social i {
-      color: white;
-      font-size: 1em;
       transition: color 0.3s ease;
   }
-
   .menu {
     padding: 1.25em; /* Equivalente a 20px */
 }
- /* Estilos para el breadcrumb */
  .breadcrumb {
   color: #ccc; /* Texto gris claro */
-  font-size: 1em; /* Tamaño de texto */
-  text-align: left; /* Alineación del texto a la izquierda */
-  margin: 0; /* Sin espacio extra alrededor */
   margin-top:9%;
   top: 0;
   width: 90%;
-  display: flex;
 }
-
 .breadcrumb a {
   color: #ccc; /* Color de los enlaces */
 }
-
-/* Estilos para la sección principal */
 .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 7em;
 }
-
-/* Estilos para la imagen */
 .content img {
   width:29%; /* Ajusta al 40% del contenedor */
-  height: auto;
   object-fit: cover;
   margin-left: 5%; /* Margen izquierdo para centrar mejor */
 }
-
-/* Estilos para el mapa */
 .content .map {
   width: 60%; /* Ancho del mapa */
   height: 35em; /* Altura ajustada */
@@ -859,241 +643,162 @@ figcaption p {
   flex-shrink: 0; /* Evita que se encoja más allá de este tamaño */
 }
 .detalles {
-    display: flex;
-    justify-content: space-between;
-    color: #ffffff;
     padding: 1.25em; /* 20px */
     margin-left: 5%;
-
 }
 .details, .about {
     width: 45%;
 }
 .link {
-  color: #ffffff; /* Color blanco */
   text-decoration: none; /* Quita el subrayado predeterminado */
-  font-size: 1.2em; /* 16px */
-  
 }
 .link:hover {
   text-decoration: underline; /* Añade subrayado al pasar el cursor */
-  color: #ffffff; /* Cambia el color al pasar el cursor */
 }
 .details h2, .about h2, .follow h2 {
-    font-size: 1.5em; /* 1.5em es aproximadamente 24px si el tamaño base es 16px */
     margin-bottom: 0.625em; /* 10px */
 }
-
 .details p, .about p {
-    font-size: 1.2em; /* 16px */
     line-height: 1.5; /* Equivalente a 24px de altura de línea si el tamaño de fuente es 16px */
 }
 .about{
   margin-right: 10%;
 }
 .Ticket {
-  text-align: left;
   padding: 1.25em 0;
 }
 .Ticket a {
   display: inline-block;
   padding: 1em 3em; /* Tamaño del botón */
   border: 1px solid #ffffff;
-  color: #ffffff;
   text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
   text-decoration: none;
   font-size: 0.875em; /* Tamaño del texto del botón */
 }
-
-.Ticket a:hover {
-  background-color:rgb(255, 255, 255); 
-  color: #000;
-}
-
 .follow {
     margin-top: 1.25em; /* 20px */
 }
-
 .follow i {
-    font-size: 1.5em; /* 1.5em es aproximadamente 24px */
     margin-right: 0.625em; /* 10px */
     color: #adadad;
-}
-
-.follow i:hover {
-    color: #ffffff;
 }
 .image-container {
   position: relative;
   width: 20em;
   margin: 1em auto;
 }
-
 .image-container img {
-  width: 100%;
-  height: auto;
   border-radius: 0.5em;
 }
-
 .album-title {
-  position: absolute;
   bottom: 1em;
   left: 1em;
-  font-size: 1.5em;
-  font-weight: bold;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.2em 0.5em;
   border-radius: 0.2em;
 }
-
 .player {
-  display: flex;
-  justify-content: center;
   gap: 1em;
   margin: 1em 0;
 }
-
-.controls i {
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
 .about1 {
   max-width: 30em;
   margin: 1em auto;
   line-height: 1.5;
 }
-
-.about-album h2, .lyrics-section h2, .review-section h2, .available-on h2, .latest-video h2 {
-  font-size: 1.5em;
+.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2 {
   margin-bottom: 0.5em;
 }
-
-.about-album p, .review-section .review-text {
+.about-album p {
   font-size: 0.9em;
   color: #bbb;
   margin-bottom: 1em;
 }
-
 .about-album ul {
   list-style: none;
   font-size: 0.9em;
 }
-
 .lyrics-section h3 {
-  cursor: pointer;
-  font-size: 1em;
   margin-top: 0.5em;
   color: #ddd;
+  padding: 0.938em;
+  padding-right: 2em;
+  margin: 1em ;
+  font-size: 1.125em;
+  position: relative;
+  border-bottom: 0.063em solid #444; 
 }
-
+.lyrics-section {
+  text-align: right;
+  width: 18.75em;
+  margin-left: 60%;
+  margin-top: -8%;
+}
+.lyrics-section h2 {
+  margin-bottom: 1.25em;
+  margin-top: 20%;
+}
+.lyrics-section h3::after {
+  content: "⌃";
+  right: 0.625em; /* Coloca la flecha al final del lado derecho */
+  font-size: 1.125em;
+  transition: transform 0.3s; /* Transición de rotación */
+}
+.lyrics-section h3.active::after {
+  transform: rotate(180deg); /* Rota la flecha */
+}
 .lyrics-content {
+  padding: 0.625em;
   display: none;
-  margin-left: 1em;
-  font-size: 0.9em;
 }
-
 .tracklist ol {
   list-style: none;
-  font-size: 1em;
   max-width: 30em;
   margin: 1em auto;
   padding: 0;
 }
-
 .tracklist li {
-  display: flex;
   justify-content: space-between;
   padding: 0.5em 0;
   border-bottom: 0.05em solid #444;
 }
-
-.track-title {
-  font-size: 0.95em;
-}
-
 .track-icons {
-  display: flex;
   gap: 0.5em;
 }
-
-.review-section {
-  max-width: 30em;
-  margin: 2em auto;
-  text-align: center;
-}
-
-.review-source {
-  font-size: 0.9em;
-  color: #888;
-}
-
-.nav-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  font-size: 1.2em;
-  color: #aaa;
-}
-
 .available-on {
   max-width: 30em;
   margin: 2em auto;
-  text-align: center;
+  margin-left: 6%;
 }
-
 .available-on h2 {
-  font-size: 1.5em;
   margin-bottom: 1em;
-}
-
+  letter-spacing: 0.06em; /* Espaciado entre letras */
+} 
+/* Contenedor de los íconos de las plataformas */
 .platform-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
+  display: inline-flex;
+  gap: 0.5em; /* Espacio entre los íconos */
 }
-
+/* Estilo de los íconos de la App Store y Google Play */
 .platform-icons a img {
-  width: 9.375em; /* Approximately 150px */
-  height: auto;
+  width: 9.375em; /* Ancho de 150px equivalente en em (asumiendo font-size base de 16px) */
+  height: 3.125em; /* Altura de 50px equivalente en em */
 }
-
 .latest-video {
   max-width: 70em;
   margin: 2em auto;
-  text-align: center;
 }
-
 .video-container {
-  width: 100%;
   padding-top: 56.25%;
   position: relative;
 }
-
 .video-container iframe {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
 }
-
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 1.25em; /* 20px */
-}
-.navigation i {
-  font-size: 1.5em; /* 24px */
-  cursor: pointer;
-}
-.navigation .dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .navigation .dots i {
   margin: 0 0.3125em; /* 5px */
@@ -1102,36 +807,24 @@ figcaption p {
   font-size: 355%;
 }
 .contact {
-  display: flex;
   justify-content: space-around;
-  width: 100%;
-}
-.contact-section {
-  text-align: center;
 }
 .contact-section h2 {
-  font-size: 1.5em;
   margin-bottom: 0.625em;
 }
 .contact-section p {
-  font-size: 1em;
   margin: 0.313em 0;
 }
 .form {
-  display: flex;
-  justify-content: space-between;
   padding: 3.125em;
-  background-color:#060606;
 }
 .left-section, .right-section {
   width: 45%;
 }
 .left-section h1 {
   font-size: 2.25em;
-  font-weight: bold;
 }
 .left-section p {
-  font-size: 1em;
   line-height: 1.5;
 }
 .contact-info {
@@ -1139,27 +832,20 @@ figcaption p {
 }
 .contact-info h2 {
   font-size: 1.125em;
-  font-weight: bold;
 }
 .contact-info p {
   font-size: 0.875em;
   line-height: 1.5;
 }
 .right-section input, .right-section textarea {
-  width: 100%;
   padding: 0.625em;
   margin-bottom: 1.25em;
-  background-color: #000;
   border: 0.063em solid #fff;
-  color: #fff;
   font-size: 0.875em;
 }
 .right-section button {
-  background-color: #fff;
-  color: #000;
   padding: 0.625em 1.25em;
   border: none;
-  cursor: pointer;
   font-size: 0.875em;
 }
 .galeria-container {
@@ -1169,249 +855,161 @@ figcaption p {
 }
 .images img {
   width: 90%;
-  height: auto;
 }
 .contactos,.tour,.about_us {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   height: 70vh;
   background-image:  url(../images/contact-us-title.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  text-align: center;
-  color: white;
 }
 .tour {
   background-image: url(..//images/tour-title-area.jpg);
 }
 .about_us{
   background-image: url(..//images/about-title-area.jpg);
-
 }
-/* Estilo del botón para ir al inicio */
 #scrollToTopBtn {
   position: fixed;
   bottom: 2em;
   right: 2em;
   width: 3em;
   height: 3em;
-  background-color: #000000;
-  color: white;
   border: 0.063em solid #fff;
   border-radius: 50%;
-  font-size: 1.5em;
-  cursor: pointer;
   display: none; /* Oculto por defecto */
   z-index: 1000;
 }
 #scrollToTopBtn:hover {
-  background-color: white;
   color: #222;
 }
-
 /* Muestra el botón solo cuando haces scroll hacia abajo */
 body.scrolled #scrollToTopBtn {
   display: block;
 }
-
 /* Oculta el botón en el header */
 header #scrollToTopBtn {
   display: none;
 }
 .albumesss {
-  display: flex;
   gap: 2em; /* Espacio entre la imagen y la información del álbum */
   max-width: 80em; /* Ancho máximo del contenedor principal */
   margin: 0 auto;
-  color: white;
-  font-family: Arial, sans-serif;
 }
-
 /* Estilos para la sección de la imagen del álbum */
 .image-foto img {
-  width: 100%;
   max-width: 35em; /* Tamaño máximo de la imagen en em */
   margin-left: 10%;
   margin-top: 5%;
-  height: auto;
   object-fit: cover;
 }
-
 /* Estilos para la sección de información del álbum */
 .about1 {
   max-width: 35em; /* Ancho máximo para la sección de información */
   margin-right: 1%;
 }
-
-/* Estilos para el título */
 .about-album h2 {
   font-size: 2em; /* Aproximadamente 24px */
-  font-weight: bold;
   letter-spacing: 0.05em;
   margin-bottom: 0.8em;
 }
-
-/* Párrafo descriptivo */
 .about-album p {
-  font-size: 1.2em; /* Aproximadamente 16px */
   line-height: 1.6em;
   margin-bottom: 1.2em;
 }
-
-/* Lista de información del álbum */
 .about-album ul {
   list-style-type: none;
   padding: 0;
-  font-size: 1.2em;
   color:#a09d9d;
 }
-
 .about-album ul li {
   margin-bottom: 0.6em;
 }
-
-.about-album ul li strong {
-  font-weight: bold;
-}
-/* Contenedor principal */
-.available-on {
-  text-align: center;
-  color: white;
-  margin-left: 6%;
-}
-
-/* Título */
-.available-on h2 {
-  font-family: Arial, sans-serif;
-  font-size: 1.5em; /* Tamaño de fuente */
-  letter-spacing: 0.06em; /* Espaciado entre letras */
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-
-/* Contenedor de los íconos de las plataformas */
-.platform-icons {
-  display: inline-flex;
-  gap: 0.5em; /* Espacio entre los íconos */
-}
-
-/* Estilo de los íconos de la App Store y Google Play */
-.platform-icons a img {
-  width: 9.375em; /* Ancho de 150px equivalente en em (asumiendo font-size base de 16px) */
-  height: 3.125em; /* Altura de 50px equivalente en em */
-}
-
-/* Contenedor principal */
 .musica {
   background-color: #1a1a1a;
   padding: 1.25em; /* 20px equivalente */
   width: 34em; /* 350px equivalente */
   margin: 1.25em auto; /* 20px equivalente */
   border-radius: 0.5em; /* 8px equivalente */
-  color: #ffffff;
-  font-family: 'Arial', sans-serif;
   margin-left: 10%;
-  align-items: center;
+  margin-top: -37%;
 }
-
-/* Controles en la parte superior */
 .Controles {
-  display: flex;
   justify-content: space-around;
   margin-bottom: 1.25em; /* 20px equivalente */
 }
 .Controles div {
   font-size: 1.25em; /* 20px equivalente */
-  cursor: pointer;
   transition: color 0.3s;
 }
-
 .Controles div:hover {
   color: #888;
 }
-
-.song-list {
-  color: #fff; /* texto blanco */
-  font-family: Arial, sans-serif;
-  padding: 1.25em;
+.song-list {  padding: 1.25em;
   max-width: 25em;
   flex: 1;
   margin-left: 6.25em;
   font-size: 1.3em;
 }
-
 .song-list h1 {
   font-size: 2.125em; 
-  font-weight: bold;
   margin-bottom: 0.125em;
-  color: #fff;
 }
-
 .song-list ol {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 .song-list li {
-  display: flex;
-  justify-content: space-between;
   padding: 0.625em ;
   border-bottom: 0.063em solid #333;
 }
-.track-title {
-  font-size: 1em;
-}
 .buy-track {
-  color: #fff;
   text-decoration: none;
-  font-weight: bold;
   font-size: 0.725em ;
 }
 .buy-track:hover {
   text-decoration: underline;
 }
-.lyrics-section {
-  text-align: right;
-  width: 18.75em;
-  margin-left: 5%;
+.review-section {
+  background-color: #1a1a1a;
+  padding: 2em;
+  max-width: 30.25em;
+  margin-left: 52%
 }
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 1.25em;
-  margin-top: 20%;
+.review-section h2 {
+  margin-bottom: 1.5em;
+  letter-spacing: 0.1em;
 }
-h3 {
-  padding: 0.938em;
-  padding-right: 2em;
-  margin: 1em ;
-  font-size: 1.125em;
-  cursor: pointer;
-  position: relative;
-  text-align: left;
-  border-bottom: 0.063em solid #444; 
-
+.review-text {
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.5;
+  color: #b3b3b3;
+  margin: 0 0 2em;
 }
-h3::after {
-  content: "⌃";
-  position: absolute;
-  right: 0.625em; /* Coloca la flecha al final del lado derecho */
-  font-size: 1.125em;
-  transition: transform 0.3s; /* Transición de rotación */
+.review-source {
+  font-size: 0.8em;
+  margin-bottom: 2em;
 }
-
-h3.active::after {
-  transform: rotate(180deg); /* Rota la flecha */
+.nav-icons {
+  gap: 1.25em;
+  margin-left: 60%;
 }
-
-.lyrics-content {
-  padding: 0.625em;
-  display: none;
-  text-align: left;
-  font-size: 1em;
-  
+.nav-button {
+  background-color: transparent;
+  color: #b3b3b3;
+  padding: 0.2em 0.5em;
+  transition: color 0.3s,border-color 0.3s;
+}
+.nav-button:hover {
+  border-color: #ffffff;
+}
+.iconos-abajo {
+  gap: 0.5em;              
+  padding: 0.5em;
+}
+.flecha:hover,.punto:hover {
+  color: #f00; 
 }
