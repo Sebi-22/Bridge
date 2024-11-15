@@ -72,9 +72,7 @@ document.getElementById('cerrarModal').addEventListener('click', function() {
     videoModal.style.display = 'none';
     videoIframe.src = ""; // Limpiar el src para detener el video
 });
-
-//Formulario de contacto
-
+// Audio
 function toggleLyrics(id) {
     var content = document.getElementById(id);
     content.style.display = content.style.display === "block" ? "none" : "block";
@@ -92,7 +90,7 @@ function toggleLyrics(id) {
         header.classList.remove("active");
     }
 }
-
+//Formulario de contacto
 function sendMessage() {
     // Capturar los valores de los campos
     const name = document.getElementById('name').value.trim();
