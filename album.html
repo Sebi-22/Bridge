@@ -100,12 +100,17 @@
                 <h2>ALBUM REVIEWS</h2>
                 <p class="review-text" id="review-text">« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »</p>
                 <p class="review-source" id="review-source">- NYLON MAGAZINE</p>
+                
+                <!-- Contenedor para los botones de navegación -->
                 <div class="nav-icons">
-                    <button id="leftBtn" direction="true" class="nav-button">&lt;</button> <!-- Botón de flecha izquierda -->
-                    <button id="rightBtn" direction="false" class="nav-button">&gt;</button> <!-- Botón de flecha derecha -->
+                    <!-- Botón izquierdo con atributos de accesibilidad mejorados -->
+                    <button id="leftBtn" class="nav-button" direction="left" aria-label="Previous review" aria-controls="review-text review-source">&lt;</button>
+                    
+                    <!-- Botón derecho con atributos de accesibilidad mejorados -->
+                    <button id="rightBtn" class="nav-button" direction="right" aria-label="Next review" aria-controls="review-text review-source">&gt;</button>
                 </div>
+            </div>  
             </div>
-             </div>
             <div class="musica">
                 <!-- Controles en la parte superior -->
                 <div class="Controles">
@@ -189,9 +194,7 @@
             <span class="flecha izquierda">&lt;</span> <!-- Icono de flecha izquierda -->
             <a href="discography.html" class="punto">⬤</a> <!-- Icono de punto de navegación con enlace -->
             <span class="flecha derecha">&gt;</span> <!-- Icono de flecha derecha -->
-        </div>
-        
-        
+        </div> 
     </div>
     </section>
 <footer>
@@ -230,8 +233,6 @@
         © Copyright Qode Interactive
     </div>
 </footer>
-
 <script src="assets/JS/script.js"></script>
-
 </body>
 </html>

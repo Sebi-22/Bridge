@@ -199,7 +199,7 @@ const newAlbums = [
 const showMoreButton = document.getElementById("show-MORE");
 
 showMoreButton.addEventListener("click", function(event) {
-    event.preventDefault(); // Evita el salto de página
+event.preventDefault(); // Evita el salto de página
     
     // Selecciona el contenedor de álbumes principal
     const albumsContainer = document.querySelector(".albums");
@@ -257,46 +257,47 @@ window.addEventListener('scroll', function() {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
 //Funcion slider de Album(section)
+// Función slider de Album (section)
 const sliderContent = [
     { text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »", source: "- NYLON MAGAZINE" },
     { text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »", source: "- ROLLING STONE" },
     { text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »", source: "- BILLBOARD" }
 ];
 
-let currentPos = 0;
+let currentPos = 0;  // Inicializa la posición del slider en 0
 
 const reviewText = document.getElementById("review-text");
 const reviewSource = document.getElementById("review-source");
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 
-function updateSliderContent(pos) {
-    // Asegura que el índice esté dentro del rango del array
-    if (pos < 0) {
-        currentPos = sliderContent.length - 1;
-    } else if (pos >= sliderContent.length) {
-        currentPos = 0;
-    } else {
-        currentPos = pos;
-    }
+function updateSliderContent(currentPos) {
+    // Asegura que el índice esté dentro del rango del array usando el operador módulo (%)
+    currentPos = (currentPos + sliderContent.length) % sliderContent.length;
+
     // Actualiza el contenido de la reseña en el slider
     reviewText.innerText = sliderContent[currentPos].text;
     reviewSource.innerText = sliderContent[currentPos].source;
+
+    console.log(`Current position: ${currentPos}`);  // Verifica que el índice se actualice correctamente
 }
+
+// Función que maneja el clic en los botones de navegación
 function handleButtonClick(event) {
     const direction = event.target.getAttribute("direction");
-    
-    if (direction === "true") {
-        currentPos--; // Mover a la izquierda
-    } else {
-        currentPos++; // Mover a la derecha
-    }
-    
+    const increment = direction === "left" ? -1 : 1;
+
+    // Actualiza la posición actual
+    currentPos += increment;
+    console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);  // Verifica qué dirección fue clickeada
+
+    // Actualiza el contenido del slider
     updateSliderContent(currentPos);
 }
 
-// Asigna los eventos a los botones
+// Asigna los eventos de clic a los botones
 leftBtn.addEventListener("click", handleButtonClick);
 rightBtn.addEventListener("click", handleButtonClick);
 
