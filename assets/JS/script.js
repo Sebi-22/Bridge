@@ -268,139 +268,57 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Configuración
-    const config = {
-        autoPlay: true,
-        interval: 5000, // 5 segundos entre slides
-        fadeTime: 500  // Medio segundo para la transición
-    };
-
-    // Contenido del slider
+document.addEventListener("DOMContentLoaded", function() {
+    // Datos de reseñas
     const sliderContent = [
-        {
-            text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »",
-            source: "- NYLON MAGAZINE"
-        },
-        {
-            text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »",
-            source: "- ROLLING STONE"
-        },
-        {
-            text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »",
-            source: "- BILLBOARD"
-        }
+        { text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »", source: "- NYLON MAGAZINE" },
+        { text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »", source: "- ROLLING STONE" },
+        { text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »", source: "- BILLBOARD" }
     ];
 
-    // Estado del slider
-    let currentPos = 0;
-    let isAnimating = false;
-    let autoPlayInterval;
+    let currentPos = 0;  // Posición inicial del slider
 
-    // Elementos del DOM
-    const reviewContainer = document.getElementById("review-container");
-    const reviewText = reviewContainer.querySelector(".review-text");
-    const reviewSource = reviewContainer.querySelector(".review-source");
+    // Referencia a los elementos del DOM
+    const reviewText = document.getElementById("review-text");
+    const reviewSource = document.getElementById("review-source");
     const leftBtn = document.getElementById("leftBtn");
     const rightBtn = document.getElementById("rightBtn");
 
-    // Función para actualizar el contenido con fade
-    function updateSlider(newPosition) {
-        if (isAnimating) return;
-        isAnimating = true;
-
-        // Manejar los límites del slider
-        if (newPosition < 0) {
-            newPosition = sliderContent.length - 1;
-        } else if (newPosition >= sliderContent.length) {
-            newPosition = 0;
-        }
-
-        // Añadir clase para fade out
-        reviewContainer.style.opacity = '0';
-
-        // Actualizar contenido después de fade out
-        setTimeout(() => {
-            currentPos = newPosition;
-            reviewText.textContent = sliderContent[newPosition].text;
-            reviewSource.textContent = sliderContent[newPosition].source;
-
-            // Fade in
-            reviewContainer.style.opacity = '1';
-            
-            // Permitir nueva animación después de completar
-            setTimeout(() => {
-                isAnimating = false;
-            }, config.fadeTime);
-        }, config.fadeTime);
+    // Asegura que todos los elementos estén presentes
+    if (!reviewText || !reviewSource || !leftBtn || !rightBtn) {
+        console.error("Algunos de los elementos no se encontraron en el DOM");
+        return;
     }
 
-    // Función para el siguiente slide
-    function nextSlide() {
-        updateSlider(currentPos + 1);
+    // Actualiza el contenido del slider
+    function updateSliderContent(currentPos) {
+        // Asegura que el índice esté dentro del rango de la lista
+        currentPos = (currentPos + sliderContent.length) % sliderContent.length;
+
+        // Actualiza el texto y la fuente
+        reviewText.innerText = sliderContent[currentPos].text;
+        reviewSource.innerText = sliderContent[currentPos].source;
+
+        console.log(`Current position: ${currentPos}`);
     }
 
-    // Función para el slide anterior
-    function prevSlide() {
-        updateSlider(currentPos - 1);
+    // Función que maneja los clics de los botones
+    function handleButtonClick(event) {
+        const direction = event.target.getAttribute("direction");
+        const increment = direction === "left" ? -1 : 1;
+
+        // Actualiza la posición del slider
+        currentPos += increment;
+        console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);
+
+        // Actualiza el contenido del slider
+        updateSliderContent(currentPos);
     }
 
-    // Iniciar autoplay
-    function startAutoPlay() {
-        if (config.autoPlay) {
-            autoPlayInterval = setInterval(nextSlide, config.interval);
-        }
-    }
+    // Asigna los eventos a los botones
+    leftBtn.addEventListener("click", handleButtonClick);
+    rightBtn.addEventListener("click", handleButtonClick);
 
-    // Detener autoplay
-    function stopAutoPlay() {
-        if (autoPlayInterval) {
-            clearInterval(autoPlayInterval);
-            autoPlayInterval = null;
-        }
-    }
-
-    // Event Listeners
-    leftBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        prevSlide();
-        startAutoPlay();
-    });
-
-    rightBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        nextSlide();
-        startAutoPlay();
-    });
-
-    // Pausar autoplay cuando el mouse está sobre el slider
-    reviewContainer.addEventListener('mouseenter', stopAutoPlay);
-    reviewContainer.addEventListener('mouseleave', startAutoPlay);
-
-    // Navegación con teclado
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            stopAutoPlay();
-            prevSlide();
-            startAutoPlay();
-        } else if (e.key === 'ArrowRight') {
-            stopAutoPlay();
-            nextSlide();
-            startAutoPlay();
-        }
-    });
-
-    // Añadir CSS necesario dinámicamente
-    const style = document.createElement('style');
-    style.textContent = `
-        #review-container {
-            transition: opacity ${config.fadeTime}ms ease-in-out;
-            opacity: 1;
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Inicializar el slider
-    updateSlider(0);
-    startAutoPlay();
+    // Inicializa el slider con la primera reseña
+    updateSliderContent(currentPos);
 });

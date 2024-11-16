@@ -994,31 +994,18 @@ header #scrollToTopBtn {
 .flecha:hover,.punto:hover {
   color: #f00; 
 }
-/* Estilos predeterminados para escritorio */
-body {
-  font-size: 1em; /* 16px */
-  line-height: 1.5;
-}
-
-header {
-  padding: 1.25em; /* 20px */
-}
-
 /* Para tabletas */
 @media (max-width: 48em) { /* 768px */
   body {
     font-size: 0.875em; /* 14px */
   }
-
   header {
     padding: 0.9375em; /* 15px */
   }
-
   .main-content {
     flex-direction: column;
   }
 }
-
 /* Para móviles */
 @media (max-width: 30em) { /* 480px */
   body {

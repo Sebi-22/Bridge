@@ -98,25 +98,18 @@
             </div>
             <div class="review-section" id="slider">
                 <h2>ALBUM REVIEWS</h2>
-                <!-- Contenedor para la reseña completa -->
-                <div id="review-container" aria-live="polite">
-                    <p class="review-text">« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »</p>
-                    <p class="review-source">- NYLON MAGAZINE</p>
-                </div>
-            
+                <p class="review-text" id="review-text">« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »</p>
+                <p class="review-source" id="review-source">- NYLON MAGAZINE</p>
+                
                 <!-- Contenedor para los botones de navegación -->
                 <div class="nav-icons">
-                    <!-- Botón izquierdo con `data-*` y `aria-controls` mejorados -->
-                    <button id="leftBtn" class="nav-button" data-direction="left" aria-label="Previous review" aria-controls="review-container" aria-live="assertive">&lt;
-                    </button>
+                    <!-- Botón izquierdo con atributos de accesibilidad mejorados -->
+                    <button id="leftBtn" class="nav-button" direction="left" aria-label="Previous review" aria-controls="review-text review-source">&lt;</button>
                     
-                    <!-- Botón derecho con `data-*` y `aria-controls` mejorados -->
-                    <button id="rightBtn" class="nav-button" data-direction="right" aria-label="Next review" aria-controls="review-container" aria-live="assertive">
-                        &gt;
-                    </button>
+                    <!-- Botón derecho con atributos de accesibilidad mejorados -->
+                    <button id="rightBtn" class="nav-button" direction="right" aria-label="Next review" aria-controls="review-text review-source">&gt;</button>
                 </div>
-            </div>
-            
+            </div>  
             </div>
             <div class="musica">
                 <!-- Controles en la parte superior -->
