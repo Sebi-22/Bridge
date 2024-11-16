@@ -7,17 +7,16 @@ img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.
 img,.image img,.blog-post img,.albumes img,.Fotones img,.content img,.image-container img,.images img,.image-foto img  {
 height: auto;
 }
-body,.container,.navbar a,.track-title:hover,.track-icons span:hover,.track-icons i:hover,.Texto2 h1,.buy-tickets,.buy-track,.song-list h1,.song-list,.musica,.available-on,.albumesss,#scrollToTopBtn,.contactos,.tour,.about_us,.right-section input, .right-section textarea ,.link:hover,.view-all a,.follow i:hover.Ticket a,.link,.detalles, .transparencia .social i,.social-icons a,.footer-column a,.show-more,.Fotones figcaption ,#show-MORE,.albumes figcaption,.info-box .buy-button,.side-text,.play-button,.blog-posts,.review-section,.review-section h2,.review-source,.nav-button:hover,.flecha,.punto{
+body,.container,.navbar a,.track-title:hover,.track-icons span:hover,.track-icons i:hover,.texto2 h1,.buy-tickets,.buy-track,.song-list h1,.song-list,.musica,.available-on,.albumesss,#scrollToTopBtn,.contactos,.tour,.about_us,.right-section input, .right-section textarea ,.link:hover,.view-all a,.follow i:hover.Ticket a,.link,.detalles, .transparencia .social i,.social-icons a,.footer-column a,.show-more,.Fotones figcaption ,#show-MORE,.albumes figcaption,.info-box .buy-button,.side-text,.play-button,.blog-posts,.review-section,.review-section h2,.review-source,.nav-button:hover,.flecha,.punto{
 color: #fff;
 }
 body,.modal,.blog-posts,#show-MORE,.footer,.form,.right-section input, .right-section textarea,#scrollToTopBtn{
 background-color: #000000;
 }
-body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.Texto h1,.Texto p,.Texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3,.articulos article, .transparencia h3 
- {
+body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3,.articulos article, .transparencia h3 {
   margin: 0;
 }
-.container,.nav-icons,.navbar,.Apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.Gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.Controles,.song-list li,.iconos-abajo {
+.container,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.Gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.Controles,.song-list li,.iconos-abajo {
   display: flex;
 }
 .container,.modal,.overlay, .articulos,.player,.platform-icons,.navigation .dots,.contactos,.tour,.about_us,.nav-icons ,.iconos-abajo{
@@ -51,7 +50,7 @@ justify-content: space-between;
   width: 90%;
   padding: 1.25em 3.125em;
 }
-.navbar a,.title,.Texto p,.Texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
+.navbar a,.title,.texto p,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
   font-size:1em;
 }
 .navbar a {
@@ -61,7 +60,7 @@ justify-content: space-between;
 .navbar a:hover {
   text-decoration: underline;
 }
-.vertical-name,.title,.our-discography h1,.Titulo-Album,.Texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.Ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
+.vertical-name,.title,.our-discography h1,.Titulo-Album,.texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.Ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
 font-weight: bold;
 }
 .vertical-name {
@@ -80,11 +79,11 @@ font-weight: bold;
 .new-album h2 {
   font-size: 2.5em;
 }
-.Apps {
+.apps {
   justify-content:left;
   margin-top: 1.25em;
 }
-.album,.Texto hr,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.Ticket a:hover    {
+.album,.texto hr,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.Ticket a:hover    {
   background-color: #fff;
 }
 .album {
@@ -162,7 +161,7 @@ font-weight: bold;
 .Titulo-Album,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
 font-size: 1.5em;
 }
-.Titulo-Album,.Texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.Texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.Ticket  {
+.Titulo-Album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.Ticket  {
   text-align: left; 
 }
 .Titulo-Album {
@@ -186,7 +185,6 @@ font-size: 1.5em;
   border-bottom: 0.063em solid #333;
   color: #bbb;
 }
-/* Título de la canción */
 .track-title {
   color: #bbb;
   flex-grow: 1;
@@ -202,39 +200,39 @@ font-size: 1.5em;
   margin-left: 0.625em;
   transition: color 0.3s;
 }
-.Texto {
+.texto {
   margin: 5%;
 }
-.Texto h1 {
+.texto h1 {
   font-size: 3em;
   font-weight: 700;
 }
-.Texto hr {
+.texto hr {
   width: 3.125em;
   height: 0.125em;
   border: none;
   margin: 1.25em auto;
 }
-.Texto p {
+.texto p {
   font-weight: 300;
 }
-.Texto2 {
-  color: #ccc; /* Color de texto gris claro */
-  padding: 5em ; /* Espaciado alrededor del contenido */
-  max-width: 70em; /* Ancho máximo para limitar la extensión del texto */
-  margin: 0 auto; /* Centrar la sección horizontalmente */
+.texto2 {
+  color: #ccc; 
+  padding: 5em ; 
+  max-width: 70em;
+  margin: 0 auto; 
 }
-.Texto2 h1 {
-  font-size: 2.5em; /* Tamaño del título */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  margin-bottom: 0.5em; /* Espaciado debajo del título */
+.texto2 h1 {
+  font-size: 2.5em; 
+  text-transform: uppercase; 
+  margin-bottom: 0.5em; 
 }
-.Texto2 hr {
+.texto2 hr {
   width: 3em; /* Ancho de la línea horizontal */
   border: 1px solid #fff; /* Color y grosor de la línea */
   margin-bottom: 1em; /* Espaciado debajo de la línea */
 }
-.Texto2 p {
+.texto2 p {
   line-height: 1.8em; /* Altura de línea para mejorar la legibilidad */
   color: #ccc; /* Color de texto gris claro */
   margin-top: 1em; /* Espacio por encima del párrafo */
@@ -572,7 +570,6 @@ figcaption p {
       object-fit: cover;
       transition: transform 0.5s ease;
   }
-  /* Capa de transparencia */
   .transparencia {
       position: absolute;
       top: 0;
@@ -787,7 +784,7 @@ figcaption p {
 .navigation .dots i {
   margin: 0 0.3125em; /* 5px */
 }
-.Tour-Dates{
+.tour-dates{
   font-size: 355%;
 }
 .contact {
