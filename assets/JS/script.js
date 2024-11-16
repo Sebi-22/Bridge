@@ -195,51 +195,61 @@ const newAlbums = [
     { src: "assets/images/album-8.jpg", title: "LOW BASS", description: "Shadows" },
 ];
 
-// Selecciona el botón "SHOW MORE"
-const showMoreButton = document.getElementById("show-MORE");
+// Espera a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona el botón "SHOW MORE"
+    const showMoreButton = document.getElementById("show-MORE");
 
-showMoreButton.addEventListener("click", function(event) {
-event.preventDefault(); // Evita el salto de página
-    
-    // Selecciona el contenedor de álbumes principal
-    const albumsContainer = document.querySelector(".albums");
+    // Verifica si el botón existe
+    if (showMoreButton) {
+        showMoreButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita el comportamiento por defecto del enlace
 
-    // Crea nuevos elementos de álbumes y los agrega al contenedor
-    newAlbums.forEach(album => {
-        const article = document.createElement("article");
-        article.classList.add("albumes");
+            // Selecciona el contenedor de álbumes
+            const albumsContainer = document.querySelector(".albums");
 
-        const figure = document.createElement("figure");
+            // Verifica si el contenedor existe
+            if (albumsContainer) {
+                // Crea nuevos elementos de álbumes y los agrega al contenedor
+                newAlbums.forEach(album => {
+                    const article = document.createElement("article");
+                    article.classList.add("albumes");
 
-        const img = document.createElement("img");
-        img.src = album.src;
-        img.alt = `Album cover with text '${album.title}'`;
+                    const figure = document.createElement("figure");
 
-        const figcaption = document.createElement("figcaption");
+                    const img = document.createElement("img");
+                    img.src = album.src;
+                    img.alt = `Album cover with text '${album.title}'`;
 
-        const h3 = document.createElement("h3");
-        h3.textContent = album.title;
+                    const figcaption = document.createElement("figcaption");
 
-        const p = document.createElement("p");
-        p.textContent = album.description;
+                    const h3 = document.createElement("h3");
+                    h3.textContent = album.title;
 
-        // Añadir los elementos al DOM
-        figcaption.appendChild(h3);
-        figcaption.appendChild(p);
-        figure.appendChild(img);
-        figure.appendChild(figcaption);
-        article.appendChild(figure);
-        albumsContainer.appendChild(article);
-    });
+                    const p = document.createElement("p");
+                    p.textContent = album.description;
 
-    // Oculta el botón después de agregar las nuevas imágenes
-    showMoreButton.style.display = "none";
+                    // Añadir los elementos al DOM
+                    figcaption.appendChild(h3);
+                    figcaption.appendChild(p);
+                    figure.appendChild(img);
+                    figure.appendChild(figcaption);
+                    article.appendChild(figure);
+                    albumsContainer.appendChild(article);
+                });
 
-    // Retraso opcional para mostrar el botón nuevamente (si se quiere)
-    setTimeout(() => {
-        showMoreButton.style.display = "block"; // Muestra el botón nuevamente
-    }, 300); // Retraso opcional de 300ms para suavizar el efecto de aparición
+                // Oculta el botón después de agregar las nuevas imágenes
+                showMoreButton.style.display = "none";
+
+                // Retraso opcional para mostrar el botón nuevamente
+                setTimeout(() => {
+                    showMoreButton.style.display = "block"; // Muestra el botón nuevamente
+                }, 300); // Retraso de 300ms para suavizar el efecto de aparición
+            }
+        });
+    }
 });
+
 
 //Boton de ir a arriba 
 // Detecta cuando el usuario hace scroll y muestra el botón si no está en el header
@@ -258,48 +268,139 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-//Funcion slider de Album(section)
-// Función slider de Album (section)
-const sliderContent = [
-    { text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »", source: "- NYLON MAGAZINE" },
-    { text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »", source: "- ROLLING STONE" },
-    { text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »", source: "- BILLBOARD" }
-];
+document.addEventListener('DOMContentLoaded', function() {
+    // Configuración
+    const config = {
+        autoPlay: true,
+        interval: 5000, // 5 segundos entre slides
+        fadeTime: 500  // Medio segundo para la transición
+    };
 
-let currentPos = 0;  // Inicializa la posición del slider en 0
+    // Contenido del slider
+    const sliderContent = [
+        {
+            text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »",
+            source: "- NYLON MAGAZINE"
+        },
+        {
+            text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »",
+            source: "- ROLLING STONE"
+        },
+        {
+            text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »",
+            source: "- BILLBOARD"
+        }
+    ];
 
-const reviewText = document.getElementById("review-text");
-const reviewSource = document.getElementById("review-source");
-const leftBtn = document.getElementById("leftBtn");
-const rightBtn = document.getElementById("rightBtn");
+    // Estado del slider
+    let currentPos = 0;
+    let isAnimating = false;
+    let autoPlayInterval;
 
-function updateSliderContent(currentPos) {
-    // Asegura que el índice esté dentro del rango del array usando el operador módulo (%)
-    currentPos = (currentPos + sliderContent.length) % sliderContent.length;
+    // Elementos del DOM
+    const reviewContainer = document.getElementById("review-container");
+    const reviewText = reviewContainer.querySelector(".review-text");
+    const reviewSource = reviewContainer.querySelector(".review-source");
+    const leftBtn = document.getElementById("leftBtn");
+    const rightBtn = document.getElementById("rightBtn");
 
-    // Actualiza el contenido de la reseña en el slider
-    reviewText.innerText = sliderContent[currentPos].text;
-    reviewSource.innerText = sliderContent[currentPos].source;
+    // Función para actualizar el contenido con fade
+    function updateSlider(newPosition) {
+        if (isAnimating) return;
+        isAnimating = true;
 
-    console.log(`Current position: ${currentPos}`);  // Verifica que el índice se actualice correctamente
-}
+        // Manejar los límites del slider
+        if (newPosition < 0) {
+            newPosition = sliderContent.length - 1;
+        } else if (newPosition >= sliderContent.length) {
+            newPosition = 0;
+        }
 
-// Función que maneja el clic en los botones de navegación
-function handleButtonClick(event) {
-    const direction = event.target.getAttribute("direction");
-    const increment = direction === "left" ? -1 : 1;
+        // Añadir clase para fade out
+        reviewContainer.style.opacity = '0';
 
-    // Actualiza la posición actual
-    currentPos += increment;
-    console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);  // Verifica qué dirección fue clickeada
+        // Actualizar contenido después de fade out
+        setTimeout(() => {
+            currentPos = newPosition;
+            reviewText.textContent = sliderContent[newPosition].text;
+            reviewSource.textContent = sliderContent[newPosition].source;
 
-    // Actualiza el contenido del slider
-    updateSliderContent(currentPos);
-}
+            // Fade in
+            reviewContainer.style.opacity = '1';
+            
+            // Permitir nueva animación después de completar
+            setTimeout(() => {
+                isAnimating = false;
+            }, config.fadeTime);
+        }, config.fadeTime);
+    }
 
-// Asigna los eventos de clic a los botones
-leftBtn.addEventListener("click", handleButtonClick);
-rightBtn.addEventListener("click", handleButtonClick);
+    // Función para el siguiente slide
+    function nextSlide() {
+        updateSlider(currentPos + 1);
+    }
 
-// Inicializa el slider con la primera reseña
-updateSliderContent(currentPos);
+    // Función para el slide anterior
+    function prevSlide() {
+        updateSlider(currentPos - 1);
+    }
+
+    // Iniciar autoplay
+    function startAutoPlay() {
+        if (config.autoPlay) {
+            autoPlayInterval = setInterval(nextSlide, config.interval);
+        }
+    }
+
+    // Detener autoplay
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+
+    // Event Listeners
+    leftBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        prevSlide();
+        startAutoPlay();
+    });
+
+    rightBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        nextSlide();
+        startAutoPlay();
+    });
+
+    // Pausar autoplay cuando el mouse está sobre el slider
+    reviewContainer.addEventListener('mouseenter', stopAutoPlay);
+    reviewContainer.addEventListener('mouseleave', startAutoPlay);
+
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            stopAutoPlay();
+            prevSlide();
+            startAutoPlay();
+        } else if (e.key === 'ArrowRight') {
+            stopAutoPlay();
+            nextSlide();
+            startAutoPlay();
+        }
+    });
+
+    // Añadir CSS necesario dinámicamente
+    const style = document.createElement('style');
+    style.textContent = `
+        #review-container {
+            transition: opacity ${config.fadeTime}ms ease-in-out;
+            opacity: 1;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Inicializar el slider
+    updateSlider(0);
+    startAutoPlay();
+});

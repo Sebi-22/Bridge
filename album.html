@@ -98,18 +98,25 @@
             </div>
             <div class="review-section" id="slider">
                 <h2>ALBUM REVIEWS</h2>
-                <p class="review-text" id="review-text">« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »</p>
-                <p class="review-source" id="review-source">- NYLON MAGAZINE</p>
-                
+                <!-- Contenedor para la reseña completa -->
+                <div id="review-container" aria-live="polite">
+                    <p class="review-text">« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »</p>
+                    <p class="review-source">- NYLON MAGAZINE</p>
+                </div>
+            
                 <!-- Contenedor para los botones de navegación -->
                 <div class="nav-icons">
-                    <!-- Botón izquierdo con atributos de accesibilidad mejorados -->
-                    <button id="leftBtn" class="nav-button" direction="left" aria-label="Previous review" aria-controls="review-text review-source">&lt;</button>
+                    <!-- Botón izquierdo con `data-*` y `aria-controls` mejorados -->
+                    <button id="leftBtn" class="nav-button" data-direction="left" aria-label="Previous review" aria-controls="review-container" aria-live="assertive">&lt;
+                    </button>
                     
-                    <!-- Botón derecho con atributos de accesibilidad mejorados -->
-                    <button id="rightBtn" class="nav-button" direction="right" aria-label="Next review" aria-controls="review-text review-source">&gt;</button>
+                    <!-- Botón derecho con `data-*` y `aria-controls` mejorados -->
+                    <button id="rightBtn" class="nav-button" data-direction="right" aria-label="Next review" aria-controls="review-container" aria-live="assertive">
+                        &gt;
+                    </button>
                 </div>
-            </div>  
+            </div>
+            
             </div>
             <div class="musica">
                 <!-- Controles en la parte superior -->
@@ -173,8 +180,8 @@
                     </li>
                 </ol>
              </div>
-             <div class="available-on" style="text-align: center; color: white;">
-                <h2 style="font-family: Arial, sans-serif; font-size: 24px; letter-spacing: 1px; font-weight: bold;">AVAILABLE ON</h2>
+             <div class="available-on">
+                <h2>AVAILABLE ON</h2>
                 <div class="platform-icons" style="display: inline-flex; gap: 10px;">
                     <a href="https://www.apple.com/itunes/" target="_blank">
                         <img alt="Available on iTunes" height="50" src="assets/images/slider-img-2.png" width="150"/>

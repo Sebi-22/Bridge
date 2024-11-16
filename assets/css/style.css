@@ -180,7 +180,6 @@ font-size: 1.5em;
 }
 .tracklist ol {
   list-style: none;
-  padding: 0;
 }
 .tracklist li {
   padding: 1.225em 0;
@@ -361,7 +360,6 @@ p {
 .blog-posts {
   padding: 1.25em;
   margin: 0.625em;
-  padding: 0;
   overflow: hidden;
 }
 .blog-post img {
@@ -510,9 +508,6 @@ transition: transform 0.2s ease-out;
 .Fotones:hover figcaption {
   opacity: 1;
 }
-figcaption h3 {
-  padding: 0;
-}
 figcaption p {
   font-size: 0.7em;
   margin: 0.25em 0 0;
@@ -565,13 +560,11 @@ figcaption p {
   border-top: 0.063em solid #333;
 }
      .articulos {
-      padding: 0;
       overflow: hidden;
   }
   .articulos article {
       height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
       overflow: hidden;
-      padding: 0;
   }
   .articulos .foto img {
       width: 130%;
@@ -748,7 +741,6 @@ figcaption p {
   list-style: none;
   max-width: 30em;
   margin: 1em auto;
-  padding: 0;
 }
 .tracklist li {
   justify-content: space-between;
@@ -912,7 +904,6 @@ header #scrollToTopBtn {
 }
 .about-album ul {
   list-style-type: none;
-  padding: 0;
   color:#a09d9d;
 }
 .about-album ul li {
@@ -950,7 +941,6 @@ header #scrollToTopBtn {
 }
 .song-list ol {
   list-style-type: none;
-  padding: 0;
 }
 .song-list li {
   padding: 0.625em ;
@@ -1003,4 +993,44 @@ header #scrollToTopBtn {
 }
 .flecha:hover,.punto:hover {
   color: #f00; 
+}
+/* Estilos predeterminados para escritorio */
+body {
+  font-size: 1em; /* 16px */
+  line-height: 1.5;
+}
+
+header {
+  padding: 1.25em; /* 20px */
+}
+
+/* Para tabletas */
+@media (max-width: 48em) { /* 768px */
+  body {
+    font-size: 0.875em; /* 14px */
+  }
+
+  header {
+    padding: 0.9375em; /* 15px */
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+/* Para móviles */
+@media (max-width: 30em) { /* 480px */
+  body {
+    font-size: 0.75em; /* 12px */
+  }
+
+  header {
+    padding: 0.625em; /* 10px */
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 0.625em; /* 10px */
+  }
 }
