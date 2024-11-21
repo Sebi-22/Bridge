@@ -785,7 +785,7 @@ figcaption p {
   margin: 0 0.3125em; /* 5px */
 }
 .tour-dates{
-  font-size: 355%;
+  font-size: 5em;
 }
 .contact {
   justify-content: space-around;
