@@ -70,3 +70,6 @@ function toggleLyrics(id) {
         header.classList.remove("active");
     }
 }
+
+
+
