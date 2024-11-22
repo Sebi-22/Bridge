@@ -257,49 +257,45 @@ window.addEventListener('scroll', function() {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-//Funcion slider de Album(section)
-// Función slider de Album (section)
-const sliderContent = [
-    { text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »", source: "- NYLON MAGAZINE" },
-    { text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »", source: "- ROLLING STONE" },
-    { text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »", source: "- BILLBOARD" }
+const reviews = [
+    {
+        text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »",
+        source: "- NYLON MAGAZINE"
+    },
+    {
+        text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. »",
+        source: "- THE GUARDIAN"
+    },
+    {
+        text: "« Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. »",
+        source: "- ROLLING STONE"
+    },
+    {
+        text: "« Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. »",
+        source: "- PITCHFORK"
+    }
 ];
 
-let currentPos = 0;  // Inicializa la posición del slider en 0
+let currentIndex = 0;
 
-const reviewText = document.getElementById("review-text");
-const reviewSource = document.getElementById("review-source");
-const leftBtn = document.getElementById("leftBtn");
-const rightBtn = document.getElementById("rightBtn");
+const reviewText = document.getElementById('review-text');
+const reviewSource = document.getElementById('review-source');
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
 
-function updateSliderContent(currentPos) {
-    // Asegura que el índice esté dentro del rango del array usando el operador módulo (%)
-    currentPos = (currentPos + sliderContent.length) % sliderContent.length;
-
-    // Actualiza el contenido de la reseña en el slider
-    reviewText.innerText = sliderContent[currentPos].text;
-    reviewSource.innerText = sliderContent[currentPos].source;
-
-    console.log(`Current position: ${currentPos}`);  // Verifica que el índice se actualice correctamente
+function updateReview() {
+    reviewText.textContent = reviews[currentIndex].text;
+    reviewSource.textContent = reviews[currentIndex].source;
 }
 
-// Función que maneja el clic en los botones de navegación
-function handleButtonClick(event) {
-    const direction = event.target.getAttribute("direction");
-    const increment = direction === "left" ? -1 : 1;
+leftBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? reviews.length - 1 : currentIndex - 1;
+    updateReview();
+});
 
-    // Actualiza la posición actual
-    currentPos += increment;
-    console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);  // Verifica qué dirección fue clickeada
+rightBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === reviews.length - 1) ? 0 : currentIndex + 1;
+    updateReview();
+});
 
-    // Actualiza el contenido del slider
-    updateSliderContent(currentPos);
-}
-
-// Asigna los eventos de clic a los botones
-leftBtn.addEventListener("click", handleButtonClick);
-rightBtn.addEventListener("click", handleButtonClick);
-
-// Inicializa el slider con la primera reseña
-updateSliderContent(currentPos);
+updateReview();
