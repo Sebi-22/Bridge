@@ -16,7 +16,7 @@ background-color: #000000;
 body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3,.articulos article, .transparencia h3 {
   margin: 0;
 }
-.container,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.Gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.Controles,.song-list li,.iconos-abajo {
+.container,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.Gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.controles,.song-list li,.iconos-abajo {
   display: flex;
 }
 .container,.modal,.overlay, .articulos,.player,.platform-icons,.navigation .dots,.contactos,.tour,.about_us,.nav-icons ,.iconos-abajo{
@@ -116,7 +116,7 @@ font-weight: bold;
   flex: 1;
   margin:0.625em;
 }
-.progress-bar,.track-icons i,.nav-button,.Controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
+.progress-bar,.track-icons i,.nav-button,.controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
   cursor: pointer;
 }
 .progress-bar {
@@ -785,7 +785,7 @@ figcaption p {
   margin: 0 0.3125em; /* 5px */
 }
 .tour-dates{
-  font-size: 5em;
+  font-size: 355%;
 }
 .contact {
   justify-content: space-around;
@@ -915,15 +915,15 @@ header #scrollToTopBtn {
   margin-left: 10%;
   margin-top: -37%;
 }
-.Controles {
+.controles {
   justify-content: space-around;
   margin-bottom: 1.25em; /* 20px equivalente */
 }
-.Controles div {
+.controles div {
   font-size: 1.25em; /* 20px equivalente */
   transition: color 0.3s;
 }
-.Controles div:hover {
+.controles div:hover {
   color: #888;
 }
 .song-list {  padding: 1.25em;

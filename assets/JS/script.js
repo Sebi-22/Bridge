@@ -1,95 +1,88 @@
-//Fecha Adicional de View All
-document.getElementById("view-all-btn").addEventListener("click", function(event) {
-    event.preventDefault(); // Evita el salto de página
-    
-    // Fechas adicionales a añadir
-    const fechasAdicionales = [
-        {
-            date: "22",
-            month: "Jun",
-            day: "Fri",
-            details: "London, England – O2 Arena",
-            link: "#"
-        },
-        {
-            date: "27",
-            month: "Jun",
-            day: "Wed",
-            details: "Rome, Italy – Cola Arena",
-            link: "#"
-        },
-        {
-            date: "29",
-            month: "Jun",
-            day: "Fri",
-            details: "Athens, Greece – PAOK Stadium",
-            link: "#"
-        },
-        {
-            date: "3",
-            month: "Jul",
-            day: "Tue",
-            details: "Budapest, Hungary – Nagy Arena",
-            link: "#"
-        }
-    ];
-    
-    const section = document.getElementById("datos");
+document.addEventListener("DOMContentLoaded", function () {
+    const viewAllBtn = document.getElementById("view-all-btn");
+    if (viewAllBtn) {  // Verifica que el botón esté disponible
+        viewAllBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            // Fechas adicionales
+            const fechasAdicionales = [
+                {
+                    date: "22",
+                    month: "Jun",
+                    day: "Fri",
+                    details: "London, England – O2 Arena",
+                    link: "#"
+                },
+                {
+                    date: "27",
+                    month: "Jun",
+                    day: "Wed",
+                    details: "Rome, Italy – Cola Arena",
+                    link: "#"
+                },
+                {
+                    date: "29",
+                    month: "Jun",
+                    day: "Fri",
+                    details: "Athens, Greece – PAOK Stadium",
+                    link: "#"
+                },
+                {
+                    date: "3",
+                    month: "Jul",
+                    day: "Tue",
+                    details: "Budapest, Hungary – Nagy Arena",
+                    link: "#"
+                }
+            ];
 
-    // Genera y añade las nuevas fechas
-    fechasAdicionales.forEach(fecha => {
-        const dateItem = document.createElement("div");
-        dateItem.classList.add("date-item");
-        
-        dateItem.innerHTML = `
-            <div class="date">${fecha.date}
-                <div class="day">${fecha.month}</div>
-                <div class="day">${fecha.day}</div>
-            </div>
-            <div class="details">${fecha.details}</div>
-            <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
-        `;
-        
-        section.insertBefore(dateItem, document.querySelector(".view-all"));
-    });
+            const section = document.getElementById("datos");
 
-    // Oculta el botón después de agregar las fechas
-    event.target.style.display = "none";
+            // Genera y añade las nuevas fechas
+            fechasAdicionales.forEach(fecha => {
+                const dateItem = document.createElement("div");
+                dateItem.classList.add("date-item");
+
+                dateItem.innerHTML = `
+                    <div class="date">${fecha.date}
+                        <div class="day">${fecha.month}</div>
+                        <div class="day">${fecha.day}</div>
+                    </div>
+                    <div class="details">${fecha.details}</div>
+                    <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
+                `;
+
+                section.insertBefore(dateItem, document.querySelector(".view-all"));
+            });
+
+            // Oculta el botón después de agregar las fechas
+            event.target.style.display = "none";
+        });
+    } else {
+        console.error("No se encuentra el botón con id 'view-all-btn'");
+    }
 });
 //Boton del video que no anda
 document.querySelector('.play-button').addEventListener('click', function() {
+    console.log('Play button clicked');
     const videoIframe = document.getElementById('videoIframe');
+    console.log(videoIframe); // Verifica si el iframe se seleccionó correctamente
     videoIframe.src = "https://player.vimeo.com/video/124943519?title=0&byline=0&portrait=0&autoplay=1";
     
     const videoModal = document.getElementById('videoModal');
+    console.log(videoModal); // Verifica si el modal se seleccionó correctamente
     videoModal.style.display = 'flex';
 });
 
 document.getElementById('cerrarModal').addEventListener('click', function() {
+    console.log('Close button clicked');
     const videoModal = document.getElementById('videoModal');
     const videoIframe = document.getElementById('videoIframe');
     
     videoModal.style.display = 'none';
     videoIframe.src = ""; // Limpiar el src para detener el video
 });
-// Audio
-function toggleLyrics(id) {
-    var content = document.getElementById(id);
-    content.style.display = content.style.display === "block" ? "none" : "block";
-}
-function toggleLyrics(id) {
-    const content = document.getElementById(id);
-    const header = content.previousElementSibling;
 
-    // Toggle display of lyrics content
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        header.classList.add("active");
-    } else {
-        content.style.display = "none";
-        header.classList.remove("active");
-    }
-}
 //Formulario de contacto
 function sendMessage() {
     // Capturar los valores de los campos
@@ -250,7 +243,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 //Boton de ir a arriba 
 // Detecta cuando el usuario hace scroll y muestra el botón si no está en el header
 window.addEventListener('scroll', function() {
@@ -262,63 +254,7 @@ window.addEventListener('scroll', function() {
         document.body.classList.remove('scrolled');
     }
 });
-
 // Función para hacer scroll hasta el inicio de la página
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Datos de reseñas
-    const sliderContent = [
-        { text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »", source: "- NYLON MAGAZINE" },
-        { text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec urna vel lorem tincidunt aliquet. Vivamus auctor dolor eget. »", source: "- ROLLING STONE" },
-        { text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »", source: "- BILLBOARD" }
-    ];
-
-    let currentPos = 0;  // Posición inicial del slider
-
-    // Referencia a los elementos del DOM
-    const reviewText = document.getElementById("review-text");
-    const reviewSource = document.getElementById("review-source");
-    const leftBtn = document.getElementById("leftBtn");
-    const rightBtn = document.getElementById("rightBtn");
-
-    // Asegura que todos los elementos estén presentes
-    if (!reviewText || !reviewSource || !leftBtn || !rightBtn) {
-        console.error("Algunos de los elementos no se encontraron en el DOM");
-        return;
-    }
-
-    // Actualiza el contenido del slider
-    function updateSliderContent(currentPos) {
-        // Asegura que el índice esté dentro del rango de la lista
-        currentPos = (currentPos + sliderContent.length) % sliderContent.length;
-
-        // Actualiza el texto y la fuente
-        reviewText.innerText = sliderContent[currentPos].text;
-        reviewSource.innerText = sliderContent[currentPos].source;
-
-        console.log(`Current position: ${currentPos}`);
-    }
-
-    // Función que maneja los clics de los botones
-    function handleButtonClick(event) {
-        const direction = event.target.getAttribute("direction");
-        const increment = direction === "left" ? -1 : 1;
-
-        // Actualiza la posición del slider
-        currentPos += increment;
-        console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);
-
-        // Actualiza el contenido del slider
-        updateSliderContent(currentPos);
-    }
-
-    // Asigna los eventos a los botones
-    leftBtn.addEventListener("click", handleButtonClick);
-    rightBtn.addEventListener("click", handleButtonClick);
-
-    // Inicializa el slider con la primera reseña
-    updateSliderContent(currentPos);
-});
