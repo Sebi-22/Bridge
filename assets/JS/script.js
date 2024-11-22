@@ -1,95 +1,88 @@
-//Fecha Adicional de View All
-document.getElementById("view-all-btn").addEventListener("click", function(event) {
-    event.preventDefault(); // Evita el salto de página
-    
-    // Fechas adicionales a añadir
-    const fechasAdicionales = [
-        {
-            date: "22",
-            month: "Jun",
-            day: "Fri",
-            details: "London, England – O2 Arena",
-            link: "#"
-        },
-        {
-            date: "27",
-            month: "Jun",
-            day: "Wed",
-            details: "Rome, Italy – Cola Arena",
-            link: "#"
-        },
-        {
-            date: "29",
-            month: "Jun",
-            day: "Fri",
-            details: "Athens, Greece – PAOK Stadium",
-            link: "#"
-        },
-        {
-            date: "3",
-            month: "Jul",
-            day: "Tue",
-            details: "Budapest, Hungary – Nagy Arena",
-            link: "#"
-        }
-    ];
-    
-    const section = document.getElementById("datos");
+document.addEventListener("DOMContentLoaded", function () {
+    const viewAllBtn = document.getElementById("view-all-btn");
+    if (viewAllBtn) {  // Verifica que el botón esté disponible
+        viewAllBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            // Fechas adicionales
+            const fechasAdicionales = [
+                {
+                    date: "22",
+                    month: "Jun",
+                    day: "Fri",
+                    details: "London, England – O2 Arena",
+                    link: "#"
+                },
+                {
+                    date: "27",
+                    month: "Jun",
+                    day: "Wed",
+                    details: "Rome, Italy – Cola Arena",
+                    link: "#"
+                },
+                {
+                    date: "29",
+                    month: "Jun",
+                    day: "Fri",
+                    details: "Athens, Greece – PAOK Stadium",
+                    link: "#"
+                },
+                {
+                    date: "3",
+                    month: "Jul",
+                    day: "Tue",
+                    details: "Budapest, Hungary – Nagy Arena",
+                    link: "#"
+                }
+            ];
 
-    // Genera y añade las nuevas fechas
-    fechasAdicionales.forEach(fecha => {
-        const dateItem = document.createElement("div");
-        dateItem.classList.add("date-item");
-        
-        dateItem.innerHTML = `
-            <div class="date">${fecha.date}
-                <div class="day">${fecha.month}</div>
-                <div class="day">${fecha.day}</div>
-            </div>
-            <div class="details">${fecha.details}</div>
-            <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
-        `;
-        
-        section.insertBefore(dateItem, document.querySelector(".view-all"));
-    });
+            const section = document.getElementById("datos");
 
-    // Oculta el botón después de agregar las fechas
-    event.target.style.display = "none";
+            // Genera y añade las nuevas fechas
+            fechasAdicionales.forEach(fecha => {
+                const dateItem = document.createElement("div");
+                dateItem.classList.add("date-item");
+
+                dateItem.innerHTML = `
+                    <div class="date">${fecha.date}
+                        <div class="day">${fecha.month}</div>
+                        <div class="day">${fecha.day}</div>
+                    </div>
+                    <div class="details">${fecha.details}</div>
+                    <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
+                `;
+
+                section.insertBefore(dateItem, document.querySelector(".view-all"));
+            });
+
+            // Oculta el botón después de agregar las fechas
+            event.target.style.display = "none";
+        });
+    } else {
+        console.error("No se encuentra el botón con id 'view-all-btn'");
+    }
 });
 //Boton del video que no anda
 document.querySelector('.play-button').addEventListener('click', function() {
+    console.log('Play button clicked');
     const videoIframe = document.getElementById('videoIframe');
+    console.log(videoIframe); // Verifica si el iframe se seleccionó correctamente
     videoIframe.src = "https://player.vimeo.com/video/124943519?title=0&byline=0&portrait=0&autoplay=1";
     
     const videoModal = document.getElementById('videoModal');
+    console.log(videoModal); // Verifica si el modal se seleccionó correctamente
     videoModal.style.display = 'flex';
 });
 
 document.getElementById('cerrarModal').addEventListener('click', function() {
+    console.log('Close button clicked');
     const videoModal = document.getElementById('videoModal');
     const videoIframe = document.getElementById('videoIframe');
     
     videoModal.style.display = 'none';
     videoIframe.src = ""; // Limpiar el src para detener el video
 });
-// Audio
-function toggleLyrics(id) {
-    var content = document.getElementById(id);
-    content.style.display = content.style.display === "block" ? "none" : "block";
-}
-function toggleLyrics(id) {
-    const content = document.getElementById(id);
-    const header = content.previousElementSibling;
 
-    // Toggle display of lyrics content
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        header.classList.add("active");
-    } else {
-        content.style.display = "none";
-        header.classList.remove("active");
-    }
-}
 //Formulario de contacto
 function sendMessage() {
     // Capturar los valores de los campos
@@ -195,50 +188,59 @@ const newAlbums = [
     { src: "assets/images/album-8.jpg", title: "LOW BASS", description: "Shadows" },
 ];
 
-// Selecciona el botón "SHOW MORE"
-const showMoreButton = document.getElementById("show-MORE");
+// Espera a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona el botón "SHOW MORE"
+    const showMoreButton = document.getElementById("show-MORE");
 
-showMoreButton.addEventListener("click", function(event) {
-event.preventDefault(); // Evita el salto de página
-    
-    // Selecciona el contenedor de álbumes principal
-    const albumsContainer = document.querySelector(".albums");
+    // Verifica si el botón existe
+    if (showMoreButton) {
+        showMoreButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita el comportamiento por defecto del enlace
 
-    // Crea nuevos elementos de álbumes y los agrega al contenedor
-    newAlbums.forEach(album => {
-        const article = document.createElement("article");
-        article.classList.add("albumes");
+            // Selecciona el contenedor de álbumes
+            const albumsContainer = document.querySelector(".albums");
 
-        const figure = document.createElement("figure");
+            // Verifica si el contenedor existe
+            if (albumsContainer) {
+                // Crea nuevos elementos de álbumes y los agrega al contenedor
+                newAlbums.forEach(album => {
+                    const article = document.createElement("article");
+                    article.classList.add("albumes");
 
-        const img = document.createElement("img");
-        img.src = album.src;
-        img.alt = `Album cover with text '${album.title}'`;
+                    const figure = document.createElement("figure");
 
-        const figcaption = document.createElement("figcaption");
+                    const img = document.createElement("img");
+                    img.src = album.src;
+                    img.alt = `Album cover with text '${album.title}'`;
 
-        const h3 = document.createElement("h3");
-        h3.textContent = album.title;
+                    const figcaption = document.createElement("figcaption");
 
-        const p = document.createElement("p");
-        p.textContent = album.description;
+                    const h3 = document.createElement("h3");
+                    h3.textContent = album.title;
 
-        // Añadir los elementos al DOM
-        figcaption.appendChild(h3);
-        figcaption.appendChild(p);
-        figure.appendChild(img);
-        figure.appendChild(figcaption);
-        article.appendChild(figure);
-        albumsContainer.appendChild(article);
-    });
+                    const p = document.createElement("p");
+                    p.textContent = album.description;
 
-    // Oculta el botón después de agregar las nuevas imágenes
-    showMoreButton.style.display = "none";
+                    // Añadir los elementos al DOM
+                    figcaption.appendChild(h3);
+                    figcaption.appendChild(p);
+                    figure.appendChild(img);
+                    figure.appendChild(figcaption);
+                    article.appendChild(figure);
+                    albumsContainer.appendChild(article);
+                });
 
-    // Retraso opcional para mostrar el botón nuevamente (si se quiere)
-    setTimeout(() => {
-        showMoreButton.style.display = "block"; // Muestra el botón nuevamente
-    }, 300); // Retraso opcional de 300ms para suavizar el efecto de aparición
+                // Oculta el botón después de agregar las nuevas imágenes
+                showMoreButton.style.display = "none";
+
+                // Retraso opcional para mostrar el botón nuevamente
+                setTimeout(() => {
+                    showMoreButton.style.display = "block"; // Muestra el botón nuevamente
+                }, 300); // Retraso de 300ms para suavizar el efecto de aparición
+            }
+        });
+    }
 });
 
 //Boton de ir a arriba 
@@ -252,50 +254,7 @@ window.addEventListener('scroll', function() {
         document.body.classList.remove('scrolled');
     }
 });
-
 // Función para hacer scroll hasta el inicio de la página
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-const reviews = [
-    {
-        text: "« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »",
-        source: "- NYLON MAGAZINE"
-    },
-    {
-        text: "« Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. »",
-        source: "- THE GUARDIAN"
-    },
-    {
-        text: "« Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. »",
-        source: "- ROLLING STONE"
-    },
-    {
-        text: "« Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. »",
-        source: "- PITCHFORK"
-    }
-];
-
-let currentIndex = 0;
-
-const reviewText = document.getElementById('review-text');
-const reviewSource = document.getElementById('review-source');
-const leftBtn = document.getElementById('leftBtn');
-const rightBtn = document.getElementById('rightBtn');
-
-function updateReview() {
-    reviewText.textContent = reviews[currentIndex].text;
-    reviewSource.textContent = reviews[currentIndex].source;
-}
-
-leftBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex === 0) ? reviews.length - 1 : currentIndex - 1;
-    updateReview();
-});
-
-rightBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex === reviews.length - 1) ? 0 : currentIndex + 1;
-    updateReview();
-});
-
-updateReview();

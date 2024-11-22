@@ -7,17 +7,16 @@ img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.
 img,.image img,.blog-post img,.albumes img,.Fotones img,.content img,.image-container img,.images img,.image-foto img  {
 height: auto;
 }
-body,.container,.navbar a,.track-title:hover,.track-icons span:hover,.track-icons i:hover,.Texto2 h1,.buy-tickets,.buy-track,.song-list h1,.song-list,.musica,.available-on,.albumesss,#scrollToTopBtn,.contactos,.tour,.about_us,.right-section input, .right-section textarea ,.link:hover,.view-all a,.follow i:hover.Ticket a,.link,.detalles, .transparencia .social i,.social-icons a,.footer-column a,.show-more,.Fotones figcaption ,#show-MORE,.albumes figcaption,.info-box .buy-button,.side-text,.play-button,.blog-posts,.review-section,.review-section h2,.review-source,.nav-button:hover,.flecha,.punto{
+body,.container,.navbar a,.track-title:hover,.track-icons span:hover,.track-icons i:hover,.texto2 h1,.buy-tickets,.buy-track,.song-list h1,.song-list,.musica,.available-on,.albumesss,#scrollToTopBtn,.contactos,.tour,.about_us,.right-section input, .right-section textarea ,.link:hover,.view-all a,.follow i:hover.ticket a,.link,.detalles, .transparencia .social i,.social-icons a,.footer-column a,.show-more,.Fotones figcaption ,#show-MORE,.albumes figcaption,.info-box .buy-button,.side-text,.play-button,.blog-posts,.review-section,.review-section h2,.review-source,.nav-button:hover,.flecha,.punto{
 color: #fff;
 }
 body,.modal,.blog-posts,#show-MORE,.footer,.form,.right-section input, .right-section textarea,#scrollToTopBtn{
 background-color: #000000;
 }
-body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.Texto h1,.Texto p,.Texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3,.articulos article, .transparencia h3 
- {
+body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3,.articulos article, .transparencia h3 {
   margin: 0;
 }
-.container,.nav-icons,.navbar,.Apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.Gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.Controles,.song-list li,.iconos-abajo {
+.container,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.Gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.controles,.song-list li,.iconos-abajo {
   display: flex;
 }
 .container,.modal,.overlay, .articulos,.player,.platform-icons,.navigation .dots,.contactos,.tour,.about_us,.nav-icons ,.iconos-abajo{
@@ -37,7 +36,7 @@ align-items: center;
   background-size: cover;
   background-position: center;
 }
-.container,.overlay,.view-all,.blog-posts,.our-discography,.social-icons a,.footer-bottom,.Ticket a,.available-on,.latest-video,.contact-section,.contactos,.tour,.about_us,.review-section {
+.container,.overlay,.view-all,.blog-posts,.our-discography,.social-icons a,.footer-bottom,.ticket a,.available-on,.latest-video,.contact-section,.contactos,.tour,.about_us,.review-section {
   text-align: center;
 }
 .navbar,.vertical-name,.new-album,.close,.overlay,.play-button,.side-text,.info-box,.albumes figcaption,.Fotones figcaption,.album-title,.video-container iframe,h3::after{
@@ -49,19 +48,19 @@ justify-content: space-between;
 .navbar {
   top: 0;
   width: 90%;
-  padding: 1.25em 3.125em;
+  padding:2em ;
 }
-.navbar a,.title,.Texto p,.Texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
+.navbar a,.title,.texto p,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
   font-size:1em;
 }
 .navbar a {
   text-decoration: none;
-  margin: 0 0.938em;
+  margin: 1em;
 }
 .navbar a:hover {
   text-decoration: underline;
 }
-.vertical-name,.title,.our-discography h1,.Titulo-Album,.Texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.Ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
+.vertical-name,.title,.our-discography h1,.Titulo-Album,.texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
 font-weight: bold;
 }
 .vertical-name {
@@ -80,11 +79,11 @@ font-weight: bold;
 .new-album h2 {
   font-size: 2.5em;
 }
-.Apps {
+.apps {
   justify-content:left;
   margin-top: 1.25em;
 }
-.album,.Texto hr,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.Ticket a:hover    {
+.album,.texto hr,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
   background-color: #fff;
 }
 .album {
@@ -99,7 +98,7 @@ font-weight: bold;
   height: 3.125em;
   margin-right: 0.625em;
 }
-.title,.controls,.volume-control,.close:hover,.view-all a:hover,#show-MORE:hover ,.Ticket a:hover,.right-section button{
+.title,.controls,.volume-control,.close:hover,.view-all a:hover,#show-MORE:hover ,.ticket a:hover,.right-section button{
   color: #000;
 }
 .title {
@@ -117,7 +116,7 @@ font-weight: bold;
   flex: 1;
   margin:0.625em;
 }
-.progress-bar,.track-icons i,.nav-button,.Controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
+.progress-bar,.track-icons i,.nav-button,.controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
   cursor: pointer;
 }
 .progress-bar {
@@ -162,7 +161,7 @@ font-weight: bold;
 .Titulo-Album,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
 font-size: 1.5em;
 }
-.Titulo-Album,.Texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.Texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.Ticket  {
+.Titulo-Album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.ticket  {
   text-align: left; 
 }
 .Titulo-Album {
@@ -180,14 +179,12 @@ font-size: 1.5em;
 }
 .tracklist ol {
   list-style: none;
-  padding: 0;
 }
 .tracklist li {
-  padding: 1.225em 0;
+  padding: 1.3em ;
   border-bottom: 0.063em solid #333;
   color: #bbb;
 }
-/* Título de la canción */
 .track-title {
   color: #bbb;
   flex-grow: 1;
@@ -203,39 +200,39 @@ font-size: 1.5em;
   margin-left: 0.625em;
   transition: color 0.3s;
 }
-.Texto {
+.texto {
   margin: 5%;
 }
-.Texto h1 {
+.texto h1 {
   font-size: 3em;
   font-weight: 700;
 }
-.Texto hr {
+.texto hr {
   width: 3.125em;
   height: 0.125em;
   border: none;
   margin: 1.25em auto;
 }
-.Texto p {
+.texto p {
   font-weight: 300;
 }
-.Texto2 {
-  color: #ccc; /* Color de texto gris claro */
-  padding: 5em ; /* Espaciado alrededor del contenido */
-  max-width: 70em; /* Ancho máximo para limitar la extensión del texto */
-  margin: 0 auto; /* Centrar la sección horizontalmente */
+.texto2 {
+  color: #ccc; 
+  padding: 5em ; 
+  max-width: 70em;
+  margin: 0; 
 }
-.Texto2 h1 {
-  font-size: 2.5em; /* Tamaño del título */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  margin-bottom: 0.5em; /* Espaciado debajo del título */
+.texto2 h1 {
+  font-size: 2.5em; 
+  text-transform: uppercase; 
+  margin-bottom: 0.5em; 
 }
-.Texto2 hr {
+.texto2 hr {
   width: 3em; /* Ancho de la línea horizontal */
   border: 1px solid #fff; /* Color y grosor de la línea */
   margin-bottom: 1em; /* Espaciado debajo de la línea */
 }
-.Texto2 p {
+.texto2 p {
   line-height: 1.8em; /* Altura de línea para mejorar la legibilidad */
   color: #ccc; /* Color de texto gris claro */
   margin-top: 1em; /* Espacio por encima del párrafo */
@@ -339,21 +336,16 @@ left: 0.625em;
 .view-all a {
   text-decoration: none;
   border:0.063em solid #fff;
-  padding: 0.625em 1.25em;
+  padding: 1.3em;
   display: inline-block;
 }
 .blog{
 width: 80%;
-margin: 0 auto;
+margin-left: 5%;
 padding:  1.25em 0;
 }
 h1 {
   font-size: 3em;
-}
-.underline {
-  width: 3.125em;
-  height: 0.125em;
-  margin: 0 auto 20px auto;
 }
 p {
   line-height: 1.5em;
@@ -361,7 +353,6 @@ p {
 .blog-posts {
   padding: 1.25em;
   margin: 0.625em;
-  padding: 0;
   overflow: hidden;
 }
 .blog-post img {
@@ -373,7 +364,6 @@ transition: transform 0.2s ease-out;
 }    
 .blog-post-title {
   font-size: 1.125em;
-  margin:0.625em 0 0.313em;
 }
 .blog-post-date {
   font-size: 0.875em;
@@ -426,7 +416,7 @@ transition: transform 0.2s ease-out;
   margin-right: 0.313em;
 }
 .our-discography {
-  margin: 0 auto;
+  margin: 0 ;
   padding: 3.125em 0;
 }
 .our-discography h1 {
@@ -510,9 +500,6 @@ transition: transform 0.2s ease-out;
 .Fotones:hover figcaption {
   opacity: 1;
 }
-figcaption h3 {
-  padding: 0;
-}
 figcaption p {
   font-size: 0.7em;
   margin: 0.25em 0 0;
@@ -565,13 +552,11 @@ figcaption p {
   border-top: 0.063em solid #333;
 }
      .articulos {
-      padding: 0;
       overflow: hidden;
   }
   .articulos article {
       height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
       overflow: hidden;
-      padding: 0;
   }
   .articulos .foto img {
       width: 130%;
@@ -579,7 +564,6 @@ figcaption p {
       object-fit: cover;
       transition: transform 0.5s ease;
   }
-  /* Capa de transparencia */
   .transparencia {
       position: absolute;
       top: 0;
@@ -644,12 +628,6 @@ figcaption p {
 .details, .about {
     width: 45%;
 }
-.link {
-  text-decoration: none; /* Quita el subrayado predeterminado */
-}
-.link:hover {
-  text-decoration: underline; /* Añade subrayado al pasar el cursor */
-}
 .details h2, .about h2, .follow h2 {
     margin-bottom: 0.625em; /* 10px */
 }
@@ -659,13 +637,13 @@ figcaption p {
 .about{
   margin-right: 10%;
 }
-.Ticket {
+.ticket {
   padding: 1.25em 0;
 }
-.Ticket a {
+.ticket a {
   display: inline-block;
   padding: 1em 3em; /* Tamaño del botón */
-  border: 1px solid #ffffff;
+  border: 0.063em   solid #ffffff;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 0.875em; /* Tamaño del texto del botón */
@@ -679,7 +657,7 @@ figcaption p {
 }
 .image-container {
   width: 20em;
-  margin: 1em auto;
+  margin: 1em ;
 }
 .image-container img {
   border-radius: 0.5em;
@@ -693,7 +671,7 @@ figcaption p {
 }
 .player {
   gap: 1em;
-  margin: 1em 0;
+  margin: 1em ;
 }
 .about1 {
   max-width: 30em;
@@ -748,7 +726,6 @@ figcaption p {
   list-style: none;
   max-width: 30em;
   margin: 1em auto;
-  padding: 0;
 }
 .tracklist li {
   justify-content: space-between;
@@ -793,9 +770,9 @@ figcaption p {
   margin-top: 1.25em; /* 20px */
 }
 .navigation .dots i {
-  margin: 0 0.3125em; /* 5px */
+  margin: 0.3125em; /* 5px */
 }
-.Tour-Dates{
+.tour-dates{
   font-size: 355%;
 }
 .contact {
@@ -805,7 +782,7 @@ figcaption p {
   margin-bottom: 0.625em;
 }
 .contact-section p {
-  margin: 0.313em 0;
+  margin: 0.313em ;
 }
 .form {
   padding: 3.125em;
@@ -912,7 +889,6 @@ header #scrollToTopBtn {
 }
 .about-album ul {
   list-style-type: none;
-  padding: 0;
   color:#a09d9d;
 }
 .about-album ul li {
@@ -927,15 +903,15 @@ header #scrollToTopBtn {
   margin-left: 10%;
   margin-top: -37%;
 }
-.Controles {
+.controles {
   justify-content: space-around;
   margin-bottom: 1.25em; /* 20px equivalente */
 }
-.Controles div {
+.controles div {
   font-size: 1.25em; /* 20px equivalente */
   transition: color 0.3s;
 }
-.Controles div:hover {
+.controles div:hover {
   color: #888;
 }
 .song-list {  padding: 1.25em;
@@ -950,7 +926,6 @@ header #scrollToTopBtn {
 }
 .song-list ol {
   list-style-type: none;
-  padding: 0;
 }
 .song-list li {
   padding: 0.625em ;
@@ -1003,4 +978,61 @@ header #scrollToTopBtn {
 }
 .flecha:hover,.punto:hover {
   color: #f00; 
+}
+/* Media Queries */
+@media (max-width: 480px) {
+  /* Estilos para móviles */
+  .navbar {
+      flex-direction: column;
+      padding: 1em;
+  }
+  .container {
+      height: auto; /* Permitir que el contenedor se ajuste al contenido */
+  }
+  .albumes, .Fotones {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 4 */
+  }
+  .texto2 h1 {
+      font-size: 2em; /* Reducir tamaño de fuente */
+  }
+  .contact-section {
+      flex-direction: column; /* Cambiar a columna */
+      align-items: center; /* Centrar elementos */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Estilos para tabletas */
+  .navbar {
+      padding: 1.5em;
+  }
+  .albumes, .Fotones {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  }
+  .texto2 h1 {
+      font-size: 2.5em; /* Ajustar tamaño de fuente */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para escritorio pequeño */
+  .navbar {
+      padding: 2em;
+  }
+  .albumes, .Fotones {
+      grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Estilos para escritorio grande */
+  .navbar {
+      padding: 2em;
+  }
+  .albumes, .Fotones {
+      grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas */
+  }
+  .texto2 h1 {
+      font-size: 3em; /* Tamaño de fuente más grande */
+  }
 }
