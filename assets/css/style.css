@@ -60,6 +60,7 @@ justify-content: space-between;
 .navbar a:hover {
   text-decoration: underline;
 }
+
 .vertical-name,.title,.our-discography h1,.Titulo-Album,.texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
 font-weight: bold;
 }
