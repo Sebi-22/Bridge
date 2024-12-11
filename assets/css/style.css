@@ -66,7 +66,6 @@ justify-content: space-between;
   display: flex;
   gap: 1.25em; /* 20px */
 }
-
 .nav-links a {
   color: #fff;
   font-size: 0.875em; /* 14px */
@@ -90,7 +89,6 @@ justify-content: space-between;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
-
 .nav-links a:hover::after,
 .nav-links a.active::after {
   transform: scaleX(1);
@@ -119,7 +117,7 @@ font-weight: bold;
   justify-content:left;
   margin-top: 1.25em;
 }
-.album,.texto hr,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
+.album,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
   background-color: #fff;
 }
 .album {
@@ -201,8 +199,7 @@ font-size: 1.5em;
   text-align: left; 
 }
 .Titulo-Album {
-    margin: 0.625em 0;
-    
+    margin: 0.625em 0;  
 }
 .album-description {
     color: #aaa;
@@ -238,41 +235,25 @@ font-size: 1.5em;
 }
 .texto {
   margin: 5%;
+  height: 30vh;
+  margin-top: 10%;
 }
 .texto h1 {
   font-size: 3em;
   font-weight: 700;
 }
-.texto hr {
-  width: 3.125em;
-  height: 0.125em;
-  border: none;
-  margin: 1.25em auto;
-}
 .texto p {
-  font-weight: 300;
+  font-size: 1.5em;
+  color:#666;
 }
-.texto2 {
-  color: #ccc; 
-  padding: 5em ; 
-  max-width: 70em;
-  margin: 0; 
-}
-.texto2 h1 {
-  font-size: 2.5em; 
-  text-transform: uppercase; 
-  margin-bottom: 0.5em; 
-}
-.texto2 hr {
-  width: 3em; /* Ancho de la línea horizontal */
-  border: 1px solid #fff; /* Color y grosor de la línea */
-  margin-bottom: 1em; /* Espaciado debajo de la línea */
-}
-.texto2 p {
-  line-height: 1.8em; /* Altura de línea para mejorar la legibilidad */
-  color: #ccc; /* Color de texto gris claro */
-  margin-top: 1em; /* Espacio por encima del párrafo */
-  max-width: 60em; /* Limita el ancho del párrafo */
+.texto h1:after {
+  content: "";
+  display: block;
+  width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+  height: 0.1em; /* Ajusta el grosor de la línea */
+  background-color: #fff; /* Cambia el color de la línea */
+  margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+  margin-left: 0%;
 }
 .Gallery {
   flex-wrap: wrap;
@@ -338,33 +319,43 @@ top: 0.625em;
 left: 0.625em;
 }
 .fechas {
-  width: 80%;
-  margin: 0 auto;
-  padding: 1.25em 0;
+  max-width: 68em; /* 800px / 16 */
+  padding: 1.25em; /* 20px / 16 */
+  margin-left:8%;
 }
-
 .date-item {
-  border-bottom:0.063em solid #333;
-  padding: 1.25em 0;
-}
-.date-item:last-child {
-  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25em ; /* 20px / 16 */
+  border-bottom: 0.0625em solid #333; /* 1px / 16 */
 }
 .date {
-  font-size: 2.25em;
+  font-size: 4em; 
+  font-weight: bold;
 }
-.day {
-  font-size: 0.875em;
+.month-day {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.875em; /* 14px / 16 */
   text-transform: uppercase;
+  margin-left: 2%;
+  color:#888;
 }
 .details {
   flex-grow: 1;
-  padding-left: 1.25em;
+  padding-left: 1.25em; /* 20px / 16 */
+  margin-left: 3%;
 }
 .buy-tickets {
-  font-size: 0.875em;
+  font-size: 1em; 
   text-transform: uppercase;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-right: 2%;
 }
 .view-all {
   padding: 1.25em 0;
@@ -378,13 +369,24 @@ left: 0.625em;
 .blog{
 width: 80%;
 margin-left: 5%;
-padding:  1.25em 0;
+padding: 1.25em ;
 }
-h1 {
+.blog h1 {
   font-size: 3em;
 }
-p {
+.blog h1:after{
+  content: "";
+display: block;
+width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+height: 0.1em; /* Ajusta el grosor de la línea */
+background-color: #fff; /* Cambia el color de la línea */
+margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+margin-left: 0%;
+}
+.blog p {
   line-height: 1.5em;
+  color: #a09d9d;
+  font-size: 1.2em;
 }
 .blog-posts {
   padding: 1.25em;
@@ -452,27 +454,34 @@ transition: transform 0.2s ease-out;
   margin-right: 0.313em;
 }
 .our-discography {
-  margin: 0 ;
-  padding: 3.125em 0;
+  padding: 3.125em ;
 }
 .our-discography h1 {
-  font-size: 2.25em;
-}
-.underline {
-  width: 3.125em;
-  height: 0.125em;
-  margin: 1.25em auto;
+  font-size: 2.5em;
+  margin-left: 4%;
+  margin-top: 2%;
 }
 .our-discography p {
-  font-size: 0.875em;
+  font-size: 1.2em;
   line-height: 1.6;
-  margin-bottom: 3.125em;
+  margin-bottom: 1em;
+  margin-left: 4%;
+}
+.our-discography h1::after{
+content: "";
+display: block;
+width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+height: 0.1em; /* Ajusta el grosor de la línea */
+background-color: #fff; /* Cambia el color de la línea */
+margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+margin-left: 0%;
 }
 .albums {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas */
   gap: 1.25em; /* Espacio entre los elementos de 1.25em */
   justify-items: center;
+  margin-right: 5%;
 }
 .albumes {
   overflow: hidden;
@@ -501,40 +510,8 @@ transition: transform 0.2s ease-out;
 #show-MORE {
   text-decoration: none;
   padding: 0.5em 1em;
-  border-radius: 0.313em;
   transition: background-color 0.3s ease-in-out;
-}
-.Fotitos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
-  gap: 1em; /* Espacio entre álbumes */
-  padding: 1em; /* Margen interno alrededor de la cuadrícula */
-  margin-top: 5%;
-}
-.Fotones {
-  overflow: hidden;
-  border-radius: 0.5em;
-  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s;
-}
-.Fotones:hover {
-  transform: scale(1.05);
-}
-.Fotones img {
-  display: block;
-  transition: opacity 0.3s ease-in-out;
-}
-.Fotones:hover img {
-  opacity: 0.4;
-}
-.Fotones figcaption {
-  bottom: 1em; /* Ajusta según sea necesario */
-  left: 1em; /* Ajusta según sea necesario */
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.Fotones:hover figcaption {
-  opacity: 1;
+  margin-right: 4% ;
 }
 figcaption p {
   font-size: 0.7em;
@@ -559,29 +536,34 @@ figcaption p {
   margin-bottom: 1.25em;
 }
 .footer-column p {
-  font-size: 0.875em;
+  font-size: 1.2em;
   line-height: 1.6;
 }
 .footer-column a {
   text-decoration: none;
   display: block;
   margin-bottom: 0.625em;
-}
-.footer-column a:hover {
+  font-size: 1.2em;
   text-decoration: underline;
+  color: #fff; /* Color inicial */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+  opacity: 1; /* Totalmente visible por defecto */
+}
+.footer-column a:hover{
+  opacity: 0.5; /* Hace la palabra más transparente al pasar el mouse */
 }
 .social-icons {
   margin-top: 1.25em;
 }
 .social-icons a {
-  font-size: 1.25em;
+  font-size: 1em;
   margin-right: 0.625em;
   display: inline-block;
   width: 2em;
-  height: 2.5em;
-  line-height: 2.5em;
+  height: 2em;
+  line-height: 2em;
   border: 0.125em solid #fff;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .footer-bottom {
   padding: 1.25em;
@@ -623,7 +605,6 @@ figcaption p {
       margin:0.5em;
       color: #ccc;
   }
-  /* Iconos de redes sociales */
   .transparencia .social {
       gap: 0.313em;
   }
@@ -780,12 +761,10 @@ figcaption p {
   margin-bottom: 1em;
   letter-spacing: 0.06em; /* Espaciado entre letras */
 } 
-/* Contenedor de los íconos de las plataformas */
 .platform-icons {
   display: inline-flex;
   gap: 0.5em; /* Espacio entre los íconos */
 }
-/* Estilo de los íconos de la App Store y Google Play */
 .platform-icons a img {
   width: 9.375em; /* Ancho de 150px equivalente en em (asumiendo font-size base de 16px) */
   height: 3.125em; /* Altura de 50px equivalente en em */
@@ -834,9 +813,7 @@ figcaption p {
 }
 .contact-info {
   margin-top: 2.25em;
-}
-.contact-info h2 {
-  font-size: 1.125em;
+  font-size: 1.2em;
 }
 .contact-info p {
   font-size: 0.875em;
@@ -1025,7 +1002,7 @@ header #scrollToTopBtn {
   .container {
       height: auto; /* Permitir que el contenedor se ajuste al contenido */
   }
-  .albumes, .Fotones {
+  .albumes {
       grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 4 */
   }
   .texto2 h1 {
