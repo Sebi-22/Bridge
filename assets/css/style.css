@@ -992,60 +992,127 @@ header #scrollToTopBtn {
 .flecha:hover,.punto:hover {
   color: #f00; 
 }
-/* Media Queries */
-@media (max-width: 480px) {
-  /* Estilos para móviles */
+/* Media Query para dispositivos móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      padding: 1em;
+      flex-direction: column; /* Cambia la dirección de la barra de navegación */
+      padding: 1em; /* Reduce el padding */
   }
+
   .container {
-      height: auto; /* Permitir que el contenedor se ajuste al contenido */
+      height: auto; /* Ajusta la altura de la contenedor */
   }
+
+  .left-section, .right-section {
+      width: 100%; /* Cambia el ancho a 100% */
+  }
+
   .albumes {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 4 */
+      grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas */
   }
-  .texto2 h1 {
-      font-size: 2em; /* Reducir tamaño de fuente */
+
+  .tracklist li {
+      padding: 0.5em; /* Reduce el padding de los elementos de la lista */
   }
-  .contact-section {
-      flex-direction: column; /* Cambiar a columna */
-      align-items: center; /* Centrar elementos */
+
+  .texto h1 {
+      font-size: 2em; /* Reduce el tamaño de la fuente */
   }
+
+  .footer {
+      padding: 1em; /* Reduce el padding del footer */
+  }
+
+  /* Otros ajustes específicos para móviles */
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Estilos para tabletas */
+/* Media Query para tabletas (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .navbar {
-      padding: 1.5em;
+      padding: 1.5em; /* Ajusta el padding */
   }
-  .albumes, .Fotones {
-      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+
+  .albumes {
+      grid-template-columns: repeat(3, 1fr); /* Ajusta el número de columnas */
   }
-  .texto2 h1 {
-      font-size: 2.5em; /* Ajustar tamaño de fuente */
+
+  .texto h1 {
+      font-size: 2.5em; /* Ajusta el tamaño de la fuente */
   }
+
+  .footer {
+      padding: 2em; /* Ajusta el padding del footer */
+  }
+
+  /* Otros ajustes específicos para tabletas */
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Estilos para escritorio pequeño */
+/* Media Query para pantallas grandes (pantallas mayores a 1024px) */
+@media (min-width: 1024px) {
   .navbar {
-      padding: 2em;
+      padding: 2em; /* Mantiene el padding original */
   }
-  .albumes, .Fotones {
-      grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+
+  .albumes {
+      grid-template-columns: repeat(4, 1fr); /* Mantiene el número de columnas */
   }
+
+  .texto h1 {
+      font-size: 3em; /* Mantiene el tamaño de la fuente */
+  }
+
+  .footer {
+      padding: 2.5em; /* Mantiene el padding del footer */
+  }
+
+  /* Otros ajustes específicos para pantallas grandes */
+}
+.navbar {
+  justify-content: space-between; /* Espaciado entre elementos de la barra de navegación */
 }
 
-@media (min-width: 1025px) {
-  /* Estilos para escritorio grande */
-  .navbar {
-      padding: 2em;
-  }
-  .albumes, .Fotones {
-      grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas */
-  }
-  .texto2 h1 {
-      font-size: 3em; /* Tamaño de fuente más grande */
-  }
+.albumes {
+  grid-template-columns: repeat(5, 1fr); /* Aumenta el número de columnas */
+}
+
+.texto h1 {
+  font-size: 3.5em; /* Aumenta el tamaño de la fuente */
+}
+
+.footer {
+  padding: 3em; /* Aumenta el padding del footer */
+}
+
+/* Otros ajustes específicos para pantallas muy grandes */
+.navbar {
+  justify-content: space-around; /* Ajusta el espaciado de la barra de navegación */
+}
+
+.albumes {
+  grid-template-columns: repeat(4, 1fr); /* Mantiene el número de columnas */
+}
+
+.texto h1 {
+  font-size: 3em; /* Mantiene el tamaño de la fuente */
+}
+
+.footer {
+  padding: 2.5em; /* Mantiene el padding del footer */
+}
+
+/* Otros ajustes específicos para dispositivos de escritorio */
+.navbar {
+  justify-content: space-between; /* Espaciado entre elementos de la barra de navegación */
+}
+
+.albumes {
+  grid-template-columns: repeat(5, 1fr); /* Aumenta el número de columnas */
+}
+
+.texto h1 {
+  font-size: 3.5em; /* Aumenta el tamaño de la fuente */
+}
+
+.footer {
+  padding: 3em; /* Aumenta el padding del footer */
 }
