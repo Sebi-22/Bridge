@@ -1,5 +1,5 @@
 *{
-font-family: 'Arial', sans-serif;
+font-family: 'Oswald';
 }
 img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.albumes img ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
   width: 100%;
@@ -30,7 +30,11 @@ align-items: center;
 }
 .container {
   flex-direction: column;
+<<<<<<< HEAD
   height: 120vh;
+=======
+  height: 125vh;
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   background-image:  url(../images/slider-img-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,16 +57,25 @@ justify-content: space-between;
 .navbar a,.title,.texto p,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
   font-size:1em;
 }
+.navbar img{
+ width: 80%;
+ margin-bottom:20%; 
+ margin-left: -50%;
+}
 .navbar a {
   text-decoration: none;
   margin: 1em;
 }
+<<<<<<< HEAD
 .navbar img{
   width: 80%;
   margin-bottom:20%; 
   margin-left: -50%;
  }
  .nav-links {
+=======
+.nav-links {
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   display: flex;
   gap: 1.25em; /* 20px */
 }
@@ -98,7 +111,7 @@ font-weight: bold;
 }
 .vertical-name {
   top: 50%;
-  left: 10%;
+  left: 12%;
   transform: translateY(-50%) rotate(180deg); 
   font-size: 8em;
   writing-mode: vertical-rl; 
@@ -106,7 +119,11 @@ font-weight: bold;
   margin-top: 8%;
 }
 .new-album {
+<<<<<<< HEAD
   bottom: -18%;
+=======
+ margin-top: -18% ; 
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   right: 9%;
   text-align: right;
 }
@@ -117,7 +134,7 @@ font-weight: bold;
   justify-content:left;
   margin-top: 1.25em;
 }
-.album,.texto hr,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
+.album,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
   background-color: #fff;
 }
 .album {
@@ -199,8 +216,7 @@ font-size: 1.5em;
   text-align: left; 
 }
 .Titulo-Album {
-    margin: 0.625em 0;
-    
+    margin: 0.625em 0;  
 }
 .album-description {
     color: #aaa;
@@ -370,8 +386,9 @@ left: 0.625em;
 .blog{
 width: 80%;
 margin-left: 5%;
-padding:  1.25em 0;
+padding: 1.25em ;
 }
+<<<<<<< HEAD
 .blog h1:after{
   content: "";
 display: block;
@@ -382,10 +399,24 @@ margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
 margin-left: 0%;
 }
 h1 {
+=======
+.blog h1 {
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   font-size: 3em;
 }
-p {
+.blog h1:after{
+  content: "";
+display: block;
+width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+height: 0.1em; /* Ajusta el grosor de la línea */
+background-color: #fff; /* Cambia el color de la línea */
+margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+margin-left: 0%;
+}
+.blog p {
   line-height: 1.5em;
+  color: #a09d9d;
+  font-size: 1.2em;
 }
 .blog-posts {
   padding: 1.25em;
@@ -453,10 +484,10 @@ transition: transform 0.2s ease-out;
   margin-right: 0.313em;
 }
 .our-discography {
-  margin: 0 ;
-  padding: 3.125em 0;
+  padding: 3.125em ;
 }
 .our-discography h1 {
+<<<<<<< HEAD
   font-size: 2.25em;
 }
 .our-discography h1::after{
@@ -468,16 +499,33 @@ transition: transform 0.2s ease-out;
   margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
   margin-left: 0%;
   }
+=======
+  font-size: 2.5em;
+  margin-left: 4%;
+  margin-top: 2%;
+}
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
 .our-discography p {
-  font-size: 0.875em;
+  font-size: 1.2em;
   line-height: 1.6;
-  margin-bottom: 3.125em;
+  margin-bottom: 1em;
+  margin-left: 4%;
+}
+.our-discography h1::after{
+content: "";
+display: block;
+width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+height: 0.1em; /* Ajusta el grosor de la línea */
+background-color: #fff; /* Cambia el color de la línea */
+margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+margin-left: 0%;
 }
 .albums {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columnas */
   gap: 1.25em; /* Espacio entre los elementos de 1.25em */
   justify-items: center;
+  margin-right: 5%;
 }
 .albumes {
   overflow: hidden;
@@ -506,8 +554,11 @@ transition: transform 0.2s ease-out;
 #show-MORE {
   text-decoration: none;
   padding: 0.5em 1em;
-  border-radius: 0.313em;
   transition: background-color 0.3s ease-in-out;
+<<<<<<< HEAD
+=======
+  margin-right: 4% ;
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
 }
 figcaption p {
   font-size: 0.7em;
@@ -557,9 +608,13 @@ figcaption p {
   display: inline-block;
   width: 2em;
   height: 2em;
+<<<<<<< HEAD
   line-height:2em;
+=======
+  line-height: 2em;
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   border: 0.125em solid #fff;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .footer-bottom {
   padding: 1.25em;
@@ -601,7 +656,6 @@ figcaption p {
       margin:0.5em;
       color: #ccc;
   }
-  /* Iconos de redes sociales */
   .transparencia .social {
       gap: 0.313em;
   }
@@ -758,12 +812,10 @@ figcaption p {
   margin-bottom: 1em;
   letter-spacing: 0.06em; /* Espaciado entre letras */
 } 
-/* Contenedor de los íconos de las plataformas */
 .platform-icons {
   display: inline-flex;
   gap: 0.5em; /* Espacio entre los íconos */
 }
-/* Estilo de los íconos de la App Store y Google Play */
 .platform-icons a img {
   width: 9.375em; /* Ancho de 150px equivalente en em (asumiendo font-size base de 16px) */
   height: 3.125em; /* Altura de 50px equivalente en em */
@@ -813,9 +865,12 @@ figcaption p {
 .contact-info {
   margin-top: 2.25em;
   font-size: 1.2em;
+<<<<<<< HEAD
 }
 .contact-info h2 {
   font-size: 1.125em;
+=======
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
 }
 .contact-info p {
   font-size: 0.875em;
@@ -994,60 +1049,127 @@ header #scrollToTopBtn {
 .flecha:hover,.punto:hover {
   color: #f00; 
 }
-/* Media Queries */
-@media (max-width: 480px) {
-  /* Estilos para móviles */
+/* Media Query para dispositivos móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      padding: 1em;
+      flex-direction: column; /* Cambia la dirección de la barra de navegación */
+      padding: 1em; /* Reduce el padding */
   }
+
   .container {
-      height: auto; /* Permitir que el contenedor se ajuste al contenido */
+      height: auto; /* Ajusta la altura de la contenedor */
   }
-  .albumes, .Fotones {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 4 */
+
+  .left-section, .right-section {
+      width: 100%; /* Cambia el ancho a 100% */
   }
-  .texto2 h1 {
-      font-size: 2em; /* Reducir tamaño de fuente */
+
+  .albumes {
+      grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas */
   }
-  .contact-section {
-      flex-direction: column; /* Cambiar a columna */
-      align-items: center; /* Centrar elementos */
+
+  .tracklist li {
+      padding: 0.5em; /* Reduce el padding de los elementos de la lista */
   }
+
+  .texto h1 {
+      font-size: 2em; /* Reduce el tamaño de la fuente */
+  }
+
+  .footer {
+      padding: 1em; /* Reduce el padding del footer */
+  }
+
+  /* Otros ajustes específicos para móviles */
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Estilos para tabletas */
+/* Media Query para tabletas (pantallas entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .navbar {
-      padding: 1.5em;
+      padding: 1.5em; /* Ajusta el padding */
   }
-  .albumes, .Fotones {
-      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+
+  .albumes {
+      grid-template-columns: repeat(3, 1fr); /* Ajusta el número de columnas */
   }
-  .texto2 h1 {
-      font-size: 2.5em; /* Ajustar tamaño de fuente */
+
+  .texto h1 {
+      font-size: 2.5em; /* Ajusta el tamaño de la fuente */
   }
+
+  .footer {
+      padding: 2em; /* Ajusta el padding del footer */
+  }
+
+  /* Otros ajustes específicos para tabletas */
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Estilos para escritorio pequeño */
+/* Media Query para pantallas grandes (pantallas mayores a 1024px) */
+@media (min-width: 1024px) {
   .navbar {
-      padding: 2em;
+      padding: 2em; /* Mantiene el padding original */
   }
-  .albumes, .Fotones {
-      grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+
+  .albumes {
+      grid-template-columns: repeat(4, 1fr); /* Mantiene el número de columnas */
   }
+
+  .texto h1 {
+      font-size: 3em; /* Mantiene el tamaño de la fuente */
+  }
+
+  .footer {
+      padding: 2.5em; /* Mantiene el padding del footer */
+  }
+
+  /* Otros ajustes específicos para pantallas grandes */
+}
+.navbar {
+  justify-content: space-between; /* Espaciado entre elementos de la barra de navegación */
 }
 
-@media (min-width: 1025px) {
-  /* Estilos para escritorio grande */
-  .navbar {
-      padding: 2em;
-  }
-  .albumes, .Fotones {
-      grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas */
-  }
-  .texto2 h1 {
-      font-size: 3em; /* Tamaño de fuente más grande */
-  }
+.albumes {
+  grid-template-columns: repeat(5, 1fr); /* Aumenta el número de columnas */
+}
+
+.texto h1 {
+  font-size: 3.5em; /* Aumenta el tamaño de la fuente */
+}
+
+.footer {
+  padding: 3em; /* Aumenta el padding del footer */
+}
+
+/* Otros ajustes específicos para pantallas muy grandes */
+.navbar {
+  justify-content: space-around; /* Ajusta el espaciado de la barra de navegación */
+}
+
+.albumes {
+  grid-template-columns: repeat(4, 1fr); /* Mantiene el número de columnas */
+}
+
+.texto h1 {
+  font-size: 3em; /* Mantiene el tamaño de la fuente */
+}
+
+.footer {
+  padding: 2.5em; /* Mantiene el padding del footer */
+}
+
+/* Otros ajustes específicos para dispositivos de escritorio */
+.navbar {
+  justify-content: space-between; /* Espaciado entre elementos de la barra de navegación */
+}
+
+.albumes {
+  grid-template-columns: repeat(5, 1fr); /* Aumenta el número de columnas */
+}
+
+.texto h1 {
+  font-size: 3.5em; /* Aumenta el tamaño de la fuente */
+}
+
+.footer {
+  padding: 3em; /* Aumenta el padding del footer */
 }
