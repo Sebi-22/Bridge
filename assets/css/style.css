@@ -819,6 +819,9 @@ figcaption p {
   font-size: 0.875em;
   line-height: 1.5;
 }
+.contact-info h2 {
+  font-size: 1.125em;
+}
 .right-section input, .right-section textarea {
   padding: 0.625em;
   margin-bottom: 1.25em;
