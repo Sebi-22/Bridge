@@ -83,7 +83,7 @@
             <div class="album-cover">
             <img src="assets/images/album-17 (1).jpg" alt="Wheels">
             <div class="album-details">
-                      <h1 class="Titulo-Album">THE KNOWING - 2018</h1>
+                      <h1 class="titulo-Album">THE KNOWING - 2018</h1>
             <p class="album-description">
                  Alienum phaedrum torquatos nec eu, vis detraxit periculis ex,
                   nihil expetendis in mei. Mei an pericula eu </p>
@@ -190,27 +190,10 @@
         </section>
 </body>
 </html>
-<section class="Gallery">
-    <div class="image large">
-        <img class = "clase" alt="Band performing on stage with red lights" src="assets/images/h1-img-1.jpg" width="50"/>
-       
+<section class="gallery">
+    <div class="gallery" id="gallery-container">
+        <!-- Las imágenes se agregarán dinámicamente aquí -->
     </div>
-    <div class="image small">
-        <img class = "clase" alt="Guitarist sitting on an amplifier" src="assets/images/h1-img-2.jpg"width="25"/>
-    </div>
-    <div class="image small">
-        <img class = "clase" alt="Guitarist and singer performing" src="assets/images/h1-img-3.jpg"width="25"/>
-    </div>
-    <div class="image small">
-        <img class = "clase" alt="Singer performing on stage with crowd" src="assets/images/h1-img-4.jpg"width="25"/>
-    </div>
-    <div class="image small">
-        <img class = "clase" alt="Drummer playing drums" src="assets/images/h1-img-5.jpg"width="25"/>
-    </div>
-    <div class="image large">
-        <img class = "clase"alt="Guitarist performing with green lights" src="assets/images/h1-img-6.jpg" width="50"/>
-    </div>
-
     <div class="modal" id="myModal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -278,6 +261,7 @@
                     <a href="#" id="view-all-btn">VIEW ALL</a>
                 </div>
         </section>
+
       <section class="blog">
            <h1>Latest blog posts </h1>
             <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.</p>
@@ -332,53 +316,12 @@
         <p>
             Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
         </p>
-        <div class="albums">
-            <!-- Primer Álbum -->
-            <article class="albumes">
-                <figure>
-                    <img src="assets/images/album-1.jpg" alt="Album cover with neon lights and text 'Be - Doo Be - Doo'">
-                    <figcaption>
-                        <h3>BE-DOO</h3>
-                        <p>Caller</p>
-                    </figcaption>
-                </figure>
-            </article>
-    
-            <!-- Segundo Álbum -->
-            <article class="albumes">
-                <figure>
-                    <img src="assets/images/album-2.jpg" alt="Album cover with a road sign and text 'Make It Go Away'">
-                    <figcaption>
-                        <h3>FREE SPIRIT</h3>
-                        <p>Go Away</p>
-                    </figcaption>
-                </figure>
-            </article>
-    
-            <!-- Tercer Álbum -->
-            <article class="albumes">
-                <figure>
-                    <img src="assets/images/album-3.jpg" alt="Album cover with neon sign and text 'Today Was A Good Day'">
-                    <figcaption>
-                        <h3>DEPRESSED DAYS</h3>
-                        <p>Ritual Spirit</p>
-                    </figcaption>
-                </figure>
-            </article>
-    
-            <!-- Cuarto Álbum -->
-            <article class="albumes">
-                <figure>
-                    <img src="assets/images/album-4.jpg" alt="Album cover with a dancer and text 'FOND OF HER'">
-                    <figcaption>
-                        <h3>WRONG MOTION</h3>
-                        <p>Love Hate</p>
-                    </figcaption>
-                </figure>
-            </article>
+      <div class="albums" id="album-container">
+  <!-- Los álbumes serán agregados dinámicamente aquí -->
+</div>
         </div>
         <div class="view-all">
-            <a href="#" id="show-MORE">SHOW MORE</a>
+            <a href="#" id="show-more">SHOW MORE</a>
         </div>
     </section>
     

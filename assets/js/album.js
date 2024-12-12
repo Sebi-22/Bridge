@@ -52,24 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicializa el slider con la primera reseña
     updateSliderContent(currentPos);
 });
-// Audio
-function toggleLyrics(id) {
-    var content = document.getElementById(id);
-    content.style.display = content.style.display === "block" ? "none" : "block";
-}
-function toggleLyrics(id) {
-    const content = document.getElementById(id);
-    const header = content.previousElementSibling;
-
-    // Toggle display of lyrics content
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        header.classList.add("active");
-    } else {
-        content.style.display = "none";
-        header.classList.remove("active");
-    }
-}
-
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const accordion = header.parentElement;
+        accordion.classList.toggle('active');
+    });
+});
 
 
