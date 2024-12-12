@@ -30,7 +30,11 @@ align-items: center;
 }
 .container {
   flex-direction: column;
+<<<<<<< HEAD
+  height: 120vh;
+=======
   height: 125vh;
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   background-image:  url(../images/slider-img-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,7 +66,16 @@ justify-content: space-between;
   text-decoration: none;
   margin: 1em;
 }
+<<<<<<< HEAD
+.navbar img{
+  width: 80%;
+  margin-bottom:20%; 
+  margin-left: -50%;
+ }
+ .nav-links {
+=======
 .nav-links {
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   display: flex;
   gap: 1.25em; /* 20px */
 }
@@ -106,7 +119,11 @@ font-weight: bold;
   margin-top: 8%;
 }
 .new-album {
+<<<<<<< HEAD
+  bottom: -18%;
+=======
  margin-top: -18% ; 
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   right: 9%;
   text-align: right;
 }
@@ -371,7 +388,20 @@ width: 80%;
 margin-left: 5%;
 padding: 1.25em ;
 }
+<<<<<<< HEAD
+.blog h1:after{
+  content: "";
+display: block;
+width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+height: 0.1em; /* Ajusta el grosor de la línea */
+background-color: #fff; /* Cambia el color de la línea */
+margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+margin-left: 0%;
+}
+h1 {
+=======
 .blog h1 {
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   font-size: 3em;
 }
 .blog h1:after{
@@ -457,10 +487,24 @@ transition: transform 0.2s ease-out;
   padding: 3.125em ;
 }
 .our-discography h1 {
+<<<<<<< HEAD
+  font-size: 2.25em;
+}
+.our-discography h1::after{
+  content: "";
+  display: block;
+  width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+  height: 0.1em; /* Ajusta el grosor de la línea */
+  background-color: #fff; /* Cambia el color de la línea */
+  margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+  margin-left: 0%;
+  }
+=======
   font-size: 2.5em;
   margin-left: 4%;
   margin-top: 2%;
 }
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
 .our-discography p {
   font-size: 1.2em;
   line-height: 1.6;
@@ -511,7 +555,10 @@ margin-left: 0%;
   text-decoration: none;
   padding: 0.5em 1em;
   transition: background-color 0.3s ease-in-out;
+<<<<<<< HEAD
+=======
   margin-right: 4% ;
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
 }
 figcaption p {
   font-size: 0.7em;
@@ -561,7 +608,11 @@ figcaption p {
   display: inline-block;
   width: 2em;
   height: 2em;
+<<<<<<< HEAD
+  line-height:2em;
+=======
   line-height: 2em;
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   border: 0.125em solid #fff;
   border-radius: 100%;
 }
@@ -814,6 +865,12 @@ figcaption p {
 .contact-info {
   margin-top: 2.25em;
   font-size: 1.2em;
+<<<<<<< HEAD
+}
+.contact-info h2 {
+  font-size: 1.125em;
+=======
+>>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
 }
 .contact-info p {
   font-size: 0.875em;
