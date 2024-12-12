@@ -30,7 +30,7 @@ align-items: center;
 }
 .container {
   flex-direction: column;
-  height: 100vh;
+  height: 120vh;
   background-image:  url(../images/slider-img-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,8 +57,41 @@ justify-content: space-between;
   text-decoration: none;
   margin: 1em;
 }
-.navbar a:hover {
-  text-decoration: underline;
+.navbar img{
+  width: 80%;
+  margin-bottom:20%; 
+  margin-left: -50%;
+ }
+ .nav-links {
+  display: flex;
+  gap: 1.25em; /* 20px */
+}
+.nav-links a {
+  color: #fff;
+  font-size: 0.875em; /* 14px */
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.3125em 0; /* 5px 0 */
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #f0f0f0;
+}
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 0.125em; /* 2px */
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 .vertical-name,.title,.our-discography h1,.Titulo-Album,.texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
 font-weight: bold;
@@ -67,17 +100,18 @@ font-weight: bold;
   top: 50%;
   left: 10%;
   transform: translateY(-50%) rotate(180deg); 
-  font-size: 6.25em;
+  font-size: 8em;
   writing-mode: vertical-rl; 
   text-orientation: mixed;
+  margin-top: 8%;
 }
 .new-album {
-  bottom: 10%;
-  right: 15%;
+  bottom: -18%;
+  right: 9%;
   text-align: right;
 }
 .new-album h2 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 .apps {
   justify-content:left;
@@ -202,41 +236,25 @@ font-size: 1.5em;
 }
 .texto {
   margin: 5%;
+  height: 30vh;
+  margin-top: 10%;
 }
 .texto h1 {
   font-size: 3em;
   font-weight: 700;
 }
-.texto hr {
-  width: 3.125em;
-  height: 0.125em;
-  border: none;
-  margin: 1.25em auto;
-}
 .texto p {
-  font-weight: 300;
+  font-size: 1.5em;
+  color:#666;
 }
-.texto2 {
-  color: #ccc; 
-  padding: 5em ; 
-  max-width: 70em;
-  margin: 0; 
-}
-.texto2 h1 {
-  font-size: 2.5em; 
-  text-transform: uppercase; 
-  margin-bottom: 0.5em; 
-}
-.texto2 hr {
-  width: 3em; /* Ancho de la línea horizontal */
-  border: 1px solid #fff; /* Color y grosor de la línea */
-  margin-bottom: 1em; /* Espaciado debajo de la línea */
-}
-.texto2 p {
-  line-height: 1.8em; /* Altura de línea para mejorar la legibilidad */
-  color: #ccc; /* Color de texto gris claro */
-  margin-top: 1em; /* Espacio por encima del párrafo */
-  max-width: 60em; /* Limita el ancho del párrafo */
+.texto h1:after {
+  content: "";
+  display: block;
+  width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+  height: 0.1em; /* Ajusta el grosor de la línea */
+  background-color: #fff; /* Cambia el color de la línea */
+  margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+  margin-left: 0%;
 }
 .Gallery {
   flex-wrap: wrap;
@@ -302,33 +320,43 @@ top: 0.625em;
 left: 0.625em;
 }
 .fechas {
-  width: 80%;
-  margin: 0 auto;
-  padding: 1.25em 0;
+  max-width: 68em; /* 800px / 16 */
+  padding: 1.25em; /* 20px / 16 */
+  margin-left:8%;
 }
-
 .date-item {
-  border-bottom:0.063em solid #333;
-  padding: 1.25em 0;
-}
-.date-item:last-child {
-  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25em ; /* 20px / 16 */
+  border-bottom: 0.0625em solid #333; /* 1px / 16 */
 }
 .date {
-  font-size: 2.25em;
+  font-size: 4em; 
+  font-weight: bold;
 }
-.day {
-  font-size: 0.875em;
+.month-day {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.875em; /* 14px / 16 */
   text-transform: uppercase;
+  margin-left: 2%;
+  color:#888;
 }
 .details {
   flex-grow: 1;
-  padding-left: 1.25em;
+  padding-left: 1.25em; /* 20px / 16 */
+  margin-left: 3%;
 }
 .buy-tickets {
-  font-size: 0.875em;
+  font-size: 1em; 
   text-transform: uppercase;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-right: 2%;
 }
 .view-all {
   padding: 1.25em 0;
@@ -343,6 +371,15 @@ left: 0.625em;
 width: 80%;
 margin-left: 5%;
 padding:  1.25em 0;
+}
+.blog h1:after{
+  content: "";
+display: block;
+width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+height: 0.1em; /* Ajusta el grosor de la línea */
+background-color: #fff; /* Cambia el color de la línea */
+margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+margin-left: 0%;
 }
 h1 {
   font-size: 3em;
@@ -422,11 +459,15 @@ transition: transform 0.2s ease-out;
 .our-discography h1 {
   font-size: 2.25em;
 }
-.underline {
-  width: 3.125em;
-  height: 0.125em;
-  margin: 1.25em auto;
-}
+.our-discography h1::after{
+  content: "";
+  display: block;
+  width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
+  height: 0.1em; /* Ajusta el grosor de la línea */
+  background-color: #fff; /* Cambia el color de la línea */
+  margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
+  margin-left: 0%;
+  }
 .our-discography p {
   font-size: 0.875em;
   line-height: 1.6;
@@ -468,38 +509,6 @@ transition: transform 0.2s ease-out;
   border-radius: 0.313em;
   transition: background-color 0.3s ease-in-out;
 }
-.Fotitos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
-  gap: 1em; /* Espacio entre álbumes */
-  padding: 1em; /* Margen interno alrededor de la cuadrícula */
-  margin-top: 5%;
-}
-.Fotones {
-  overflow: hidden;
-  border-radius: 0.5em;
-  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s;
-}
-.Fotones:hover {
-  transform: scale(1.05);
-}
-.Fotones img {
-  display: block;
-  transition: opacity 0.3s ease-in-out;
-}
-.Fotones:hover img {
-  opacity: 0.4;
-}
-.Fotones figcaption {
-  bottom: 1em; /* Ajusta según sea necesario */
-  left: 1em; /* Ajusta según sea necesario */
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.Fotones:hover figcaption {
-  opacity: 1;
-}
 figcaption p {
   font-size: 0.7em;
   margin: 0.25em 0 0;
@@ -523,27 +532,32 @@ figcaption p {
   margin-bottom: 1.25em;
 }
 .footer-column p {
-  font-size: 0.875em;
+  font-size: 1.2em;
   line-height: 1.6;
 }
 .footer-column a {
   text-decoration: none;
   display: block;
   margin-bottom: 0.625em;
-}
-.footer-column a:hover {
+  font-size: 1.2em;
   text-decoration: underline;
+  color: #fff; /* Color inicial */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+  opacity: 1; /* Totalmente visible por defecto */
+}
+.footer-column a:hover{
+  opacity: 0.5; /* Hace la palabra más transparente al pasar el mouse */
 }
 .social-icons {
   margin-top: 1.25em;
 }
 .social-icons a {
-  font-size: 1.25em;
+  font-size: 1em;
   margin-right: 0.625em;
   display: inline-block;
   width: 2em;
-  height: 2.5em;
-  line-height: 2.5em;
+  height: 2em;
+  line-height:2em;
   border: 0.125em solid #fff;
   border-radius: 50%;
 }
@@ -798,6 +812,7 @@ figcaption p {
 }
 .contact-info {
   margin-top: 2.25em;
+  font-size: 1.2em;
 }
 .contact-info h2 {
   font-size: 1.125em;
