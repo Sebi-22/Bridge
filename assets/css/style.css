@@ -71,9 +71,11 @@
     display: flex;
     gap: 1.25em; /* 20px */
   }
+  .nav-links a,.track-info,.right-section button,.month-day,.blog-post-date,.footer-column p,.ticket a, .contact-info p,.right-section input, .right-section textarea  {
+  font-size: 0.875em; 
+  }
   .nav-links a {
     color: #fff;
-    font-size: 0.875em; /* 14px */
     text-transform: uppercase;
     position: relative;
     padding: 0.3125em 0; /* 5px 0 */
@@ -98,10 +100,9 @@
   .nav-links a.active::after {
     transform: scaleX(1);
   }
-  .vertical-name,.title,.our-discography h1,.titulo-Album,.texto2 h1,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
+  .vertical-name,.title,.our-discography h1,.titulo-Album,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
   font-weight: bold;
   }
-
 .vertical-name {
       top: 50%;
       left: 12%;
@@ -117,14 +118,14 @@
        right: 9%;
       text-align: right;
       }
-      .new-album h2 {
+      .new-album h2,.blog h1,.texto h1,.our-discography h1 {
         font-size: 3em;
       }
       .apps {
         justify-content:left;
         margin-top: 1.25em;
       }
-      .album,.underline,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
+      .album,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
         background-color: #fff;
       }
   .album {
@@ -145,8 +146,10 @@
   .title {
     margin-right: 2%;
   }
-  .subtitle {
+  .subtitle,.time,.timer{
     font-size: 0.75em;
+  }
+  .subtitle {
     color: #888;
   }
   .controls {
@@ -171,7 +174,6 @@
     width: 0%;
   }
   .time {
-    font-size: 0.75em;
     color: #666;
   }
   .volume-control {
@@ -192,14 +194,14 @@
   .album-cover img {
       width: 80%;
   }
-  .album-details,.album-description,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
+  .album-details,.about-album ul,.about-album p,.our-discography p,.album-description,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
     font-size: 1.2em;
   }
   .album-details {
       margin-top: 3.25em;
       width: 80%;
   }
-  .titulo-Album,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
+  .titulo-Album,.lyrics-section h1 ,.transparencia h3, .texto p,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
   font-size: 1.5em;
   }
   .titulo-Album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.ticket  {
@@ -246,21 +248,10 @@
     margin-top: 10%;
   }
   .texto h1 {
-    font-size: 3em;
     font-weight: 700;
   }
   .texto p {
-    font-size: 1.5em;
     color:#666;
-  }
-  .texto h1:after {
-    content: "";
-    display: block;
-    width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
-    height: 0.1em; /* Ajusta el grosor de la línea */
-    background-color: #fff; /* Cambia el color de la línea */
-    margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
-    margin-left: 0%;
   }
   .gallery {
     flex-wrap: wrap;
@@ -325,37 +316,53 @@
   top: 0.625em;
   left: 0.625em;
   }
+  
   .fechas {
     max-width: 68em; /* 800px / 16 */
     padding: 1.25em; /* 20px / 16 */
-    margin-left:8%;
-  }
-  .date-item {
+    margin-left: 8%;
+    margin-top: 5%;
+}
+
+.date-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25em ; /* 20px / 16 */
+    padding: 1.25em; /* 20px / 16 */
     border-bottom: 0.0625em solid #333; /* 1px / 16 */
-  }
-  .date {
+    position: relative; /* Necesario para que ::before se posicione relativo al contenedor */
+}
+
+.date-item::before {
+    content: '';
+    position: absolute;
+    left: 10em; /* Posición horizontal relativa al contenido */
+    top: 2em;
+    bottom: 1em;
+    width: 0.1em; /* Grosor de la línea */
+    background-color: #b2b2b2; /* Color de la línea vertical */
+    z-index: -1; /* Coloca la línea detrás del contenido */
+}
+.date {
     font-size: 4em; 
     font-weight: bold;
-  }
-  .month-day {
+}
+.month-day {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    font-size: 0.875em; /* 14px / 16 */
     text-transform: uppercase;
     margin-left: 2%;
-    color:#888;
-  }
-  .details {
+    color: #888;
+}
+
+.details {
     flex-grow: 1;
     padding-left: 1.25em; /* 20px / 16 */
     margin-left: 3%;
-  }
-  .buy-tickets {
+}
+
+.buy-tickets {
     font-size: 1em; 
     text-transform: uppercase;
     color: #fff;
@@ -363,22 +370,25 @@
     font-weight: bold;
     text-decoration: underline;
     margin-right: 2%;
-  }
-  .view-all {
+}
+
+.view-all {
     padding: 1.25em 0;
-  }
-  .view-all a {
+}
+
+.view-all a {
     text-decoration: none;
-    border:0.063em solid #fff;
+    border: 0.063em solid #fff;
     padding: 1.3em;
     display: inline-block;
-  }
+}
+
   .blog{
   width: 80%;
   margin-left: 5%;
   padding:  1.25em 0;
   }
-  .blog h1:after{
+  .blog h1:after,.our-discography h1::after,.texto h1:after{
     content: "";
   display: block;
   width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
@@ -386,9 +396,6 @@
   background-color: #fff; /* Cambia el color de la línea */
   margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
   margin-left: 0%;
-  }
-  h1 {
-    font-size: 3em;
   }
   p {
     line-height: 1.5em;
@@ -412,7 +419,6 @@
     font-size: 1.125em;
   }
   .blog-post-date {
-    font-size: 0.875em;
     margin-top: auto;
     margin-left: 2em;
     color: #aaa;
@@ -466,21 +472,10 @@
     padding: 3.125em 0;
   }
   .our-discography h1 {
-    font-size: 3em;
     margin-left: 10%;
     margin-top: 5%;
   }
-  .our-discography h1::after{
-    content: "";
-    display: block;
-    width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
-    height: 0.1em; /* Ajusta el grosor de la línea */
-    background-color: #fff; /* Cambia el color de la línea */
-    margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
-    margin-left: 0%;
-    }
   .our-discography p {
-    font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 3.125em;
     margin-left: 10%;
@@ -537,35 +532,48 @@
   .footer-column {
     flex: 1;
     margin: 0 1.25em;
+    
   }
   .footer-column h2 {
     margin-bottom: 1.25em;
   }
   .footer-column p {
-    font-size: 0.875em;
     line-height: 1.6;
   }
   .footer-column a {
-    text-decoration: none;
+    text-decoration: underline;
     display: block;
     margin-bottom: 0.625em;
+    transition: opacity 0.3s ease; /* Define la transición base */
   }
-  .footer-column a:hover {
-    text-decoration: underline;
-  }
-  .social-icons {
-    margin-top: 1.25em;
-  }
-  .social-icons a {
-    font-size: 1.25em;
-    margin-right: 0.625em;
-    display: inline-block;
-    width: 2em;
-    height: 2.5em;
-    line-height: 2.5em;
-    border: 0.125em solid #fff;
-    border-radius: 50%;
-  }
+.footer-column a:hover{
+  opacity: 0.7; /* Aplica la opacidad leve al pasar el mouse */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+.social-icons {
+  margin-top: 1.25em;
+}
+
+.social-icons a {
+  font-size: 1.25em;
+  margin-right: 0.625em;
+  display: inline-block;
+  width: 2em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border: 0.125em solid #fff;
+  border-radius: 50%;
+  text-align: center; /* Centra el icono dentro del círculo */
+  color: #fff; /* Color inicial del icono */
+  background-color: transparent; /* Fondo inicial */
+  transition: all 0.3s ease; /* Transición suave para los cambios */
+}
+
+.social-icons a:hover {
+  color: #000; /* Cambia el color del icono a negro */
+  background-color: #fff; /* Cambia el fondo a blanco */
+  border-color: #fff; /* Mantiene el borde blanco */
+}
   .footer-bottom {
     padding: 1.25em;
     border-top: 0.063em solid #333;
@@ -616,7 +624,6 @@
         opacity: 1;
     }
     .transparencia h3 {
-        font-size: 1.5em;
         text-transform: uppercase;
     }
     .transparencia p {
@@ -637,6 +644,7 @@
     margin-top:9%;
     top: 0;
     width: 90%;
+    margin-left: 14%;
   }
   .breadcrumb a {
     color: #ccc; /* Color de los enlaces */
@@ -670,7 +678,8 @@
       line-height: 1.5; /* Equivalente a 24px de altura de línea si el tamaño de fuente es 16px */
   }
   .about{
-    margin-right: 10%;
+    margin-right: 25%;
+    margin-top: -5%;
   }
   .ticket {
     padding: 1.25em 0;
@@ -681,11 +690,14 @@
     border: 0.063em   solid #ffffff;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 0.875em; /* Tamaño del texto del botón */
+  }
+  .inicio,.disco,.album-section{
+    margin-left: 3%;
   }
   .follow {
       margin-top: 1.25em; /* 20px */
-  }
+      font-size: small;
+    }
   .follow i {
       margin-right: 0.625em; /* 10px */
       color: #adadad;
@@ -717,46 +729,48 @@
     margin-bottom: 0.5em;
   }
   .about-album p {
-    font-size: 0.9em;
     color: #bbb;
     margin-bottom: 1em;
   }
   .about-album ul {
     list-style: none;
-    font-size: 0.9em;
-  }
-  .lyrics-section h3 {
-    margin-top: 0.5em;
-    color: #ddd;
-    padding: 0.938em;
-    padding-right: 2em;
-    margin: 1em ;
-    font-size: 1.125em;
-    border-bottom: 0.063em solid #444; 
+    margin-left: -8%;
   }
   .lyrics-section {
-    text-align: right;
-    width: 18.75em;
-    margin-left: 60%;
-    margin-top: -8%;
-  }
-  .lyrics-section h2 {
+    max-width: 37.5em;
+    margin-left: 52%;
+    margin-top: -10%;
+}
+.lyrics-section h1 {
     margin-bottom: 1.25em;
-    margin-top: 20%;
-  }
-  .lyrics-section h3::after {
-    content: "⌃";
-    right: 0.625em; /* Coloca la flecha al final del lado derecho */
-    font-size: 1.125em;
-    transition: transform 0.3s; /* Transición de rotación */
-  }
-  .lyrics-section h3.active::after {
-    transform: rotate(180deg); /* Rota la flecha */
-  }
-  .lyrics-content {
-    padding: 0.625em;
+}
+.accordion {
+    border-radius:0.313em;
+    margin-bottom: 0.625em;
+    border-bottom: 0.1em solid #9d9d9d; 
+
+}
+.accordion-header {
+    padding: 0.938em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-content {
+    padding: 0.938em;
     display: none;
-  }
+}
+.accordion-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+.accordion.active .accordion-content {
+    display: block;
+}
+.accordion.active .accordion-header i {
+    transform: rotate(180deg);
+}
   .tracklist ol {
     list-style: none;
     max-width: 30em;
@@ -831,24 +845,22 @@
   }
   .contact-info {
     margin-top: 2.25em;
+
   }
   .contact-info h2 {
     font-size: 1.125em;
   }
   .contact-info p {
-    font-size: 0.875em;
     line-height: 1.5;
   }
   .right-section input, .right-section textarea {
     padding: 0.625em;
     margin-bottom: 1.25em;
     border: 0.063em solid #fff;
-    font-size: 0.875em;
   }
   .right-section button {
     padding: 0.625em 1.25em;
     border: none;
-    font-size: 0.875em;
   }
   .galeria-container {
     display: grid;
@@ -924,29 +936,55 @@
     margin-bottom: 0.6em;
   }
   .musica {
-    background-color: #1a1a1a;
-    padding: 1.25em; /* 20px equivalente */
-    width: 34em; /* 350px equivalente */
-    margin: 1.25em auto; /* 20px equivalente */
-    border-radius: 0.5em; /* 8px equivalente */
-    margin-left: 10%;
-    margin-top: -37%;
-  }
-  .controles {
-    justify-content: space-around;
-    margin-bottom: 1.25em; /* 20px equivalente */
-  }
-  .controles div {
-    font-size: 1.25em; /* 20px equivalente */
-    transition: color 0.3s;
-  }
-  .controles div:hover {
-    color: #888;
-  }
+    background-color: #2b2b2b;
+    border-radius: 0.5em;
+    width: 32em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 7%;
+    margin-top: -29%;
+}
+.controles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.controles div {
+    cursor: pointer;
+    padding: 0.5em;
+    margin-left: 8%;
+    margin-right: 15%;
+}
+.controles i {
+    color: #fff;
+    font-size: 1.25em;
+}
+.controles div:hover i {
+    color: #ccc;
+}
+.track-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.track-titulo {
+    font-size: 1em;
+    font-weight: bold;
+}
+.artist-name {
+    color: #ccc;
+}
+.timer {
+    color: #ccc;
+}
   .song-list {  padding: 1.25em;
     max-width: 25em;
     flex: 1;
-    margin-left: 6.25em;
+    margin-left: 3em;
     font-size: 1.3em;
   }
   .song-list h1 {
@@ -971,7 +1009,8 @@
     background-color: #1a1a1a;
     padding: 2em;
     max-width: 30.25em;
-    margin-left: 52%
+    margin-left: 52%;
+    margin-top: 5%;
   }
   .review-section h2 {
     margin-bottom: 1.5em;
@@ -1002,66 +1041,94 @@
     border-color: #ffffff;
   }
   .iconos-abajo {
-    gap: 0.5em;              
+    gap: 35em;              
     padding: 0.5em;
   }
-  .flecha:hover,.punto:hover {
-    color: #f00; 
+ /* Media Queries */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 1.5em;
   }
-  /* Media Queries */
-  @media (max-width: 480px) {
-    /* Estilos para móviles */
-    .navbar {
-        flex-direction: column;
-        padding: 1em;
-    }
-    .container {
-        height: auto; /* Permitir que el contenedor se ajuste al contenido */
-    }
-    .albumes, .Fotones {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en lugar de 4 */
-    }
-    .texto2 h1 {
-        font-size: 2em; /* Reducir tamaño de fuente */
-    }
-    .contact-section {
-        flex-direction: column; /* Cambiar a columna */
-        align-items: center; /* Centrar elementos */
-    }
+
+  .albumes {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  @media (min-width: 481px) and (max-width: 768px) {
-    /* Estilos para tabletas */
-    .navbar {
-        padding: 1.5em;
-    }
-    .albumes, .Fotones {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    }
-    .texto2 h1 {
-        font-size: 2.5em; /* Ajustar tamaño de fuente */
-    }
+
+  .about1 {
+    max-width: 28em;
   }
-  
-  @media (min-width: 769px) and (max-width: 1024px) {
-    /* Estilos para escritorio pequeño */
-    .navbar {
-        padding: 2em;
-    }
-    .albumes, .Fotones {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    }
+
+  .left-section,
+  .right-section {
+    width: 100%;
   }
-  
-  @media (min-width: 1025px) {
-    /* Estilos para escritorio grande */
-    .navbar {
-        padding: 2em;
-    }
-    .albumes, .Fotones {
-        grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas */
-    }
-    .texto2 h1 {
-        font-size: 3em; /* Tamaño de fuente más grande */
-    }
+}
+
+@media (max-width: 992px) {
+  .navbar a {
+    font-size: 0.9em;
   }
+
+  .albumes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-section {
+    height: 60vh;
+  }
+
+  .content img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .albumes {
+    grid-template-columns: 1fr;
+  }
+
+  .video-section {
+    height: 50vh;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar a {
+    font-size: 0.8em;
+  }
+
+  .play-button i {
+    font-size: 4em;
+  }
+
+  .side-text {
+    font-size: 3em;
+  }
+
+  .footer-column {
+    margin: 1em 0;
+  }
+
+  .about-album h2 {
+    font-size: 1.5em;
+  }
+
+  .about-album p {
+    font-size: 0.9em;
+  }
+}
