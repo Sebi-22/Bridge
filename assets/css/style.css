@@ -30,11 +30,8 @@ align-items: center;
 }
 .container {
   flex-direction: column;
-<<<<<<< HEAD
   height: 120vh;
-=======
   height: 125vh;
->>>>>>> d25be788e791ebdecf494ca3eda5771c35f42bcf
   background-image:  url(../images/slider-img-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
