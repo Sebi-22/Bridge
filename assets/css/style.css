@@ -31,7 +31,6 @@ align-items: center;
 .container {
   flex-direction: column;
   height: 120vh;
-  height: 125vh;
   background-image:  url(../images/slider-img-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
