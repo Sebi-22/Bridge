@@ -558,21 +558,33 @@ figcaption p {
   margin-bottom: 1.25em;
 }
 .footer-column p {
-  font-size: 1.2em;
+  font-size: 0.875em;
   line-height: 1.6;
 }
 .footer-column a {
   text-decoration: none;
   display: block;
   margin-bottom: 0.625em;
-  font-size: 1.2em;
-  text-decoration: underline;
-  color: #fff; /* Color inicial */
-  transition: opacity 0.3s ease; /* Efecto de transición */
-  opacity: 1; /* Totalmente visible por defecto */
 }
-.footer-column a:hover{
-  opacity: 0.5; /* Hace la palabra más transparente al pasar el mouse */
+.footer-column a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  margin-top: 1.25em;
+}
+.social-icons a {
+  font-size: 1.25em;
+  margin-right: 0.625em;
+  display: inline-block;
+  width: 2em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border: 0.125em solid #fff;
+  border-radius: 50%;
+}
+.footer-bottom {
+  padding: 1.25em;
+  border-top: 0.063em solid #333;
 }
 .social-icons {
   margin-top: 1.25em;
@@ -835,7 +847,6 @@ figcaption p {
 }
 .contact-info {
   margin-top: 2.25em;
-  font-size: 1.2em;
 }
 .contact-info h2 {
   font-size: 1.125em;
