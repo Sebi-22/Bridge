@@ -691,23 +691,35 @@
     border: 0;
     filter: grayscale(100%); /* Escala de grises para un estilo más estilizado */
     flex-shrink: 0; /* Evita que se encoja más allá de este tamaño */
+    margin-top: 13%;
   }
   .detalles {
       padding: 1.25em; /* 20px */
       margin-left: 5%;
+      margin-bottom: 8%;
   }
-  .details, .about {
+  .details{
+    margin-bottom: 50%;
+    margin-top: -13%;
+    margin-left: 5%;
+  }
+  .details,.about {
       width: 45%;
   }
-  .details h2, .about h2, .follow h2 {
+ .about h2, .follow h2 {
       margin-bottom: 0.625em; /* 10px */
+  }
+  .details h2{
+    margin-bottom: 2%;
+    font-size: 2em;
   }
   .details p, .about p {
       line-height: 1.5; /* Equivalente a 24px de altura de línea si el tamaño de fuente es 16px */
   }
   .about{
     margin-right: 25%;
-    margin-top: -5%;
+    margin-top: -70%;
+    margin-left: 42%;
   }
   .ticket {
     padding: 1.25em 0;
@@ -720,7 +732,7 @@
     text-decoration: none;
   }
   .inicio,.disco,.album-section{
-    margin-left: 3%;
+    margin-left: 6em;
   }
   .follow {
       margin-top: 1.25em; /* 20px */
