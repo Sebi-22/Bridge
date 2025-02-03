@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     link: "#"
                 },
                 {
-                    date: "3",
+                    date: "03",
                     month: "Jul",
                     day: "Tue",
                     details: "Budapest, Hungary – Nagy Arena",
@@ -38,10 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
             ];
 
             const section = document.getElementById("datos");
+            const ul = section.querySelector("ul"); // Selecciona la lista existente
 
             // Genera y añade las nuevas fechas
             fechasAdicionales.forEach(fecha => {
-                const dateItem = document.createElement("div");
+                const dateItem = document.createElement("li"); // Crea un nuevo elemento de lista
                 dateItem.classList.add("date-item");
 
                 // Añadir contenido interno manteniendo la estructura HTML
@@ -55,9 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
                 `;
 
-                // Agregar antes del contenedor "view-all"
-                const viewAllContainer = document.querySelector(".view-all");
-                section.insertBefore(dateItem, viewAllContainer);
+                // Agregar el nuevo elemento de lista a la lista existente
+                ul.appendChild(dateItem);
             });
 
             // Oculta el botón después de agregar las fechas

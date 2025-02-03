@@ -1,5 +1,5 @@
 *{
-  font-family: 'Open Sans';
+  font-family:'Open Sans','sans-serif';
   }
   img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.albumes img ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
     width: 100%;
@@ -50,7 +50,7 @@
     width: 90%;
     padding:2em ;
   }
-  .navbar a,.texto p,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
+  .navbar a,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
     font-size:1em;
   }
   .navbar img{
@@ -97,7 +97,7 @@
   .nav-links a.active::after {
     transform: scaleX(1);
   }
-  .vertical-name,.title,.our-discography h1,.titulo-Album,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
+  .vertical-name,.title,.our-discography h1,.titulo-album,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
   font-weight: bold;
   }
 .vertical-name {
@@ -115,7 +115,7 @@
       right: 10%;
       text-align: right;
       }
-      .new-album h2,.blog h1,.texto h1,.our-discography h1 {
+      .new-album h2 {
         font-size: 3em;
       }
       .apps {
@@ -190,23 +190,27 @@
       flex: 1;
   }
   .album-cover img {
-      width: 80%;
+      width: 75%;
+      margin-top: 3%;
+      margin-left:5%;
   }
-  .album-details,.about-album ul,.about-album p,.our-discography p,.album-description,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
+  .album-details,.about-album ul,.about-album p,.album-description,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
     font-size: 1.2em;
   }
   .album-details {
       margin-top: 3.25em;
       width: 80%;
+      margin-left: 5%;
+
   }
-  .titulo-Album,.lyrics-section h1 ,.transparencia h3, .texto p,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
+  .titulo-album,.lyrics-section h1 ,.transparencia h3,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
   font-size: 1.5em;
   }
-  .titulo-Album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.ticket  {
+  .titulo-album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.ticket  {
     text-align: left; 
   }
-  .titulo-Album{
-      margin: 0.625em 0;
+  .titulo-album{
+    margin: 0.625em 0;
   }
   .album-description {
       color: #aaa;
@@ -215,41 +219,46 @@
   }
   .tracklist {
       flex: 1;
-      margin-left: 1.25em;
+      margin-left: -1em;
   }
   .tracklist ol {
     list-style: none;
   }
   .tracklist li {
-    padding: 1.3em ;
     border-bottom: 0.063em solid #333;
     color: #bbb;
+    font-weight: 800;
   }
   .track-title {
-    color: #bbb;
+    color: #737272;
     flex-grow: 1;
     transition: color 0.3s;
+    font-size: 0.8em;
   }
   .track-icons span {
     color: #bbb;
     margin-right: 0.625em;
     transition: color 0.3s;
+    font-size: 0.5em;
   }
   .track-icons i {
     color: #bbb;
     margin-left: 0.625em;
     transition: color 0.3s;
+    font-size: 0.5em;
   }
   .texto {
-    margin: 5%;
-    height: 30vh;
-    margin-top: 10%;
+    height: 40vh;
+    margin-top: 7%;
+    margin-left: 10%;
   }
   .texto h1 {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 2.7em;
   }
   .texto p {
-    color:#666;
+    color:#a09d9d;
+    font-size: 1em;
   }
   .gallery {
     flex-wrap: wrap;
@@ -314,14 +323,12 @@
   top: 0.625em;
   left: 0.625em;
   }
-  
   .fechas {
     max-width: 68em; /* 800px / 16 */
-    padding: 1.25em; /* 20px / 16 */
-    margin-left: 8%;
-    margin-top: 5%;
+    padding: 1em; /* 20px / 16 */
+    margin-left: 5%;
+    margin-top: 1%;
 }
-
 .date-item {
     display: flex;
     justify-content: space-between;
@@ -329,12 +336,11 @@
     padding: 1.25em; /* 20px / 16 */
     border-bottom: 0.0625em solid #333; /* 1px / 16 */
     position: relative; /* Necesario para que ::before se posicione relativo al contenedor */
-}
-
+  }
 .date-item::before {
     content: '';
     position: absolute;
-    left: 10em; /* Posición horizontal relativa al contenido */
+    margin-left: 13%;    
     top: 2em;
     bottom: 1em;
     width: 0.1em; /* Grosor de la línea */
@@ -342,24 +348,26 @@
     z-index: -1; /* Coloca la línea detrás del contenido */
 }
 .date {
-    font-size: 4em; 
-    font-weight: bold;
+    font-size: 3.5em; 
+    font-weight:bolder;
+    width: 5%;
+    margin-left: -2%;
 }
 .month-day {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-transform: uppercase;
-    margin-left: 2%;
     color: #888;
+    margin-left: 3em; /* Espacio entre la fecha y el mes/día */
 }
-
 .details {
     flex-grow: 1;
     padding-left: 1.25em; /* 20px / 16 */
-    margin-left: 3%;
+    margin-left: 3em; /* Espacio entre el mes/día y los detalles */
+    flex-grow: 1; /* Permite que los detalles ocupen el espacio restante */
+    font-size: 0.85em;
 }
-
 .buy-tickets {
     font-size: 1em; 
     text-transform: uppercase;
@@ -368,6 +376,7 @@
     font-weight: bold;
     text-decoration: underline;
     margin-right: 2%;
+
 }
 
 .view-all {
@@ -383,8 +392,12 @@
 
   .blog{
   width: 80%;
-  margin-left: 5%;
+  margin-left: 10%;
   padding:  1.25em 0;
+  margin-top: 10%;
+  }
+  .blog h1{
+    font-size: 2.8em;
   }
   .blog h1:after,.our-discography h1::after,.texto h1:after{
     content: "";
@@ -397,6 +410,8 @@
   }
   p {
     line-height: 1.5em;
+    color: #a09d9d;
+    font-size: 1em;
   }
   .blog-posts {
     padding: 1.25em;
@@ -415,10 +430,12 @@
   }
   .blog-post-title {
     font-size: 1.125em;
+    margin-left: -15%;
+    margin-top: 5%;
   }
   .blog-post-date {
-    margin-top: auto;
-    margin-left: 2em;
+    margin-top: 2%;
+    margin-left: -60%;
     color: #aaa;
   }
   .video-section {
@@ -471,18 +488,23 @@
   }
   .our-discography h1 {
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 4%;
+    font-size: 2.8em;
   }
   .our-discography p {
     line-height: 1.6;
     margin-bottom: 3.125em;
     margin-left: 10%;
-    color:#aaa
+    color:#aaa;
+    font-size: 1em;
   }
   .albums {
     display: grid;
     grid-template-columns: repeat(4,1fr); /* 4 columnas */
     justify-items: center;
+    margin-left: 8%;
+    margin: auto 5% 10%;
+    width: 90%;
   }
   .albumes {
     overflow: hidden;
@@ -526,14 +548,20 @@
   }
   .footer {
     padding: 2.5em;
+    margin-bottom: 5%;
   }
   .footer-column {
     flex: 1;
     margin: 0 1.25em;
-    
   }
   .footer-column h2 {
     margin-bottom: 1.25em;
+    font-size: 1.2em;
+  }
+  .footer-column h3 {
+    font-size: 3.2em;
+    margin-top: -1%;
+   margin-bottom: 5%;  
   }
   .footer-column p {
     line-height: 1.6;
@@ -541,6 +569,8 @@
   .footer-column a {
     text-decoration: underline;
     display: block;
+    font-size: 0.8em;
+    margin-top: 8%;
     margin-bottom: 0.625em;
     transition: opacity 0.3s ease; /* Define la transición base */
   }
@@ -850,6 +880,7 @@
   }
   .contact-info p {
     line-height: 1.5;
+    margin-top: 8%;
   }
   .right-section input, .right-section textarea {
     padding: 0.625em;
