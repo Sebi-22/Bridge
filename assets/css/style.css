@@ -1,5 +1,5 @@
 *{
-  font-family: 'Oswald';
+  font-family: 'Open Sans';
   }
   img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.albumes img ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
     width: 100%;
@@ -30,7 +30,7 @@
   }
   .container {
     flex-direction: column;
-    height: 130vh;
+    height: 129vh;
     background-image:  url(../images/slider-img-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,32 +46,29 @@
   justify-content: space-between;
   }
   .navbar {
-    top: 0;
+    top: -1%;
     width: 90%;
     padding:2em ;
   }
-  .navbar a,.title,.texto p,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
+  .navbar a,.texto p,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
     font-size:1em;
   }
   .navbar img{
-   width: 80%;
+   width: 70%;
    margin-bottom:20%; 
-   margin-left: -50%;
+   margin-top: 5%;
+   margin-left: -100%;
   }
   .navbar a {
     text-decoration: none;
     margin: 1em;
   }
-  .navbar img{
-    width: 80%;
-    margin-bottom:20%; 
-    margin-left: -50%;
-   }
   .nav-links {
     display: flex;
-    gap: 1.25em; /* 20px */
-  }
-  .nav-links a,.track-info,.right-section button,.month-day,.blog-post-date,.footer-column p,.ticket a, .contact-info p,.right-section input, .right-section textarea  {
+    position: relative;
+    left: 2.5%;
+   }
+  .track-info,.right-section button,.month-day,.blog-post-date,.footer-column p,.ticket a, .contact-info p,.right-section input, .right-section textarea  {
   font-size: 0.875em; 
   }
   .nav-links a {
@@ -80,6 +77,7 @@
     position: relative;
     padding: 0.3125em 0; /* 5px 0 */
     transition: color 0.3s ease;
+    font-size: 0.8em;
   }
   .nav-links a:hover {
     color: #f0f0f0;
@@ -90,7 +88,6 @@
     height: 0.125em; /* 2px */
     background-color: #fff;
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     transform: scaleX(0);
@@ -105,7 +102,7 @@
   }
 .vertical-name {
       top: 50%;
-      left: 12%;
+      left: 3%;
       transform: translateY(-50%) rotate(180deg); 
       font-size: 8em;
       writing-mode: vertical-rl; 
@@ -113,9 +110,9 @@
       margin-top: 8%;
     }
     .new-album {
-      bottom: -18%;
-       margin-top: -18% ; 
-       right: 9%;
+      bottom: -9%;
+      margin-top:-18% ; 
+      right: 10%;
       text-align: right;
       }
       .new-album h2,.blog h1,.texto h1,.our-discography h1 {
@@ -128,33 +125,33 @@
       .album,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
         background-color: #fff;
       }
-  .album {
-    padding: 0.625em;
-  }
   .left {
     margin-right: 1em;
-    margin-left: 5%;
+    margin-left: 10%;
+
   }
   .left img {
-    width: 3.125em;
-    height: 3.125em;
-    margin-right: 0.625em;
+    width: 4em;
+    height: 4em;
+    margin-right: 2em;
   }
   .title,.controls,.volume-control,.close:hover,.view-all a:hover,#show-MORE:hover ,.ticket a:hover,.right-section button{
     color: #000;
   }
   .title {
-    margin-right: 2%;
+    font-size:1em ;
   }
-  .subtitle,.time,.timer{
+  .time,.timer{
     font-size: 0.75em;
   }
   .subtitle {
     color: #888;
+    font-size: 1em;
   }
   .controls {
-    gap: 0.938em;
-    margin-right:2%;
+    gap: 7em;
+    margin-right:5%;
+    font-size: 0.6em;
   }
   .progress-container {
     flex: 1;
@@ -175,6 +172,7 @@
   }
   .time {
     color: #666;
+    align-items: left;
   }
   .volume-control {
     gap: 0.313em;
