@@ -361,7 +361,7 @@
     color: #888;
     margin-left: 3em; /* Espacio entre la fecha y el mes/día */
 }
-.details {
+.ciudad {
     flex-grow: 1;
     padding-left: 1.25em; /* 20px / 16 */
     margin-left: 3em; /* Espacio entre el mes/día y los detalles */
@@ -864,45 +864,85 @@
   }
   .contact {
     justify-content: space-around;
+    margin-top: 8%;
+    margin-bottom: 10%;
   }
   .contact-section h2 {
     margin-bottom: 0.625em;
+    margin-right: 60%;
   }
   .contact-section p {
     margin: 0.313em ;
   }
   .form {
     padding: 3.125em;
+    background-color:#070707;
   }
-  .left-section, .right-section {
+  .left-section,.right-section {
     width: 45%;
   }
   .left-section h1 {
-    font-size: 2.25em;
+    font-size: 1.5em;
+    margin-top: 10%;
+    margin-left: 10%;
   }
   .left-section p {
     line-height: 1.5;
-  }
-  .contact-info {
+    margin-left: 10%;
+    margin-top: 2%;
+    }
+  .info-contacto {
+    display: flex;
     margin-top: 2.25em;
-
+    justify-content: space-between;
+    margin-left: 10%;
   }
-  .contact-info h2 {
-    font-size: 1.125em;
+  .info-contacto div {
+    width: 45%;
+}
+  .info-contacto h2 {
+    font-size: 1em;
+    margin-bottom:0.625em;
   }
-  .contact-info p {
+  .info-contacto p {
     line-height: 1.5;
     margin-top: 8%;
+    margin: 0.313em 0;
+    font-size: 0.9em;
+    margin-bottom: 20%;
   }
-  .right-section input, .right-section textarea {
-    padding: 0.625em;
-    margin-bottom: 1.25em;
-    border: 0.063em solid #fff;
+  .right-section {
+    text-align: center;
+    margin-top: 5%;
   }
-  .right-section button {
-    padding: 0.625em 1.25em;
-    border: none;
-  }
+.right-section input, .right-section textarea {
+  width: 100%;
+  padding: 0.625em; /* 10px */
+  background-color: #070707;
+  border: 0.0625em solid #fff; /* 1px */
+  color: #fff;
+  font-size: 1em; /* 16px */
+  margin-bottom: 1.25em; /* 20px */
+}
+.right-section textarea {
+  height: 6.25em; /* 100px */
+}
+.right-section button {
+  background-color: #fff;
+  color: #000;
+  padding: 0.625em 1.25em; /* 10px 20px */
+  border: none;
+  cursor: pointer;
+  margin-right: 70%;
+  font-size: 1em; /* 16px */
+  transition: background-color 0.3s, color 0.3s;
+}
+.right-section button:hover {
+  background-color: #000;
+  color: #fff;
+  border: 0.0625em solid #fff; /* 1px */
+}
+
   .galeria-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -11,28 +11,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     date: "22",
                     month: "Jun",
                     day: "Fri",
-                    details: "London, England – O2 Arena",
+                    ciudad: "London, England – O2 Arena",
                     link: "#"
                 },
                 {
                     date: "27",
                     month: "Jun",
                     day: "Wed",
-                    details: "Rome, Italy – Cola Arena",
+                    ciudad: "Rome, Italy – Cola Arena",
                     link: "#"
                 },
                 {
                     date: "29",
                     month: "Jun",
                     day: "Fri",
-                    details: "Athens, Greece – PAOK Stadium",
+                    ciudad: "Athens, Greece – PAOK Stadium",
                     link: "#"
                 },
                 {
                     date: "03",
                     month: "Jul",
                     day: "Tue",
-                    details: "Budapest, Hungary – Nagy Arena",
+                    ciudad: "Budapest, Hungary – Nagy Arena",
                     link: "#"
                 }
             ];
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div>${fecha.month}</div>
                         <div>${fecha.day}</div>
                     </div>
-                    <div class="details">${fecha.details}</div>
+                    <div class="ciudad">${fecha.ciudad}</div>
                     <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
                 `;
 
