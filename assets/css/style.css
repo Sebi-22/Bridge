@@ -13,19 +13,19 @@
   body,.modal,.blog-posts,#show-MORE,.footer,.form,.right-section input, .right-section textarea,#scrollToTopBtn{
   background-color: #000000;
   }
-  body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3,.articulos article, .transparencia h3 {
+  body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3 {
     margin: 0;
   }
-  .container,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.articulos,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.controles,.song-list li,.iconos-abajo {
+  .container,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.controles,.song-list li,.iconos-abajo {
     display: flex;
   }
-  .container,.modal,.overlay, .articulos,.player,.platform-icons,.navigation .dots,.contactos,.tour,.about_us,.nav-icons ,.iconos-abajo{
+  .container,.modal,.overlay,.player,.platform-icons,.navigation .dots,.contactos,.tour,.about_us,.nav-icons ,.iconos-abajo{
   justify-content: center;
   }
   .container,.album,.musica,.iconos-abajo,.content,.contactos,.tour,.about_us,.navigation ,.info-box .buy-button ,.info-box,.date-item,.left,.modal ,.controls,.progress-container,.volume-control,.tracklist li,.track-icons,.navigation .dots {
   align-items: center;
   }
-  .container,.contactos,.tour,.about_us,.video-container,.lyrics-section h3,.image-container,.articulos article,.Fotones,.albumes,.video-section,.modal-content,.progress-bar{
+  .container,.contactos,.tour,.about_us,.video-container,.lyrics-section h3,.image-container,.Fotones,.albumes,.video-section,.modal-content,.progress-bar{
     position: relative;
   }
   .container {
@@ -185,7 +185,7 @@
     background-image:url(../images/h1-img-8.jpg) ;
     padding: 5.25em;
     height: 120vh;
-  }
+   }
   .album-cover {
       flex: 1;
   }
@@ -193,9 +193,13 @@
       width: 75%;
       margin-top: 3%;
       margin-left:5%;
+      margin-bottom: -5%;
   }
-  .album-details,.about-album ul,.about-album p,.album-description,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
+  .album-details,.about-album ul,.about-album p,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
     font-size: 1.2em;
+  }
+  .album-description{
+    font-size: 0.9em;
   }
   .album-details {
       margin-top: 3.25em;
@@ -203,7 +207,7 @@
       margin-left: 5%;
 
   }
-  .titulo-album,.lyrics-section h1 ,.transparencia h3,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .about h2, .follow h2,.follow i  {
+  .titulo-album,.lyrics-section h1 ,.transparencia h3,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .follow h2,.follow i  {
   font-size: 1.5em;
   }
   .titulo-album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.ticket  {
@@ -249,8 +253,9 @@
   }
   .texto {
     height: 40vh;
-    margin-top: 7%;
+    margin-top: 8%;
     margin-left: 10%;
+    margin-bottom: 5%;
   }
   .texto h1 {
     font-weight: 600;
@@ -258,7 +263,7 @@
   }
   .texto p {
     color:#a09d9d;
-    font-size: 1em;
+    font-size: 1.2em;
   }
   .gallery {
     flex-wrap: wrap;
@@ -623,48 +628,55 @@
     padding: 1.25em;
     border-top: 0.063em solid #333;
   }
-       .articulos {
-        overflow: hidden;
-    }
+  .articulos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5%;
+    margin-right: 3%;
+  }
     .articulos article {
-        height: 31.25em; /* Aumenta la altura para hacerlos más grandes */
-        overflow: hidden;
+      position: relative;
+      flex: 1;
     }
     .articulos .foto img {
-        width: 130%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
+      width: 130%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.5s ease;
     }
     .transparencia {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-    }
-    .articulos article:hover .transparencia {
-        opacity: 1;
-    }
-    .transparencia h3 {
-        text-transform: uppercase;
-    }
-    .transparencia p {
-        margin:0.5em;
-        color: #ccc;
-    }
-    .transparencia .social {
-        gap: 0.313em;
-    }
-    .transparencia .social i {
-        transition: color 0.3s ease;
-    }
-    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      margin-left: 12%;
+  }
+  .articulos article:hover .transparencia {
+    opacity: 1;
+}
+.transparencia h3 {
+  text-transform: uppercase;
+}
+.transparencia h3 {
+  text-transform: uppercase;
+}
+.transparencia p {
+  margin:0.5em;
+  color: #ccc;
+}
+.transparencia  .social {
+  gap: 0.313em;
+}
+.transparencia .social i {
+  transition: color 0.3s ease;
+}
+  .menu {
       padding: 1.25em; /* Equivalente a 20px */
   }
    .breadcrumb {
@@ -679,6 +691,7 @@
   }
   .content {
     padding: 7em;
+    margin-top: -1%;
   }
   .content img {
     width:29%; /* Ajusta al 40% del contenedor */
@@ -700,7 +713,7 @@
   }
   .details{
     margin-bottom: 50%;
-    margin-top: -13%;
+    margin-top: -20%;
     margin-left: 5%;
   }
   .details,.about {
@@ -708,6 +721,9 @@
   }
  .about h2, .follow h2 {
       margin-bottom: 0.625em; /* 10px */
+  }
+  .about h2{
+    font-size: 1.8em;
   }
   .details h2{
     margin-bottom: 2%;
@@ -718,7 +734,7 @@
   }
   .about{
     margin-right: 25%;
-    margin-top: -70%;
+    margin-top: -68%;
     margin-left: 42%;
   }
   .ticket {
