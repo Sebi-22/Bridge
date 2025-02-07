@@ -860,7 +860,8 @@ padding: 1.25em; /* Equivalente a 20px */
     margin: 0.3125em; /* 5px */
   }
   .tour-dates{
-    font-size: 355%;
+    font-size: 255%;
+    font-weight: 500;
   }
   .contact {
     justify-content: space-around;
@@ -936,7 +937,7 @@ padding: 1.25em; /* Equivalente a 20px */
 }
 .error {
   color: red;
-  font-size: 0.875em;
+  font-size:0.875em;
   margin-bottom: 0.625em;
 }
 .alert {
@@ -956,7 +957,7 @@ padding: 1.25em; /* Equivalente a 20px */
   }
   .contactos,.tour,.about_us {
     flex-direction: column;
-    height: 70vh;
+    height: 85vh;
     background-image:  url(../images/contact-us-title.jpg);
     background-repeat: no-repeat;
     background-size: cover;
