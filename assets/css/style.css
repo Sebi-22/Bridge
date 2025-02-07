@@ -13,7 +13,7 @@
   body,.modal,.blog-posts,#show-MORE,.footer,.form,.right-section input, .right-section textarea,#scrollToTopBtn{
   background-color: #000000;
   }
-  body,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3 {
+  body,.accordion-content p,.our-discography,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3 {
     margin: 0;
   }
   .container,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.controles,.song-list li,.iconos-abajo {
@@ -107,6 +107,8 @@
       font-size: 8em;
       writing-mode: vertical-rl; 
       text-orientation: mixed;
+    }
+    .vertical-name,.texto,.footer-column a,.contact,.info-contacto p {
       margin-top: 8%;
     }
     .new-album {
@@ -127,8 +129,9 @@
       }
   .left {
     margin-right: 1em;
+  }
+  .left,.texto,.our-discography h1,.our-discography p,.albumes p,.left-section h1,.left-section p,.info-contacto,.image-foto img {
     margin-left: 10%;
-
   }
   .left img {
     width: 4em;
@@ -146,6 +149,8 @@
   }
   .subtitle {
     color: #888;
+  }
+  .subtitle,.buy-tickets,.p,.our-discography p,.social-icons a, .info-contacto h2,.track-titulo  {
     font-size: 1em;
   }
   .controls {
@@ -154,10 +159,12 @@
     font-size: 0.6em;
   }
   .progress-container {
-    flex: 1;
     margin:0.625em;
   }
-  .progress-bar,.track-icons i,.nav-button,.controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
+  .progress-container, .album-cover, .tracklist,.footer-column,.articulos article, .song-list  {
+    flex: 1;
+}
+  .progress-bar,.controles div,.accordion-header,.track-icons i,.nav-button,.controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
     cursor: pointer;
   }
   .progress-bar {
@@ -185,10 +192,7 @@
     background-image:url(../images/h1-img-8.jpg) ;
     padding: 5.25em;
     height: 120vh;
-   }
-  .album-cover {
-      flex: 1;
-  }
+   } 
   .album-cover img {
       width: 75%;
       margin-top: 3%;
@@ -205,7 +209,6 @@
       margin-top: 3.25em;
       width: 80%;
       margin-left: 5%;
-
   }
   .titulo-album,.lyrics-section h1 ,.transparencia h3,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .follow h2,.follow i  {
   font-size: 1.5em;
@@ -222,7 +225,6 @@
       text-align: justify;
   }
   .tracklist {
-      flex: 1;
       margin-left: -1em;
   }
   .tracklist ol {
@@ -253,8 +255,6 @@
   }
   .texto {
     height: 40vh;
-    margin-top: 8%;
-    margin-left: 10%;
     margin-bottom: 5%;
   }
   .texto h1 {
@@ -374,16 +374,13 @@
     font-size: 0.85em;
 }
 .buy-tickets {
-    font-size: 1em; 
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     text-decoration: underline;
     margin-right: 2%;
-
 }
-
 .view-all {
     padding: 1.25em 0;
 }
@@ -416,7 +413,6 @@
   p {
     line-height: 1.5em;
     color: #a09d9d;
-    font-size: 1em;
   }
   .blog-posts {
     padding: 1.25em;
@@ -436,6 +432,8 @@
   .blog-post-title {
     font-size: 1.125em;
     margin-left: -15%;
+  }
+  .blog-post-title, .right-section, .image-foto img,.review-section  {
     margin-top: 5%;
   }
   .blog-post-date {
@@ -488,20 +486,16 @@
     margin-right: 0.313em;
   }
   .our-discography {
-    margin: 0 ;
     padding: 3.125em 0;
   }
   .our-discography h1 {
-    margin-left: 10%;
     margin-top: 4%;
     font-size: 2.8em;
   }
   .our-discography p {
     line-height: 1.6;
     margin-bottom: 3.125em;
-    margin-left: 10%;
     color:#aaa;
-    font-size: 1em;
   }
   .albums {
     display: grid;
@@ -535,7 +529,6 @@
     }
   .albumes p{
     margin-bottom: 15%;
-    margin-left: 10%;
   }
   .view-all {
     margin-top: 2em;
@@ -556,7 +549,6 @@
     margin-bottom: 5%;
   }
   .footer-column {
-    flex: 1;
     margin: 0 1.25em;
   }
   .footer-column h2 {
@@ -575,7 +567,6 @@
     text-decoration: underline;
     display: block;
     font-size: 0.8em;
-    margin-top: 8%;
     margin-bottom: 0.625em;
     transition: opacity 0.3s ease; /* Define la transición base */
   }
@@ -586,7 +577,6 @@
 .social-icons {
   margin-top: 1.25em;
 }
-
 .social-icons a {
   font-size: 1.25em;
   margin-right: 0.625em;
@@ -601,7 +591,6 @@
   background-color: transparent; /* Fondo inicial */
   transition: all 0.3s ease; /* Transición suave para los cambios */
 }
-
 .social-icons a:hover {
   color: #000; /* Cambia el color del icono a negro */
   background-color: #fff; /* Cambia el fondo a blanco */
@@ -615,7 +604,6 @@
     margin-top: 1.25em;
   }
   .social-icons a {
-    font-size: 1em;
     margin-right: 0.625em;
     display: inline-block;
     width: 2em;
@@ -636,7 +624,6 @@
   }
     .articulos article {
       position: relative;
-      flex: 1;
     }
     .articulos .foto img {
       width: 130%;
@@ -677,7 +664,7 @@
   transition: color 0.3s ease;
 }
   .menu {
-      padding: 1.25em; /* Equivalente a 20px */
+padding: 1.25em; /* Equivalente a 20px */
   }
    .breadcrumb {
     color: #ccc; /* Texto gris claro */
@@ -691,7 +678,7 @@
   }
   .content {
     padding: 7em;
-    margin-top: -1%;
+    margin-top: -10%;
   }
   .content img {
     width:29%; /* Ajusta al 40% del contenedor */
@@ -807,9 +794,7 @@
 
 }
 .accordion-header {
-    padding: 0.938em;
-    cursor: pointer;
-    display: flex;
+    padding: 0.938em;    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -818,7 +803,6 @@
     display: none;
 }
 .accordion-content p {
-    margin: 0;
     line-height: 1.5;
 }
 .accordion.active .accordion-content {
@@ -880,7 +864,6 @@
   }
   .contact {
     justify-content: space-around;
-    margin-top: 8%;
     margin-bottom: 10%;
   }
   .contact-section h2 {
@@ -900,37 +883,30 @@
   .left-section h1 {
     font-size: 1.5em;
     margin-top: 10%;
-    margin-left: 10%;
-  }
+    }
   .left-section p {
     line-height: 1.5;
-    margin-left: 10%;
     margin-top: 2%;
     }
   .info-contacto {
     display: flex;
     margin-top: 2.25em;
     justify-content: space-between;
-    margin-left: 10%;
   }
   .info-contacto div {
     width: 45%;
 }
   .info-contacto h2 {
-    font-size: 1em;
     margin-bottom:0.625em;
   }
   .info-contacto p {
     line-height: 1.5;
-    margin-top: 8%;
     margin: 0.313em 0;
     font-size: 0.9em;
     margin-bottom: 20%;
   }
   .right-section {
-    text-align: center;
-    margin-top: 5%;
-  }
+    text-align: center;  }
 .right-section input, .right-section textarea {
   width: 100%;
   padding: 0.625em; /* 10px */
@@ -958,7 +934,18 @@
   color: #fff;
   border: 0.0625em solid #fff; /* 1px */
 }
-
+.error {
+  color: red;
+  font-size: 0.875em;
+  margin-bottom: 0.625em;
+}
+.alert {
+  background: yellow;
+  color: black;
+  padding: 0.625em;
+  margin-top: 0.625em;
+  display: none;
+}
   .galeria-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1008,8 +995,6 @@
   }
   .image-foto img {
     max-width: 35em; /* Tamaño máximo de la imagen en em */
-    margin-left: 10%;
-    margin-top: 5%;
     object-fit: cover;
   }
   .about1 {
@@ -1050,7 +1035,6 @@
     margin-bottom: 1em;
 }
 .controles div {
-    cursor: pointer;
     padding: 0.5em;
     margin-left: 8%;
     margin-right: 15%;
@@ -1069,7 +1053,6 @@
     width: 100%;
 }
 .track-titulo {
-    font-size: 1em;
     font-weight: bold;
 }
 .artist-name {
@@ -1078,9 +1061,9 @@
 .timer {
     color: #ccc;
 }
-  .song-list {  padding: 1.25em;
+  .song-list {  
+    padding: 1.25em;
     max-width: 25em;
-    flex: 1;
     margin-left: 3em;
     font-size: 1.3em;
   }
@@ -1107,7 +1090,6 @@
     padding: 2em;
     max-width: 30.25em;
     margin-left: 52%;
-    margin-top: 5%;
   }
   .review-section h2 {
     margin-bottom: 1.5em;

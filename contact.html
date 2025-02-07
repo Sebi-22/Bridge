@@ -77,9 +77,19 @@
             </div>
             <div class="right-section">
                 <input type="text" id="name" placeholder="Your Name*">
+                <div id="error-name" class="error"></div>
+        
                 <input type="email" id="email" placeholder="Your Email*">
+                <div id="error-email" class="error"></div>
+        
                 <textarea id="message" placeholder="Your Message*"></textarea>
+                <div id="error-message" class="error"></div>
+        
                 <button onclick="sendMessage()">SEND MESSAGE</button>
+        
+                <div id="alerta" class="alert" style="display: none;">
+                    ⚠️ ONE OR MORE FIELDS HAVE AN ERROR. PLEASE CHECK AND TRY AGAIN.
+                </div>
             </div>
         </section>
       <footer>

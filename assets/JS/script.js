@@ -91,26 +91,41 @@ document.getElementById('cerrarModal').addEventListener('click', function() {
 
 //Formulario de contacto
 function sendMessage() {
-    // Capturar los valores de los campos
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+    var verify = true;
 
-    // Validar los campos requeridos
-    if (name === "" || email === "" || message === "") {
-        alert("Todos los campos son obligatorios.");
-        return;
+    document.getElementById("error-name").textContent = "";
+    document.getElementById("error-email").textContent = "";
+    document.getElementById("error-message").textContent = "";
+    document.getElementById("alerta").style.display = "none";
+
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+
+    if (name === "") {
+        document.getElementById("error-name").textContent = "The field is required.";
+        verify = false;
+    }
+    if (email === "") {
+        document.getElementById("error-email").textContent = "The field is required.";
+        verify = false;
+    } else {
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById("error-email").textContent = "Please enter a valid email.";
+            verify = false;
+        }
+    }
+    if (message === "") {
+        document.getElementById("error-message").textContent = "The field is required.";
+        verify = false;
     }
 
-    // Validación de formato de email
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        alert("Por favor, ingresa un correo electrónico válido.");
-        return;
+    if (verify) {
+        window.location.replace("gracias.html");
+    } else {
+        document.getElementById("alerta").style.display = "block";
     }
-
-    // Enviar datos o mostrar una confirmación
-    alert(`Mensaje enviado:\nNombre: ${name}\nEmail: ${email}\nMensaje: ${message}`);
 }
 
   // Variables de control de audio
