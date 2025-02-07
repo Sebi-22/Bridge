@@ -55,7 +55,23 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
         const accordion = header.parentElement;
+
+        // Cerrar otros acordeones antes de abrir el nuevo
+        document.querySelectorAll('.accordion').forEach(item => {
+            if (item !== accordion) {
+                item.classList.remove('active');
+                item.querySelector('.accordion-content').style.maxHeight = null;
+            }
+        });
+
+        // Alternar el estado del acordeón actual
         accordion.classList.toggle('active');
+        const content = accordion.querySelector('.accordion-content');
+        if (accordion.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = null;
+        }
     });
 });
 

@@ -150,7 +150,7 @@
   .subtitle {
     color: #888;
   }
-  .subtitle,.buy-tickets,.p,.our-discography p,.social-icons a, .info-contacto h2,.track-titulo  {
+  .subtitle,.buy-tickets,.p,.our-discography p,.social-icons a, .info-contacto h2  {
     font-size: 1em;
   }
   .controls {
@@ -671,7 +671,7 @@ padding: 1.25em; /* Equivalente a 20px */
     margin-top:9%;
     top: 0;
     width: 90%;
-    margin-left: 14%;
+    margin-left: 10%;
   }
   .breadcrumb a {
     color: #ccc; /* Color de los enlaces */
@@ -765,8 +765,9 @@ padding: 1.25em; /* Equivalente a 20px */
   }
   .about1 {
     max-width: 30em;
-    margin: 1em auto;
+    margin-left: 9em;
     line-height: 1.5;
+    margin-top: 3%;
   }
   .about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2 {
     margin-bottom: 0.5em;
@@ -782,7 +783,7 @@ padding: 1.25em; /* Equivalente a 20px */
   .lyrics-section {
     max-width: 37.5em;
     margin-left: 52%;
-    margin-top: -10%;
+    margin-bottom: 10%;
 }
 .lyrics-section h1 {
     margin-bottom: 1.25em;
@@ -801,13 +802,17 @@ padding: 1.25em; /* Equivalente a 20px */
 .accordion-content {
     padding: 0.938em;
     display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 .accordion-content p {
     line-height: 1.5;
 }
 .accordion.active .accordion-content {
     display: block;
-}
+    max-height: 18.75em; /* 300px = 18.75em si el font-size base es 16px */
+  }
 .accordion.active .accordion-header i {
     transform: rotate(180deg);
 }
@@ -995,8 +1000,10 @@ padding: 1.25em; /* Equivalente a 20px */
     margin: 0 auto;
   }
   .image-foto img {
-    max-width: 35em; /* Tamaño máximo de la imagen en em */
+    max-width: 30em; /* Tamaño máximo de la imagen en em */
     object-fit: cover;
+    margin-left: 20%;
+    margin-top:15%;
   }
   .about1 {
     max-width: 35em; /* Ancho máximo para la sección de información */
@@ -1021,24 +1028,31 @@ padding: 1.25em; /* Equivalente a 20px */
   .musica {
     background-color: #2b2b2b;
     border-radius: 0.5em;
-    width: 32em;
-    padding: 1em;
+    width: 30em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 7%;
-    margin-top: -29%;
+    margin-left: 10%;
+    margin-top: -50%;
 }
 .controles {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 1em;
+    padding: 0.8em;
 }
 .controles div {
     padding: 0.5em;
     margin-left: 8%;
     margin-right: 15%;
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+.controles div:not(:first-child) {
+  border-left: 0.10em solid gray; /* Línea entre los botones */
+  margin-left: -10%;
 }
 .controles i {
     color: #fff;
@@ -1052,12 +1066,18 @@ padding: 1.25em; /* Equivalente a 20px */
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    display: flex;
+    padding: 1em 0;
+    border-top: 0.08em solid gray;
+    margin-top: 0.5em;
 }
 .track-titulo {
     font-weight: bold;
+    font-size: 1.2em;
 }
 .artist-name {
     color: #ccc;
+    font-size: 0.8em;
 }
 .timer {
     color: #ccc;
@@ -1067,13 +1087,16 @@ padding: 1.25em; /* Equivalente a 20px */
     max-width: 25em;
     margin-left: 3em;
     font-size: 1.3em;
+    margin-top: 3%;
   }
   .song-list h1 {
-    font-size: 2.125em; 
+    font-size: 1.2em; 
     margin-bottom: 0.125em;
+    margin-left: 10%;
   }
   .song-list ol {
     list-style-type: none;
+    font-size: 0.9em;
   }
   .song-list li {
     padding: 0.625em ;
