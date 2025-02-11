@@ -1,10 +1,10 @@
 *{
   font-family:'Oswald','Open Sans','sans-serif';
   }
-  img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.albumes img ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
+  img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
     width: 100%;
   }
-  img,.image img,.blog-post img,.albumes img,.Fotones img,.content img,.image-container img,.images img,.image-foto img  {
+  img,.image img,.blog-post img,.Fotones img,.content img,.image-container img,.images img,.image-foto img  {
   height: auto;
   }
   body,.container,.navbar a,.track-title:hover,.track-icons span:hover,.track-icons i:hover,.texto2 h1,.buy-tickets,.buy-track,.song-list h1,.song-list,.musica,.available-on,.albumesss,#scrollToTopBtn,.contactos,.tour,.about_us,.right-section input, .right-section textarea ,.link:hover,.view-all a,.follow i:hover.ticket a,.link,.detalles, .transparencia .social i,.social-icons a,.footer-column a,.show-more,.Fotones figcaption ,#show-MORE,.albumes figcaption,.info-box .buy-button,.side-text,.play-button,.blog-posts,.review-section,.review-section h2,.review-source,.nav-button:hover,.flecha,.punto{
@@ -503,51 +503,67 @@
   }
   .albums {
     display: grid;
-    grid-template-columns: repeat(4,1fr); /* 4 columnas */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 0.9375em; /* 15px */
     justify-items: center;
-    margin-left: 8%;
-    margin: auto 5% 10%;
+    margin-left: 7%;
     width: 90%;
-  }
-  .albumes {
+}
+.albumes {
+    position: relative;
     overflow: hidden;
-  }
-  .albumes img {
-    display: block;
+    width: 100%;
+    aspect-ratio: 1; /* Mantiene proporción cuadrada */
+}
+.albumes img {
     transition: opacity 0.3s ease-in-out;
-  }
-  .albumes:hover img {
+    width: 150%;
+    height: 200%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio */
+}
+.albumes:hover img {
     opacity: 0.4;
-  }
-  .albumes figcaption {
-    bottom: 0.625em;
+}
+.albumes figcaption {
+    position: absolute;
+    bottom: 0.625em; /* 10px */
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
+    text-align: center;
+    color: white;
     transition: opacity 0.3s ease-in-out;
-  }
-  .albumes:hover figcaption {
+    width: 80%;
+}
+.albumes:hover figcaption {
     opacity: 1;
-  }
-  .albumes h3 {
-    padding:0.3125em;
-    margin-top: -60%;
-    }
-  .albumes p{
-    margin-bottom: 15%;
-  }
-  .view-all {
-    margin-top: 2em;
-  }
-  #show-more {
+}
+.albumes h3 {
+    font-size: 1.2em;
+    margin: 0;
+    margin-right: 38%;
+}
+.albumes p {
+    font-size: 1em;
+    margin: 0.3125em 0; /* 5px */
+    margin-left: 19%;
+}
+.view-all {
+    margin-top: 1.25em; /* 20px */
+    text-align: center;
+}
+#show-more {
     text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 0.313em;
-    transition: background-color 0.3s ease-in-out;
-  }
-  figcaption p {
-    font-size: 0.7em;
-    margin: 0.25em;
-    color: #a09d9d;
-  }
+    padding: 1em;
+    border-radius: 0.4em; /* 5px */
+    background-color: #000000;
+    color: white;
+    transition:background-color 0.3s ease-in-out;
+}
+#show-more:hover {
+    background-color: #ffffff;
+    color: #000;
+}
   .footer {
     padding: 2.5em;
     margin-bottom: 5%;
