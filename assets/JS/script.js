@@ -127,52 +127,58 @@ function sendMessage() {
         document.getElementById("alerta").style.display = "block";
     }
 }
+// Variables de control de audio
+const playPauseBtn = document.getElementById("play-pause");
+const progressBar = document.getElementById("progress-bar");
+const progressBarFill = document.getElementById("progress-bar-fill");
+const currentTimeEl = document.getElementById("current-time");
+const durationEl = document.getElementById("duration");
+const volumeSlider = document.getElementById("volume-slider");
 
-  // Variables de control de audio
-  const playPauseBtn = document.getElementById('play-pause');
-  const progressBar = document.getElementById('progress-bar');
-  const progressBarFill = document.getElementById('progress-bar-fill');
-  const currentTimeEl = document.getElementById('current-time');
-  const durationEl = document.getElementById('duration');
-  const volumeSlider = document.getElementById('volume-slider');
-  
-  // Crear audio (reemplaza 'ruta_del_audio.mp3' con la ruta real de tu archivo de audio)
-  const audio = new Audio('assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3');
+// Crear el objeto de audio
+const audio = new Audio("assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3"); // Asegúrate de que la ruta sea correcta
 
-  audio.addEventListener('loadedmetadata', () => {
-      durationEl.textContent = formatTime(audio.duration);
-  });
+// Evento para cuando el audio carga sus metadatos
+audio.addEventListener("loadedmetadata", () => {
+    durationEl.textContent = formatTime(audio.duration);
+});
 
-  audio.addEventListener('timeupdate', () => {
-      const progress = (audio.currentTime / audio.duration) * 100;
-      progressBarFill.style.width = `${progress}%`;
-      currentTimeEl.textContent = formatTime(audio.currentTime);
-  });
+// Evento de actualización del tiempo de reproducción
+audio.addEventListener("timeupdate", () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    progressBarFill.style.width = `${progress}%`;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+});
 
-  progressBar.addEventListener('click', (e) => {
-      const clickPosition = (e.offsetX / progressBar.offsetWidth) * audio.duration;
-      audio.currentTime = clickPosition;
-  });
+// Hacer clic en la barra de progreso para adelantar la canción
+progressBar.addEventListener("click", (e) => {
+    const clickPosition = (e.offsetX / progressBar.offsetWidth) * audio.duration;
+    audio.currentTime = clickPosition;
+});
 
-  playPauseBtn.addEventListener('click', () => {
-      if (audio.paused) {
-          audio.play();
-          playPauseBtn.classList.replace('fa-play', 'fa-pause');
-      } else {
-          audio.pause();
-          playPauseBtn.classList.replace('fa-pause', 'fa-play');
-      }
-  });
+// Controlar el botón de play/pause
+playPauseBtn.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play();
+        playPauseBtn.classList.replace("fa-play", "fa-pause");
+    } else {
+        audio.pause();
+        playPauseBtn.classList.replace("fa-pause", "fa-play");
+    }
+});
 
-  volumeSlider.addEventListener('input', () => {
-      audio.volume = volumeSlider.value;
-  });
+// Control de volumen
+volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value;
+});
 
-  function formatTime(seconds) {
-      const mins = Math.floor(seconds / 60);
-      const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
-      return `${mins}:${secs}`;
-  }
+// Formato de tiempo (minutos:segundos)
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
+    return `${mins}:${secs}`;
+}
+
 // Arreglo de objetos con los datos de las nuevas imágenes
 const newAlbums = [
     { src: "assets/images/album-5.jpg", title: "FALLEN", description: "Harmony" },

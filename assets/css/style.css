@@ -1,5 +1,5 @@
 *{
-  font-family:'Open Sans','sans-serif';
+  font-family:'Oswald','Open Sans','sans-serif';
   }
   img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography,.albumes img ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
     width: 100%;
@@ -30,7 +30,7 @@
   }
   .container {
     flex-direction: column;
-    height: 129vh;
+    height: 135vh;
     background-image:  url(../images/slider-img-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,20 +101,21 @@
   font-weight: bold;
   }
 .vertical-name {
-      top: 50%;
-      left: 3%;
+      top: 55%;
+      left: 5%;
       transform: translateY(-50%) rotate(180deg); 
       font-size: 8em;
       writing-mode: vertical-rl; 
       text-orientation: mixed;
+      line-height: 1; /* Reduce espacio entre letras */
     }
     .vertical-name,.texto,.footer-column a,.contact,.info-contacto p {
       margin-top: 8%;
     }
     .new-album {
-      bottom: -9%;
+      bottom: -15%;
       margin-top:-18% ; 
-      right: 10%;
+      left: 55%;
       text-align: right;
       }
       .new-album h2 {
@@ -123,6 +124,7 @@
       .apps {
         justify-content:left;
         margin-top: 1.25em;
+
       }
       .album,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
         background-color: #fff;
@@ -160,6 +162,7 @@
   }
   .progress-container {
     margin:0.625em;
+    margin-right: 20%;
   }
   .progress-container, .album-cover, .tracklist,.footer-column,.articulos article, .song-list  {
     flex: 1;
@@ -183,7 +186,8 @@
   }
   .volume-control {
     gap: 0.313em;
-    margin-right: 5%;;
+    margin-right: 20%;
+    margin-left: -18%;
   }
   .volume-slider {
     width: 5em;
@@ -1114,39 +1118,49 @@ padding: 1.25em; /* Equivalente a 20px */
     padding: 2em;
     max-width: 30.25em;
     margin-left: 52%;
-  }
-  .review-section h2 {
+    border: 0.125em  /* Aquí está el recuadro */
+}
+.review-section h2 {
     margin-bottom: 1.5em;
     letter-spacing: 0.1em;
-  }
-  .review-text {
-    font-size: 0.9em;
+}
+.review-text {
+    font-size: 1em; /* 16px */
     font-style: italic;
+    margin-bottom: 1.25em; /* 20px */
     line-height: 1.5;
     color: #b3b3b3;
-    margin: 0 0 2em;
-  }
-  .review-source {
-    font-size: 0.8em;
-    margin-bottom: 2em;
-  }
-  .nav-icons {
-    gap: 1.25em;
-    margin-left: 60%;
-  }
-  .nav-button {
+}
+.review-source {
+    font-size: 1em; /* 8px */
+    margin-bottom: 0.125em; /* 2px */
+}
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    margin-left: 85%;
+}
+
+.nav-button {
     background-color: transparent;
     color: #b3b3b3;
-    padding: 0.2em 0.5em;
-    transition: color 0.3s,border-color 0.3s;
-  }
-  .nav-button:hover {
+    padding: 0.125em 0.3125em; /* 2px 5px */
+    border: 0.0625em solid transparent; /* 1px */
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.nav-button:hover {
+    color: #ffffff;
     border-color: #ffffff;
-  }
-  .iconos-abajo {
-    gap: 35em;              
-    padding: 0.5em;
-  }
+}
+
+.iconos-abajo {
+    display: flex;
+    justify-content: center;
+    gap: 2.1875em; /* 35px */
+    padding: 0.3125em; /* 5px */
+}
+
  /* Media Queries */
 @media (max-width: 1200px) {
   .navbar {
