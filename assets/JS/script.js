@@ -321,6 +321,82 @@ document.addEventListener("DOMContentLoaded", function() {
         albumContainer.appendChild(article);
     });
 });
+document.querySelectorAll('.fa-play').forEach(playButton => {
+    playButton.addEventListener('click', function() {
+        // Detener todos los audios
+        document.querySelectorAll('audio').forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0; // Reiniciar el audio
+        });
+
+        // Restablecer todos los botones de play y pausa
+        document.querySelectorAll('.fa-play').forEach(button => {
+            button.style.display = 'inline';
+        });
+        document.querySelectorAll('.fa-pause').forEach(button => {
+            button.style.display = 'none';
+        });
+
+        // Remover la clase 'playing' de todos los títulos
+        document.querySelectorAll('.track-title').forEach(title => {
+            title.classList.remove('playing');
+        });
+
+        // Obtener el audio correspondiente
+        const audioId = this.getAttribute('data-audio');
+        const audio = document.getElementById(audioId);
+
+        // Reproducir el audio
+        audio.play();
+
+        // Agregar la clase 'playing' al título
+        this.closest('li').querySelector('.track-title').classList.add('playing');
+
+        // Alternar la visibilidad de los botones
+        this.style.display = 'none'; // Ocultar botón de play
+        this.closest('li').querySelector('.fa-pause').style.display = 'inline'; // Mostrar botón de pausa
+    });
+});
+
+// Agregar el evento para el botón de pausa
+document.querySelectorAll('.fa-pause').forEach(pauseButton => {
+    pauseButton.addEventListener('click', function() {
+        // Obtener el audio correspondiente
+        const audioId = this.getAttribute('data-audio');
+        const audio = document.getElementById(audioId);
+
+        // Pausar el audio
+        audio.pause();
+
+        // Remover la clase 'playing' del título
+        this.closest('li').querySelector('.track-title').classList.remove('playing');
+
+        // Alternar la visibilidad de los botones
+        this.style.display = 'none'; // Ocultar botón de pausa
+        this.closest('li').querySelector('.fa-play').style.display = 'inline'; // Mostrar botón de play
+    });
+});
+
+
+// Agregar el evento para el botón de pausa
+document.querySelectorAll('.fa-pause').forEach(pauseButton => {
+    pauseButton.addEventListener('click', function() {
+        // Obtener el audio correspondiente
+        const audioId = this.getAttribute('data-audio');
+        const audio = document.getElementById(audioId);
+
+        // Pausar el audio
+        audio.pause();
+
+        // Remover la clase 'playing' del título y el botón de play
+        this.classList.remove('playing');
+        this.closest('li').querySelector('.track-title').classList.remove('playing');
+
+        // Mostrar y ocultar botones
+        this.style.display = 'none'; // Ocultar el botón de pausa
+        this.closest('li').querySelector('.fa-play').style.display = 'inline'; // Mostrar el botón de play
+    });
+});
 document.addEventListener("DOMContentLoaded", function() {
     // Datos de las imágenes
     const images = [
@@ -408,3 +484,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
