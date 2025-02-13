@@ -331,6 +331,7 @@
     .image img {
       object-fit: cover;
     }
+  
     .modal {
       display: none; /* Oculto por defecto */
       position: fixed;
