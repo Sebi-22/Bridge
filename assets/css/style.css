@@ -67,7 +67,7 @@
       position: relative;
       left: 2.5%;
     }
-    .track-info,.right-section button,.month-day,.blog-post-date,.footer-column p,.ticket a, .contact-info p,.right-section input, .right-section textarea  {
+    .track-info,.right-section button,.month-day,.blog-post-date,.ticket a, .contact-info p,.right-section input, .right-section textarea  {
     font-size: 0.875em; 
     }
     .nav-links a {
@@ -213,7 +213,7 @@
         width: 80%;
         margin-left: 5%;
     }
-    .titulo-album,.lyrics-section h1 ,.transparencia h3,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.footer-column h2,.details h2,.album-title, .follow h2,.follow i  {
+    .titulo-album,.lyrics-section h1 ,.transparencia h3,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.details h2,.album-title, .follow h2 {
     font-size: 1.5em;
     }
     .titulo-album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.ticket  {
@@ -256,7 +256,8 @@
       transition: color 0.3s;
       font-size: 0.5em;
     }
-    .vimeo-modal { /* Modal */
+    .vimeo-modal { 
+      /* Modal */
       display: none; 
       position: fixed; 
       z-index: 1; 
@@ -264,33 +265,27 @@
       top: 0;
       width: 100%; 
       height: 100%; 
-      overflow: auto; 
-      background-color: rgb(0,0,0); 
-      background-color: rgba(0,0,0,0.4); 
   }
   .vimeo-modal-content { /* Cambiado aquí */
-      background-color: #fefefe;
-      margin: 1.25em auto; /* 20px */
       padding: 1.25em; /* 20px */
-      border: 0.0625em solid #888; /* 1px */
       width: 80%; /* Cambiado a un valor más razonable */
       position: relative; /* Para posicionar el botón de cerrar */
   }
-  .close {
+  .cierre {
       color: #aaa;
       float: right;
       font-size: 1.75em; /* 28px */
       font-weight: bold;
   }
-  .close:hover,
-  .close:focus {
+  .cierre:hover,
+  .cierre:focus {
       color: black;
       text-decoration: none;
       cursor: pointer;
   }
   iframe {
       width: 100%; /* Ajusta el iframe al ancho del modal */
-      height: 360px; /* Altura del iframe */
+      height: 15em; /* Altura del iframe */
   }
     .texto {
       height: 40vh;
@@ -331,7 +326,6 @@
     .image img {
       object-fit: cover;
     }
-  
     .modal {
       display: none; /* Oculto por defecto */
       position: fixed;
@@ -587,17 +581,17 @@
       text-align: center;
   }
   #show-more {
-      text-decoration: none;
-      padding: 1em;
-      border-radius: 0.4em; /* 5px */
-      background-color: #000000;
-      color: white;
-      transition:background-color 0.3s ease-in-out;
-  }
-  #show-more:hover {
-      background-color: #ffffff;
-      color: #000;
-  }
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 0.4em; /* 5px */
+    background-color: #000000;
+    color: white;
+    transition:background-color 0.3s ease-in-out;
+}
+#show-more:hover {
+    background-color: #ffffff;
+    color: #000;
+}
     .footer {
       padding: 2.5em;
       margin-bottom: 5%;
@@ -616,6 +610,7 @@
     }
     .footer-column p {
       line-height: 1.6;
+      font-size: 1em;
     }
     .footer-column a {
       text-decoration: underline;
@@ -632,7 +627,7 @@
     margin-top: 1.25em;
   }
   .social-icons a {
-    font-size: 1.25em;
+    font-size: 1em;
     margin-right: 0.625em;
     display: inline-block;
     width: 2em;
@@ -650,6 +645,34 @@
     background-color: #fff; /* Cambia el fondo a blanco */
     border-color: #fff; /* Mantiene el borde blanco */
   }
+  .contact-info {
+    color: white;
+    width: 15.625em; /* 250px */
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 1.125em; /* 18px */
+    font-weight: bold;
+    margin-bottom: 0.8em; /* Ajustado para que coincida con la imagen */
+}
+.contact-info p {
+    display: flex;
+    align-items: center;
+    font-size: 0.875em; /* 14px */
+    margin: 0.75em 0; /* Ajustado para coincidir con la separación exacta */
+}
+
+.contact-info i {
+    margin-right: 0.8em; /* Ajustado para que los íconos tengan la misma distancia */
+    font-size: 1em; /* 16px */
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875em; /* 14px */
+}
     .footer-bottom {
       padding: 1.25em;
       border-top: 0.063em solid #333;
@@ -736,7 +759,7 @@
     .content img {
       width:29%; /* Ajusta al 40% del contenedor */
       object-fit: cover;
-      margin-left: 5%; /* Margen izquierdo para centrar mejor */
+      margin-left: 1%; /* Margen izquierdo para centrar mejor */
     }
     .content .map {
       width: 60%; /* Ancho del mapa */
@@ -745,6 +768,7 @@
       filter: grayscale(100%); /* Escala de grises para un estilo más estilizado */
       flex-shrink: 0; /* Evita que se encoja más allá de este tamaño */
       margin-top: 13%;
+      margin-right: 5%;
     }
     .detalles {
         padding: 1.25em; /* 20px */
@@ -754,7 +778,7 @@
     .details{
       margin-bottom: 50%;
       margin-top: -20%;
-      margin-left: 5%;
+      margin-left:2%;
     }
     .details,.about {
         width: 45%;
@@ -773,9 +797,9 @@
         line-height: 1.5; /* Equivalente a 24px de altura de línea si el tamaño de fuente es 16px */
     }
     .about{
-      margin-right: 25%;
+      margin-right: 40%;
       margin-top: -68%;
-      margin-left: 42%;
+      margin-left: 38%;
     }
     .ticket {
       padding: 1.25em 0;
@@ -793,11 +817,17 @@
     .follow {
         margin-top: 1.25em; /* 20px */
         font-size: small;
+        margin-bottom: 20%;
       }
     .follow i {
-        margin-right: 0.625em; /* 10px */
+        margin-right: 2.2em; /* 10px */
         color: #adadad;
-    }
+        font-size: 1.2em;
+        transition: color 0.3s, text-shadow 0.3s;
+}
+      .follow i:hover {
+        color: #ffffff;
+}
     .image-container {
       width: 20em;
       margin: 1em ;

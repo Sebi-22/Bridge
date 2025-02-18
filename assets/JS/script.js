@@ -321,6 +321,19 @@ document.addEventListener("DOMContentLoaded", function() {
         albumContainer.appendChild(article);
     });
 });
+// Función para inicializar la visibilidad de los botones
+function initializeButtonVisibility() {
+    document.querySelectorAll('.fa-play').forEach(playButton => {
+        playButton.style.display = 'inline'; // Mostrar botones de play
+    });
+    document.querySelectorAll('.fa-pause').forEach(pauseButton => {
+        pauseButton.style.display = 'none'; // Ocultar botones de pausa
+    });
+}
+
+// Llamar a la función para inicializar la visibilidad al cargar la página
+initializeButtonVisibility();
+
 document.querySelectorAll('.fa-play').forEach(playButton => {
     playButton.addEventListener('click', function() {
         // Detener todos los audios
@@ -329,7 +342,7 @@ document.querySelectorAll('.fa-play').forEach(playButton => {
             audio.currentTime = 0; // Reiniciar el audio
         });
 
-        // Restablecer todos los botones de play y pausa
+        // Ocultar todos los botones de play y mostrar todos los de pausa
         document.querySelectorAll('.fa-play').forEach(button => {
             button.style.display = 'inline';
         });
@@ -376,11 +389,13 @@ document.querySelectorAll('.fa-pause').forEach(pauseButton => {
         this.closest('li').querySelector('.fa-play').style.display = 'inline'; // Mostrar botón de play
     });
 });
+
+// Modal para video
 document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("videoModal");
     const videoFrame = document.getElementById("videoFrame");
     const videoIcons = document.querySelectorAll(".video-icon");
-    const closeModal = document.querySelector(".close");
+    const closeModal = document.querySelector(".cierre");
 
     videoIcons.forEach(icon => {
         icon.addEventListener("click", function() {
@@ -389,12 +404,10 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.display = "flex";
         });
     });
-
     closeModal.addEventListener("click", function() {
         modal.style.display = "none";
         videoFrame.src = "";
     });
-
     window.addEventListener("click", function(event) {
         if (event.target === modal) {
             modal.style.display = "none";
@@ -403,25 +416,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Agregar el evento para el botón de pausa
-document.querySelectorAll('.fa-pause').forEach(pauseButton => {
-    pauseButton.addEventListener('click', function() {
-        // Obtener el audio correspondiente
-        const audioId = this.getAttribute('data-audio');
-        const audio = document.getElementById(audioId);
-
-        // Pausar el audio
-        audio.pause();
-
-        // Remover la clase 'playing' del título y el botón de play
-        this.classList.remove('playing');
-        this.closest('li').querySelector('.track-title').classList.remove('playing');
-
-        // Mostrar y ocultar botones
-        this.style.display = 'none'; // Ocultar el botón de pausa
-        this.closest('li').querySelector('.fa-play').style.display = 'inline'; // Mostrar el botón de play
-    });
-});
 document.addEventListener("DOMContentLoaded", function() {
     // Datos de las imágenes
     const images = [
