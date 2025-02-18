@@ -650,7 +650,6 @@
     width: 15.625em; /* 250px */
     text-align: left;
 }
-
 .contact-info h2 {
     font-size: 1.125em; /* 18px */
     font-weight: bold;
@@ -872,33 +871,38 @@
       margin-bottom: 1.25em;
   }
   .accordion {
-      border-radius:0.313em;
-      margin-bottom: 0.625em;
-      border-bottom: 0.1em solid #9d9d9d; 
+    border-radius: 0.313em;
+    margin-bottom: 0.625em;
+    border-bottom: 0.1em solid #9d9d9d; 
+}
 
-  }
-  .accordion-header {
-      padding: 0.938em;    
-      justify-content: space-between;
-      align-items: center;
-  }
-  .accordion-content {
-      padding: 0.938em;
-      display: none;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-  }
-  .accordion-content p {
-      line-height: 1.5;
-  }
-  .accordion.active .accordion-content {
-      display: block;
-      max-height: 18.75em; /* 300px = 18.75em si el font-size base es 16px */
-    }
-  .accordion.active .accordion-header i {
-      transform: rotate(180deg);
-  }
+.accordion-header {
+    padding: 0.938em;    
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+}
+
+.accordion-content {
+    padding: 0.938em;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    line-height: 1.5;
+}
+
+.accordion.active .accordion-content {
+    display: block;
+    max-height: 18.75em; /* 300px = 18.75em si el font-size base es 16px */
+}
+
+.accordion.active .accordion-header i {
+    transform: rotate(180deg);
+}
     .tracklist ol {
       list-style: none;
       max-width: 30em;
@@ -1115,6 +1119,7 @@
       align-items: center;
       margin-left: 10%;
       margin-top: -50%;
+
   }
   .controles {
       justify-content: space-between;
@@ -1129,6 +1134,8 @@
       text-align: center;
       position: relative;
       flex: 1;
+      cursor: pointer;
+      display: inline-block;
   }
   .controles div:not(:first-child) {
     border-left: 0.10em solid gray; /* Línea entre los botones */
@@ -1141,6 +1148,13 @@
   .controles div:hover i {
       color: #ccc;
   }
+  .titulo-track {
+    cursor: pointer;
+    color: rgb(144, 144, 144);
+}
+.titulo-track:hover {
+    color: rgb(209, 209, 209);
+}
   .track-info {
       justify-content: space-between;
       align-items: center;

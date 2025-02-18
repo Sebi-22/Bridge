@@ -61,92 +61,7 @@
             
             <section class="lyrics-section">
                 <h1>AVAILABLE LYRICS</h1>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>BLACK HOLE SUN</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Lorem ipsum dolor sit amet,<br>
-                        ex rebum commodo aliquam sea,<br>
-                        perpetua mediocrem theophrastus vim ne,<br>
-                        per facete voluptatum no.<br>
-                        Eum no aeque legendos menarchum.</p>
-                        <p>Sed feugiat tractatos partiendo ei,<br>
-                        at alii stet epicurei per, has no duis<br>
-                        vivendo consequuntur. Eos gubergren omittantur<br>
-                        Lorem ipsum dolor sit amet,<br>
-                        ex rebum commodo aliquam sea,<br>
-                        perpetua mediocrem theophrastus vim ne,<br>
-                        per facete voluptatum no.<br>
-                        Eum no aeque legendos menarchum.</p>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>WORK</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        Lorem ipsum dolor sit amet,
-                        ex rebum commodo aliquam sea,
-                        perpetua mediocrem theophrastus vim ne,
-                        per facete voluptatum no.
-                        Eum no aeque legendos mnesarchum.
-                        
-                        Sed feugiat tractatos partiendo ei,
-                        at alii stet epicurei per, has no duis
-                        vivendo consequuntur. Eos gubergren omittantur
-                        Lorem ipsum dolor sit amet,
-                        ex rebum commodo aliquam sea,
-                        perpetua mediocrem theophrastus vim ne,
-                        per facete voluptatum no.
-                        Eum no aeque legendos mnesarchum.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>LULLABY</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        Lorem ipsum dolor sit amet,
-                        ex rebum commodo aliquam sea,
-                        perpetua mediocrem theophrastus vim ne,
-                        per facete voluptatum no.
-                        Eum no aeque legendos mnesarchum.
-                        
-                        Sed feugiat tractatos partiendo ei,
-                        at alii stet epicurei per, has no duis
-                        vivendo consequuntur. Eos gubergren omittantur
-                        Lorem ipsum dolor sit amet,
-                        ex rebum commodo aliquam sea,
-                        perpetua mediocrem theophrastus vim ne,
-                        per facete voluptatum no.
-                        Eum no aeque legendos mnesarchum.                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <span>THE PASSANGER</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-content">
-                        Lorem ipsum dolor sit amet,
-                        ex rebum commodo aliquam sea,
-                        perpetua mediocrem theophrastus vim ne,
-                        per facete voluptatum no.
-                        Eum no aeque legendos mnesarchum.
-                        
-                        Sed feugiat tractatos partiendo ei,
-                        at alii stet epicurei per, has no duis
-                        vivendo consequuntur. Eos gubergren omittantur
-                        Lorem ipsum dolor sit amet,
-                        ex rebum commodo aliquam sea,
-                        perpetua mediocrem theophrastus vim ne,
-                        per facete voluptatum no.
-                        Eum no aeque legendos mnesarchum.                    
-                    </div>
-                </div>
+                <div id="accordion-container"></div>
             </section>
 
             <section class="review-section" id="slider">
@@ -161,14 +76,12 @@
             </section>
 
             <section class="musica">
-                <!-- Controles en la parte superior -->
                 <div class="controles">
                     <div><i class="fas fa-backward"></i></div>
-                    <div><i class="fas fa-play"></i></div>
+                    <div><i class="fas fa-play" id="play-button"></i></div>
                     <div><i class="fas fa-forward"></i></div>
                 </div>
-        
-                <!-- Información de la pista y temporizador en la parte inferior -->
+            
                 <div class="track-info">
                     <div>
                         <div class="track-titulo">BLACK HOLE SUN</div>
@@ -177,52 +90,55 @@
                     <div class="timer">00:00/00:31</div>
                 </div>
             </section>
-             <div class="song-list">
+            
+            <section class="song-list">
                 <h1>Tracklist</h1>
                 <ol>
                     <li>
-                        <span class="titulo-track">1. Black Hole Sun</span>
+                        <span class="titulo-track" data-audio="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3">1. Black Hole Sun</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">2. Work</span>
+                        <span class="titulo-track" data-audio="assets/images/Rihanna (feat (mp3cut.net).mp3">2. Work</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">3. Lullaby</span>
+                        <span class="titulo-track" data-audio="assets/images/Lullaby (Remastered) (mp3cut.net).mp3">3. Lullaby</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">4. The Passenger</span>
+                        <span class="titulo-track" data-audio="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3">4. The Passenger</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">5. Celebrity Skin</span>
+                        <span class="titulo-track" data-audio="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3">5. Celebrity Skin</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">6. Creep</span>
+                        <span class="titulo-track" data-audio="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3">6. Creep</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">7. Epic</span>
+                        <span class="titulo-track" data-audio="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3">7. Epic</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">8. Reptilia</span>
+                        <span class="titulo-track" data-audio="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3">8. Reptilia</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">9. Go With the Flow</span>
+                        <span class="titulo-track" data-audio="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3">9. Go With the Flow</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                     <li>
-                        <span class="titulo-track">10. Electric Version</span>
+                        <span class="titulo-track" data-audio="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3">10. Electric Version</span>
                         <a href="#" class="buy-track">BUY TRACK</a>
                     </li>
                 </ol>
-             </div>
-             <div class="available-on">
+            </section>
+            <audio id="audio-player" src="" preload="auto"></audio>
+
+             <section class="available-on">
                 <h2>AVAILABLE ON</h2>
                 <div class="platform-icons">
                     <a href="https://www.apple.com/itunes/" target="_blank">
@@ -231,10 +147,10 @@
                     <a href="https://play.google.com/store/games?device=windows" target="_blank">
                         <img alt="Available on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
                     </a>
-                </div>
-            </div>
+                </section>
+            
                  <!-- Latest Video Section -->
-     <div class="latest-video">
+     <section class="latest-video">
         <h2>LATEST VIDEO</h2>
         <div class="video-container">
             <iframe title="vimeo-player" src="https://player.vimeo.com/video/33730560?h=3913acf0ac" width="640" height="360" frameborder="0"  allowfullscreen></iframe>        </div>
@@ -243,7 +159,7 @@
             <a href="discography.html" class="punto">⬤</a> <!-- Icono de punto de navegación con enlace -->
             <span class="flecha derecha">&gt;</span> <!-- Icono de flecha derecha -->
         </div> 
-    </div>
+     </section>
     </section>
 <footer>
     <div class="footer">

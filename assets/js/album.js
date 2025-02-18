@@ -52,27 +52,152 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicializa el slider con la primera reseña
     updateSliderContent(currentPos);
 });
-document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const accordion = header.parentElement;
+const lyricsData = [
+    {
+        title: "BLACK HOLE SUN",
+        content: `<p>Lorem ipsum dolor sit amet,<br>
+                  ex rebum commodo aliquam sea,<br>
+                  perpetua mediocrem theophrastus vim ne,<br>
+                  per facete voluptatum no.<br>
+                  Eum no aeque legendos menarchum.</p>
+                  <p>Sed feugiat tractatos partiendo ei,<br>
+                  at alii stet epicurei per, has no duis<br>
+                  vivendo consequuntur. Eos gubergren omittantur<br>
+                  Lorem ipsum dolor sit amet,<br>
+                  ex rebum commodo aliquam sea,<br>
+                  perpetua mediocrem theophrastus vim ne,<br>
+                  per facete voluptatum no.<br>
+                  Eum no aeque legendos menarchum.</p>`
+    },
+    {
+        title: "WORK",
+        content: `Lorem ipsum dolor sit amet,
+                  ex rebum commodo aliquam sea,
+                  perpetua mediocrem theophrastus vim ne,
+                  per facete voluptatum no.
+                  Eum no aeque legendos mnesarchum.
+                  
+                  Sed feugiat tractatos partiendo ei,
+                  at alii stet epicurei per, has no duis
+                  vivendo consequuntur. Eos gubergren omittantur
+                  Lorem ipsum dolor sit amet,
+                  ex rebum commodo aliquam sea,
+                  perpetua mediocrem theophrastus vim ne,
+                  per facete voluptatum no.
+                  Eum no aeque legendos mnesarchum.`
+    },
+    {
+        title: "LULLABY",
+        content: `Lorem ipsum dolor sit amet,
+                  ex rebum commodo aliquam sea,
+                  perpetua mediocrem theophrastus vim ne,
+                  per facete voluptatum no.
+                  Eum no aeque legendos mnesarchum.
+                  
+                  Sed feugiat tractatos partiendo ei,
+                  at alii stet epicurei per, has no duis
+                  vivendo consequuntur. Eos gubergren omittantur
+                  Lorem ipsum dolor sit amet,
+                  ex rebum commodo aliquam sea,
+                  perpetua mediocrem theophrastus vim ne,
+                  per facete voluptatum no.
+                  Eum no aeque legendos mnesarchum.`
+    },
+    {
+        title: "THE PASSENGER",
+        content: `Lorem ipsum dolor sit amet,
+                  ex rebum commodo aliquam sea,
+                  perpetua mediocrem theophrastus vim ne,
+                  per facete voluptatum no.
+                  Eum no aeque legendos mnesarchum.
+                  
+                  Sed feugiat tractatos partiendo ei,
+                  at alii stet epicurei per, has no duis
+                  vivendo consequuntur. Eos gubergren omittantur
+                  Lorem ipsum dolor sit amet,
+                  ex rebum commodo aliquam sea,
+                  perpetua mediocrem theophrastus vim ne,
+                  per facete voluptatum no.
+                  Eum no aeque legendos mnesarchum.`
+    }
+];
 
-        // Cerrar otros acordeones antes de abrir el nuevo
-        document.querySelectorAll('.accordion').forEach(item => {
-            if (item !== accordion) {
-                item.classList.remove('active');
-                item.querySelector('.accordion-content').style.maxHeight = null;
+// Función para crear el acordeón
+function createAccordion() {
+    const container = document.getElementById('accordion-container');
+
+    lyricsData.forEach(item => {
+        const accordion = document.createElement('div');
+        accordion.classList.add('accordion');
+
+        const header = document.createElement('div');
+        header.classList.add('accordion-header');
+        header.innerHTML = `<span>${item.title}</span><i class="fas fa-chevron-down"></i>`;
+        
+        const content = document.createElement('div');
+        content.classList.add('accordion-content');
+        content.innerHTML = item.content;
+
+        accordion.appendChild(header);
+        accordion.appendChild(content);
+        container.appendChild(accordion);
+
+        // Agregar el evento de clic al encabezado
+        header.addEventListener('click', () => {
+            const isActive = accordion.classList.toggle('active');
+
+            // Cerrar otros acordeones
+            document.querySelectorAll('.accordion').forEach(otherAccordion => {
+                if (otherAccordion !== accordion) {
+                    otherAccordion.classList.remove('active');
+                    otherAccordion.querySelector('.accordion-content').style.maxHeight = null;
+                }
+            });
+
+            // Alternar el contenido del acordeón actual
+            if (isActive) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = null;
             }
         });
-
-        // Alternar el estado del acordeón actual
-        accordion.classList.toggle('active');
-        const content = accordion.querySelector('.accordion-content');
-        if (accordion.classList.contains('active')) {
-            content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-            content.style.maxHeight = null;
-        }
     });
+}
+
+// Llamar a la función para crear el acordeón
+createAccordion();
+
+
+const audioPlayer = document.getElementById('audio-player');
+const trackTitle = document.querySelector('.track-titulo');
+const playButton = document.getElementById('play-button');
+
+document.querySelectorAll('.titulo-track').forEach(track => {
+    track.addEventListener('click', function() {
+        const audioSrc = this.getAttribute('data-audio');
+        audioPlayer.src = audioSrc;
+        trackTitle.textContent = this.textContent; // Actualiza el título de la pista
+        audioPlayer.play();
+        playButton.classList.remove('fa-play');
+        playButton.classList.add('fa-pause');
+    });
+});
+
+playButton.addEventListener('click', function() {
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        playButton.classList.remove('fa-play');
+        playButton.classList.add('fa-pause');
+    } else {
+        audioPlayer.pause();
+        playButton.classList.remove('fa-pause');
+        playButton.classList.add('fa-play');
+    }
+});
+
+audioPlayer.addEventListener('ended', function() {
+    playButton.classList.remove('fa-pause');
+    playButton.classList.add('fa-play');
 });
 
 
