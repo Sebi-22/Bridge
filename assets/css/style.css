@@ -1325,78 +1325,38 @@
       padding: 0.3125em; /* 5px */
   }
 
- /* Estilos generales para pantallas grandes */
-@media (min-width: 1200px) {
-  .container {
-      flex-direction: row; /* Cambia a fila en pantallas grandes */
-      height: auto; /* Ajusta la altura */
-  }
-  .navbar {
-      width: 80%; /* Ajusta el ancho de la barra de navegación */
-  }
-  .albumes {
-      grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
-  }
+  @media (max-width: 1200px) {
+    .container {
+        height: 100vh; /* Ajusta la altura para pantallas más pequeñas */
+    }
+    .navbar {
+        padding: 1em; /* Reduce el padding en la barra de navegación */
+    }
 }
 
-/* Estilos para pantallas medianas */
-@media (max-width: 1199px) and (min-width: 768px) {
-  .container {
-      flex-direction: column; /* Cambia a columna en pantallas medianas */
-      height: auto; /* Ajusta la altura */
-  }
-  .navbar {
-      width: 90%; /* Ajusta el ancho de la barra de navegación */
-  }
-  .albumes {
-      grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
-  }
+@media (max-width: 992px) {
+    .left-section, .right-section {
+        width: 100%; /* Cambia a ancho completo en pantallas más pequeñas */
+    }
+    .albumes {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en lugar de cuatro */
+    }
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 767px) {
-  .navbar {
-      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-      padding: 1em; /* Ajusta el padding */
-  }
-  .albumes {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
-  }
-  .container {
-      height: auto; /* Ajusta la altura */
-  }
-  .right-section input, .right-section textarea {
-      font-size: 0.875em; /* Reduce el tamaño de fuente */
-  }
-  .texto h1 {
-      font-size: 2em; /* Reduce el tamaño de fuente */
-  }
-  .texto p {
-      font-size: 1em; /* Reduce el tamaño de fuente */
-  }
-  .footer {
-      padding: 1em; /* Ajusta el padding */
-  }
+@media (max-width: 768px) {
+    .texto h1 {
+        font-size: 2em; /* Reduce el tamaño de fuente del título */
+    }
+    .video-section {
+        height: 50vh; /* Ajusta la altura de la sección de video */
+    }
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 480px) {
-  .navbar a {
-      font-size: 0.75em; /* Reduce el tamaño de fuente */
-  }
-  .video-section {
-      height: 50vh; /* Ajusta la altura de la sección de video */
-  }
-  .album-cover img {
-      width: 100%; /* Asegura que la imagen cubra el contenedor */
-  }
-  .contact-section h2 {
-      font-size: 1.5em; /* Reduce el tamaño de fuente */
-  }
-  .contact-section p {
-      font-size: 0.875em; /* Reduce el tamaño de fuente */
-  }
-  .right-section button {
-      font-size: 0.875em; /* Reduce el tamaño de fuente */
-  }
+@media (max-width: 576px) {
+    .navbar a {
+        font-size: 0.8em; /* Reduce el tamaño de fuente de los enlaces */
+    }
+    .footer-column {
+        margin: 0.5em 0; /* Ajusta el margen de las columnas del pie de página */
+    }
 }
