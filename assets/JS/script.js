@@ -70,29 +70,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Boton del video que no anda
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.play-button').addEventListener('click', function() {
-        console.log('Play button clicked');
-        const videoIframe = document.getElementById('videoIframe');
-        console.log(videoIframe); // Verifica si el iframe se seleccionó correctamente
-        videoIframe.src = "https://player.vimeo.com/video/124943519?title=0&byline=0&portrait=0&autoplay=1";
-        
-        const nuevoModal = document.getElementById('nuevomodal');
-        const overlay = document.querySelector('.overlay');
-        console.log(nuevoModal); // Verifica si el modal se seleccionó correctamente
-        nuevoModal.style.display = 'flex';
-        overlay.style.display = 'block'; // Muestra la superposición
+document.addEventListener("DOMContentLoaded", function () {
+    const abrirModal = document.getElementById("abrirModal");
+    const cerrarModal = document.getElementById("cerrarModal");
+    const modal = document.getElementById("nuevomodal");
+
+    // Aseguramos que el modal no esté abierto al inicio
+    modal.style.display = "none";
+
+    abrirModal.addEventListener("click", () => {
+        modal.style.display = "flex";
+        abrirModal.style.display = "none"; // Oculta el botón de play
     });
 
-    document.getElementById('cerrarModal').addEventListener('click', function() {
-        console.log('Close button clicked');
-        const nuevoModal = document.getElementById('nuevomodal');
-        const videoIframe = document.getElementById('videoIframe');
-        const overlay = document.querySelector('.overlay');
-        
-        nuevoModal.style.display = 'none';
-        overlay.style.display = 'none'; // Oculta la superposición
-        videoIframe.src = ""; // Limpiar el src para detener el video
+    cerrarModal.addEventListener("click", () => {
+        modal.style.display = "none";
+        abrirModal.style.display = "block"; // Muestra el botón de play al cerrar
+    });
+
+    // Cerrar el modal si se hace clic fuera del contenido
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            abrirModal.style.display = "block"; // Vuelve a mostrar el botón de play
+        }
     });
 });
 //Formulario de contacto

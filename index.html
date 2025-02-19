@@ -382,17 +382,19 @@
 
   <section class="video-section">
     <div class="overlay"></div>
-    <div class="play-button">
+    <div class="play-button" id="abrirModal">
         <i class="fas fa-play-circle"></i>
     </div>
     <div id="nuevomodal">
         <div class="modal-contento">
-            <iframe id="videoIframe" width="650" height="400" frameborder="no"></iframe>
+            <div>
+                <p class="error-message">Sorry</p>
+                <p class="error-subtext">This video does not exist.</p>
+            </div>
             <button id="cerrarModal">X</button>
         </div>
-    </div>
+    </div>  
 </section>
-
 
     <section class="our-discography">
         <h1>OUR DISCOGRAPHY</h1>

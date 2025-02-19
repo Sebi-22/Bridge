@@ -480,34 +480,83 @@
     }
     .video-section {
       height: 75vh;
+      width: 100%;
       margin-top: 10%;
       background-image: url(../images/h1-img-7.jpg);
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   
-  #nuevoModal {
-    display: none; /* Ocultar el modal inicialmente */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Asegúrate de que esté por encima de la superposición */
-    background: white; /* Fondo blanco para el modal */
-    padding: 20px;
-    border-radius: 8px;
-}
-  .play-button {
-      cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
   }
-    .play-button {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 0.625em;
-    }
-    .play-button i {
-      font-size: 6.25em;
-    }
+  
+  .play-button {
+      position: relative;
+      z-index: 2;
+      font-size: 3.75em; /* 60px */
+      color: white;
+      cursor: pointer;
+  }
+  
+  #nuevomodal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .modal-contento {
+      position: relative;
+      background: rgb(41, 41, 41);
+      padding: 1.25em; /* 20px */
+      border-radius: 0.625em; /* 10px */
+      width: 40.625em; /* 650px */
+      height: 25em; /* 400px */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+  }
+
+  #cerrarModal {
+      position: absolute;
+      top: 100%; /* -10px */
+      right: -0.625em; /* -10px */
+      background:transparent;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 0.3125em 0.625em; /* 5px 10px */
+      font-size: 1.125em; /* 18px */
+      border-radius: 50%;
+  }
+  .error-message {
+      font-size: 4em; /* 24px */
+      font-weight: bold;
+      color: white;
+  }
+  .error-subtext {
+      font-size: 1em; /* 16px */
+      margin-top: 0.625em; /* 10px */
+      color: white;
+
+  }
+   
     .side-text {
       top: 50%;
       right: 0;
@@ -1276,179 +1325,78 @@
       padding: 0.3125em; /* 5px */
   }
 
-  /* Media Queries */
-  @media (max-width: 1200px) {
-    .navbar {
-      padding: 1.5em;
-    }
-
-    .albumes {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .about1 {
-      max-width: 28em;
-    }
-
-    .left-section,
-    .right-section {
-      width: 100%;
-    }
+ /* Estilos generales para pantallas grandes */
+@media (min-width: 1200px) {
+  .container {
+      flex-direction: row; /* Cambia a fila en pantallas grandes */
+      height: auto; /* Ajusta la altura */
   }
-
-  @media (max-width: 992px) {
-    .navbar a {
-      font-size: 0.9em;
-    }
-
-    .albumes {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .video-section {
-      height: 60vh;
-    }
-
-    .content img {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .albumes {
-      grid-template-columns: 1fr;
-    }
-
-    .video-section {
-      height: 50vh;
-    }
-
-    .left-section,
-    .right-section {
-      width: 100%;
-      margin: 0;
-    }
-
-    .contact-info {
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .navbar a {
-      font-size: 0.8em;
-    }
-
-    .play-button i {
-      font-size: 4em;
-    }
-
-    .side-text {
-      font-size: 3em;
-    }
-
-    .footer-column {
-      margin: 1em 0;
-    }
-
-    .about-album h2 {
-      font-size: 1.5em;
-    }
-
-    .about-album p {
-      font-size: 0.9em;
-    }
-  }
-  /* Media Queries */
-@media (max-width: 1200px) {
   .navbar {
-    padding: 1.5em; /* Reduce el padding para pantallas más pequeñas */
+      width: 80%; /* Ajusta el ancho de la barra de navegación */
   }
-
   .albumes {
-    grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas */
-  }
-
-  .about1 {
-    max-width: 28em; /* Ajusta el ancho máximo */
-  }
-
-  .left-section,
-  .right-section {
-    width: 100%; /* Asegura que ocupen el 100% del ancho */
+      grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
   }
 }
 
-@media (max-width: 992px) {
-  .navbar a {
-    font-size: 0.9em; /* Reduce el tamaño de fuente */
+/* Estilos para pantallas medianas */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .container {
+      flex-direction: column; /* Cambia a columna en pantallas medianas */
+      height: auto; /* Ajusta la altura */
   }
-
-  .albumes {
-    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
-  }
-
-  .video-section {
-    height: 60vh; /* Ajusta la altura */
-  }
-
-  .content img {
-    width: 100%; /* Asegura que las imágenes ocupen el 100% */
-  }
-}
-
-@media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* Cambia a columna */
-    align-items: center; /* Centra los elementos */
+      width: 90%; /* Ajusta el ancho de la barra de navegación */
   }
-
   .albumes {
-    grid-template-columns: 1fr; /* Cambia a 1 columna */
-  }
-
-  .video-section {
-    height: 50vh; /* Ajusta la altura */
-  }
-
-  .left-section,
-  .right-section {
-    width: 100%; /* Asegura que ocupen el 100% del ancho */
-    margin: 0; /* Elimina márgenes */
-  }
-
-  .contact-info {
-    text-align: center; /* Centra el texto */
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
   }
 }
 
-@media (max-width: 576px) {
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  .navbar {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      padding: 1em; /* Ajusta el padding */
+  }
+  .albumes {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+  .container {
+      height: auto; /* Ajusta la altura */
+  }
+  .right-section input, .right-section textarea {
+      font-size: 0.875em; /* Reduce el tamaño de fuente */
+  }
+  .texto h1 {
+      font-size: 2em; /* Reduce el tamaño de fuente */
+  }
+  .texto p {
+      font-size: 1em; /* Reduce el tamaño de fuente */
+  }
+  .footer {
+      padding: 1em; /* Ajusta el padding */
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
   .navbar a {
-    font-size: 0.8em; /* Reduce aún más el tamaño de fuente */
+      font-size: 0.75em; /* Reduce el tamaño de fuente */
   }
-
-  .play-button i {
-    font-size: 4em; /* Ajusta el tamaño del icono */
+  .video-section {
+      height: 50vh; /* Ajusta la altura de la sección de video */
   }
-
-  .side-text {
-    font-size: 3em; /* Ajusta el tamaño del texto lateral */
+  .album-cover img {
+      width: 100%; /* Asegura que la imagen cubra el contenedor */
   }
-
-  .footer-column {
-    margin: 1em 0; /* Ajusta el margen */
+  .contact-section h2 {
+      font-size: 1.5em; /* Reduce el tamaño de fuente */
   }
-
-  .about-album h2 {
-    font-size: 1.5em; /* Ajusta el tamaño del título */
+  .contact-section p {
+      font-size: 0.875em; /* Reduce el tamaño de fuente */
   }
-
-  .about-album p {
-    font-size: 0.9em; /* Ajusta el tamaño del texto */
+  .right-section button {
+      font-size: 0.875em; /* Reduce el tamaño de fuente */
   }
 }
