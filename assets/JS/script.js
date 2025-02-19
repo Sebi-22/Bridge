@@ -70,26 +70,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Boton del video que no anda
-document.querySelector('.play-button').addEventListener('click', function() {
-    console.log('Play button clicked');
-    const videoIframe = document.getElementById('videoIframe');
-    console.log(videoIframe); // Verifica si el iframe se seleccionó correctamente
-    videoIframe.src = "https://player.vimeo.com/video/124943519?title=0&byline=0&portrait=0&autoplay=1";
-    
-    const videoModal = document.getElementById('videoModal');
-    console.log(videoModal); // Verifica si el modal se seleccionó correctamente
-    videoModal.style.display = 'flex';
-});
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.play-button').addEventListener('click', function() {
+        console.log('Play button clicked');
+        const videoIframe = document.getElementById('videoIframe');
+        console.log(videoIframe); // Verifica si el iframe se seleccionó correctamente
+        videoIframe.src = "https://player.vimeo.com/video/124943519?title=0&byline=0&portrait=0&autoplay=1";
+        
+        const nuevoModal = document.getElementById('nuevomodal');
+        const overlay = document.querySelector('.overlay');
+        console.log(nuevoModal); // Verifica si el modal se seleccionó correctamente
+        nuevoModal.style.display = 'flex';
+        overlay.style.display = 'block'; // Muestra la superposición
+    });
 
-document.getElementById('cerrarModal').addEventListener('click', function() {
-    console.log('Close button clicked');
-    const videoModal = document.getElementById('videoModal');
-    const videoIframe = document.getElementById('videoIframe');
-    
-    videoModal.style.display = 'none';
-    videoIframe.src = ""; // Limpiar el src para detener el video
+    document.getElementById('cerrarModal').addEventListener('click', function() {
+        console.log('Close button clicked');
+        const nuevoModal = document.getElementById('nuevomodal');
+        const videoIframe = document.getElementById('videoIframe');
+        const overlay = document.querySelector('.overlay');
+        
+        nuevoModal.style.display = 'none';
+        overlay.style.display = 'none'; // Oculta la superposición
+        videoIframe.src = ""; // Limpiar el src para detener el video
+    });
 });
-
 //Formulario de contacto
 function sendMessage() {
     var verify = true;
