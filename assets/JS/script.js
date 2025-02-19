@@ -1,3 +1,4 @@
+//Fechas conciertos 
 document.addEventListener("DOMContentLoaded", function () {
     const viewAllBtn = document.getElementById("view-all-btn");
 
@@ -127,7 +128,7 @@ function sendMessage() {
         document.getElementById("alerta").style.display = "block";
     }
 }
-// Variables de control de audio
+//Audio 1
 const playPauseBtn = document.getElementById("play-pause");
 const progressBar = document.getElementById("progress-bar");
 const progressBarFill = document.getElementById("progress-bar-fill");
@@ -136,7 +137,7 @@ const durationEl = document.getElementById("duration");
 const volumeSlider = document.getElementById("volume-slider");
 
 // Crear el objeto de audio
-const audio = new Audio("assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3"); // Asegúrate de que la ruta sea correcta
+const audio = new Audio("assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3");
 
 // Evento para cuando el audio carga sus metadatos
 audio.addEventListener("loadedmetadata", () => {
@@ -160,10 +161,10 @@ progressBar.addEventListener("click", (e) => {
 playPauseBtn.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
-        playPauseBtn.classList.replace("fa-play", "fa-pause");
+        playPauseBtn.classList.replace("fa-play", "fa-pause"); // Cambia el icono a "pause"
     } else {
         audio.pause();
-        playPauseBtn.classList.replace("fa-pause", "fa-play");
+        playPauseBtn.class .replace("fa-pause", "fa-play"); // Cambia el icono a "play"
     }
 });
 
@@ -178,7 +179,7 @@ function formatTime(seconds) {
     const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
     return `${mins}:${secs}`;
 }
-
+//Galeria de fotos con show more
 // Arreglo de objetos con los datos de las nuevas imágenes
 const newAlbums = [
     { src: "assets/images/album-5.jpg", title: "FALLEN", description: "Harmony" },
@@ -211,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     const img = document.createElement("img");
                     img.src = album.src;
-                    img.alt = `Album cover with text '${album.title}'`;
+                    img.alt = `Album cover for '${album.title}'`; // Mejora la accesibilidad
 
                     const figcaption = document.createElement("figcaption");
 
@@ -241,11 +242,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 //Boton de ir a arriba 
 // Detecta cuando el usuario hace scroll y muestra el botón si no está en el header
 window.addEventListener('scroll', function() {
-    const scrollTopButton = document.getElementById('scrollToTopBtn');
     const headerHeight = document.querySelector('header').offsetHeight;
     if (window.scrollY > headerHeight) {
         document.body.classList.add('scrolled');
@@ -257,7 +256,7 @@ window.addEventListener('scroll', function() {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
+//Galeria de fotos 1
 document.addEventListener("DOMContentLoaded", function() {
     // Datos de los álbumes
     const albums = [
@@ -321,6 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
         albumContainer.appendChild(article);
     });
 });
+//Audios 
 // Función para inicializar la visibilidad de los botones
 function initializeButtonVisibility() {
     document.querySelectorAll('.fa-play').forEach(playButton => {
@@ -415,7 +415,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
+/*galeria de fotos 2*/
 document.addEventListener("DOMContentLoaded", function() {
     // Datos de las imágenes
     const images = [

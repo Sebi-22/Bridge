@@ -64,21 +64,24 @@
                 </div>
             </div>
             <div class="controls">
-                <i class="fas fa-step-backward" id="backward"></i>
-                <i class="fas fa-play" id="play-pause"></i>
-                <i class="fas fa-step-forward" id="forward"></i>
+                <i class="fas fa-step-backward" id="backward" aria-label="Rewind"></i>
+                <i class="fas fa-play" id="play-pause" aria-label="Play/Pause"></i>
+                <i class="fas fa-step-forward" id="forward" aria-label="Forward"></i>
             </div>
             <div class="progress-container">
                 <div class="progress-bar" id="progress-bar">
                     <div class="progress-bar-fill" id="progress-bar-fill"></div>
                 </div>
-        <span class="time" id="duration">00:00/00:31</span>
-            </div>
+                 <span class="time" id="current-time">00:00</span>
+        <span class="separator"> / </span>
+        <span class="time" id="duration">00:31</span>
+    </div>
             <div class="volume-control">
                 <i class="fas fa-volume-up"></i>
                 <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="1">
             </div>
         </section>
+    
         
             <section class="album-info">
             <div class="album-cover">
@@ -392,17 +395,14 @@
 
 
     <section class="our-discography">
-        <h1> OUR DISCOGRAPHY </h1>
+        <h1>OUR DISCOGRAPHY</h1>
         <p>
-        Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
+            Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
         </p>
-      <div class="albums" id="album-container">
-  <!-- Los álbumes serán agregados dinámicamente aquí -->
-</div>
+        <div class="albums" id="album-container">
+            <!-- Los álbumes serán agregados dinámicamente aquí -->
         </div>
-        <div class="view-all">
-            <a href="#" id="show-more">SHOW MORE</a>
-        </div>
+        <button id="show-more" class="show-more">SHOW MORE</button>
     </section>
     
     </main>

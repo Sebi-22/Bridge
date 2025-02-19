@@ -1,3 +1,4 @@
+//Galeria de fotos con show more
 // Arreglo de objetos con los datos de las nuevas imágenes
 const newAlbums = [
     { src: "assets/images/album-5.jpg", title: "FALLEN", description: "Harmony" },
@@ -9,7 +10,7 @@ const newAlbums = [
 // Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
     // Selecciona el botón "SHOW MORE"
-    const showMoreButton = document.getElementById("show-MORE");
+    const showMoreButton = document.getElementById("show-more");
 
     // Verifica si el botón existe
     if (showMoreButton) {
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     const img = document.createElement("img");
                     img.src = album.src;
-                    img.alt = `Album cover with text '${album.title}'`;
+                    img.alt = `Album cover for '${album.title}'`; // Mejora la accesibilidad
 
                     const figcaption = document.createElement("figcaption");
 

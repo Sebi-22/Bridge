@@ -179,6 +179,12 @@
       background-color: #555;
       width: 0%;
     }
+    .separator {
+      margin: 0.5em; /* Espaciado a la izquierda y derecha */
+      font-weight: bold; /* Peso de la fuente */
+      color: #000; /* Color del separador */
+      font-size: 1em; /* Tamaño de la fuente */
+  }
     .time {
       color: #666;
       align-items: left;
@@ -329,19 +335,20 @@
     .modal {
       display: none; /* Oculto por defecto */
       position: fixed;
-      z-index: 1000;
+      z-index: 2000;
       left: 0;
       top: 0;
-      height: 100%;
+      height: 200%;
     }
     .modal-content {
-      max-width: 60%;
-      max-height: 80%;
+      max-width: 70%;
+      max-height: 100%;
       overflow: auto;
     }
     .modal-content img {
-      width: 90%;
-      border-radius: 0.5em;
+      width: 80%;
+      margin-left: 20%;
+      margin-top: 10%;
     }
     .close {
       bottom: 0.625em;
@@ -353,7 +360,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     }
     .overlay span {
     display: block;
@@ -416,14 +423,12 @@
   .view-all {
       padding: 1.25em 0;
   }
-
   .view-all a {
       text-decoration: none;
       border: 0.063em solid #fff;
       padding: 1.3em;
       display: inline-block;
   }
-
     .blog{
     width: 80%;
     margin-left: 10%;
@@ -576,21 +581,26 @@
       margin: 0.3125em 0; /* 5px */
       margin-left: 19%;
   }
-  .view-all {
-      margin-top: 1.25em; /* 20px */
-      text-align: center;
-  }
-  #show-more {
-    text-decoration: none;
-    padding: 1em;
-    border-radius: 0.4em; /* 5px */
-    background-color: #000000;
-    color: white;
-    transition:background-color 0.3s ease-in-out;
+  .show-more {
+    background-color: transparent; /* Fondo transparente */
+    margin-top: 2%;
+    margin-left: 45%;
+    margin-right:35%;
+    border: 0.125em solid white; /* Borde blanco en em */
+    color: white; /* Texto blanco */
+    padding: 0.625em 1.25em; /* Espaciado interno en em */
+    font-size: 1em; /* Tamaño de fuente en em */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Efecto de transición */
 }
-#show-more:hover {
-    background-color: #ffffff;
-    color: #000;
+.show-more:focus {
+    outline: none; /* Sin borde de enfoque */
+}
+.show-more:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo al pasar el ratón */
+}
+.show-more:active {
+    transform: scale(1); /* Mantiene el tamaño al hacer clic */
 }
     .footer {
       padding: 2.5em;
