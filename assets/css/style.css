@@ -372,7 +372,7 @@
     .fechas {
       max-width: 68em; /* 800px / 16 */
       padding: 1em; /* 20px / 16 */
-      margin-left: 5%;
+      margin-left: 12%;
       margin-top: 1%;
   }
   .date-item {
