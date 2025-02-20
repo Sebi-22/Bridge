@@ -168,36 +168,36 @@ function createAccordion() {
 createAccordion();
 
 
-const audioPlayer = document.getElementById('audio-player');
-const trackTitle = document.querySelector('.track-titulo');
-const playButton = document.getElementById('play-button');
+    const audioPlayer = document.getElementById('audio-player');
+    const trackTitle = document.querySelector('.track-titulo');
+    const playButton = document.getElementById('play-button');
 
-document.querySelectorAll('.titulo-track').forEach(track => {
-    track.addEventListener('click', function() {
-        const audioSrc = this.getAttribute('data-audio');
-        audioPlayer.src = audioSrc;
-        trackTitle.textContent = this.textContent; // Actualiza el título de la pista
-        audioPlayer.play();
-        playButton.classList.remove('fa-play');
-        playButton.classList.add('fa-pause');
+    document.querySelectorAll('.titulo-track').forEach(track => {
+        track.addEventListener('click', function() {
+            const audioSrc = this.getAttribute('data-audio');
+            audioPlayer.src = audioSrc;
+            trackTitle.textContent = this.textContent; // Actualiza el título de la pista
+            audioPlayer.play();
+            playButton.classList.remove('fa-play');
+            playButton.classList.add('fa-pause');
+        });
     });
-});
 
-playButton.addEventListener('click', function() {
-    if (audioPlayer.paused) {
-        audioPlayer.play();
-        playButton.classList.remove('fa-play');
-        playButton.classList.add('fa-pause');
-    } else {
-        audioPlayer.pause();
+    playButton.addEventListener('click', function() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playButton.classList.remove('fa-play');
+            playButton.classList.add('fa-pause');
+        } else {
+            audioPlayer.pause();
+            playButton.classList.remove('fa-pause');
+            playButton.classList.add('fa-play');
+        }
+    });
+
+    audioPlayer.addEventListener('ended', function() {
         playButton.classList.remove('fa-pause');
         playButton.classList.add('fa-play');
-    }
-});
-
-audioPlayer.addEventListener('ended', function() {
-    playButton.classList.remove('fa-pause');
-    playButton.classList.add('fa-play');
-});
+    });
 
 
