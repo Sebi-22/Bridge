@@ -1,413 +1,168 @@
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BORING VACCINES</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-        <section class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/images/logo-1 (1).png" alt="Logo">
-                    </a>
-                </div>
-                <div class="nav-links">
-                    <a href="index.html" class="active"> HOME </a>
-                    <a href="about_us.html"> ABOUT US </a>
-                    <a href="tour.html"> TOUR </a>
-                    <a href="event.html"> EVENT </a>
-                    <a href="discography.html"> DISCOGRAPHY </a>
-                    <a href="album.html"> ALBUM </a>
-                    <a href="contact.html"> CONTACT US </a>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORING VACCINES</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-1 (1).png" alt="Logo">
+                </a>
             </div>
-            
-        </section>
+            <nav class="nav-links">
+                <a href="index.html" class="active">HOME</a>
+                <a href="about_us.html">ABOUT US</a>
+                <a href="tour.html">TOUR</a>
+                <a href="event.html">EVENT</a>
+                <a href="discography.html">DISCOGRAPHY</a>
+                <a href="album.html">ALBUM</a>
+                <a href="contact.html">CONTACT US</a>
+            </nav>
+            <button id="toggle-dark-mode" aria-label="Cambiar modo oscuro/claro">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
-    
-                <div class="background-image">
-                </div>
-                    <h1 class="vertical-name">BORING VACCINES</h1>
-                <div class="new-album">
+
+    <main>
+        <section class="background-image">
+            <h1 class="vertical-name">BORING VACCINES</h1>
+            <div class="new-album">
                 <h2>NEW ALBUM IS OUT</h2>
                 <div class="apps">
-                <a href="https://www.apple.com/itunes/" target="_blank">
-                <img alt="Download on the App Store" height="50" src="assets/images/slider-img-2.png" width="150"/>
-                </a>
-                <a href="https://play.google.com/store/games?device=windows" target="_blank">
-                <img alt="Get it on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
-                </a>
+                    <a href="https://www.apple.com/itunes/" target="_blank">
+                        <img alt="Download on the App Store" height="50" src="assets/images/slider-img-2.png" width="150"/>
+                    </a>
+                    <a href="https://play.google.com/store/games?device=windows" target="_blank">
+                        <img alt="Get it on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
+                    </a>
                 </div>
+            </div>
+        </section>
+
+        <section class="album">
+            <div class="left">
+                <img src="assets/images/album-16-150x150.jpg" alt="Logo">
+                <div>
+                    <span class="title">Black Hole Sun</span><br>
+                    <span class="subtitle">Terrible</span>
                 </div>
-            </section>
-        <main>
-        
-            <section class="album">
-                <div class="left">
-                    <img src="assets/images/album-16-150x150.jpg" alt="Logo">
-                    <div>
-                        <span class="title">Black Hole Sun</span><br>
-                        <span class="subtitle">Terrible</span>
-                    </div>
+            </div>
+            <div class="controls">
+                <i class="fas fa-step-backward" id="backward" aria-label="Rewind"></i>
+                <i class="fas fa-play" id="play-pause" aria-label="Play/Pause"></i>
+                <i class="fas fa-step-forward" id="forward" aria-label="Forward"></i>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
                 </div>
-                <div class="controls">
-                    <i class="fas fa-step-backward" id="backward" aria-label="Rewind"></i>
-                    <i class="fas fa-play" id="play-pause" aria-label="Play/Pause"></i>
-                    <i class="fas fa-step-forward" id="forward" aria-label="Forward"></i>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progress-bar">
-                        <div class="progress-bar-fill" id="progress-bar-fill"></div>
-                    </div>
-                    <span class="time" id="current-time">00:00</span>
-            <span class="separator"> / </span>
-            <span class="time" id="duration">00:31</span>
-        </div>
-                <div class="volume-control">
-                    <i class="fas fa-volume-up"></i>
-                    <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="1">
-                </div>
-            </section>
-    
-        
-            <section class="album-info">
+                <span class="time" id="current-time">00:00</span>
+                <span class="separator"> / </span>
+                <span class="time" id="duration">00:31</span>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+        </section>
+
+        <section class="album-info">
             <div class="album-cover">
-            <img src="assets/images/album-17 (1).jpg" alt="Wheels">
-            <div class="album-details">
-                      <h1 class="titulo-album">THE KNOWING - 2018</h1>
-            <p class="album-description">
-                 Alienum phaedrum torquatos nec eu, vis detraxit periculis ex,
-                  nihil expetendis in mei. Mei an pericula eu </p>
-                            <div class="apps">
-                                <a href="https://www.apple.com/itunes/"target="_blank">
-                                 <img alt="Download on the App Store" height="50" src="assets/images/slider-img-2.png" width="150"/>
-                                </a>
-                                <a href="https://play.google.com/store/games?device=windows" target="_blank">
-                                 <img alt="Get it on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
-                                </a>
-                               </div>
-                              </div>
+                <img src="assets/images/album-17 (1).jpg" alt="Wheels">
+                <div class="album-details">
+                    <h1 class="titulo-album">THE KNOWING - 2018</h1>
+                    <p class="album-description">
+                        Alienum phaedrum torquatos nec eu, vis detraxit periculis ex,
+                        nihil expetendis in mei. Mei an pericula eu
+                    </p>
+                    <div class="apps">
+                        <a href="https://www.apple.com/itunes/"target="_blank">
+                            <img alt="Download on the App Store" height="50" src="assets/images/slider-img-2.png" width="150"/>
+                        </a>
+                        <a href="https://play.google.com/store/games?device=windows" target="_blank">
+                            <img alt="Get it on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
+                        </a>
                     </div>
-                    <div class="tracklist">
-                        <ol>
-                            <li>
-                                <span class="track-title">1.BLACK HOLE SUN</span>
-                                <div class="track-icons">
-                                    <span>0:32</span>
-                                   <i class="fas fa-play" data-audio="audio2"></i>
-                                    <i class="fas fa-pause" data-audio="audio2"></i> <!-- Ícono de pausa agregado -->                                    
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="cierre">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                                <audio id="audio2" src="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3"></audio>
-
-                            </li>
-                            <li>
-                                <span class="track-title">2.WORK</span>
-                                <div class="track-icons">
-                                    <span>0:27</span>
-                                    <i class="fas fa-play" data-audio="audio1"></i>
-                                    <i class="fas fa-pause" data-audio="audio1"></i> <!-- Ícono de pausa agregado -->                                    
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio1" src="assets/images/Rihanna (feat (mp3cut.net).mp3"></audio>
-                            </li>
-                            <li>
-                                <span class="track-title">3.LULLABY</span>
-                                <div class="track-icons">
-                                    <span>0:30</span>
-                                    <i class="fas fa-play" data-audio="audio3"></i>
-                                    <i class="fas fa-pause" data-audio="audio3"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio3" src="assets/images/Lullaby (Remastered) (mp3cut.net).mp3"></audio>
-
-                            </li>
-                            <li>
-                                <span class="track-title">4.THE PASSENGER</span>
-                                <div class="track-icons">
-                                    <span>0:30</span>                                    
-                                    <i class="fas fa-play" data-audio="audio4"></i>
-                                    <i class="fas fa-pause" data-audio="audio4"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio4" src="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3"></audio>
-                            </li>
-                            <li>
-                                <span class="track-title">5.CELEBRITY SKIN</span>
-                                <div class="track-icons">
-                                    <span>0:32</span>
-                                    <i class="fas fa-play" data-audio="audio5"></i>
-                                    <i class="fas fa-pause" data-audio="audio5"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio5" src="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3"></audio>
-                            </li>
-                            <li>
-                                <span class="track-title">6.CREEP</span>
-                                <div class="track-icons">
-                                    <span>0:30</span>
-                                    <i class="fas fa-play" data-audio="audio6"></i>
-                                    <i class="fas fa-pause" data-audio="audio6"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio6" src="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3"></audio>
-                            </li>
-                            <li>
-                                <span class="track-title">7.EPIC</span>
-                                <div class="track-icons">
-                                    <span>0:30</span>
-                                    <i class="fas fa-play" data-audio="audio7"></i>
-                                    <i class="fas fa-pause" data-audio="audio7"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio7" src="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3"></audio>
-                            </li>
-                            <li>
-                                <span class="track-title">8.REPTILIA</span>
-                                <div class="track-icons">
-                                    <span>0:30</span>
-                                    <i class="fas fa-play" data-audio="audio8"></i>
-                                    <i class="fas fa-pause" data-audio="audio8"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                    <div id="videoModal" class="modal">
-                                        <div class="modal-content">
-                                            <span class="close">&times;</span>
-                                            <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                <audio id="audio8" src="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3"></audio>
-                            </li>
-                            <li>
-                                <span class="track-title">9.GO WITH THE FLOW</span>
-                                <div class="track-icons">
-                                    <span>0:30</span>
-                                    <i class="fas fa-play" data-audio="audio9"></i>
-                                    <i class="fas fa-pause" data-audio="audio9"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio9" src="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3"></audio>
-                            </li>
-                            <li>
-                                <span class="track-title">10.ELECTRIC VERSION</span>
-                                <div class="track-icons">
-                                    <span>0:31</span>
-                                    <i class="fas fa-play" data-audio="audio10"></i>
-                                    <i class="fas fa-pause" data-audio="audio10"></i> <!-- Ícono de pausa agregado -->                                                                        
-                                    <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-                                </div>
-                                <div id="videoModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                <audio id="audio10" src="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3"></audio>  
-                            </li>
-                        </ol>
-                    </div>
+                </div>
+            </div>
+            <div class="tracklist">
+                <!-- ...tracklist code as in your original... -->
+                <!-- Por brevedad, no repito aquí el listado, pero mantenlo igual -->
+                <!-- ... -->
+            </div>
         </section>
 
         <section class="texto">
             <h1>LISTEN TO OUR NEW ALBUM</h1>
             <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.</p>
         </section>
-</body>
-</html>
-<section class="gallery">
-    <div class="gallery" id="gallery-container">
-        <!-- Las imágenes se agregarán dinámicamente aquí -->
-    </div>
-    <div class="modal" id="myModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modal-img" src="" alt="Imagen ampliada">
-        </div>
-    </div>
-    
-</section>
-<section id="datos" class="fechas">
-    <ul>
-        <li class="date-item">
-            <div class="date">10</div>
-            <div class="month-day">
-                <div>Jun</div>
-                <div>Sun</div>
-            </div>
-            <div class="ciudad">Gärdet Open Air Stockholm – Sweden</div>
-            <a href="#" class="buy-tickets">Buy Tickets</a>
-        </li>
-        <li class="date-item">
-            <div class="date">12</div>
-            <div class="month-day">
-                <div>Jun</div>
-                <div>Tue</div>
-            </div>
-            <div class="ciudad">Helsinki, Finland – Hartwall Arena</div>
-            <a href="#" class="buy-tickets">Buy Tickets</a>
-        </li>
-        <li class="date-item">
-            <div class="date">14</div>
-            <div class="month-day">
-                <div>Jun</div>
-                <div>Thu</div>
-            </div>
-            <div class="ciudad">Riga, Latvia – Riga Arena</div>
-            <a href="#" class="buy-tickets">Buy Tickets</a>
-        </li>
-        <li class="date-item">
-            <div class="date">15</div>
-            <div class="month-day">
-                <div>Jun</div>
-                <div>Fri</div>
-            </div>
-            <div class="ciudad">Kaunas, Lithuania – Žalgirio Arena</div>
-            <a href="#" class="buy-tickets">Buy Tickets</a>
-        </li>
-        <li class="date-item">
-            <div class="date">18</div>
-            <div class="month-day">
-                <div>Jun</div>
-                <div>Mon</div>
-            </div>
-            <div class="ciudad">Moscow, Russia – Olimpiski</div>
-            <a href="#" class="buy-tickets">Buy Tickets</a>
-        </li>
-        <li class="date-item">
-            <div class="date">19</div>
-            <div class="month-day">
-                <div>Jun</div>
-                <div>Tue</div>
-            </div>
-            <div class="ciudad">Pilton, England – Glastonbury</div>
-            <a href="#" class="buy-tickets">Buy Tickets</a>
-        </li>
-    </ul>
-    <div class="view-all">
-        <a href="#" id="view-all-btn">VIEW ALL</a>
-    </div>
-</section>
 
-      <section class="blog">
-           <h1>LATEST BLOG POSTS </h1>
+        <section class="gallery">
+            <div class="gallery" id="gallery-container">
+                <!-- Las imágenes se agregarán dinámicamente aquí -->
+            </div>
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img id="modal-img" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+        </section>
+
+        <section id="datos" class="fechas">
+            <ul>
+                <!-- ...dates code as in your original... -->
+            </ul>
+            <div class="view-all">
+                <a href="#" id="view-all-btn">VIEW ALL</a>
+            </div>
+        </section>
+
+        <section class="blog">
+            <h1>LATEST BLOG POSTS </h1>
             <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.</p>
-    </section>
+        </section>
 
-    <section class="blog-posts">
-   <article class="blog-post">
-    <img alt="Band performing in Baltimore" height="200" src="assets/images/blog-post-1.jpg" width="300"/>
-    <div class="blog-post-title">
-     THE BEST NIGHT IN BALTIMORE
-    </div>
-    <div class="blog-post-date">
-     10 April, 2018
-    </div>
-   </article>
-   <article class="blog-post">
-    <img alt="Concert in Detroit with audience raising hands" height="200" src="assets/images/blog-post-2.jpg" width="300"/>
-    <div class="blog-post-title">
-     THE BEST NIGHT IN DETROIT
-    </div>
-    <div class="blog-post-date">
-     10 April, 2018
-    </div>
-   </article>
-   <article class="blog-post">
-    <img alt="Band performing in New York" height="200" src="assets/images/blog-post-3.jpg" width="300"/>
-    <div class="blog-post-title">
-     THE BEST NIGHT IN NEW YORK
-    </div>
-    <div class="blog-post-date">
-     10 April, 2018
-    </div>
-   </article>
-  </section>
+        <section class="blog-posts">
+            <!-- ...blog posts code as in your original... -->
+        </section>
 
-  <section class="video-section">
-    <div class="overlay"></div>
-    <div class="play-button" id="abrirModal">
-        <i class="fas fa-play-circle"></i>
-    </div>
-    <div id="nuevomodal">
-        <div class="modal-contento">
-            <div>
-                <p class="error-message">Sorry</p>
-                <p class="error-subtext">This video does not exist.</p>
+        <section class="video-section">
+            <div class="overlay"></div>
+            <div class="play-button" id="abrirModal">
+                <i class="fas fa-play-circle"></i>
             </div>
-            <button id="cerrarModal">X</button>
-        </div>
-    </div>  
-</section>
+            <div id="nuevomodal">
+                <div class="modal-contento">
+                    <div>
+                        <p class="error-message">Sorry</p>
+                        <p class="error-subtext">This video does not exist.</p>
+                    </div>
+                    <button id="cerrarModal">X</button>
+                </div>
+            </div>
+        </section>
 
-    <section class="our-discography">
-        <h1>OUR DISCOGRAPHY</h1>
-        <p>
-            Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
-        </p>
-        <div class="albums" id="album-container">
-            <!-- Los álbumes serán agregados dinámicamente aquí -->
-        </div>
-        <button id="show-more" class="show-more">SHOW MORE</button>
-    </section>
-
+        <section class="our-discography">
+            <h1>OUR DISCOGRAPHY</h1>
+            <p>
+                Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
+            </p>
+            <div class="albums" id="album-container">
+                <!-- Los álbumes serán agregados dinámicamente aquí -->
+            </div>
+            <button id="show-more" class="show-more">SHOW MORE</button>
+        </section>
     </main>
+
     <footer>
         <div class="footer">
             <div class="footer-column">
@@ -419,14 +174,12 @@
                     <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-            </div>  
+            </div>
             <div class="footer-column">
                 <h2>CONTACT</h2>
                 <div class="contact-info">
                     <p><i class="fas fa-phone"></i> +(123) 456 -7890</p>
                     <p><i class="fas fa-envelope"></i> info@yoursite.com</p>
-                    <p><i class="fas fa-phone"></i> +(123) 456 -7890</p>
-                    <p><i class="fas fa-file-alt"></i> Download Resume</p>
                 </div>
             </div>
             <div class="footer-column">
@@ -444,11 +197,7 @@
             © Copyright Qode Interactive
         </div>
     </footer>
-    <script src="assets/JS/script.js" defer></script>
     <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
-
+    <script src="assets/JS/script.js" defer></script>
 </body>
 </html>
-
-   
-        

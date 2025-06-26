@@ -1,1362 +1,722 @@
-  *{
-    font-family:'Oswald','Open Sans','sans-serif';
-    }
-    img,.container,.progress-bar,.image img,.modal,.video-section,.our-discography ,.Fotones img,.image-container img,.video-container iframe ,.contact,.right-section input, .right-section textarea,.contactos,.tour,.about_us,.image-foto img {
-      width: 100%;
-    }
-    img,.image img,.blog-post img,.Fotones img,.content img,.image-container img,.images img,.image-foto img  {
-    height: auto;
-    }
-    body,.container,.navbar a,.track-title:hover,.track-icons span:hover,.track-icons i:hover,.texto2 h1,.buy-tickets,.buy-track,.song-list h1,.song-list,.musica,.available-on,.albumesss,#scrollToTopBtn,.contactos,.tour,.about_us,.right-section input, .right-section textarea ,.link:hover,.view-all a,.follow i:hover.ticket a,.link,.detalles, .transparencia .social i,.social-icons a,.footer-column a,.show-more,.Fotones figcaption ,#show-MORE,.albumes figcaption,.info-box .buy-button,.side-text,.play-button,.blog-posts,.review-section,.review-section h2,.review-source,.nav-button:hover,.flecha,.punto{
+/* --- RESET Y FUENTES --- */
+* {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #fff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* --- HEADER Y NAVBAR --- */
+header {
+    background: #222;
     color: #fff;
-    }
-    body,.modal,.blog-posts,#show-MORE,.footer,.form,.right-section input, .right-section textarea,#scrollToTopBtn{
-    background-color: #000000;
-    }
-    body,.accordion-content p,.our-discography,.song-list ol,.breadcrumb,.new-album h2,.tracklist ol,.texto h1,.texto p,.texto2 hr,h1,p,.albumes h3,.albumes p,figcaption h3 {
-      margin: 0;
-    }
-    .container,.iconos-abajo,.nav-icons,.track-info,.musica,.info-contacto,.controles,.accordion-header,.articulos,.month-day ,.date-item ,.nav-links ,.nav-icons,.navbar,.apps,.album,.left,.controls,.progress-container,.volume-control ,.album-info,.tracklist li,.track-icons,.gallery,.date-item,.blog-posts,.info-box,.info-box .buy-button,.footer,.transparencia, .transparencia .social, .breadcrumb,.content ,.detalles,.player,.platform-icons,.navigation,.navigation .dots,.contact,.form,.contactos,.tour,.about_us,.albumesss,.controles,.song-list li,.iconos-abajo {
-      display: flex;
-    }
-    .container,.modal,.overlay,.player,.platform-icons,.navigation .dots,.contactos,.tour,.about_us,.nav-icons ,.iconos-abajo{
-    justify-content: center;
-    }
-    .container,.album,.musica,.iconos-abajo,.content,.contactos,.tour,.about_us,.navigation ,.info-box .buy-button ,.info-box,.date-item,.left,.modal ,.controls,.progress-container,.volume-control,.tracklist li,.track-icons,.navigation .dots {
-    align-items: center;
-    }
-    .container,.contactos,.tour,.about_us,.video-container,.lyrics-section h3,.image-container,.Fotones,.albumes,.video-section,.modal-content,.progress-bar{
-      position: relative;
-    }
-    .container {
-      flex-direction: column;
-      height: 135vh;
-      background-image:  url(../images/slider-img-1.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    .container,.overlay,.view-all,.blog-posts,.our-discography,.social-icons a,.footer-bottom,.ticket a,.available-on,.latest-video,.contact-section,.contactos,.tour,.about_us,.review-section {
-      text-align: center;
-    }
-    .navbar,.vertical-name,.new-album,.close,.overlay,.play-button,.side-text,.info-box,.albumes figcaption,.album-title,.video-container iframe,h3::after{
-    position:absolute;
-    }
-    .navbar,.tracklist li,.date-item,.blog-posts,.footer,.content,.detalles,.navigation,.form,.song-list li{
-    justify-content: space-between;
-    }
-    .navbar {
-      top: -1%;
-      width: 90%;
-      padding:2em ;
-    }
-    .navbar a,.texto2 p,.info-box .buy-button,figcaption h3, .transparencia p,  .transparencia .social i, .breadcrumb,.lyrics-section h3,.tracklist ol,.contact-section p,.left-section p,.track-title,.lyrics-content{
-      font-size:1em;
-    }
-    .navbar img{
-    width: 70%;
-    margin-bottom:20%; 
-    margin-top: 5%;
-    margin-left: -100%;
-    }
-    .navbar a {
-      text-decoration: none;
-      margin: 1em;
-    }
-    .nav-links {
-      position: relative;
-      left: 2.5%;
-    }
-    .track-info,.right-section button,.month-day,.blog-post-date,.ticket a, .contact-info p,.right-section input, .right-section textarea  {
-    font-size: 0.875em; 
-    }
-    .nav-links a {
-      color: #fff;
-      text-transform: uppercase;
-      position: relative;
-      padding: 0.3125em 0; /* 5px 0 */
-      transition: color 0.3s ease;
-      font-size: 0.8em;
-    }
-    .nav-links a:hover {
-      color: #f0f0f0;
-    }
-    .nav-links a::after {
-      content: "";
-      display: block;
-      height: 0.125em; /* 2px */
-      background-color: #fff;
-      position: absolute;
-      left: 0;
-      right: 0;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    .nav-links a:hover::after,
-    .nav-links a.active::after {
-      transform: scaleX(1);
-    }
-    .vertical-name,.title,.our-discography h1,.titulo-album,.date,.buy-tickets,h1,.blog-post-title,.side-text,.info-box .demos ,.ticket a,.review-source,.review-section h2,.buy-track,.song-list h1,.about-album ul li strong,.album-title,.available-on h2,.left-section h1,.contact-info h2 ,.about-album h2{
-    font-weight: bold;
-    }
-  .vertical-name {
-        top: 55%;
-        left: 5%;
-        transform: translateY(-50%) rotate(180deg); 
-        font-size: 8em;
-        writing-mode: vertical-rl; 
-        text-orientation: mixed;
-        line-height: 1; /* Reduce espacio entre letras */
-      }
-      .vertical-name,.texto,.footer-column a,.contact,.info-contacto p {
-        margin-top: 8%;
-      }
-      .new-album {
-        bottom: -15%;
-        margin-top:-18% ; 
-        left: 55%;
-        text-align: right;
-        }
-        .new-album h2 {
-          font-size: 3em;
-        }
-        .apps {
-          justify-content:left;
-          margin-top: 1.25em;
-
-        }
-        .album,.view-all a:hover,.right-section button,#show-MORE:hover,#scrollToTopBtn:hover,.info-box,.ticket a:hover    {
-          background-color: #fff;
-        }
-    .left {
-      margin-right: 1em;
-    }
-    .left,.texto,.our-discography h1,.our-discography p,.albumes p,.left-section h1,.left-section p,.info-contacto,.image-foto img {
-      margin-left: 10%;
-    }
-    .left img {
-      width: 4em;
-      height: 4em;
-      margin-right: 2em;
-    }
-    .title,.controls,.volume-control,.close:hover,.view-all a:hover,#show-MORE:hover ,.ticket a:hover,.right-section button{
-      color: #000;
-    }
-    .title {
-      font-size:1em ;
-    }
-    .time,.timer{
-      font-size: 0.75em;
-    }
-    .subtitle {
-      color: #888;
-    }
-    .subtitle,.buy-tickets,.p,.our-discography p,.social-icons a, .info-contacto h2  {
-      font-size: 1em;
-    }
-    .controls {
-      gap: 7em;
-      margin-right:5%;
-      font-size: 0.6em;
-    }
-    .progress-container {
-      margin:0.625em;
-      margin-right: 20%;
-    }
-    .progress-container, .album-cover, .tracklist,.footer-column,.articulos article, .song-list  {
-      flex: 1;
-  }
-    .progress-bar,.controles div,.accordion-header,.track-icons i,.nav-button,.controles div,#scrollToTopBtn,.right-section button,.close,.play-button,.albumes,.Fotones,.controls i,.lyrics-section h3,.navigation i,.flecha{
-      cursor: pointer;
-    }
-    .progress-bar {
-      height: 0.188em;
-      background-color: #ddd;
-      margin: 0.625em;
-    }
-    .progress-bar-fill {
-      height: 100%;
-      background-color: #555;
-      width: 0%;
-    }
-    .separator {
-      margin: 0.5em; /* Espaciado a la izquierda y derecha */
-      font-weight: bold; /* Peso de la fuente */
-      color: #000; /* Color del separador */
-      font-size: 1em; /* Tamaño de la fuente */
-  }
-    .time {
-      color: #666;
-      align-items: left;
-    }
-    .volume-control {
-      gap: 0.313em;
-      margin-right: 20%;
-      margin-left: -18%;
-    }
-    .volume-slider {
-      width: 5em;
-    }
-    .album-info {
-      background-image:url(../images/h1-img-8.jpg) ;
-      padding: 5.25em;
-      height: 120vh;
-    } 
-    .album-cover img {
-        width: 75%;
-        margin-top: 3%;
-        margin-left:5%;
-        margin-bottom: -5%;
-    }
-    .album-details,.about-album ul,.about-album p,.nav-button ,p,#show-MORE,.punto,.link,.details p, .about p,.about-album p,.about-album ul{
-      font-size: 1.2em;
-    }
-    .album-description{
-      font-size: 0.9em;
-    }
-    .album-details {
-        margin-top: 3.25em;
-        width: 80%;
-        margin-left: 5%;
-    }
-    .titulo-album,.lyrics-section h1 ,.transparencia h3,.tracklist,.flecha,.review-section h2,#scrollToTopBtn,.contact-section h2,.navigation i,.available-on h2,.lyrics-section h2,.close,.about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2,.controls i,.overlay,.details h2,.album-title, .follow h2 {
-    font-size: 1.5em;
-    }
-    .titulo-album,.texto,.review-source,.review-section h2,.lyrics-content,.lyrics-section h2,.lyrics-section h3 ,.texto2,.blog,.our-discography h1,.our-discography p,.breadcrumb.ticket  {
-      text-align: left; 
-    }
-    .titulo-album{
-      margin: 0.625em 0;
-    }
-    .album-description {
-        color: #aaa;
-        line-height: 1.5;
-        text-align: justify;
-    }
-    .tracklist {
-        margin-left: -1em;
-    }
-    .tracklist ol {
-      list-style: none;
-    }
-    .tracklist li {
-      border-bottom: 0.063em solid #333;
-      color: #bbb;
-      font-weight: 800;
-    }
-    .track-title {
-      color: #737272;
-      flex-grow: 1;
-      transition: color 0.3s;
-      font-size: 0.8em;
-    }
-    .track-icons span {
-      color: #bbb;
-      margin-right: 0.625em;
-      transition: color 0.3s;
-      font-size: 0.5em;
-    }
-    .track-icons i {
-      color: #bbb;
-      margin-left: 0.625em;
-      transition: color 0.3s;
-      font-size: 0.5em;
-    }
-    .videoModal { 
-      /* Modal */
-      display: none; 
-      position: fixed; 
-      z-index: 1; 
-      left: 0;
-      top: 0;
-      width: 100%; 
-      height: 100%; 
-  }
-  .videoModal-content { /* Cambiado aquí */
-      padding: 1.25em; /* 20px */
-      width: 80%; /* Cambiado a un valor más razonable */
-      position: relative; /* Para posicionar el botón de cerrar */
-  }
-  .cierre {
-      color: #aaa;
-      float: right;
-      font-size: 1.75em; /* 28px */
-      font-weight: bold;
-  }
-  .cierre:hover,
-  .cierre:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-  }
-  iframe {
-      width: 100%; /* Ajusta el iframe al ancho del modal */
-      height: 15em; /* Altura del iframe */
-  }
-    .texto {
-      height: 40vh;
-      margin-bottom: 5%;
-    }
-    .texto h1 {
-      font-weight: 600;
-      font-size: 2.7em;
-    }
-    .texto p {
-      color:#a09d9d;
-      font-size: 1.2em;
-    }
-    .gallery {
-      flex-wrap: wrap;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, auto);
-      box-sizing: border-box;
-    }
-    .image {
-      overflow: hidden;
-    }
-    .image.large:hover, .image.small:hover{
-      opacity: 50%;
-    }
-    .image.large {
-      grid-column: span 1;
-      height: 20em;
-      width:50%;
-    }
-    .image.small {
-      height: 20em;
-      width: 25%;
-      grid-column: span 1 ; /* Ocupa una columna */
-      grid-row: span 1; /* Ocupa una fila */
-      flex-direction: row-reverse;
-      }
-    .image img {
-      object-fit: cover;
-    }
-    .modal {
-      display: none; /* Oculto por defecto */
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      height: 200%;
-    }
-    .modal-content {
-      max-width: 70%;
-      max-height: 100%;
-      overflow: auto;
-    }
-    .modal-content img {
-      width: 80%;
-      margin-left: 20%;
-      margin-top: 10%;
-    }
-    .close {
-      bottom: 0.625em;
-      right: 0.625em;
-      color: #666;
-    }
-    .overlay {
+    padding: 1em 0;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    }
-    .overlay span {
-    display: block;
-    }
-    .top-left.bottom-right.bottom-left .top-right {
-    top: 0.625em;
-    left: 0.625em;
-    }
-    .fechas {
-      max-width: 68em; /* 800px / 16 */
-      padding: 1em; /* 20px / 16 */
-      margin-left: 12%;
-      margin-top: 1%;
-  }
-  .date-item {
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25em; /* 20px / 16 */
-      border-bottom: 0.0625em solid #333; /* 1px / 16 */
-      position: relative; /* Necesario para que ::before se posicione relativo al contenedor */
-    }
-  .date-item::before {
-      content: '';
-      position: absolute;
-      margin-left: 13%;    
-      top: 2em;
-      bottom: 1em;
-      width: 0.1em; /* Grosor de la línea */
-      background-color: #b2b2b2; /* Color de la línea vertical */
-      z-index: -1; /* Coloca la línea detrás del contenido */
-  }
-  .date {
-      font-size: 3.5em; 
-      font-weight:bolder;
-      width: 5%;
-      margin-left: -2%;
-  }
-  .month-day {
-      flex-direction: column;
-      align-items: flex-end;
-      text-transform: uppercase;
-      color: #888;
-      margin-left: 3em; /* Espacio entre la fecha y el mes/día */
-  }
-  .ciudad {
-      flex-grow: 1;
-      padding-left: 1.25em; /* 20px / 16 */
-      margin-left: 3em; /* Espacio entre el mes/día y los detalles */
-      flex-grow: 1; /* Permite que los detalles ocupen el espacio restante */
-      font-size: 0.85em;
-  }
-  .buy-tickets {
-      text-transform: uppercase;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      text-decoration: underline;
-      margin-right: 2%;
-  }
-  .view-all {
-      padding: 1.25em 0;
-  }
-  .view-all a {
-      text-decoration: none;
-      border: 0.063em solid #fff;
-      padding: 1.3em;
-      display: inline-block;
-  }
-    .blog{
-    width: 80%;
-    margin-left: 10%;
-    padding:  1.25em 0;
-    margin-top: 10%;
-    }
-    .blog h1{
-      font-size: 2.8em;
-    }
-    .blog h1:after,.our-discography h1::after,.texto h1:after{
-      content: "";
-    display: block;
-    width: 2em; /* Ajusta el tamaño de la línea proporcional al texto */
-    height: 0.1em; /* Ajusta el grosor de la línea */
-    background-color: #fff; /* Cambia el color de la línea */
-    margin: 0.5em ; /* Centra la línea y ajusta el espacio (arriba y abajo) */
-    margin-left: 0%;
-    }
-    p {
-      line-height: 1.5em;
-      color: #a09d9d;
-    }
-    .blog-posts {
-      padding: 1.25em;
-      margin: 0.625em;
-    }
-    .blog-post {
-      overflow: hidden; /* Evita que la imagen ampliada sobresalga */
-      display: inline-block; /* Asegura la correcta alineación del contenedor */
-    }
-    .blog-post img {
-      width: 80%; /* Mantiene la imagen con el 80% del ancho del contenedor */
-      transition: transform 0.3s ease; /* Suaviza el zoom */
-    }
-    .blog-post img:hover {
-      transform: scale(1.02); /* Aplica un zoom del 5% */
-    }
-    .blog-post-title {
-      font-size: 1.125em;
-      margin-left: -15%;
-    }
-    .blog-post-title, .right-section, .image-foto img,.review-section  {
-      margin-top: 5%;
-    }
-    .blog-post-date {
-      margin-top: 2%;
-      margin-left: -60%;
-      color: #aaa;
-    }
-    .video-section {
-      height: 75vh;
-      width: 100%;
-      margin-top: 10%;
-      background-image: url(../images/h1-img-7.jpg);
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-  }
-  
-  .play-button {
-      position: relative;
-      z-index: 2;
-      font-size: 3.75em; /* 60px */
-      color: white;
-      cursor: pointer;
-  }
-  
-  #nuevomodal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  .modal-contento {
-      position: relative;
-      background: rgb(41, 41, 41);
-      padding: 1.25em; /* 20px */
-      border-radius: 0.625em; /* 10px */
-      width: 40.625em; /* 650px */
-      height: 25em; /* 400px */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-  }
-
-  #cerrarModal {
-      position: absolute;
-      top: 100%; /* -10px */
-      right: -0.625em; /* -10px */
-      background:transparent;
-      color: white;
-      border: none;
-      cursor: pointer;
-      padding: 0.3125em 0.625em; /* 5px 10px */
-      font-size: 1.125em; /* 18px */
-      border-radius: 50%;
-  }
-  .error-message {
-      font-size: 4em; /* 24px */
-      font-weight: bold;
-      color: white;
-  }
-  .error-subtext {
-      font-size: 1em; /* 16px */
-      margin-top: 0.625em; /* 10px */
-      color: white;
-
-  }
-   
-    .side-text {
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      font-size: 5em;
-    }
-    .info-box {
-      bottom: 1.25em;
-      right:  1.25em;
-      padding: 0.625em  1.25em;
-      border-radius: 0.063em;
-    }
-    .info-box .demos {
-      font-size:  1.25em;
-      margin-right: 0.625em ;
-    }
-    .info-box .demos span {
-      font-size: 1.875em;
-    }
-    .info-box .buy-button {
-      background: #e6005c;
-      padding:0.625em 1.25em;
-      border-radius: 0.313em;
-      text-decoration: none;
-    }
-    .info-box .buy-button i {
-      margin-right: 0.313em;
-    }
-    .our-discography {
-      padding: 3.125em 0;
-    }
-    .our-discography h1 {
-      margin-top: 4%;
-      font-size: 2.8em;
-    }
-    .our-discography p {
-      line-height: 1.6;
-      margin-bottom: 3.125em;
-      color:#aaa;
-    }
-    .albums {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-      gap: 0.9375em; /* 15px */
-      justify-items: center;
-      margin-left: 7%;
-      width: 90%;
-  }
-  .albumes {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      aspect-ratio: 1; /* Mantiene proporción cuadrada */
-  }
-  .albumes img {
-      transition: opacity 0.3s ease-in-out;
-      width: 150%;
-      height: 200%;
-      object-fit: cover; /* Asegura que la imagen cubra el espacio */
-  }
-  .albumes:hover img {
-      opacity: 0.4;
-  }
-  .albumes figcaption {
-      position: absolute;
-      bottom: 0.625em; /* 10px */
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      text-align: center;
-      color: white;
-      transition: opacity 0.3s ease-in-out;
-      width: 80%;
-  }
-  .albumes:hover figcaption {
-      opacity: 1;
-  }
-  .albumes h3 {
-      font-size: 1.2em;
-      margin: 0;
-      margin-right: 38%;
-  }
-  .albumes p {
-      font-size: 1em;
-      margin: 0.3125em 0; /* 5px */
-      margin-left: 19%;
-  }
-  .show-more {
-    background-color: transparent; /* Fondo transparente */
-    margin-top: 2%;
-    margin-left: 45%;
-    margin-right:35%;
-    border: 0.125em solid white; /* Borde blanco en em */
-    color: white; /* Texto blanco */
-    padding: 0.625em 1.25em; /* Espaciado interno en em */
-    font-size: 1em; /* Tamaño de fuente en em */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón */
-    transition: background-color 0.3s ease; /* Efecto de transición */
+    z-index: 100;
 }
-.show-more:focus {
-    outline: none; /* Sin borde de enfoque */
-}
-.show-more:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo al pasar el ratón */
-}
-.show-more:active {
-    transform: scale(1); /* Mantiene el tamaño al hacer clic */
-}
-    .footer {
-      padding: 2.5em;
-      margin-bottom: 5%;
-    }
-    .footer-column {
-      margin: 0 1.25em;
-    }
-    .footer-column h2 {
-      margin-bottom: 1.25em;
-      font-size: 1.2em;
-    }
-    .footer-column h3 {
-      font-size: 3.2em;
-      margin-top: -1%;
-    margin-bottom: 5%;  
-    }
-    .footer-column p {
-      line-height: 1.6;
-      font-size: 1em;
-    }
-    .footer-column a {
-      text-decoration: underline;
-      display: block;
-      font-size: 0.8em;
-      margin-bottom: 0.625em;
-      transition: opacity 0.3s ease; /* Define la transición base */
-    }
-  .footer-column a:hover{
-    opacity: 0.7; /* Aplica la opacidad leve al pasar el mouse */
-    transition: opacity 0.3s ease; /* Transición suave */
-  }
-  .social-icons {
-    margin-top: 1.25em;
-  }
-  .social-icons a {
-    font-size: 1em;
-    margin-right: 0.625em;
-    display: inline-block;
-    width: 2em;
-    height: 2.5em;
-    line-height: 2.5em;
-    border: 0.125em solid #fff;
-    border-radius: 50%;
-    text-align: center; /* Centra el icono dentro del círculo */
-    color: #fff; /* Color inicial del icono */
-    background-color: transparent; /* Fondo inicial */
-    transition: all 0.3s ease; /* Transición suave para los cambios */
-  }
-  .social-icons a:hover {
-    color: #000; /* Cambia el color del icono a negro */
-    background-color: #fff; /* Cambia el fondo a blanco */
-    border-color: #fff; /* Mantiene el borde blanco */
-  }
-  .contact-info {
-    color: white;
-    width: 15.625em; /* 250px */
-    text-align: left;
-}
-.contact-info h2 {
-    font-size: 1.125em; /* 18px */
-    font-weight: bold;
-    margin-bottom: 0.8em; /* Ajustado para que coincida con la imagen */
-}
-.contact-info p {
+.container.navbar {
     display: flex;
     align-items: center;
-    font-size: 0.875em; /* 14px */
-    margin: 0.75em 0; /* Ajustado para coincidir con la separación exacta */
-}
-
-.contact-info i {
-    margin-right: 0.8em; /* Ajustado para que los íconos tengan la misma distancia */
-    font-size: 1em; /* 16px */
-}
-
-.contact-info a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.875em; /* 14px */
-}
-    .footer-bottom {
-      padding: 1.25em;
-      border-top: 0.063em solid #333;
-    }
-    .social-icons {
-      margin-top: 1.25em;
-    }
-    .social-icons a {
-      margin-right: 0.625em;
-      display: inline-block;
-      width: 2em;
-      height: 2em;
-      line-height: 2em;
-      border: 0.125em solid #fff;
-      border-radius: 100%;
-    }
-    .footer-bottom {
-      padding: 1.25em;
-      border-top: 0.063em solid #333;
-    }
-    .articulos{
-      flex-wrap: wrap;
-      margin-left: -5%;
-      margin-right: 3%;
-    }
-      .articulos article {
-        position: relative;
-      }
-      .articulos .foto img {
-        width: 130%;
-        display: block;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-      }
-      .transparencia {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        margin-left: 12%;
-    }
-    .articulos article:hover .transparencia {
-      opacity: 1;
-  }
-  .transparencia h3 {
-    text-transform: uppercase;
-  }
-  .transparencia h3 {
-    text-transform: uppercase;
-  }
-  .transparencia p {
-    margin:0.5em;
-    color: #ccc;
-  }
-  .transparencia  .social {
-    gap: 0.313em;
-  }
-  .transparencia .social i {
-    transition: color 0.3s ease;
-  }
-    .menu {
-  padding: 1.25em; /* Equivalente a 20px */
-    }
-    .breadcrumb {
-      color: #ccc; /* Texto gris claro */
-      margin-top:9%;
-      top: 0;
-      width: 90%;
-      margin-left: 5%;
-    }
-    .breadcrumb a {
-      color: #ccc; /* Color de los enlaces */
-    }
-    .content {
-      padding: 7em;
-      margin-top: -10%;
-    }
-    .content img {
-      width:29%; /* Ajusta al 40% del contenedor */
-      object-fit: cover;
-      margin-left: 1%; /* Margen izquierdo para centrar mejor */
-    }
-    .content .map {
-      width: 60%; /* Ancho del mapa */
-      height: 35em; /* Altura ajustada */
-      border: 0;
-      filter: grayscale(100%); /* Escala de grises para un estilo más estilizado */
-      flex-shrink: 0; /* Evita que se encoja más allá de este tamaño */
-      margin-top: 13%;
-      margin-right: 5%;
-    }
-    .detalles {
-        padding: 1.25em; /* 20px */
-        margin-left: 5%;
-        margin-bottom: 8%;
-    }
-    .details{
-      margin-bottom: 50%;
-      margin-top: -20%;
-      margin-left:2%;
-    }
-    .details,.about {
-        width: 45%;
-    }
-  .about h2, .follow h2 {
-        margin-bottom: 0.625em; /* 10px */
-    }
-    .about h2{
-      font-size: 1.8em;
-    }
-    .details h2{
-      margin-bottom: 2%;
-      font-size: 2em;
-    }
-    .details p, .about p {
-        line-height: 1.5; /* Equivalente a 24px de altura de línea si el tamaño de fuente es 16px */
-    }
-    .about{
-      margin-right: 40%;
-      margin-top: -68%;
-      margin-left: 38%;
-    }
-    .ticket {
-      padding: 1.25em 0;
-    }
-    .ticket a {
-      display: inline-block;
-      padding: 1em 3em; /* Tamaño del botón */
-      border: 0.063em   solid #ffffff;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-    .inicio,.disco,.album-section{
-      margin-left: 3%;
-      background-color: #000; /* Fondo negro */
-      color: #fff; /* Texto blanco */
-      text-align: center; /* Centramos el texto */
-    }
-    .follow {
-        margin-top: 1.25em; /* 20px */
-        font-size: small;
-        margin-bottom: 20%;
-      }
-    .follow i {
-        margin-right: 2.2em; /* 10px */
-        color: #adadad;
-        font-size: 1.2em;
-        transition: color 0.3s, text-shadow 0.3s;
-}
-      .follow i:hover {
-        color: #ffffff;
-}
-    .image-container {
-      width: 20em;
-      margin: 1em ;
-    }
-    .image-container img {
-      border-radius: 0.5em;
-    }
-    .album-title {
-      bottom: 1em;
-      left: 1em;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 0.2em 0.5em;
-      border-radius: 0.2em;
-    }
-    .player {
-      gap: 1em;
-      margin: 1em ;
-    }
-    .about1 {
-      max-width: 30em;
-      margin-left: 9em;
-      line-height: 1.5;
-      margin-top: 3%;
-    }
-    .about-album h2, .lyrics-section h2,  h2,.available-on h2, .latest-video h2 {
-      margin-bottom: 0.5em;
-    }
-    .about-album p {
-      color: #bbb;
-      margin-bottom: 1em;
-    }
-    .about-album ul {
-      list-style: none;
-      margin-left: -8%;
-    }
-    .lyrics-section {
-      max-width: 37.5em;
-      margin-left: 52%;
-      margin-bottom: 10%;
-  }
-  .lyrics-section h1 {
-      margin-bottom: 1.25em;
-  }
-  .accordion {
-    border-radius: 0.313em;
-    margin-bottom: 0.625em;
-    border-bottom: 0.1em solid #9d9d9d; 
-}
-
-.accordion-header {
-    padding: 0.938em;    
     justify-content: space-between;
-    align-items: center;
-    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
 }
-
-.accordion-content {
-    padding: 0.938em;
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+.logo img {
+    height: 50px;
 }
-
-.accordion-content p {
-    line-height: 1.5;
+.nav-links {
+    display: flex;
+    gap: 1em;
 }
-
-.accordion.active .accordion-content {
-    display: block;
-    max-height: 18.75em; /* 300px = 18.75em si el font-size base es 16px */
-}
-
-.accordion.active .accordion-header i {
-    transform: rotate(180deg);
-}
-    .tracklist ol {
-      list-style: none;
-      max-width: 30em;
-      margin: 1em auto;
-    }
-    .tracklist li {
-      justify-content: space-between;
-      padding: 0.5em 0;
-      border-bottom: 0.05em solid #444;
-    }
-    .track-icons {
-      gap: 0.5em;
-    }
-    .available-on {
-      max-width: 30em;
-      margin: 2em auto;
-      margin-left: 6%;
-    }
-    .available-on h2 {
-      margin-bottom: 1em;
-      letter-spacing: 0.06em; /* Espaciado entre letras */
-    } 
-    .platform-icons {
-      display: inline-flex;
-      gap: 0.5em; /* Espacio entre los íconos */
-    }
-    .platform-icons a img {
-      width: 9.375em; /* Ancho de 150px equivalente en em (asumiendo font-size base de 16px) */
-      height: 3.125em; /* Altura de 50px equivalente en em */
-    }
-    .latest-video {
-      max-width: 70em;
-      margin: 2em auto;
-    }
-    .video-container {
-      padding-top: 56.25%;
-    }
-    .video-container iframe {
-      top: 0;
-      left: 0;
-      height: 100%;
-    }
-    .navigation {
-      margin-top: 1.25em; /* 20px */
-    }
-    .navigation .dots i {
-      margin: 0.3125em; /* 5px */
-    }
-    .tour-dates{
-      font-size: 255%;
-      font-weight: 500;
-    }
-    .contact {
-      justify-content: space-around;
-      margin-bottom: 10%;
-    }
-    .contact-section h2 {
-      margin-bottom: 0.625em;
-      margin-right: 60%;
-    }
-    .contact-section p {
-      margin: 0.313em ;
-    }
-    .form {
-      padding: 3.125em;
-      background-color:#070707;
-    }
-    .left-section,.right-section {
-      width: 45%;
-    }
-    .left-section h1 {
-      font-size: 1.5em;
-      margin-top: 10%;
-      }
-    .left-section p {
-      line-height: 1.5;
-      margin-top: 2%;
-      }
-    .info-contacto {
-      margin-top: 2.25em;
-      justify-content: space-between;
-    }
-    .info-contacto div {
-      width: 45%;
-  }
-    .info-contacto h2 {
-      margin-bottom:0.625em;
-    }
-    .info-contacto p {
-      line-height: 1.5;
-      margin: 0.313em 0;
-      font-size: 0.9em;
-      margin-bottom: 20%;
-    }
-    .right-section {
-      text-align: center;  }
-  .right-section input, .right-section textarea {
-    width: 100%;
-    padding: 0.625em; /* 10px */
-    background-color: #070707;
-    border: 0.0625em solid #fff; /* 1px */
+.nav-links a {
     color: #fff;
-    font-size: 1em; /* 16px */
-    margin-bottom: 1.25em; /* 20px */
-  }
-  .right-section textarea {
-    height: 6.25em; /* 100px */
-  }
-  .right-section button {
-    background-color: #fff;
-    color: #000;
-    padding: 0.625em 1.25em; /* 10px 20px */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+.nav-links a.active,
+.nav-links a:hover {
+    background: #444;
+}
+#toggle-dark-mode {
+    background: none;
     border: none;
-    cursor: pointer;
-    margin-right: 70%;
-    font-size: 1em; /* 16px */
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .right-section button:hover {
-    background-color: #000;
     color: #fff;
-    border: 0.0625em solid #fff; /* 1px */
-  }
-  .error {
-    color: red;
-    font-size:0.875em;
-    margin-bottom: 0.625em;
-  }
-  .alert {
-    background: yellow;
-    color: black;
-    padding: 0.625em;
-    margin-top: 0.625em;
-    display: none;
-  }
-    .galeria-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.625em;
-    }
-    .images img {
-      width: 90%;
-    }
-    .contactos,.tour,.about_us {
-      flex-direction: column;
-      height: 85vh;
-      background-image:  url(../images/contact-us-title.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    .tour {
-      background-image: url(..//images/tour-title-area.jpg);
-    }
-    .about_us{
-      background-image: url(..//images/about-title-area.jpg);
-    }
-    #scrollToTopBtn {
-      position: fixed;
-      bottom: 2em;
-      right: 2em;
-      width: 3em;
-      height: 3em;
-      border: 0.063em solid #fff;
-      border-radius: 50%;
-      display: none; /* Oculto por defecto */
-      z-index: 1000;
-    }
-    #scrollToTopBtn:hover {
-      color: #222;
-    }
-    body.scrolled #scrollToTopBtn {
-      display: block;
-    }
-    header #scrollToTopBtn {
-      display: none;
-    }
-    .albumesss {
-      gap: 2em; /* Espacio entre la imagen y la información del álbum */
-      max-width: 80em; /* Ancho máximo del contenedor principal */
-      margin: 0 auto;
-    }
-    .image-foto img {
-      max-width: 30em; /* Tamaño máximo de la imagen en em */
-      object-fit: cover;
-      margin-left: 20%;
-      margin-top:15%;
-    }
-    .about1 {
-      max-width: 35em; /* Ancho máximo para la sección de información */
-      margin-right: 1%;
-    }
-    .about-album h2 {
-      font-size: 2em; /* Aproximadamente 24px */
-      letter-spacing: 0.05em;
-      margin-bottom: 0.8em;
-    }
-    .about-album p {
-      line-height: 1.6em;
-      margin-bottom: 1.2em;
-    }
-    .about-album ul {
-      list-style-type: none;
-      color:#a09d9d;
-    }
-    .about-album ul li {
-      margin-bottom: 0.6em;
-    }
-    .musica {
-      background-color: #2b2b2b;
-      border-radius: 0.5em;
-      width: 30em;
-      flex-direction: column;
-      align-items: center;
-      margin-left: 10%;
-      margin-top: -50%;
-
-  }
-  .controles {
-      justify-content: space-between;
-      width: 100%;
-      margin-bottom: 1em;
-      padding: 0.8em;
-  }
-  .controles div {
-      padding: 0.5em;
-      margin-left: 8%;
-      margin-right: 15%;
-      text-align: center;
-      position: relative;
-      flex: 1;
-      cursor: pointer;
-      display: inline-block;
-  }
-  .controles div:not(:first-child) {
-    border-left: 0.10em solid gray; /* Línea entre los botones */
-    margin-left: -10%;
-  }
-  .controles i {
-      color: #fff;
-      font-size: 1.25em;
-  }
-  .controles div:hover i {
-      color: #ccc;
-  }
-  .titulo-track {
+    font-size: 1.5em;
     cursor: pointer;
-    color: rgb(144, 144, 144);
-}
-.titulo-track:hover {
-    color: rgb(209, 209, 209);
-}
-  .track-info {
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 1em 0;
-      border-top: 0.08em solid gray;
-      margin-top: 0.5em;
-  }
-  .track-titulo {
-      font-weight: bold;
-      font-size: 1.2em;
-  }
-  .artist-name {
-      color: #ccc;
-      font-size: 0.8em;
-  }
-  .timer {
-      color: #ccc;
-  }
-    .song-list {  
-      padding: 1.25em;
-      max-width: 25em;
-      margin-left: 3em;
-      font-size: 1.3em;
-      margin-top: 3%;
-    }
-    .song-list h1 {
-      font-size: 1.2em; 
-      margin-bottom: 0.125em;
-      margin-left: 10%;
-    }
-    .song-list ol {
-      list-style-type: none;
-      font-size: 0.9em;
-    }
-    .song-list li {
-      padding: 0.625em ;
-      border-bottom: 0.063em solid #333;
-    }
-    .buy-track {
-      text-decoration: none;
-      font-size: 0.725em ;
-    }
-    .buy-track:hover {
-      text-decoration: underline;
-    }
-    .review-section {
-      background-color: #1a1a1a;
-      padding: 2em;
-      max-width: 30.25em;
-      margin-left: 52%;
-      border: 0.125em  /* Aquí está el recuadro */
-  }
-  .review-section h2 {
-      margin-bottom: 1.5em;
-      letter-spacing: 0.1em;
-  }
-  .review-text {
-      font-size: 1em; /* 16px */
-      font-style: italic;
-      margin-bottom: 1.25em; /* 20px */
-      line-height: 1.5;
-      color: #b3b3b3;
-  }
-  .review-source {
-      font-size: 1em; /* 8px */
-      margin-bottom: 0.125em; /* 2px */
-  }
-  .nav-icons {
-      justify-content: center;
-      margin-left: 85%;
-  }
-
-  .nav-button {
-      background-color: transparent;
-      color: #b3b3b3;
-      padding: 0.125em 0.3125em; /* 2px 5px */
-      border: 0.0625em solid transparent; /* 1px */
-      transition: color 0.3s, border-color 0.3s;
-  }
-
-  .nav-button:hover {
-      color: #ffffff;
-      border-color: #ffffff;
-  }
-
-  .iconos-abajo {
-      justify-content: center;
-      gap: 2.1875em; /* 35px */
-      padding: 0.3125em; /* 5px */
-  }
-
-  @media (max-width: 1200px) {
-    .container {
-        height: 100vh; /* Ajusta la altura para pantallas más pequeñas */
-    }
-    .navbar {
-        padding: 1em; /* Reduce el padding en la barra de navegación */
-    }
+    margin-left: 1em;
 }
 
-@media (max-width: 992px) {
-    .left-section, .right-section {
-        width: 100%; /* Cambia a ancho completo en pantallas más pequeñas */
-    }
-    .albumes {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en lugar de cuatro */
-    }
+/* --- HERO / PORTADA --- */
+.background-image {
+  background-image: url('assets/images/slider-img-1.jpg');   
+     min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.vertical-name {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+    margin: 2em 0 0.5em 0;
+}
+.new-album {
+    text-align: center;
+    margin: 2em 0;
+}
+.new-album h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #222;
+}
+.apps img {
+    margin: 0 0.5em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.apps img:hover {
+    transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    .texto h1 {
-        font-size: 2em; /* Reduce el tamaño de fuente del título */
-    }
-    .video-section {
-        height: 50vh; /* Ajusta la altura de la sección de video */
-    }
+/* --- REPRODUCTOR DE AUDIO --- */
+.album {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    padding: 2em;
+    border-radius: 10px;
+    margin: 2em auto;
+    max-width: 700px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    gap: 2em;
+}
+.album .left {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.album .left img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.album .title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.album .subtitle {
+    color: #888;
+    font-size: 1em;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.5em;
+    color: #222;
+}
+.controls i {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.controls i:hover {
+    color: #007bff;
+}
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    width: 140px;
+}
+.progress-bar {
+    background: #ddd;
+    width: 80px;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 0.5em;
+}
+.progress-bar-fill {
+    background: #007bff;
+    height: 100%;
+    width: 0%;
+    transition: width 0.2s;
+}
+.time {
+    font-size: 0.9em;
+    color: #555;
+}
+.separator {
+    color: #888;
+}
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.volume-slider {
+    width: 60px;
 }
 
-@media (max-width: 576px) {
-    .navbar a {
-        font-size: 0.8em; /* Reduce el tamaño de fuente de los enlaces */
+/* --- INFO DEL ÁLBUM Y TRACKLIST --- */
+.album-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 2em auto;
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.album-cover {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+.album-cover img {
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.album-details {
+    margin-top: 1em;
+}
+.titulo-album {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+.album-description {
+    color: #555;
+    margin-bottom: 1em;
+}
+.tracklist {
+    flex: 2 1 350px;
+}
+.tracklist ol {
+    list-style: none;
+}
+.tracklist li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f1f1;
+    margin-bottom: 0.5em;
+    padding: 0.7em 1em;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.track-title {
+    font-weight: 600;
+}
+.track-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+.track-icons i {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+.track-icons i:hover {
+    color: #0056b3;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    max-width: 90vw;
+    max-height: 80vh;
+    position: relative;
+}
+.modal-content .close, .modal-content .cierre {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5em;
+    color: #222;
+    cursor: pointer;
+}
+
+/* --- TEXTO PROMOCIONAL --- */
+.texto {
+    text-align: center;
+    margin: 3em 0 2em 0;
+}
+.texto h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.texto p {
+    color: #555;
+}
+
+/* --- GALERÍA DE IMÁGENES --- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin: 2em auto;
+    max-width: 1100px;
+}
+.image {
+    overflow: hidden;
+}
+.image.large {
+    width: 50%;
+    height: 20em;
+}
+.image.small {
+    width: 25%;
+    height: 20em;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+.image img:hover {
+    transform: scale(1.05);
+}
+#myModal .modal-content {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+#modal-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+/* --- FECHAS DE EVENTOS --- */
+.fechas ul {
+    list-style: none;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0;
+}
+.date-item {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    padding: 1em;
+    gap: 1.5em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.date {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+    width: 50px;
+    text-align: center;
+}
+.month-day {
+    text-align: center;
+    color: #555;
+    width: 60px;
+}
+.ciudad {
+    flex: 1;
+    font-weight: 500;
+}
+.buy-tickets {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5em 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.buy-tickets:hover {
+    background: #0056b3;
+}
+.view-all {
+    text-align: center;
+    margin: 1em 0;
+}
+#view-all-btn {
+    background: #222;
+    color: #fff;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+#view-all-btn:hover {
+    background: #444;
+}
+
+/* --- BLOG --- */
+.blog {
+    text-align: center;
+    margin: 3em 0 1em 0;
+}
+.blog h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+.blog-post {
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1em;
+    width: 300px;
+    text-align: center;
+}
+.blog-post img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.7em;
+}
+.blog-post-title {
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+.blog-post-date {
+    color: #888;
+    font-size: 0.95em;
+}
+
+/* --- VIDEO SECTION --- */
+.video-section {
+    position: relative;
+    background: #222;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.video-section .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+.play-button {
+    position: relative;
+    z-index: 2;
+    font-size: 4em;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.play-button:hover {
+    color: #007bff;
+}
+#nuevomodal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+.modal-contento {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+#error-message {
+    color: #c00;
+    font-size: 1.2em;
+}
+#error-subtext {
+    color: #888;
+}
+#cerrarModal {
+    position: absolute;
+    top: 10px; right: 15px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px; height: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* --- DISCOGRAFÍA --- */
+.our-discography {
+    text-align: center;
+    margin: 3em 0 2em 0;
+    padding: 3em 0;
+}
+.our-discography h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.our-discography p {
+    color: #555;
+    margin-bottom: 2em;
+}
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+.albumes {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    aspect-ratio: 1;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.albumes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+.albumes:hover img {
+    opacity: 0.4;
+}
+.albumes figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    text-align: center;
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+    width: 80%;
+}
+.albumes:hover figcaption {
+    opacity: 1;
+}
+.albumes h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+.albumes p {
+    font-size: 1em;
+    margin: 0.3em 0;
+}
+.show-more {
+    background: #007bff;
+    color: #fff;
+    padding: 0.7em 2em;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    margin: 2em 0 0 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.show-more:hover {
+    background: #0056b3;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 2em 0 0 0;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2em;
+}
+.footer-column {
+    flex: 1 1 200px;
+    margin-bottom: 1em;
+}
+.footer-column h2, .footer-column h3 {
+    font-family: 'Oswald', Arial, sans-serif;
+    margin-bottom: 0.7em;
+}
+.social-icons a {
+    color: #fff;
+    margin-right: 0.7em;
+    font-size: 1.3em;
+    transition: color 0.2s;
+}
+.social-icons a:hover {
+    color: #007bff;
+}
+.contact-info p {
+    margin-bottom: 0.5em;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 1em 0;
+    background: #181818;
+    color: #aaa;
+    margin-top: 1em;
+}
+
+/* --- BOTÓN SCROLL ARRIBA --- */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+#scrollToTopBtn:hover {
+    background: #007bff;
+}
+
+/* --- MODO OSCURO --- */
+body.dark-mode {
+    background: #181818;
+    color: #f1f1f1;
+}
+body.dark-mode header,
+body.dark-mode footer {
+    background: #181818;
+    color: #f1f1f1;
+}
+body.dark-mode .nav-links a {
+    color: #f1f1f1;
+}
+body.dark-mode .nav-links a.active,
+body.dark-mode .nav-links a:hover {
+    background: #333;
+}
+body.dark-mode .background-image {
+    background: #222;
+}
+body.dark-mode .album,
+body.dark-mode .album-info,
+body.dark-mode .tracklist li,
+body.dark-mode .blog-post,
+body.dark-mode .album-card,
+body.dark-mode .fechas ul,
+body.dark-mode .footer {
+    background: #232323;
+    color: #f1f1f1;
+}
+body.dark-mode .progress-bar {
+    background: #444;
+}
+body.dark-mode .progress-bar-fill {
+    background: #00bfff;
+}
+body.dark-mode .buy-tickets,
+body.dark-mode .show-more {
+    background: #00bfff;
+    color: #181818;
+}
+body.dark-mode .buy-tickets:hover,
+body.dark-mode .show-more:hover {
+    background: #0099cc;
+}
+body.dark-mode .footer-bottom {
+    background: #111;
+    color: #aaa;
+}
+body.dark-mode .modal-content,
+body.dark-mode .modal-contento {
+    background: #232323;
+    color: #f1f1f1;
+}
+body.dark-mode #scrollToTopBtn {
+    background: #00bfff;
+    color: #181818;
+}
+body.dark-mode #scrollToTopBtn:hover {
+    background: #0099cc;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .album-info, .footer, .albums, .blog-posts, .gallery {
+        flex-direction: column;
+        align-items: center;
     }
-    .footer-column {
-        margin: 0.5em 0; /* Ajusta el margen de las columnas del pie de página */
+    .container.navbar {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .album {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+@media (max-width: 600px) {
+    .album-cover img, .album-card img {
+        width: 100%;
+        min-width: 0;
+    }
+    .album, .album-info, .footer, .albums, .blog-posts, .gallery {
+        padding: 1em;
+    }
+    .date-item {
+        flex-direction: column;
+        gap: 0.5em;
+        align-items: flex-start;
     }
 }
