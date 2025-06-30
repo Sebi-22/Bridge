@@ -308,24 +308,24 @@ document.addEventListener("DOMContentLoaded", function() {
 // ========== GALERÍA DE FOTOS PRINCIPAL ==========
 document.addEventListener("DOMContentLoaded", function() {
     const images = [
-        { src: "assets/images/h1-img-1.jpg", alt: "Band performing on stage with red lights", width: "50", size: "large" },
-        { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting on an amplifier", width: "25", size: "small" },
-        { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer performing", width: "25", size: "small" },
-        { src: "assets/images/h1-img-4.jpg", alt: "Singer performing on stage with crowd", width: "25", size: "small" },
-        { src: "assets/images/h1-img-5.jpg", alt: "Drummer playing drums", width: "25", size: "small" },
-        { src: "assets/images/h1-img-6.jpg", alt: "Guitarist performing with green lights", width: "50", size: "large" }
+        { src: "assets/images/h1-img-1.jpg", alt: "Band performing on stage with red lights", size: "large" },
+        { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting on an amplifier", size: "small" },
+        { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer performing", size: "small" },
+        { src: "assets/images/h1-img-4.jpg", alt: "Singer performing on stage with crowd", size: "small" },
+        { src: "assets/images/h1-img-5.jpg", alt: "Drummer playing drums", size: "small" },
+        { src: "assets/images/h1-img-6.jpg", alt: "Guitarist performing with green lights", size: "large" }
     ];
     const galleryContainer = document.getElementById("gallery-container");
     const modal = document.getElementById("myModal");
     const modalImg = document.getElementById("modal-img");
     const closeBtn = document.querySelector(".close");
+
     images.forEach(image => {
         const imageDiv = document.createElement("div");
         imageDiv.classList.add("image", image.size);
         const img = document.createElement("img");
         img.src = image.src;
         img.alt = image.alt;
-        img.width = image.width;
         img.addEventListener("click", function() {
             modal.style.display = "block";
             modalImg.src = image.src;
@@ -334,6 +334,7 @@ document.addEventListener("DOMContentLoaded", function() {
         imageDiv.appendChild(img);
         galleryContainer.appendChild(imageDiv);
     });
+
     closeBtn.addEventListener("click", function() {
         modal.style.display = "none";
     });
