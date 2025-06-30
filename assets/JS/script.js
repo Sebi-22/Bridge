@@ -87,14 +87,13 @@ function sendMessage() {
         document.getElementById("alerta").style.display = "block";
     }
 }
-
 // ========== AUDIO PRINCIPAL (BLACK HOLE SUN) ==========
-const playPauseBtn = document.getElementById("play-pause");
-const progressBar = document.getElementById("progress-bar");
-const progressBarFill = document.getElementById("progress-bar-fill");
-const currentTimeEl = document.getElementById("current-time");
-const durationEl = document.getElementById("duration");
-const volumeSlider = document.getElementById("volume-slider");
+const playPauseBtn = document.getElementById("main-audio-play-pause");
+const progressBar = document.getElementById("main-audio-progress-bar");
+const progressBarFill = document.getElementById("main-audio-progress-bar-fill");
+const currentTimeEl = document.getElementById("main-audio-current-time");
+const durationEl = document.getElementById("main-audio-duration");
+const volumeSlider = document.getElementById("main-audio-volume-slider");
 const audio = new Audio("assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3");
 
 audio.addEventListener("loadedmetadata", () => {
@@ -112,11 +111,21 @@ progressBar.addEventListener("click", (e) => {
 playPauseBtn.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
-        playPauseBtn.classList.replace("fa-play", "fa-pause");
     } else {
         audio.pause();
-        playPauseBtn.classList.replace("fa-pause", "fa-play");
     }
+});
+audio.addEventListener("play", () => {
+    playPauseBtn.classList.remove("fa-play");
+    playPauseBtn.classList.add("fa-pause");
+});
+audio.addEventListener("pause", () => {
+    playPauseBtn.classList.remove("fa-pause");
+    playPauseBtn.classList.add("fa-play");
+});
+audio.addEventListener("ended", () => {
+    playPauseBtn.classList.remove("fa-pause");
+    playPauseBtn.classList.add("fa-play");
 });
 volumeSlider.addEventListener("input", () => {
     audio.volume = volumeSlider.value;

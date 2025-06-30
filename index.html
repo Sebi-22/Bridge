@@ -47,33 +47,32 @@
             </div>
         </section>
 
-        <section class="album">
-            <div class="left">
-                <img src="assets/images/album-16-150x150.jpg" alt="Logo">
-                <div>
-                    <span class="title">Black Hole Sun</span><br>
-                    <span class="subtitle">Terrible</span>
-                </div>
-            </div>
-            <div class="controls">
-                <i class="fas fa-step-backward" id="backward" aria-label="Rewind"></i>
-                <i class="fas fa-play" id="play-pause" aria-label="Play/Pause"></i>
-                <i class="fas fa-step-forward" id="forward" aria-label="Forward"></i>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="progress-bar">
-                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
-                </div>
-                <span class="time" id="current-time">00:00</span>
-                <span class="separator"> / </span>
-                <span class="time" id="duration">00:31</span>
-            </div>
-            <div class="volume-control">
-                <i class="fas fa-volume-up"></i>
-                <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="1">
-            </div>
-        </section>
-
+ <section class="album-player">
+    <div class="left-player">
+        <img src="assets/images/album-16-150x150.jpg" alt="Logo">
+        <div class="info-player">
+            <span class="title-player">BLACK HOLE SUN</span><br>
+            <span class="subtitle-player">Terrible</span>
+        </div>
+    </div>
+    <div class="controls-player">
+        <i class="fas fa-step-backward" id="main-audio-backward" aria-label="Rewind"></i>
+        <i class="fas fa-play" id="main-audio-play-pause" aria-label="Play/Pause"></i>
+        <i class="fas fa-step-forward" id="main-audio-forward" aria-label="Forward"></i>
+    </div>
+    <div class="progress-container-player">
+        <div class="progress-bar-player" id="main-audio-progress-bar">
+            <div class="progress-bar-fill-player" id="main-audio-progress-bar-fill"></div>
+        </div>
+        <span class="time-player" id="main-audio-current-time">00:00</span>
+        <span class="separator-player">/</span>
+        <span class="time-player" id="main-audio-duration">00:31</span>
+    </div>
+    <div class="volume-control-player">
+        <i class="fas fa-volume-up"></i>
+        <input type="range" class="volume-slider-player" id="main-audio-volume-slider" min="0" max="1" step="0.01" value="1">
+    </div>
+</section>
         <section class="album-info">
             <div class="album-cover">
                 <img src="assets/images/album-17 (1).jpg" alt="Wheels">
@@ -95,7 +94,6 @@
             </div>
             <div class="tracklist">
                 <!-- ...tracklist code as in your original... -->
-                <!-- Por brevedad, no repito aquí el listado, pero mantenlo igual -->
                 <!-- ... -->
             </div>
         </section>
