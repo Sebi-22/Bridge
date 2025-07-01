@@ -221,6 +221,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const img = document.createElement("img");
         img.src = album.imgSrc;
         img.alt = album.altText;
+
+        // Agregar figcaption con título y artista
         const figcaption = document.createElement("figcaption");
         const h3 = document.createElement("h3");
         h3.textContent = album.title;
@@ -228,6 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
         p.textContent = album.artist;
         figcaption.appendChild(h3);
         figcaption.appendChild(p);
+
         figure.appendChild(img);
         figure.appendChild(figcaption);
         article.appendChild(figure);

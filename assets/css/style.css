@@ -15,7 +15,7 @@ body {
 
 /* --- HEADER Y NAVBAR --- */
 header {
-    background: transparent;
+    background:transparent;
     color: #fff;
     position: absolute;
     top: 0;
@@ -153,7 +153,41 @@ header {
 .apps img:hover {
     transform: scale(1.05);
 }
+/* HERO SECTION */
 
+.about-hero {
+    position: relative;
+    width: 100vw;
+    height: 420px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-bg {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    background-image: url('../images/about-title-area.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.about-title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0;
+}
 /* --- REPRODUCTOR DE AUDIO --- */
 .album-player {
     display: flex;
@@ -308,6 +342,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 8%;
 }
 .album-cover img {
     width: 100%;
@@ -322,7 +357,7 @@ header {
 }
 .titulo-album {
     font-family: 'Oswald', Arial, sans-serif;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     margin-bottom: 0.5em;
     color: #fff;
@@ -368,7 +403,7 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #222;
-    padding: 0.8em 0;
+    padding: 0.8em;
     color: #eee;
     font-weight: 600;
     font-size: 1em;
@@ -379,7 +414,7 @@ header {
     border-bottom: none;
 }
 .track-title {
-    color: #fff;
+    color: #8e8e8e;
     flex: 1;
     font-size: 1em;
     text-align: left;
@@ -490,7 +525,46 @@ iframe {
     word-break: break-word;
     margin-left: 3%;
 }
+/*texto2*/
+.texto2 {
+    background: #000;
+    color: #fff;
+    padding: 3.5em 0 3em 0;
+    max-width: 100vw;
+}
 
+.texto2 h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-left: 7vw;
+    margin-bottom: 0.3em;
+    text-align: left;
+}
+
+.texto2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    margin-left: 7vw;
+    margin-bottom: 2em;
+}
+
+.texto2 p {
+    color: #bdbdbd;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1.05em;
+    margin-left: 7vw;
+    margin-right: 10vw;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    text-align: left;
+    max-width: 900px;
+}
 /* Modo oscuro */
 body.dark-mode .texto {
     background: #181818;
@@ -582,8 +656,10 @@ body.dark-mode .texto {
 .fechas {
     width: 100vw;
     background: #000;
-    padding: 0 0 3em 0;
+    padding: 0;
     margin: 0;
+    margin-top: 5%;
+    margin-left: -8%;
 }
 .fechas ul {
     list-style: none;
@@ -762,184 +838,289 @@ body.dark-mode .texto {
 /* --- VIDEO SECTION --- */
 .video-section {
     position: relative;
-    background: #222;
-    height: 18.75em; /* 300px */
+    width: 100vw;
+    min-height: 32em;
+    height: 60vh;
+    max-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2em 0;
-    border-radius: 0.625em;
     overflow: hidden;
+    background: #222;
 }
-.video-section .overlay {
+.video-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.25);
+    z-index: 2;
+}
+.video-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .play-button {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-size: 4em;
     color: #fff;
     cursor: pointer;
+    z-index: 4;
     transition: color 0.2s;
 }
 .play-button:hover {
     color: #007bff;
 }
-#nuevomodal {
-    display: none;
-    position: fixed;
-    z-index: 3000;
-    left: 0; top: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.7);
-    align-items: center;
-    justify-content: center;
-}
-.modal-contento {
-    background: #fff;
-    padding: 2em;
-    border-radius: 0.625em;
-    text-align: center;
-    position: relative;
-}
-#error-message {
-    color: #c00;
-    font-size: 1.2em;
-}
-#error-subtext {
-    color: #888;
-}
-#cerrarModal {
-    position: absolute;
-    top: 0.625em; right: 0.9375em;
-    background: #222;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 1.875em; /* 30px */
-    height: 1.875em;
-    font-size: 1.2em;
-    cursor: pointer;
-}
 
 /* --- DISCOGRAFÍA --- */
 .our-discography {
-    text-align: center;
-    margin: 3em 0 2em 0;
-    padding: 3em 0;
+    width: 100vw;
+    background: #000;
+    margin: 0;
+    padding: 3em 0 4em 0;
+    text-align: left;
 }
 .our-discography h1 {
     font-family: 'Oswald', Arial, sans-serif;
-    font-size: 2em;
-    margin-bottom: 0.5em;
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0 0 0.5em 7vw;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: left;
+    display: block;
 }
-.our-discography p {
-    color: #555;
-    margin-bottom: 2em;
+.discography-underline {
+    width: 80px;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    margin: 0 0 2em 7vw;
+}
+.discography-description {
+    color: #bdbdbd;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1.05em;
+    margin: 0 0 3em 7vw;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    max-width: 700px;
+    text-align: left;
+    font-weight: 400;
 }
 .albums {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 2em;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0 0 2em 7vw;
 }
 .albumes {
     position: relative;
     overflow: hidden;
-    width: 12.5em; /* 200px */
-    aspect-ratio: 1;
+    width: 260px;
+    aspect-ratio: 1/1;
     background: #222;
-    border-radius: 0.625em;
-    box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 1.5px 4px rgba(0,0,0,0.10);
 }
+
 .albumes img {
-    width: 100%;
+    width: 120%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 0.625em;
+    object-position: center center;
+    transition: filter 0.3s, transform 0.4s cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
+
 .albumes:hover img {
-    opacity: 0.4;
+    filter: brightness(0.4);
+    transform: translate(-50%, -50%) scale(1.07);
 }
+
 .albumes figcaption {
     position: absolute;
-    bottom: 0.625em;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1.2em 1em 1em 1em;
+    box-sizing: border-box;
+    color: #fff;
     opacity: 0;
-    text-align: center;
-    color: white;
-    transition: opacity 0.3s ease-in-out;
-    width: 80%;
+    transition: opacity 0.3s;
+    z-index: 2;
+    text-align: left;
+    font-family: 'Oswald', Arial, sans-serif;
 }
+
 .albumes:hover figcaption {
     opacity: 1;
 }
-.albumes h3 {
-    font-size: 1.2em;
-    margin: 0;
-}
-.albumes p {
-    font-size: 1em;
-    margin: 0.3em 0;
-}
-.show-more {
-    background: #007bff;
-    color: #fff;
-    padding: 0.7em 2em;
-    border-radius: 0.3125em;
-    border: none;
-    font-weight: 600;
-    margin: 2em 0 0 0;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.show-more:hover {
-    background: #0056b3;
+
+.albumes figcaption h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 0.2em 0;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
+.albumes figcaption p {
+    font-size: 1em;
+    margin: 0;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #bdbdbd;
+}
+.show-more {
+    background: transparent;
+    color: #fff;
+    padding: 0.7em 2em;
+    border-radius: 0;
+    border: 2px solid #fff;
+    font-weight: 600;
+    margin: 2em 0 0 7vw;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'Oswald', Arial, sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-left: 45%;
+}
+.show-more:hover {
+    background: #fff;
+    color: #000;
+}
 /* --- FOOTER --- */
 footer {
-    background: #222;
+    background: #000;
     color: #fff;
     padding: 2em 0 0 0;
 }
 .footer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 75em; /* 1200px */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    max-width: 1200px;
     margin: 0 auto;
     gap: 2em;
 }
 .footer-column {
-    flex: 1 1 12.5em; /* 200px */
+    flex: 1 1 200px;
     margin-bottom: 1em;
+    min-width: 200px;
 }
 .footer-column h2, .footer-column h3 {
     font-family: 'Oswald', Arial, sans-serif;
     margin-bottom: 0.7em;
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
+.footer-column h3 {
+    font-size: 2.2em;
+    margin-bottom: 0.3em;
+}
+.footer-desc {
+    color: #bdbdbd;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+    max-width: 320px;
+}
+.social-icons {
+    margin-top: 1.2em;
+    display: flex;
+    gap: 1em;
+}
+
 .social-icons a {
     color: #fff;
-    margin-right: 0.7em;
     font-size: 1.3em;
-    transition: color 0.2s;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 2.4em;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: transparent;
+    box-sizing: border-box;
 }
+
 .social-icons a:hover {
-    color: #007bff;
+    color: #000000;
+    border-color: #000000;
+    background: #fff;
+}
+
+.social-icons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    font-size: 1.1em;
+    line-height: 1;
 }
 .contact-info p {
     margin-bottom: 0.5em;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #fff;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.footer-column a {
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 0.5em;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.footer-column a:hover {
+    color: #666666;
+    text-decoration: underline;
 }
 .footer-bottom {
     text-align: center;
-    padding: 1em 0;
-    background: #181818;
+    padding: 1.2em 0 0.8em 0;
+    background: #000;
     color: #aaa;
-    margin-top: 1em;
+    margin-top: 2em;
+    font-size: 1em;
+    letter-spacing: 0.03em;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    border-top: 1px solid #444;
 }
 
 /* --- BOTÓN SCROLL ARRIBA --- */
