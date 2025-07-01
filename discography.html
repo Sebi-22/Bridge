@@ -18,41 +18,37 @@
 
 <body>
     <header>
-        <section class="disco">
-            <div class="navbar">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/images/logo-1 (1).png" alt="Logo">
-                    </a>
-                </div>
-                <div class="nav-links">
-                    <a href="index.html" > HOME </a>
-                    <a href="about_us.html"> ABOUT US </a>
-                    <a href="tour.html"> TOUR </a>
-                    <a href="event.html"> EVENT </a>
-                    <a href="discography.html" class="active"> DISCOGRAPHY </a>
-                    <a href="album.html"> ALBUM </a>
-                    <a href="contact.html"> CONTACT US </a>
-                </div>
+   <div class="container navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-1 (1).png" alt="Logo">
+                </a>
             </div>
-            
+    <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="about_us.html">ABOUT US</a>
+                <a href="tour.html">TOUR</a>
+                <a href="event.html">EVENT</a>
+                <a href="discography.html"class="active">DISCOGRAPHY</a>
+                <a href="album.html">ALBUM</a>
+                <a href="contact.html">CONTACT US</a>
             </nav>
+            <button id="toggle-dark-mode" aria-label="Cambiar modo oscuro/claro">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
-
-        <section class="breadcrumb">
-            <a href="index.html">
-             Home </a>  &gt;  Discography  </a>
-           </section>
-
-        </section>
-
-    </header>  
+  <section class="breadcrumb">
+    <a href="index.html">Home</a> &gt; <span>Discography</span>
+  </section>
+</header>
 
             <section class="imagenes">
 
                 <div class="albums" id="album-container">
                     <!-- Los álbumes serán agregados dinámicamente aquí -->
                   </div>
+
+            </section>
                   <footer>
                     <div class="footer">
                         <div class="footer-column">
@@ -90,6 +86,7 @@
                     </div>
                 </footer>
     <script src="assets/js/discography.js" defer></script>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
 
 </body>
 </html>

@@ -1122,7 +1122,180 @@ footer {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     border-top: 1px solid #444;
 }
+/* --- BREADCRUMB --- */
+.breadcrumb {
+  margin-left: 7vw;
+  margin-top: 1.5em;
+  font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+  color: #bdbdbd;
+  font-size: 1.05em;
+  letter-spacing: 0.05em;
+}
 
+.breadcrumb a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  color: #bdbdbd;
+}
+
+/* --- CONTENT GRID --- */
+.content-grid {
+  width: 95vw;
+  margin: 0 auto;
+  padding: 2em 0 0 0;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Oswald', Arial, sans-serif;
+  margin-top: 10%;
+}
+
+.top-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3em;
+    margin: 2em 0 2em 0;
+}
+
+.img-col {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-col img {
+    width: 350px;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    background: #111;
+}
+
+.map-col {
+    flex: 0 0 800px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.map-col .map {
+    width: 800px;
+    height: 420px;
+    border: none;
+    filter: grayscale(1);
+    display: block;
+    background: #222;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3em;
+    margin: 0 0 0 7vw;
+    width: 85vw;
+}
+
+.details-col {
+    flex: 0 0 32%;
+    max-width: 32%;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #bdbdbd;
+}
+
+.details-col h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+
+.details-col p,
+.details-col a {
+    font-size: 1em;
+    color: #bdbdbd;
+    margin: 0.3em 0;
+    word-break: break-all;
+}
+
+.details-col .link {
+    color: #bdbdbd;
+    text-decoration: underline;
+}
+
+.ticket {
+    margin-top: 2.5em;
+}
+
+.buy-tickets {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.9em 4em;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.buy-tickets:hover {
+    background: #fff;
+    color: #000;
+}
+
+.about-col {
+    flex: 1 1 0;
+    max-width: 60%;
+    margin-left: 2em;
+}
+
+.about-col h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+}
+
+.about-col p {
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #bdbdbd;
+    font-size: 1em;
+    margin-bottom: 2em;
+    line-height: 1.7;
+}
+
+.follow {
+    margin-top: 2.5em;
+}
+
+.follow h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 0.7em;
+    letter-spacing: 1px;
+}
+
+.follow a {
+    color: #bdbdbd;
+    font-size: 1.5em;
+    margin-right: 1.2em;
+    transition: color 0.2s;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.follow a:hover {
+    color: #fff;
+}
 /* --- BOTÓN SCROLL ARRIBA --- */
 #scrollToTopBtn {
     position: fixed;
@@ -1139,6 +1312,48 @@ footer {
     display: none;
     z-index: 1000;
     box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.15);
+}
+/* --- SECCIÓN DE IMÁGENES --- */
+.imagenes {
+    background: #000000;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.albums {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.albumes {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.albumes figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.albumes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
+    transition: transform 0.3s;
 }
 #scrollToTopBtn:hover {
     background: #007bff;
@@ -1298,4 +1513,15 @@ body.dark-mode #scrollToTopBtn:hover {
         width: 90vw;
         max-width: 400px;
     }
+}
+@media (max-width: 900px) {
+  .top-row, .bottom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-col img, .map-col .map {
+    max-width: 90vw;
+    height: 40vw;
+    min-height: 200px;
+  }
 }
