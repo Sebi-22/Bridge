@@ -1617,7 +1617,6 @@ footer {
 }
 
 /* --- ALBUM REVIEWS --- */
-/* --- ALBUM REVIEWS --- */
 .review-section {
     background: #181818;
     padding: 28px 32px 22px 32px;
@@ -1627,6 +1626,7 @@ footer {
     margin: 30px auto; /* Centrado sin margin-right */
     box-sizing: border-box;
     position: relative; /* Para posicionar los botones dentro */
+    margin-left:50%;
 }
 
 .review-section h2 {
@@ -1677,7 +1677,6 @@ footer {
 .nav-button:hover {
     color: #e91e63;
 }
-
 
 /* --- PLAYER --- */
 .musica {
