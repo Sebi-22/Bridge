@@ -53,40 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ========== FORMULARIO DE CONTACTO ==========
-function sendMessage() {
-    var verify = true;
-    document.getElementById("error-name").textContent = "";
-    document.getElementById("error-email").textContent = "";
-    document.getElementById("error-message").textContent = "";
-    document.getElementById("alerta").style.display = "none";
-    var name = document.getElementById("name").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var message = document.getElementById("message").value.trim();
-    if (name === "") {
-        document.getElementById("error-name").textContent = "The field is required.";
-        verify = false;
-    }
-    if (email === "") {
-        document.getElementById("error-email").textContent = "The field is required.";
-        verify = false;
-    } else {
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            document.getElementById("error-email").textContent = "Please enter a valid email.";
-            verify = false;
-        }
-    }
-    if (message === "") {
-        document.getElementById("error-message").textContent = "The field is required.";
-        verify = false;
-    }
-    if (verify) {
-        window.location.replace("gracias.html");
-    } else {
-        document.getElementById("alerta").style.display = "block";
-    }
-}
 // ========== AUDIO PRINCIPAL (BLACK HOLE SUN) ==========
 const playPauseBtn = document.getElementById("main-audio-play-pause");
 const progressBar = document.getElementById("main-audio-progress-bar");

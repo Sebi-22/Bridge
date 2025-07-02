@@ -1,63 +1,58 @@
-//Galeria de fotos con show more
-// Arreglo de objetos con los datos de las nuevas imágenes
-const newAlbums = [
-    { src: "assets/images/album-5.jpg", title: "FALLEN", description: "Harmony" },
-    { src: "assets/images/album-6.jpg", title: "JOY", description: "Eclipse" },
-    { src: "assets/images/album-7.jpg", title: "FREE YOUR MIND", description: "Ocean" },
-    { src: "assets/images/album-8.jpg", title: "LOW BASS", description: "Shadows" },
-];
+// ========== GALERÍA DE ÁLBUMES (OUR DISCOGRAPHY - INICIAL) ==========
+document.addEventListener("DOMContentLoaded", function() {
+    const albums = [
+        { imgSrc: "assets/images/album-1.jpg", altText: "Album cover with neon lights and text 'Be - Doo Be - Doo'", title: "BE-DOO", artist: "Caller" },
+        { imgSrc: "assets/images/album-2.jpg", altText: "Album cover with a road sign and text 'Make It Go Away'", title: "FREE SPIRIT", artist: "Go Away" },
+        { imgSrc: "assets/images/album-3.jpg", altText: "Album cover with neon sign and text 'Today Was A Good Day'", title: "DEPRESSED DAYS", artist: "Ritual Spirit" },
+        { imgSrc: "assets/images/album-4.jpg", altText: "Album cover with a dancer and text 'FOND OF HER'", title: "WRONG MOTION", artist: "Love Hate" }
+    ];
+    const albumContainer = document.getElementById("album-container");
+    albums.forEach(album => {
+        const article = document.createElement("article");
+        article.classList.add("albumes");
+        const figure = document.createElement("figure");
+        const img = document.createElement("img");
+        img.src = album.imgSrc;
+        img.alt = album.altText;
 
-// Espera a que el DOM esté completamente cargado
-document.addEventListener("DOMContentLoaded", function () {
-    // Selecciona el botón "SHOW MORE"
-    const showMoreButton = document.getElementById("show-more");
+        // Agregar figcaption con título y artista
+        const figcaption = document.createElement("figcaption");
+        const h3 = document.createElement("h3");
+        h3.textContent = album.title;
+        const p = document.createElement("p");
+        p.textContent = album.artist;
+        figcaption.appendChild(h3);
+        figcaption.appendChild(p);
 
-    // Verifica si el botón existe
-    if (showMoreButton) {
-        showMoreButton.addEventListener("click", function (event) {
-            event.preventDefault(); // Evita el comportamiento por defecto del enlace
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+        article.appendChild(figure);
+        albumContainer.appendChild(article);
+    });
+});
 
-            // Selecciona el contenedor de álbumes
-            const albumsContainer = document.querySelector(".albums");
-
-            // Verifica si el contenedor existe
-            if (albumsContainer) {
-                // Crea nuevos elementos de álbumes y los agrega al contenedor
-                newAlbums.forEach(album => {
-                    const article = document.createElement("article");
-                    article.classList.add("albumes");
-
-                    const figure = document.createElement("figure");
-
-                    const img = document.createElement("img");
-                    img.src = album.src;
-                    img.alt = `Album cover for '${album.title}'`; // Mejora la accesibilidad
-
-                    const figcaption = document.createElement("figcaption");
-
-                    const h3 = document.createElement("h3");
-                    h3.textContent = album.title;
-
-                    const p = document.createElement("p");
-                    p.textContent = album.description;
-
-                    // Añadir los elementos al DOM
-                    figcaption.appendChild(h3);
-                    figcaption.appendChild(p);
-                    figure.appendChild(img);
-                    figure.appendChild(figcaption);
-                    article.appendChild(figure);
-                    albumsContainer.appendChild(article);
-                });
-
-                // Oculta el botón después de agregar las nuevas imágenes
-                showMoreButton.style.display = "none";
-
-                // Retraso opcional para mostrar el botón nuevamente
-                setTimeout(() => {
-                    showMoreButton.style.display = "block"; // Muestra el botón nuevamente
-                }, 300); // Retraso de 300ms para suavizar el efecto de aparición
-            }
-        });
+// ========== BOTÓN SCROLL ARRIBA ==========
+const scrollBtn = document.getElementById('scrollToTopBtn');
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+};
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+// ========== MODO OSCURO/CLARO ==========
+const toggleBtn = document.getElementById('toggle-dark-mode');
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const icon = toggleBtn.querySelector('i');
+    if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
     }
 });

@@ -111,6 +111,55 @@ header {
     position: relative;
     padding-top: 5.625em; /* 90px */
 }
+.background-image2 {
+    background-image: url('../images/tour-title-area.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 88vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.background-image3 {
+    background-image: url('../images/about-title-area.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 88vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.background-image4 {
+    background-image: url('../images/contact-us-title.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 88vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tour-dates {
+    color: #fff;
+    font-family: 'Oswald', 'Open Sans', Arial, sans-serif;
+    font-size: 3em;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
 
 .vertical-name {
     position: absolute;
@@ -527,43 +576,47 @@ iframe {
 }
 /*texto2*/
 .texto2 {
-    background: #000;
-    color: #fff;
-    padding: 3.5em 0 3em 0;
-    max-width: 100vw;
+    width: 100vw;
+    background: #0a0a0a;
+    padding: 4em 0 5em 0;
+    margin: 0;
 }
 
 .texto2 h1 {
     font-family: 'Oswald', Arial, sans-serif;
-    font-size: 2.5em;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    margin-left: 7vw;
-    margin-bottom: 0.3em;
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
     text-align: left;
+    margin-left: 7vw;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    position: relative;
+    display: inline-block;
 }
 
-.texto2::after {
+.texto2 h1::after {
     content: "";
     display: block;
-    width: 80px;
+    width: 90px;
     height: 4px;
     background: #fff;
+    margin-top: 0.5em;
     border-radius: 2px;
-    margin-left: 7vw;
-    margin-bottom: 2em;
 }
 
 .texto2 p {
     color: #bdbdbd;
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    font-size: 1.05em;
+    font-size: 1.1em;
+    margin: 1.5em 0 0 0;
     margin-left: 7vw;
-    margin-right: 10vw;
+    letter-spacing: 0.05em;
     line-height: 1.7;
-    letter-spacing: 0.03em;
+    max-width: 85vw;
     text-align: left;
-    max-width: 900px;
+    font-weight: 400;
 }
 /* Modo oscuro */
 body.dark-mode .texto {
@@ -1010,11 +1063,93 @@ body.dark-mode .texto {
     background: #fff;
     color: #000;
 }
+/* --- ARTÍCULOS --- */
+.articulos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    background: #111;
+    padding: 0;
+    margin: 0;
+}
+
+.articulos article {
+    flex: 1 1 0;
+    margin: 0;
+    padding: 0;
+}
+
+.foto {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    display: flex;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.transparencia {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.articulos article:hover .transparencia {
+    opacity: 1;
+}
+
+.transparencia h3 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 0.2em 0;
+    letter-spacing: 1px;
+}
+
+.transparencia p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #ccc;
+    margin: 0 0 1em 0;
+    font-size: 1.1em;
+}
+
+.transparencia .social {
+    display: flex;
+    gap: 0.7em;
+}
+
+.transparencia .social a {
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.transparencia .social a:hover {
+    color: #e91e63;
+}
 /* --- FOOTER --- */
 footer {
     background: #000;
     color: #fff;
     padding: 2em 0 0 0;
+    margin-top: 12%;
 }
 .footer {
     display: flex;
@@ -1122,6 +1257,657 @@ footer {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     border-top: 1px solid #444;
 }
+/* --- CONTACTO --- */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #000000;
+    padding: 70px 0 90px 0;
+    width: 100%;
+    margin: 0;
+    gap: 0;
+}
+
+.contact-section {
+    flex: 0 0 22%;
+    max-width: 22%;
+    min-width: 200px;
+    text-align: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.contact-section h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2.3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+    font-weight: 700;
+}
+
+.contact-section p {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #a09d9d;
+    font-size: 0.9em;
+    margin: 0 0 6px 0;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+/* --- FORMULARIO DE CONTACTO --- */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #0a0a0a;
+    padding: 60px 0 80px 0;
+    width: 100%;
+    gap: 0;
+}
+
+.left-section {
+    flex: 0 0 48%;
+    max-width: 48%;
+    color: #fff;
+    padding-left: 7%;
+    box-sizing: border-box;
+}
+
+.left-section h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.left-section > p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #ccc;
+    font-size: 1.13em;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+.info-contacto {
+    display: flex;
+    gap: 60px;
+}
+
+.info-contacto h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.info-contacto p {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #ccc;
+    font-size: 1.05em;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.right-section {
+    flex: 0 0 44%;
+    max-width: 44%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding-left: 3%;
+    padding-right: 7%;
+    box-sizing: border-box;
+}
+
+.right-section input,
+.right-section textarea {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1.08em;
+    padding: 16px 14px;
+    margin-bottom: 0;
+    outline: none;
+    transition: border 0.3s;
+    resize: none;
+}
+
+.right-section input:focus,
+.right-section textarea:focus {
+    border-color: #ffffff;
+}
+
+.right-section textarea {
+    min-height: 140px;
+    max-height: 260px;
+}
+
+.right-section button {
+    margin-top: 18px;
+    width: 210px;
+    padding: 14px 0;
+    background: #fff;
+    color: #111;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.08em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s;
+}
+.right-section button:hover {
+    background: #000000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.error {
+    color: #e91e63;
+    font-size: 0.95em;
+    margin-bottom: 0;
+    min-height: 18px;
+}
+
+.alert {
+    color: #fff;
+    background: #e91e63;
+    padding: 12px 18px;
+    margin-top: 18px;
+    border-radius: 3px;
+    font-size: 1em;
+    text-align: center;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+/* --- CONTENEDOR PRINCIPAL --- */
+.albumesss {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0 0 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    margin-top: 10%;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.albumesss .image-foto {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 1/1;
+    margin: 0 auto 0 auto;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.albumesss .image-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 420px;
+    margin-right: 0;
+    gap: 30px;
+}
+
+/* --- COLUMNA DERECHA --- */
+.about1 {
+    flex: 1 1 0;
+    min-width: 340px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-album h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about-album p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #ccc;
+    font-size: 1em;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    max-width: 95%;
+}
+
+.about-album ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-album li {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #ccc;
+    font-size: 1em;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.about-album li strong {
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* --- LYRICS SECTION (ACORDEÓN) --- */
+.lyrics-section {
+    margin: 30px auto 0 auto;
+    max-width: 520px;
+    width: 100%;
+    padding: 0 10px;
+    margin-left: 49%;
+    margin-top: -10%;
+
+}
+
+.lyrics-section h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+
+#accordion-container {
+    width: 100%;
+}
+
+.accordion {
+    border-bottom: 1px solid #222;
+    background: transparent;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1em;
+    color: #ccc;
+    padding: 12px 0 12px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.accordion-header i {
+    font-size: 1em;
+    color: #ccc;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.accordion.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+    background: transparent;
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #ccc;
+    font-size: 1em;
+    padding: 0 20px;
+    line-height: 1.7;
+    border-left: 2px solid #222;
+}
+
+.accordion.active .accordion-content {
+    padding: 14px 20px 14px 20px;
+    border-left: 2px solid #fff;
+    color: #fff;
+}
+
+/* --- ALBUM REVIEWS --- */
+.review-section {
+    background: #181818;
+    margin: 30px auto 0 auto;
+    padding: 28px 32px 22px 32px;
+    border-radius: 2px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-right:5%;
+}
+
+.review-section h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.review-text {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #ccc;
+    font-size: 1em;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+.review-source {
+    font-family: 'Oswald', Arial, sans-serif;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: -28px;
+}
+
+.nav-button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 4px 10px;
+    transition: color 0.2s;
+}
+
+.nav-button:hover {
+    color: #e91e63;
+}
+
+/* --- PLAYER --- */
+.musica {
+    width: 100%;
+    max-width: 500px;
+    background: #222;
+    border-radius: 2px;
+    margin: 40px auto 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: -20%;
+    margin-right:55% ;
+}
+
+.controles {
+    display: flex;
+    border-bottom: 2px solid #888;
+    height: 80px;
+    background: #2a2a2a;
+}
+
+.controles > div {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-right: 1px solid #888;
+}
+
+.controles > div:last-child {
+    border-right: none;
+}
+
+.controles i {
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.controles i:hover {
+    color: #e91e63;
+}
+
+.track-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 20px 28px 16px 28px;
+}
+
+.track-titulo {
+    font-family: 'Oswald', Arial, sans-serif;
+    color: #fff;
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.artist-name {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #aaa;
+    font-size: 1em;
+    margin-top: 2px;
+}
+
+.timer {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+/* --- LISTA DE CANCIONES --- */
+.song-list {
+    width: 100%;
+    max-width: 570px;
+    margin: 20px auto 0 auto;
+    background: transparent;
+    padding: 0 10px;
+    margin-left: 5%;
+}
+
+.song-list h1 {
+    font-family: 'Oswald', Arial, sans-serif;
+    color: #fff;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.song-list ol {
+    list-style: decimal;
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1.08em;
+    padding-left: 18px;
+    margin: 0;
+}
+
+.song-list li {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    padding: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.titulo-track {
+    cursor: pointer;
+    transition: color 0.2s;
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.titulo-track:hover {
+    color: #e91e63;
+}
+
+.buy-track {
+    color: #fff;
+    font-size: 0.95em;
+    text-decoration: underline;
+    margin-left: 10px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    transition: color 0.2s;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.buy-track:hover {
+    color: #e91e63;
+}
+/* --- SECCIÓN DISPONIBLE EN --- */
+
+.available-on {
+    margin: 40px 0 0 0;
+    padding-left: 60px;
+    margin-left: 2%;
+    
+}
+.available-on h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.platform-icons {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.platform-icons a img {
+    display: block;
+    height: 50px;
+    width: 150px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.platform-icons a:hover img {
+    transform: scale(1.05);
+}
+/* --- SECCIÓN DEL VÍDEO --- */
+.latest-video {
+    margin: 40px 0 0 0;
+    padding: 0 0 30px 0;
+}
+
+.latest-video h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+    color: #fff;
+    font-size:30px;
+    line-height: 40px;
+    margin-left: 5%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 18px;
+    background: #000; /* Fondo negro para el área del video */
+    padding: 2em 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16/9;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    background: #000;
+    display: block;
+}
+.iconos-abajo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40vw;
+    margin-top: 10px;
+    margin-bottom: 0;
+    min-height: 60px;
+}
+
+.flecha {
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.punto {
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
 /* --- BREADCRUMB --- */
 .breadcrumb {
   margin-left: 7vw;
@@ -1524,4 +2310,33 @@ body.dark-mode #scrollToTopBtn:hover {
     height: 40vw;
     min-height: 200px;
   }
+}
+@media (max-width: 1200px) {
+    .articulos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .articulos article {
+        width: 90vw;
+        max-width: 500px;
+        height: 400px;
+    }
+}
+/* --- RESPONSIVE --- */
+@media (max-width: 1100px) {
+    .albumesss {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .albumesss .image-foto,
+    .musica,
+    .song-list {
+        width: 100%;
+        max-width: 600px;
+    }
+    .about1 {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }
