@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicializa el slider con la primera reseña
     updateSliderContent(currentPos);
 });
+
 const lyricsData = [
     {
         title: "BLACK HOLE SUN",
@@ -79,12 +80,7 @@ const lyricsData = [
                   
                   Sed feugiat tractatos partiendo ei,
                   at alii stet epicurei per, has no duis
-                  vivendo consequuntur. Eos gubergren omittantur
-                  Lorem ipsum dolor sit amet,
-                  ex rebum commodo aliquam sea,
-                  perpetua mediocrem theophrastus vim ne,
-                  per facete voluptatum no.
-                  Eum no aeque legendos mnesarchum.`
+                  vivendo consequuntur. Eos gubergren omittantur.`
     },
     {
         title: "LULLABY",
@@ -96,12 +92,7 @@ const lyricsData = [
                   
                   Sed feugiat tractatos partiendo ei,
                   at alii stet epicurei per, has no duis
-                  vivendo consequuntur. Eos gubergren omittantur
-                  Lorem ipsum dolor sit amet,
-                  ex rebum commodo aliquam sea,
-                  perpetua mediocrem theophrastus vim ne,
-                  per facete voluptatum no.
-                  Eum no aeque legendos mnesarchum.`
+                  vivendo consequuntur. Eos gubergren omittantur.`
     },
     {
         title: "THE PASSENGER",
@@ -113,16 +104,10 @@ const lyricsData = [
                   
                   Sed feugiat tractatos partiendo ei,
                   at alii stet epicurei per, has no duis
-                  vivendo consequuntur. Eos gubergren omittantur
-                  Lorem ipsum dolor sit amet,
-                  ex rebum commodo aliquam sea,
-                  perpetua mediocrem theophrastus vim ne,
-                  per facete voluptatum no.
-                  Eum no aeque legendos mnesarchum.`
+                  vivendo consequuntur. Eos gubergren omittantur.`
     }
 ];
 
-// Función para crear el acordeón
 function createAccordion() {
     const container = document.getElementById('accordion-container');
 
@@ -133,7 +118,7 @@ function createAccordion() {
         const header = document.createElement('div');
         header.classList.add('accordion-header');
         header.innerHTML = `<span>${item.title}</span><i class="fas fa-chevron-down"></i>`;
-        
+
         const content = document.createElement('div');
         content.classList.add('accordion-content');
         content.innerHTML = item.content;
@@ -142,30 +127,21 @@ function createAccordion() {
         accordion.appendChild(content);
         container.appendChild(accordion);
 
-        // Agregar el evento de clic al encabezado
         header.addEventListener('click', () => {
             const isActive = accordion.classList.toggle('active');
 
-            // Cerrar otros acordeones
             document.querySelectorAll('.accordion').forEach(otherAccordion => {
                 if (otherAccordion !== accordion) {
                     otherAccordion.classList.remove('active');
-                    otherAccordion.querySelector('.accordion-content').style.maxHeight = null;
                 }
             });
-
-            // Alternar el contenido del acordeón actual
-            if (isActive) {
-                content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-                content.style.maxHeight = null;
-            }
         });
     });
 }
 
-// Llamar a la función para crear el acordeón
 createAccordion();
+
+
 
 
     const audioPlayer = document.getElementById('audio-player');
