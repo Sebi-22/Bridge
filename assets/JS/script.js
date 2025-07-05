@@ -36,22 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const abrirModal = document.getElementById("abrirModal");
     const cerrarModal = document.getElementById("cerrarModal");
     const modal = document.getElementById("nuevomodal");
+
+    // Inicializa el modal como oculto
     modal.style.display = "none";
+
+    // Abre el modal
     abrirModal.addEventListener("click", () => {
         modal.style.display = "flex";
-        abrirModal.style.display = "none";
+        abrirModal.style.display = "none"; // Oculta el botón de reproducción
     });
+
+    // Cierra el modal
     cerrarModal.addEventListener("click", () => {
         modal.style.display = "none";
-        abrirModal.style.display = "block";
+        abrirModal.style.display = "block"; // Muestra el botón de reproducción
     });
+
+    // Cierra el modal al hacer clic fuera de él
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
-            abrirModal.style.display = "block";
+            abrirModal.style.display = "block"; // Muestra el botón de reproducción
         }
     });
 });
+
 
 // ========== AUDIO PRINCIPAL (BLACK HOLE SUN) ==========
 const playPauseBtn = document.getElementById("main-audio-play-pause");
