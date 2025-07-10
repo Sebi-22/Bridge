@@ -96,7 +96,6 @@ header {
     cursor: pointer;
     margin-left: 13em;
 }
-
 /* HERO / PORTADA */
 .background-image {
     background-image: url('../images/slider-img-1.jpg');
@@ -111,7 +110,7 @@ header {
     position: relative;
     padding-top: 5.625em; /* 90px */
 }
-.background-image2 {
+.background-image2,.background-image3,.background-image4 {
     background-image: url('../images/tour-title-area.jpg');
     background-size: cover;
     background-position: center;
@@ -124,25 +123,9 @@ header {
 }
 .background-image3 {
     background-image: url('../images/about-title-area.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 88vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .background-image4 {
     background-image: url('../images/contact-us-title.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 88vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .hero-content {
     width: 100%;
@@ -2243,6 +2226,44 @@ body.dark-mode #scrollToTopBtn:hover {
         flex-direction: column;
         gap: 1em;
     }
+        .album-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding: 2em 1em;
+    }
+    .album-cover {
+        max-width: 350px;
+        margin-bottom: 2em;
+    }
+    .tracklist {
+        width: 100%;
+    }
+       .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .image {
+        height: 200px;
+    }
+        .blog-posts {
+        flex-wrap: wrap;
+        gap: 2em;
+        margin-left: 2vw;
+    }
+    .blog-post {
+        width: 90vw;
+        max-width: 400px;
+    }
+     .top-row, .bottom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-col img, .map-col .map {
+    max-width: 90vw;
+    height: 40vw;
+    min-height: 200px;
+  }
 }
 @media (max-width: 600px) {
     .album-cover img, .album-card img {
@@ -2257,25 +2278,6 @@ body.dark-mode #scrollToTopBtn:hover {
         gap: 0.5em;
         align-items: flex-start;
     }
-
-}
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .album-info {
-        flex-direction: column;
-        align-items: center;
-        gap: 2em;
-        padding: 2em 1em;
-    }
-    .album-cover {
-        max-width: 350px;
-        margin-bottom: 2em;
-    }
-    .tracklist {
-        width: 100%;
-    }
-}
-@media (max-width: 600px) {
     .album-info {
         padding: 1em 0.5em;
     }
@@ -2287,19 +2289,7 @@ body.dark-mode #scrollToTopBtn:hover {
         align-items: flex-start;
         gap: 0.5em;
     }
-}
-/* Responsive: 2 columnas en tablet, 1 columna en móvil */
-@media (max-width: 900px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-    }
-    .image {
-        height: 200px;
-    }
-}
-@media (max-width: 600px) {
-    .gallery {
+      .gallery {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 1fr);
     }
@@ -2317,43 +2307,7 @@ body.dark-mode #scrollToTopBtn:hover {
     .blog-post {
         width: 320px;
     }
-}
-@media (max-width: 900px) {
-    .blog-posts {
-        flex-wrap: wrap;
-        gap: 2em;
-        margin-left: 2vw;
-    }
-    .blog-post {
-        width: 90vw;
-        max-width: 400px;
-    }
-}
-@media (max-width: 900px) {
-  .top-row, .bottom-row {
-    flex-direction: column;
-    align-items: center;
-  }
-  .img-col img, .map-col .map {
-    max-width: 90vw;
-    height: 40vw;
-    min-height: 200px;
-  }
-}
-@media (max-width: 1200px) {
-    .articulos {
-        flex-direction: column;
-        align-items: center;
-    }
-    .articulos article {
-        width: 90vw;
-        max-width: 500px;
-        height: 400px;
-    }
-}
-/* --- RESPONSIVE --- */
-@media (max-width: 1100px) {
-    .albumesss {
+       .albumesss {
         flex-direction: column;
         align-items: center;
         gap: 0;
@@ -2367,5 +2321,16 @@ body.dark-mode #scrollToTopBtn:hover {
     .about1 {
         max-width: 100%;
         padding: 0 20px;
+    }
+}
+@media (max-width: 1200px) {
+    .articulos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .articulos article {
+        width: 90vw;
+        max-width: 500px;
+        height: 400px;
     }
 }
