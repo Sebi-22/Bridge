@@ -705,7 +705,7 @@ body.dark-mode .texto {
     padding: 0;
     margin: 0;
     margin-top: 5%;
-    margin-left: -8%;
+    margin-left: 4%;
 }
 .fechas ul {
     list-style: none;
@@ -935,8 +935,9 @@ body.dark-mode .texto {
     width: 100vw;
     background: #000;
     margin: 0;
-    padding: 3em 0 4em 0;
     text-align: left;
+    margin-left: 7%;
+    margin-top: 5%;
 }
 .our-discography h1 {
     font-family: 'Oswald', Arial, sans-serif;
@@ -948,6 +949,7 @@ body.dark-mode .texto {
     text-align: left;
     display: block;
 }
+
 .discography-underline {
     width: 80px;
     height: 4px;
@@ -969,9 +971,7 @@ body.dark-mode .texto {
 .albums {
     display: flex;
     flex-wrap: nowrap;
-    gap: 2em;
     justify-content: flex-start;
-    margin: 0 0 2em 7vw;
 }
 .albumes {
     position: relative;
@@ -984,7 +984,6 @@ body.dark-mode .texto {
     justify-content: center;
     box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 1.5px 4px rgba(0,0,0,0.10);
 }
-
 .albumes img {
     width: 120%;
     height: 100%;
@@ -998,10 +997,12 @@ body.dark-mode .texto {
     transform: translate(-50%, -50%);
 }
 
+
 .albumes:hover img {
     filter: brightness(0.4);
     transform: translate(-50%, -50%) scale(1.07);
 }
+
 
 .albumes figcaption {
     position: absolute;
@@ -1017,11 +1018,9 @@ body.dark-mode .texto {
     text-align: left;
     font-family: 'Oswald', Arial, sans-serif;
 }
-
 .albumes:hover figcaption {
     opacity: 1;
 }
-
 .albumes figcaption h3 {
     font-size: 1.1em;
     font-weight: bold;
@@ -1036,6 +1035,7 @@ body.dark-mode .texto {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
 }
+
 .show-more {
     background: transparent;
     color: #fff;
@@ -1050,12 +1050,14 @@ body.dark-mode .texto {
     letter-spacing: 0.05em;
     font-size: 1em;
     text-transform: uppercase;
-    margin-left: 45%;
+    margin-left: 35%;
 }
+
 .show-more:hover {
     background: #fff;
     color: #000;
 }
+
 /* --- ARTÍCULOS --- */
 .articulos {
     display: flex;
@@ -1910,6 +1912,11 @@ footer {
     align-items: center;
 }
 
+/* Cambiar el color de la selección de texto */
+::selection {
+    background-color: #ffffff; /* Color de fondo de la selección */
+    color: #ffffff; /* Color del texto seleccionado */
+}
 
 .punto {
     font-size: 2em;
@@ -2124,7 +2131,7 @@ footer {
 
 .albums {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 0.2fr);
     gap: 2em;
     margin: 2em 0;
 }
