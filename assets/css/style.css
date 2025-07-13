@@ -11,6 +11,7 @@ body {
     color: #222;
     background-color: #000;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* --- HEADER Y NAVBAR --- */
@@ -138,10 +139,10 @@ header {
     font-family: 'Oswald', 'Open Sans', Arial, sans-serif;
     font-size: 3em;
     font-weight: 200;
-    letter-spacing: 2px;
+    letter-spacing: 0.125em;
     text-align: center;
     margin: 0;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    text-shadow:0.125em 0.125em 0.5em rgba(0,0,0,0.7);
 }
 
 .vertical-name {
@@ -190,8 +191,8 @@ header {
 .about-hero {
     position: relative;
     width: 100vw;
-    height: 420px;
-    min-height: 350px;
+    height: 26.25em;
+    min-height: 21.875em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,7 +232,7 @@ header {
     max-width: 100vw;
     box-shadow: none;
     gap: 2em;
-    border-bottom: 2px solid #eee;
+    border-bottom: 0.125em solid #eee;
     font-family: 'Oswald', Arial, sans-serif;
     
 }
@@ -241,7 +242,7 @@ header {
     align-items: center;
     gap: 1em;
     min-width: 16em;
-    border-right: 1px solid #eee;
+    border-right: 0.063em solid #eee;
     padding-right: 1.5em;
     margin-left: 15%;
 }
@@ -281,7 +282,7 @@ header {
     gap: 1.5em;
     font-size: 1.4em;
     color: #111;
-    border-right: 1px solid #eee;
+    border-right:0.063em solid #eee;
     padding: 0 1.5em 0 1.5em;
 }
 
@@ -302,7 +303,7 @@ header {
     align-items: center;
     gap: 0.5em;
     width: 14em;
-    border-right: 1px solid #eee;
+    border-right: 0.063em solid #eee;
     padding: 0 1.5em 0 1.5em;
 }
 
@@ -370,7 +371,7 @@ header {
     position: relative;
 }
 .album-cover {
-    flex: 0 0 400px;
+    flex: 0 0 25em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -378,9 +379,9 @@ header {
 }
 .album-cover img {
     width: 100%;
-    max-width: 400px;
+    max-width: 25em;
     border-radius: 0.5em;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    box-shadow: 0 0.25em 1.5em rgba(0,0,0,0.5);
     margin-bottom: 2em;
 }
 .album-details {
@@ -393,7 +394,7 @@ header {
     font-weight: bold;
     margin-bottom: 0.5em;
     color: #fff;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
     text-align: left;
 }
 .album-description {
@@ -409,9 +410,9 @@ header {
     margin-top: 1em;
 }
 .apps img {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    height: 40px;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.2);
+    height: 2.5em;
     width: auto;
     transition: transform 0.2s;
 }
@@ -421,7 +422,7 @@ header {
 
 /* TRACKLIST */
 .tracklist {
-    flex: 1 1 350px;
+    flex: 1 1 21.875em;
     background: transparent;
     margin-top: 0.5em;
 }
@@ -439,7 +440,7 @@ header {
     color: #eee;
     font-weight: 600;
     font-size: 1em;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
     transition: background 0.2s;
 }
 .tracklist li:last-child {
@@ -451,7 +452,7 @@ header {
     font-size: 1em;
     text-align: left;
     font-family: 'Oswald', Arial, sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
 .track-icons {
     display: flex;
@@ -478,14 +479,14 @@ header {
 
 /* MODAL VIDEO */
 .modal {
-display: none; /* Oculto por defecto /
+display: none; /* Oculto por defecto */
 position: fixed;
 z-index: 2000;
 left: 0;
 top: 0;
 width: 100vw;
 height: 100vh;
-background: rgba(0, 0, 0, 0.7); / Fondo oscuro con opacidad */
+background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
 align-items: center;
 justify-content: center;
 }
@@ -493,14 +494,13 @@ justify-content: center;
 .modal-contento {
 background: #181818;
 padding: 1.5em;
-border-radius: 10px;
+border-radius: 0.625em;
 max-width: 90vw;
 max-height: 80vh;
 position: relative;
-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.7);
 color: #fff; /* Color de texto blanco */
 }
-
 .modal-contento .error-message {
 font-size: 1.5em;
 font-weight: bold;
@@ -513,8 +513,8 @@ margin-top: 0.5em;
 
 #cerrarModal {
 position: absolute;
-top: 10px;
-right: 15px;
+top: 0.625em;
+right: 0.938em;
 font-size: 1.5em;
 color: #fff;
 cursor: pointer;
@@ -541,7 +541,7 @@ border: none;
     color: #fff;
     margin-bottom: 0.5em;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
     position: relative;
     display: inline-block;
     text-transform: uppercase;
@@ -550,11 +550,11 @@ border: none;
 .texto h1::after {
     content: "";
     display: block;
-    width: 80px;
-    height: 4px;
+    width: 5em;
+    height: 0.25em;
     background: #fff;
     margin-top: 0.5em;
-    border-radius: 2px;
+    border-radius: 0.125em;
 }
 .texto p {
     color: #bdbdbd;
@@ -562,7 +562,7 @@ border: none;
     margin-top: 0.5em;
     letter-spacing: 0.05em;
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 43.75em;
     font-weight: 400;
     word-break: break-word;
     margin-left: 3%;
@@ -580,7 +580,7 @@ border: none;
     font-size: 3em;
     color: #fff;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 0.125em;
     text-align: left;
     margin-left: 7vw;
     margin-bottom: 0.5em;
@@ -592,11 +592,11 @@ border: none;
 .texto2 h1::after {
     content: "";
     display: block;
-    width: 90px;
-    height: 4px;
+    width: 5.625em;
+    height:0.25em;
     background: #fff;
     margin-top: 0.5em;
-    border-radius: 2px;
+    border-radius: 0.125em;
 }
 
 .texto2 p {
@@ -705,18 +705,18 @@ body.dark-mode .texto {
     padding: 0;
     margin: 0;
     margin-top: 5%;
-    margin-left: 4%;
+    margin-left: 1%;
 }
 .fechas ul {
     list-style: none;
-    max-width: 900px;
+    max-width: 56.25em;
     margin: 2em auto 0 auto;
     padding: 0;
 }
 .date-item {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #222;
+    border-bottom: 0.063em solid #222;
     background: transparent;
     margin: 0;
     border-radius: 0;
@@ -728,26 +728,26 @@ body.dark-mode .texto {
     font-size: 2.8em;
     font-weight: bold;
     color: #fff;
-    width: 70px;
+    width: 4.375em;
     text-align: center;
     line-height: 1;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
 .month-day {
     text-align: center;
     color: #fff;
-    width: 60px;
+    width: 3.75em;
     font-size: 1em;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
 .ciudad {
     flex: 1;
     font-weight: 600;
     color: #fff;
     font-size: 1.1em;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
     text-transform: uppercase;
 }
 .buy-tickets {
@@ -758,7 +758,7 @@ body.dark-mode .texto {
     text-decoration: underline;
     font-weight: 700;
     font-size: 1em;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
     transition: color 0.2s;
     cursor: pointer;
     margin-left: 1em;
@@ -777,11 +777,11 @@ body.dark-mode .texto {
     color: #fff;
     padding: 0.8em 3em;
     border-radius: 0;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     text-decoration: none;
     font-weight: 600;
     font-size: 1em;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
     transition: background 0.2s, color 0.2s;
     cursor: pointer;
     box-shadow: none;
@@ -804,7 +804,7 @@ body.dark-mode .texto {
     color: #fff;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
     text-align: left;
     position: relative;
     display: block;
@@ -812,11 +812,11 @@ body.dark-mode .texto {
 .blog h1::after {
     content: "";
     display: block;
-    width: 80px;
-    height: 4px;
+    width: 5em;
+    height: 0.25em;
     background: #fff;
     margin-top: 0.5em;
-    border-radius: 2px;
+    border-radius: 0.125em;
 }
 .blog-description {
     color: #bdbdbd;
@@ -825,7 +825,7 @@ body.dark-mode .texto {
     margin: 2em 0 3em 7vw;
     letter-spacing: 0.05em;
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 43.75em;
     text-align: left;
     font-weight: 400;
 }
@@ -841,7 +841,7 @@ body.dark-mode .texto {
     border-radius: 0;
     box-shadow: none;
     padding: 0;
-    width: 350px;
+    width: 21.875em;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -855,7 +855,6 @@ body.dark-mode .texto {
     display: block;
     margin-bottom: 1em;
 }
-
 .blog-post img {
     width: 100%;
     height: 100%;
@@ -873,7 +872,7 @@ body.dark-mode .texto {
     font-weight: 700;
     margin-bottom: 0.3em;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
 }
 .blog-post-date {
     color: #bdbdbd;
@@ -887,7 +886,7 @@ body.dark-mode .texto {
     width: 100vw;
     min-height: 32em;
     height: 60vh;
-    max-height: 600px;
+    max-height: 37.5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -896,13 +895,19 @@ body.dark-mode .texto {
 }
 .video-bg {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
     object-fit: cover;
     z-index: 1;
 }
 .overlay {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
     background: rgba(0,0,0,0.25);
     z-index: 2;
 }
@@ -929,7 +934,6 @@ body.dark-mode .texto {
 .play-button:hover {
     color: #007bff;
 }
-
 /* --- DISCOGRAFÍA --- */
 .our-discography {
     width: 100vw;
@@ -945,16 +949,16 @@ body.dark-mode .texto {
     color: #fff;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
     text-align: left;
     display: block;
 }
 
 .discography-underline {
-    width: 80px;
-    height: 4px;
+    width: 5em;
+    height: 0.25em;
     background: #fff;
-    border-radius: 2px;
+    border-radius: 0.125em;
     margin: 0 0 2em 7vw;
 }
 .discography-description {
@@ -964,7 +968,7 @@ body.dark-mode .texto {
     margin: 0 0 3em 7vw;
     letter-spacing: 0.05em;
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 43.75em;
     text-align: left;
     font-weight: 400;
 }
@@ -976,13 +980,13 @@ body.dark-mode .texto {
 .albumes {
     position: relative;
     overflow: hidden;
-    width: 260px;
+    width: 16.25em;
     aspect-ratio: 1/1;
     background: #222;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 1.5px 4px rgba(0,0,0,0.10);
+    box-shadow: 0 0.5em 2em rgba(0,0,0,0.25), 0 0.094em 0.25em rgba(0,0,0,0.10);
 }
 .albumes img {
     width: 120%;
@@ -996,14 +1000,10 @@ body.dark-mode .texto {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 .albumes:hover img {
     filter: brightness(0.4);
     transform: translate(-50%, -50%) scale(1.07);
 }
-
-
 .albumes figcaption {
     position: absolute;
     left: 0;
@@ -1041,7 +1041,7 @@ body.dark-mode .texto {
     color: #fff;
     padding: 0.7em 2em;
     border-radius: 0;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     font-weight: 600;
     margin: 2em 0 0 7vw;
     cursor: pointer;
@@ -1052,12 +1052,10 @@ body.dark-mode .texto {
     text-transform: uppercase;
     margin-left: 35%;
 }
-
 .show-more:hover {
     background: #fff;
     color: #000;
 }
-
 /* --- ARTÍCULOS --- */
 .articulos {
     display: flex;
@@ -1068,13 +1066,11 @@ body.dark-mode .texto {
     padding: 0;
     margin: 0;
 }
-
 .articulos article {
     flex: 1 1 0;
     margin: 0;
     padding: 0;
 }
-
 .foto {
     position: relative;
     margin: 0;
@@ -1084,7 +1080,6 @@ body.dark-mode .texto {
     aspect-ratio: 1/1;
     display: flex;
 }
-
 .foto img {
     width: 100%;
     height: 100%;
@@ -1104,11 +1099,9 @@ body.dark-mode .texto {
     opacity: 0;
     transition: opacity 0.4s;
 }
-
 .articulos article:hover .transparencia {
     opacity: 1;
 }
-
 .transparencia h3 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.2em;
@@ -1116,9 +1109,8 @@ body.dark-mode .texto {
     color: #fff;
     text-transform: uppercase;
     margin: 0 0 0.2em 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
-
 .transparencia p {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #ccc;
@@ -1130,12 +1122,10 @@ body.dark-mode .texto {
     display: flex;
     gap: 0.7em;
 }
-
 .transparencia .social a {
     color: #fff;
     font-size: 1.3em;
 }
-
 .transparencia .social a:hover {
     color: #e91e63;
 }
@@ -1150,14 +1140,14 @@ footer {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    max-width: 1200px;
+    max-width: 75em;
     margin: 0 auto;
     gap: 2em;
 }
 .footer-column {
-    flex: 1 1 200px;
+    flex: 1 1 12.5em;
     margin-bottom: 1em;
-    min-width: 200px;
+    min-width: 12.5em;
 }
 .footer-column h2, .footer-column h3 {
     font-family: 'Oswald', Arial, sans-serif;
@@ -1177,19 +1167,18 @@ footer {
     font-size: 1em;
     margin-bottom: 1.5em;
     line-height: 1.6;
-    max-width: 320px;
+    max-width: 20em;
 }
 .social-icons {
     margin-top: 1.2em;
     display: flex;
     gap: 1em;
 }
-
 .social-icons a {
     color: #fff;
     font-size: 1.3em;
     transition: color 0.2s, border-color 0.2s, background 0.2s;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     border-radius: 50%;
     width: 2.4em;
     height: 2.4em;
@@ -1250,7 +1239,7 @@ footer {
     font-size: 1em;
     letter-spacing: 0.03em;
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    border-top: 1px solid #444;
+    border-top: 0.063em solid #444;
 }
 /* --- CONTACTO --- */
 .contact {
@@ -1258,7 +1247,7 @@ footer {
     justify-content: center;
     align-items: flex-start;
     background: #000000;
-    padding: 70px 0 90px 0;
+    padding: 4.375em 0 5.625em 0;
     width: 100%;
     margin: 0;
     gap: 0;
@@ -1267,9 +1256,9 @@ footer {
 .contact-section {
     flex: 0 0 22%;
     max-width: 22%;
-    min-width: 200px;
+    min-width: 12.5em;
     text-align: left;
-    padding: 0 20px;
+    padding: 0 1.25em;
     box-sizing: border-box;
 }
 
@@ -1278,8 +1267,8 @@ footer {
     font-size: 2.3em;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 28px;
+    letter-spacing: 0.063em;
+    margin-bottom: 1.75em;
     font-weight: 700;
 }
 
@@ -1287,8 +1276,8 @@ footer {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #a09d9d;
     font-size: 0.9em;
-    margin: 0 0 6px 0;
-    letter-spacing: 1px;
+    margin: 0 0 0.375em 0;
+    letter-spacing: 0.063em;
     word-break: break-all;
 }
 /* --- FORMULARIO DE CONTACTO --- */
@@ -1297,7 +1286,7 @@ footer {
     justify-content: center;
     align-items: flex-start;
     background: #0a0a0a;
-    padding: 60px 0 80px 0;
+    padding: 3.75em 0 5em 0;
     width: 100%;
     gap: 0;
 }
@@ -1314,8 +1303,8 @@ footer {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.3em;
     text-transform: uppercase;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+    margin-bottom: 1.875em;
+    letter-spacing: 0.063em;
     font-weight: 700;
 }
 
@@ -1323,22 +1312,22 @@ footer {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #ccc;
     font-size: 1.13em;
-    margin-bottom: 40px;
+    margin-bottom: 2.5em;
     line-height: 1.7;
     max-width: 90%;
 }
 
 .info-contacto {
     display: flex;
-    gap: 60px;
+    gap: 3.75em;
 }
 
 .info-contacto h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.3em;
     text-transform: uppercase;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
+    margin-bottom: 1.125em;
+    letter-spacing: 0.063em;
     font-weight: 700;
 }
 
@@ -1346,8 +1335,8 @@ footer {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
     font-size: 1.05em;
-    margin: 0 0 10px 0;
-    letter-spacing: 1px;
+    margin: 0 0 0.625em 0;
+    letter-spacing: 0.063em;
     line-height: 1.7;
 }
 
@@ -1356,7 +1345,7 @@ footer {
     max-width: 44%;
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 1.375em;
     padding-left: 3%;
     padding-right: 7%;
     box-sizing: border-box;
@@ -1366,11 +1355,11 @@ footer {
 .right-section textarea {
     width: 100%;
     background: transparent;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     color: #fff;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.08em;
-    padding: 16px 14px;
+    padding: 1em 0.875em;
     margin-bottom: 0;
     outline: none;
     transition: border 0.3s;
@@ -1383,14 +1372,14 @@ footer {
 }
 
 .right-section textarea {
-    min-height: 140px;
-    max-height: 260px;
+    min-height: 8.75em;
+    max-height: 16.25em;
 }
 
 .right-section button {
-    margin-top: 18px;
-    width: 210px;
-    padding: 14px 0;
+    margin-top: 1.125em;
+    width: 13.125em;
+    padding: 0.875em 0;
     background: #fff;
     color: #111;
     font-family: 'Oswald', Arial, sans-serif;
@@ -1399,28 +1388,28 @@ footer {
     border: none;
     cursor: pointer;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
     transition: background 0.2s, color 0.2s;
 }
 .right-section button:hover {
     background: #000000;
     color: #fff;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
 }
 
 .error {
     color: #e91e63;
     font-size: 0.95em;
     margin-bottom: 0;
-    min-height: 18px;
+    min-height: 1.125em;
 }
 
 .alert {
     color: #fff;
     background: #e91e63;
-    padding: 12px 18px;
-    margin-top: 18px;
-    border-radius: 3px;
+    padding: 0.75em 1.125em;
+    margin-top: 1.125em;
+    border-radius: 0.188em;
     font-size: 1em;
     text-align: center;
     font-family: 'Open Sans', Arial, sans-serif;
@@ -1430,18 +1419,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 40px 0 0 0;
+    padding: 2.5em 0 0 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 75em;
     margin: 0 auto;
-    gap: 40px;
+    gap: 2.5em;
     margin-top: 10%;
 }
 
 /* --- COLUMNA IZQUIERDA --- */
 .albumesss .image-foto {
     width: 100%;
-    max-width: 520px;
+    max-width: 32.5em;
     aspect-ratio: 1/1;
     margin: 0 auto 0 auto;
     background: #000;
@@ -1463,27 +1452,26 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 420px;
+    width: 26.25em;
     margin-right: 0;
-    gap: 30px;
+    gap: 1.875em;
 }
-
 /* --- COLUMNA DERECHA --- */
 .about1 {
     flex: 1 1 0;
-    min-width: 340px;
-    max-width: 600px;
+    min-width: 21.25em;
+    max-width: 37.5em;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.875em;
 }
 
 .about-album h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     text-transform: uppercase;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
+    margin-bottom: 1.125em;
+    letter-spacing: 0.063em;
     font-weight: 700;
     color: #fff;
 }
@@ -1492,38 +1480,35 @@ footer {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #ccc;
     font-size: 1em;
-    margin-bottom: 18px;
+    margin-bottom: 1.125em;
     line-height: 1.7;
     max-width: 95%;
 }
-
 .about-album ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .about-album li {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
     font-size: 1em;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
+    margin-bottom: 0.313em;
+    letter-spacing: 0.063em;
 }
-
 .about-album li strong {
     color: #fff;
     font-family: 'Oswald', Arial, sans-serif;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
 
 /* --- LYRICS SECTION (ACORDEÓN) --- */
 .lyrics-section {
-    margin: 30px auto;
-    max-width: 520px;
+    margin: 1.875em auto;
+    max-width: 32.5em;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 0.625em;
     margin-left: 50%;
     margin-top: -10%;
 }
@@ -1533,31 +1518,28 @@ footer {
     font-size: 1.5em;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
+    letter-spacing: 0.063em;
+    margin-bottom: 1.125em;
     font-weight: 700;
     text-align: left;
 }
 
 #accordion-container {
     width: 100%;
-    max-height: 260px;
+    max-height: 16.25em;
     overflow-y: auto;
-    padding-right: 4px;
-    scrollbar-width: none;       /* Firefox */
-    -ms-overflow-style: none;    /* IE/Edge */
+    padding-right: 0.25em;
+    scrollbar-width: none;      
+    -ms-overflow-style: none;   
 }
-
 #accordion-container::-webkit-scrollbar {
     width: 0px;
     background: transparent;
 }
-
 .accordion {
-    border-bottom: 1px solid #222;
+    border-bottom: 0.063em solid #222;
     background: transparent;
 }
-
 .accordion-header {
     display: flex;
     justify-content: space-between;
@@ -1565,24 +1547,21 @@ footer {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1em;
     color: #ccc;
-    padding: 12px 0;
+    padding: 0.75em 0;
     cursor: pointer;
     transition: background 0.2s;
     text-transform: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
 }
-
 .accordion-header i {
     font-size: 1em;
     color: #ccc;
-    margin-right: 20px;
+    margin-right: 1.25em;
     transition: transform 0.3s;
 }
-
 .accordion.active .accordion-header i {
     transform: rotate(180deg);
 }
-
 .accordion-content {
     max-height: 0;
     overflow: hidden;
@@ -1591,46 +1570,42 @@ footer {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
     font-size: 1em;
-    padding: 0 20px;
+    padding: 0 1.25em;
     line-height: 1.7;
-    border-left: 2px solid #222;
+    border-left: 0.125em solid #222;
 }
-
 .accordion.active .accordion-content {
-    padding: 14px 20px;
-    border-left: 2px solid #fff;
+    padding: 0.875em 1.25em;
+    border-left: 0.125em solid #fff;
     color: #fff;
-    max-height: 200px;
+    max-height: 12.5em;
     overflow-y: auto;
     scrollbar-width: none;       /* Firefox */
     -ms-overflow-style: none;    /* IE/Edge */
 }
-
 .accordion.active .accordion-content::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
     background: transparent;
 }
-
 /* --- ALBUM REVIEWS --- */
 .review-section {
     background: #181818;
-    padding: 28px 32px 22px 32px;
-    border-radius: 2px;
-    max-width: 600px;
+    padding: 1.75em 2em 1.375em 2em;
+    border-radius: 0.125em;
+    max-width: 37.5em;
     width: 100%;
-    margin: 30px auto; /* Centrado sin margin-right */
+    margin: 1.875em auto; /* Centrado sin margin-right */
     box-sizing: border-box;
     position: relative; /* Para posicionar los botones dentro */
     margin-left:50%;
 }
-
 .review-section h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
+    letter-spacing: 0.063em;
+    margin-bottom: 1.125em;
     font-weight: 700;
 }
 
@@ -1638,123 +1613,109 @@ footer {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
     font-size: 1em;
-    margin-bottom: 18px;
+    margin-bottom: 1.125em;
     line-height: 1.7;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
 }
-
 .review-source {
     font-family: 'Oswald', Arial, sans-serif;
     color: #fff;
     font-size: 1em;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 0.625em;
 }
-
 .nav-icons {
     position: absolute;
-    bottom: 22px;
-    right: 32px;
+    bottom: 1.375em;
+    right: 2em;
     display: flex;
-    gap: 10px;
+    gap: 0.625em;
 }
-
 .nav-button {
     background: transparent;
     border: none;
     color: #fff;
     font-size: 1.2em;
     cursor: pointer;
-    padding: 4px 10px;
+    padding: 0.25em 0.625em;
     transition: color 0.2s;
 }
-
 .nav-button:hover {
     color: #e91e63;
 }
-
 /* --- PLAYER --- */
 .musica {
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25em;
     background: #222;
-    border-radius: 2px;
-    margin: 40px auto 0 auto;
+    border-radius: 0.125em;
+    margin: 2.5em auto 0 auto;
     padding: 0;
     box-sizing: border-box;
     margin-top: -25%;
     margin-right:55% ;
 }
-
 .controles {
     display: flex;
-    border-bottom: 2px solid #888;
-    height: 80px;
+    border-bottom: 0.125em solid #888;
+    height: 5em;
     background: #2a2a2a;
 }
-
 .controles > div {
     flex: 1 1 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
-    border-right: 1px solid #888;
+    height: 5em;
+    border-right: 0.063em solid #888;
 }
-
 .controles > div:last-child {
     border-right: none;
 }
-
 .controles i {
     color: #fff;
     font-size: 1.5em;
     cursor: pointer;
     transition: color 0.2s;
 }
-
 .controles i:hover {
     color: #e91e63;
 }
-
 .track-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #222;
-    padding: 20px 28px 16px 28px;
+    padding: 1.25em 1.75em 1em 1.75em;
 }
-
 .track-titulo {
     font-family: 'Oswald', Arial, sans-serif;
     color: #fff;
     font-size: 1.15em;
     font-weight: 700;
-    margin-bottom: 4px;
-    letter-spacing: 0.5px;
+    margin-bottom: 0.25em;
+    letter-spacing: 0.031em;
 }
-
 .artist-name {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #aaa;
     font-size: 1em;
-    margin-top: 2px;
+    margin-top: 0.125em;
 }
-
 .timer {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #fff;
     font-size: 1em;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.125em;
 }
 /* --- LISTA DE CANCIONES --- */
 .song-list {
     width: 100%;
-    max-width: 570px;
-    margin: 20px auto 0 auto;
+    max-width: 35.625em;
+    margin: 35.625em auto 0 auto;
     background: transparent;
-    padding: 0 10px;
+    padding: 0 0.625em;
     margin-left: 5%;
 }
 
@@ -1763,9 +1724,9 @@ footer {
     color: #fff;
     font-size: 1.15em;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
     margin-top: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
 
 .song-list ol {
@@ -1773,22 +1734,20 @@ footer {
     color: #fff;
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.08em;
-    padding-left: 18px;
+    padding-left: 1.125em;
     margin: 0;
 }
-
 .song-list li {
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #222;
-    padding: 10px 0;
+    border-bottom: 0.063em solid #222;
+    padding: 0.063em 0;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
 }
-
 .titulo-track {
     cursor: pointer;
     transition: color 0.2s;
@@ -1797,94 +1756,84 @@ footer {
     font-size: 1em;
     font-weight: 700;
 }
-
 .titulo-track:hover {
     color: #e91e63;
 }
-
 .buy-track {
     color: #fff;
     font-size: 0.95em;
     text-decoration: underline;
-    margin-left: 10px;
+    margin-left: 0.625em;
     font-family: 'Open Sans', Arial, sans-serif;
     transition: color 0.2s;
     font-weight: 400;
     text-transform: none;
 }
-
 .buy-track:hover {
     color: #e91e63;
 }
 /* --- SECCIÓN DISPONIBLE EN --- */
-
 .available-on {
-    margin: 40px 0 0 0;
-    padding-left: 60px;
+    margin: 2.5em 0 0 0;
+    padding-left: 3.75em;
     margin-left: 2%;
-    
 }
 .available-on h2 {
     font-family: 'Oswald', Arial, sans-serif;
     color: #fff;
     font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 22px;
+    letter-spacing: 0.063em;
+    margin-bottom: 1.375em;
     font-weight: 700;
     text-align: left;
 }
-
 .platform-icons {
     display: flex;
-    gap: 22px;
+    gap: 1.375em;
     align-items: center;
 }
-
 .platform-icons a img {
     display: block;
-    height: 50px;
-    width: 150px;
+    height: 3.125em;
+    width: 9.375em;
     object-fit: contain;
     transition: transform 0.2s;
 }
-
 .platform-icons a:hover img {
     transform: scale(1.05);
 }
 /* --- SECCIÓN DEL VÍDEO --- */
 .latest-video {
-    margin: 40px 0 0 0;
-    padding: 0 0 30px 0;
+    margin: 2.5em 0 0 0;
+    padding: 0 0 1.875em 0;
 }
 
 .latest-video h2 {
     font-family: 'Oswald', Arial, sans-serif;
     color: #fff;
-    font-size:30px;
-    line-height: 40px;
+    font-size:1.875em;
+    line-height:2.5em;
     margin-left: 5%;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
+    letter-spacing: 0.063em;
+    margin-bottom: 1.125em;
     font-weight: 700;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 0.625em;
 }
-
 .video-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 1.125em;
     background: #000; /* Fondo negro para el área del video */
     padding: 2em 0;
 }
-
 .video-container iframe {
     width: 100%;
-    max-width: 1200px;
+    max-width: 75em;
     aspect-ratio: 16/9;
     height: auto;
     border: none;
@@ -1897,11 +1846,10 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 40vw;
-    margin-top: 10px;
+    margin-top: 0.625em;
     margin-bottom: 0;
-    min-height: 60px;
+    min-height: 3.75em;
 }
-
 .flecha {
     color: #fff;
     font-size: 2em;
@@ -1911,13 +1859,11 @@ footer {
     display: flex;
     align-items: center;
 }
-
 /* Cambiar el color de la selección de texto */
 ::selection {
     background-color: #ffffff; /* Color de fondo de la selección */
     color: #ffffff; /* Color del texto seleccionado */
 }
-
 .punto {
     font-size: 2em;
     color: #fff;
@@ -1926,7 +1872,6 @@ footer {
     display: flex;
     align-items: center;
 }
-
 /* --- BREADCRUMB --- */
 .breadcrumb {
   margin-left: 7vw;
@@ -1936,16 +1881,13 @@ footer {
   font-size: 1.05em;
   letter-spacing: 0.05em;
 }
-
 .breadcrumb a {
   color: #bdbdbd;
   text-decoration: none;
 }
-
 .breadcrumb span {
   color: #bdbdbd;
 }
-
 /* --- CONTENT GRID --- */
 .content-grid {
   width: 95vw;
@@ -1956,7 +1898,6 @@ footer {
   font-family: 'Oswald', Arial, sans-serif;
   margin-top: 10%;
 }
-
 .top-row {
     display: flex;
     justify-content: center;
@@ -1964,36 +1905,31 @@ footer {
     gap: 3em;
     margin: 2em 0 2em 0;
 }
-
 .img-col {
-    flex: 0 0 350px;
+    flex: 0 0 21.875em;
     display: flex;
     justify-content: flex-end;
 }
-
 .img-col img {
-    width: 350px;
-    height: 420px;
+    width: 21.875em;
+    height: 26.25em;
     object-fit: cover;
     display: block;
     background: #111;
 }
-
 .map-col {
-    flex: 0 0 800px;
+    flex: 0 0 50em;
     display: flex;
     align-items: flex-start;
 }
-
 .map-col .map {
-    width: 800px;
-    height: 420px;
+    width: 50em;
+    height: 26.25em;
     border: none;
     filter: grayscale(1);
     display: block;
     background: #222;
 }
-
 .bottom-row {
     display: flex;
     justify-content: flex-start;
@@ -2002,73 +1938,62 @@ footer {
     margin: 0 0 0 7vw;
     width: 85vw;
 }
-
 .details-col {
     flex: 0 0 32%;
     max-width: 32%;
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
 }
-
 .details-col h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     color: #fff;
     margin-bottom: 1em;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
-
-.details-col p,
-.details-col a {
+.details-col p,.details-col a {
     font-size: 1em;
     color: #bdbdbd;
     margin: 0.3em 0;
     word-break: break-all;
 }
-
 .details-col .link {
     color: #bdbdbd;
     text-decoration: underline;
 }
-
 .ticket {
     margin-top: 2.5em;
 }
-
 .buy-tickets {
     display: inline-block;
     background: transparent;
     color: #fff;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     padding: 0.9em 4em;
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.1em;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
     margin-top: 1em;
     text-align: center;
 }
-
 .buy-tickets:hover {
     background: #fff;
     color: #000;
 }
-
 .about-col {
     flex: 1 1 0;
     max-width: 60%;
     margin-left: 2em;
 }
-
 .about-col h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     color: #fff;
     margin-bottom: 0.7em;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
-
 .about-col p {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
@@ -2076,19 +2001,16 @@ footer {
     margin-bottom: 2em;
     line-height: 1.7;
 }
-
 .follow {
     margin-top: 2.5em;
 }
-
 .follow h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     color: #fff;
     margin-bottom: 0.7em;
-    letter-spacing: 1px;
+    letter-spacing: 0.063em;
 }
-
 .follow a {
     color: #bdbdbd;
     font-size: 1.5em;
@@ -2097,7 +2019,6 @@ footer {
     text-decoration: none;
     vertical-align: middle;
 }
-
 .follow a:hover {
     color: #fff;
 }
@@ -2128,14 +2049,12 @@ footer {
     justify-content: center;
     margin-top: 15%;
 }
-
 .albums {
     display: grid;
     grid-template-columns: repeat(4, 0.2fr);
     gap: 2em;
     margin: 2em 0;
 }
-
 .albumes {
     background: none;
     box-shadow: none;
@@ -2145,13 +2064,11 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
 .albumes figure {
     margin: 0;
     width: 100%;
     height: 100%;
 }
-
 .albumes img {
     width: 100%;
     height: 100%;
@@ -2163,7 +2080,6 @@ footer {
 #scrollToTopBtn:hover {
     background: #007bff;
 }
-
 /* --- MODO OSCURO --- */
 body.dark-mode {
     background: #ffffff;
@@ -2176,14 +2092,7 @@ body.dark-mode footer {
 body.dark-mode .nav-links a {
     color: #f1f1f1;
 }
-
-body.dark-mode .album,
-body.dark-mode .album-info,
-body.dark-mode .tracklist li,
-body.dark-mode .blog-post,
-body.dark-mode .album-card,
-body.dark-mode .fechas ul,
-body.dark-mode .footer {
+body.dark-mode .album,body.dark-mode .album-info,body.dark-mode .tracklist li,body.dark-mode .blog-post,body.dark-mode .album-card,body.dark-mode .fechas ul,body.dark-mode .footer {
     background: #232323;
     color: #f1f1f1;
 }
@@ -2193,21 +2102,18 @@ body.dark-mode .progress-bar {
 body.dark-mode .progress-bar-fill {
     background: #00bfff;
 }
-body.dark-mode .buy-tickets,
-body.dark-mode .show-more {
+body.dark-mode .buy-tickets,body.dark-mode .show-more {
     background: #00bfff;
     color: #181818;
 }
-body.dark-mode .buy-tickets:hover,
-body.dark-mode .show-more:hover {
+body.dark-mode .buy-tickets:hover,body.dark-mode .show-more:hover {
     background: #0099cc;
 }
 body.dark-mode .footer-bottom {
     background: #111;
     color: #aaa;
 }
-body.dark-mode .modal-content,
-body.dark-mode .modal-contento {
+body.dark-mode .modal-content,body.dark-mode .modal-contento {
     background: #232323;
     color: #f1f1f1;
 }
@@ -2218,7 +2124,6 @@ body.dark-mode #scrollToTopBtn {
 body.dark-mode #scrollToTopBtn:hover {
     background: #0099cc;
 }
-
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
     .album-info, .footer, .albums, .blog-posts, .gallery {
@@ -2240,7 +2145,7 @@ body.dark-mode #scrollToTopBtn:hover {
         padding: 2em 1em;
     }
     .album-cover {
-        max-width: 350px;
+        max-width: 21.875em;
         margin-bottom: 2em;
     }
     .tracklist {
@@ -2251,7 +2156,7 @@ body.dark-mode #scrollToTopBtn:hover {
         grid-template-rows: repeat(4, 1fr);
     }
     .image {
-        height: 200px;
+        height: 12.5em;
     }
         .blog-posts {
         flex-wrap: wrap;
@@ -2260,7 +2165,7 @@ body.dark-mode #scrollToTopBtn:hover {
     }
     .blog-post {
         width: 90vw;
-        max-width: 400px;
+        max-width: 25em;
     }
      .top-row, .bottom-row {
     flex-direction: column;
@@ -2269,7 +2174,7 @@ body.dark-mode #scrollToTopBtn:hover {
   .img-col img, .map-col .map {
     max-width: 90vw;
     height: 40vw;
-    min-height: 200px;
+    min-height: 12.5em;
   }
 }
 @media (max-width: 600px) {
@@ -2301,7 +2206,7 @@ body.dark-mode #scrollToTopBtn:hover {
         grid-template-rows: repeat(8, 1fr);
     }
     .image {
-        height: 180px;
+        height: 11.25em;
     }
 }
 /* Responsive */
@@ -2312,22 +2217,20 @@ body.dark-mode #scrollToTopBtn:hover {
         margin-left: 4vw;
     }
     .blog-post {
-        width: 320px;
+        width: 20em;
     }
        .albumesss {
         flex-direction: column;
         align-items: center;
         gap: 0;
     }
-    .albumesss .image-foto,
-    .musica,
-    .song-list {
+    .albumesss .image-foto,.musica,.song-list {
         width: 100%;
-        max-width: 600px;
+        max-width: 37.5em;
     }
     .about1 {
         max-width: 100%;
-        padding: 0 20px;
+        padding: 0 1.25em;
     }
 }
 @media (max-width: 1200px) {
@@ -2337,7 +2240,7 @@ body.dark-mode #scrollToTopBtn:hover {
     }
     .articulos article {
         width: 90vw;
-        max-width: 500px;
-        height: 400px;
+        max-width: 31.25em;
+        height: 25em;
     }
 }
