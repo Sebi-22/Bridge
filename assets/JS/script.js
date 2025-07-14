@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 // ========== MODAL VIDEO (NO DISPONIBLE) ==========
 document.addEventListener("DOMContentLoaded", function () {
     const abrirModal = document.getElementById("abrirModal");
