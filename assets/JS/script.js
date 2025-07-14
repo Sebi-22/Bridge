@@ -294,40 +294,90 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ========== GALERÍA DE FOTOS PRINCIPAL ==========
 document.addEventListener("DOMContentLoaded", function() {
-    const images = [
-        { src: "assets/images/h1-img-1.jpg", alt: "Band performing on stage with red lights", size: "large" },
-        { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting on an amplifier", size: "small" },
-        { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer performing", size: "small" },
-        { src: "assets/images/h1-img-4.jpg", alt: "Singer performing on stage with crowd", size: "small" },
-        { src: "assets/images/h1-img-5.jpg", alt: "Drummer playing drums", size: "small" },
-        { src: "assets/images/h1-img-6.jpg", alt: "Guitarist performing with green lights", size: "large" }
-    ];
-    const galleryContainer = document.getElementById("gallery-container");
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("modal-img");
-    const closeBtn = document.querySelector(".close");
+  const images = [
+    { src: "assets/images/h1-img-1.jpg", alt: "Band performing on stage with red lights", size: "large" },
+    { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting on an amplifier", size: "small" },
+    { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer performing", size: "small" },
+    { src: "assets/images/h1-img-4.jpg", alt: "Singer performing on stage with crowd", size: "small" },
+    { src: "assets/images/h1-img-5.jpg", alt: "Drummer playing drums", size: "small" },
+    { src: "assets/images/h1-img-6.jpg", alt: "Guitarist performing with green lights", size: "large" }
+  ];
+  const galleryContainer = document.getElementById("gallery-container");
+  const modal = document.getElementById("myModal");
+     // Verifica que el modal existe:
+     console.log(modal); // Debe mostrar el elemento HTML
+  const modalImg = document.getElementById("modal-img");
+  const closeBtn = document.querySelector(".modal .cerrar");
+  const arrowLeft = document.querySelector(".arrow-left");
+  const arrowRight = document.querySelector(".arrow-right");
 
-    images.forEach(image => {
-        const imageDiv = document.createElement("div");
-        imageDiv.classList.add("image", image.size);
-        const img = document.createElement("img");
-        img.src = image.src;
-        img.alt = image.alt;
-        img.addEventListener("click", function() {
-            modal.style.display = "block";
-            modalImg.src = image.src;
-            modalImg.alt = image.alt;
-        });
-        imageDiv.appendChild(img);
-        galleryContainer.appendChild(imageDiv);
-    });
+  let currentIndex = 0;
 
-    closeBtn.addEventListener("click", function() {
-        modal.style.display = "none";
+  // Crear galería
+  images.forEach((image, index) => {
+    const imageDiv = document.createElement("div");
+    imageDiv.classList.add("image", image.size);
+    const img = document.createElement("img");
+    img.src = image.src;
+    img.alt = image.alt;
+    img.setAttribute("data-index", index);
+    img.addEventListener("click", function() {
+      currentIndex = index;
+      openModal(currentIndex);
     });
-    window.addEventListener("click", function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    });
+    imageDiv.appendChild(img);
+    galleryContainer.appendChild(imageDiv);
+  });
+
+  function openModal(index) {
+    modal.style.display = "flex";
+    updateModalImage(index);
+    document.body.style.overflow = "hidden"; // Evitar scroll de fondo
+  }
+
+     function closeModal() {
+       modal.style.display = "none";
+       console.log("Modal cerrado"); // Verifica en la consola
+       document.body.style.overflow = "";
+     }
+     
+
+  function updateModalImage(index) {
+    modalImg.src = images[index].src;
+    modalImg.alt = images[index].alt;
+  }
+
+  closeBtn.addEventListener("click", closeModal);
+
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Navegación slider
+  arrowLeft.addEventListener("click", function() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateModalImage(currentIndex);
+  });
+
+  arrowRight.addEventListener("click", function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateModalImage(currentIndex);
+  });
+
+  // Navegación con teclado
+  document.addEventListener("keydown", function(e) {
+    if (modal.style.display === "flex") {
+      if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateModalImage(currentIndex);
+      } else if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateModalImage(currentIndex);
+      } else if (e.key === "Escape") {
+        closeModal();
+      }
+    }
+  });
 });

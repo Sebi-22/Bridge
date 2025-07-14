@@ -477,51 +477,6 @@ header {
     color: #fff;
 }
 
-/* MODAL VIDEO */
-.modal {
-display: none; /* Oculto por defecto */
-position: fixed;
-z-index: 2000;
-left: 0;
-top: 0;
-width: 100vw;
-height: 100vh;
-background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
-align-items: center;
-justify-content: center;
-}
-
-.modal-contento {
-background: #181818;
-padding: 1.5em;
-border-radius: 0.625em;
-max-width: 90vw;
-max-height: 80vh;
-position: relative;
-box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.7);
-color: #fff; /* Color de texto blanco */
-}
-.modal-contento .error-message {
-font-size: 1.5em;
-font-weight: bold;
-}
-
-.modal-contento .error-subtext {
-font-size: 1em;
-margin-top: 0.5em;
-}
-
-#cerrarModal {
-position: absolute;
-top: 0.625em;
-right: 0.938em;
-font-size: 1.5em;
-color: #fff;
-cursor: pointer;
-background: none;
-border: none;
-}
-
 /* --- TEXTO PROMOCIONAL --- */
 .texto {
     width: 99vw;
@@ -615,88 +570,115 @@ body.dark-mode .texto {
     background: #181818;
 }
 
-/* --- GALERÍA DE IMÁGENES --- */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 100vw;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  /* --- GALERÍA DE IMÁGENES --- */
+  .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .image {
-    overflow: hidden;
-    height: 20em;
-    position: relative;
+  overflow: hidden;
+  height: 20em;
+  position: relative;
 }
 
 .image.large {
-    width: 50%;
+  width: 50%;
 }
 
 .image.small {
-    width: 25%;
+  width: 25%;
 }
 
 .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0;
-    cursor: pointer;
-    box-shadow: none;
-    transition: transform 0.2s, opacity 0.2s;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: none;
+  transition: transform 0.2s, opacity 0.2s;
+  display: block;
 }
 
 .image.large:hover img,
 .image.small:hover img {
-    opacity: 0.5;
-    transform: scale(1.05);
+  opacity: 0.5;
+  transform: scale(1.05);
 }
 
 /* Modal básico */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.8);
-    align-items: center;
-    justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
 }
 .modal-content {
-    max-width: 70vw;
-    max-height: 90vh;
-    overflow: auto;
-    margin: auto;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 .modal-content img {
-    width: 80%;
-    margin: 0 auto;
-    display: block;
-    border-radius: 0.5em;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 0.5em;
+  user-select: none;
 }
-.close {
-    position: absolute;
-    top: 1em;
-    right: 2em;
-    color: #fff;
-    font-size: 2em;
-    cursor: pointer;
-    z-index: 10;
+.cerrar {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  color: #fff;
+  font-size: 2.5em;
+  cursor: pointer;
+  z-index: 9999; /* Asegúrate de que sea el más alto */
+  user-select: none;
 }
+/* Flechas para slider */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 3em;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 10px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+.arrow:hover {
+  background: rgba(0,0,0,0.6);
+}
+.arrow-left {
+  left: 10px;
+}
+.arrow-right {
+  right: 10px;
+}
+
 /* --- FECHAS DE EVENTOS --- */
  .fechas {
     width: 100vw;
@@ -707,14 +689,14 @@ body.dark-mode .texto {
   }
   .fechas ul {
     list-style: none;
-    max-width: 1100px;
+    max-width: 68.75em;
     margin: 2em auto 0 auto;
     padding: 0;
   }
   .date-item {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #222;
+    border-bottom: 0.063em solid #222;
     background: transparent;
     margin: 0;
     padding: 1.5em 0;
@@ -726,14 +708,14 @@ body.dark-mode .texto {
   .date-block {
     display: flex;
     align-items: center;
-    gap: 8px;
-    min-width: 110px;
-    border-right: 1px solid #666;
-    padding-right: 15px;
+    gap: 0.5em;
+    min-width: 68.75em;
+    border-right: 0.063em solid #666;
+    padding-right: 0.938em;
   }
   .date {
     font-family: 'Anton', sans-serif;
-    font-size: 56px;
+    font-size: 3.5em;
     font-weight: 700;
     color: #fff;
     width: auto;
@@ -748,8 +730,8 @@ body.dark-mode .texto {
     flex-direction: column;
     text-align: left;
     color: #999;
-    width: 50px;
-    font-size: 14px;
+    width: 3.125em;
+    font-size: 0.875em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.063em;
@@ -765,7 +747,7 @@ body.dark-mode .texto {
     flex: 1;
     font-weight: 700;
     color: #fff;
-    font-size: 14px;
+    font-size: 0.875em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     user-select: none;
@@ -778,7 +760,7 @@ body.dark-mode .texto {
     border: none;
     text-decoration: underline;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875em;
     letter-spacing: 0.05em;
     transition: color 0.2s;
     margin-left: 1em;
@@ -798,7 +780,7 @@ body.dark-mode .texto {
     color: #fff;
     padding: 0.8em 3em;
     border-radius: 0;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     text-decoration: none;
     font-weight: 600;
     font-size: 1em;
@@ -956,6 +938,65 @@ body.dark-mode .texto {
 .play-button:hover {
     color: #007bff;
 }
+/* MODAL VIDEO */
+.nuevomodal {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 32em;
+    height: 60vh;
+    max-height: 37.5em;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cuadro de mensaje grande */
+.modal-contento {
+    background: #111;
+    padding: 4em 5em;
+    border-radius: 0.25em;
+    width: 90%;
+    max-width: 800px;
+    height: 400px; /* AUMENTAMOS LA ALTURA */
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Texto de error grande */
+.modal-contento .error-message {
+    font-size: 3em; /* más grande */
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.modal-contento .error-subtext {
+    font-size: 1.5em; /* más grande */
+    color: #ccc;
+    margin-top: 0.5em;
+}
+
+/* Botón cerrar */
+#cerrarModal {
+    position: absolute;
+    bottom: 1em;
+    right: 1.5em;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
 /* --- DISCOGRAFÍA --- */
 .our-discography {
     width: 100vw;
@@ -1151,117 +1192,138 @@ body.dark-mode .texto {
 .transparencia .social a:hover {
     color: #e91e63;
 }
-/* --- FOOTER --- */
+/*  ─── FOOTER ──────────────────────────────────────────────────── */
 footer {
-    background: #000;
-    color: #fff;
-    padding: 2em 0 0 0;
-    margin-top: 12%;
+    background:#000;
+    color:#fff;
+    padding:2em 0 0 0;
+    margin-top:12%;
+    font-size:16px;/* punto de partida */
+    line-height:1.6;
 }
-.footer {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    max-width: 75em;
-    margin: 0 auto;
-    gap: 2em;
+
+.footer{
+    max-width:75em;/* ≈1200 px */
+    margin:0 auto;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:flex-start;
+    gap:4em; /* espacio entre columnas (más ancho que antes) */
 }
-.footer-column {
-    flex: 1 1 12.5em;
-    margin-bottom: 1em;
-    min-width: 12.5em;
+
+/*  ── columnas ── */
+.footer-column{
+    flex:1 1 12.5em;
+    min-width:12.5em;
+    margin-bottom:1.5em;
 }
-.footer-column h2, .footer-column h3 {
-    font-family: 'Oswald', Arial, sans-serif;
-    margin-bottom: 0.7em;
-    font-size: 1.2em;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+
+/*  ── títulos ── */
+.footer-column h2,
+.footer-column h3{
+    font-family:'Oswald',Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    font-weight:700;
+    margin:0 0 0.7em 0;
 }
-.footer-column h3 {
-    font-size: 2.2em;
-    margin-bottom: 0.3em;
+.footer-column h2{font-size:1.2em;}
+.footer-column h3{font-size:2.2em;margin-bottom:0.3em;}
+
+/*  ── descripción de la marca ── */
+.footer-desc{
+    font-family:'Fira Mono','Consolas','Courier New',monospace;
+    color:#bdbdbd;
+    max-width:20em;
+    margin-bottom:1.5em;
 }
-.footer-desc {
-    color: #bdbdbd;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    font-size: 1em;
-    margin-bottom: 1.5em;
-    line-height: 1.6;
-    max-width: 20em;
-}
+
 .social-icons {
-    margin-top: 1.2em;
     display: flex;
     gap: 1em;
+    margin-top: 1.2em;
 }
+
 .social-icons a {
-    color: #fff;
-    font-size: 1.3em;
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
-    border: 0.125em solid #fff;
+    width: 2.6em;
+    height: 2.6em;
+    border: 2px solid #fff;
     border-radius: 50%;
-    width: 2.4em;
-    height: 2.4em;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     background: transparent;
-    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.1em;
+    transition: all 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-    color: #000000;
-    border-color: #000000;
     background: #fff;
+    color: #000;
 }
 
-.social-icons a i {
+.social-icons i {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1em;
-    height: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin-top: 0.3em; /* ajusta el valor para bajarlo más o menos */
 }
-.contact-info p {
-    margin-bottom: 0.5em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    color: #fff;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+/*  ── contacto ── */
+.contact-info p{
+    display:flex;
+    align-items:center;
+    gap:0.5em;
+    margin-bottom:1em;       
+    font-family:'Fira Mono','Consolas','Courier New',monospace;
+    color:#a8a8a8;
 }
-.footer-column a {
-    color: #fff;
-    font-family: 'Oswald', Arial, sans-serif;
-    font-size: 1em;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-bottom: 0.5em;
-    display: inline-block;
-    transition: color 0.2s;
+
+/*  ── enlaces útiles ── */
+.footer-column a{
+    display:inline-block;
+    margin-bottom:0.5em;
+    font-family:'Oswald',Arial,sans-serif;
+    font-size:1em;
+    font-weight:600;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    color:#fff;
+    text-decoration:none;
+    transition:color 0.2s;
 }
-.footer-column a:hover {
-    color: #666666;
-    text-decoration: underline;
+.footer-column a:hover{
+    color:#666;
+    text-decoration:underline;
 }
-.footer-bottom {
-    text-align: center;
-    padding: 1.2em 0 0.8em 0;
-    background: #000;
-    color: #aaa;
-    margin-top: 2em;
-    font-size: 1em;
-    letter-spacing: 0.03em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    border-top: 0.063em solid #444;
+
+/*  ── placeholder para Instagram (opcional) ── */
+.instagram-placeholder{
+    width:100%;
+    height:5em;
+    background:#111;
+    border:1px dashed #333;
+    margin-top:0.7em;
+}
+
+/*  ── franja inferior ── */
+.footer-bottom{
+    margin-top:2em;
+    padding:1.2em 0 0.8em;
+    text-align:center;
+    font-family:'Fira Mono','Consolas','Courier New',monospace;
+    font-size:1em;
+    letter-spacing:0.03em;
+    color:#aaa;
+    border-top:0.063em solid #444;
+    background:#000;
 }
 /* --- CONTACTO --- */
 .contact {
