@@ -670,7 +670,7 @@ body.dark-mode .texto {
 /* --- FECHAS DE EVENTOS --- */
   #datos.fechas {
     max-width: 75em;
-    margin: 5% auto 0 auto;
+    margin: 6% auto 0 auto;
     padding: 1.25em 0.938em;
     color: white;
   }
@@ -821,7 +821,7 @@ body.dark-mode .texto {
     border-radius: 0;
     box-shadow: none;
     padding: 0;
-    width: 21.875em;
+    width: 25em;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -957,7 +957,7 @@ body.dark-mode .texto {
 }
 
 .modal-contento .error-subtext {
-    font-size: 1.75em;             /* Aumentado */
+    font-size: 1.75em;/* Aumentado */
     color: #ccc;
     margin-top: 1em;
 }
@@ -973,16 +973,13 @@ body.dark-mode .texto {
     background: none;
     border: none;
 }
-
-
 /* --- DISCOGRAFÍA --- */
 .our-discography {
     width: 100vw;
     background: #000;
-    margin: 0;
     text-align: left;
-    margin-left: 7%;
-    margin-top: 5%;
+    margin-top: 5em;
+    margin-left: 9%;
 }
 .our-discography h1 {
     font-family: 'Oswald', Arial, sans-serif;
