@@ -1754,65 +1754,77 @@ footer {
 .song-list {
     width: 100%;
     max-width: 35.625em;
-    margin: 35.625em auto 0 auto;
+    margin: 5em auto 0 auto; /* Ajustar margen superior */
     background: transparent;
-    padding: 0 0.625em;
-    margin-left: 5%;
+    padding: 0 1em;
+    margin-left:5% ;
+    color: #a09d9d;
 }
 
 .song-list h1 {
     font-family: 'Oswald', Arial, sans-serif;
-    color: #fff;
-    font-size: 1.15em;
+    font-size: 1.2em;
     text-transform: uppercase;
-    margin-bottom: 0.625em;
+    margin-bottom: 0.8em;
     margin-top: 0;
-    letter-spacing: 0.063em;
+    letter-spacing: 0.08em;
+    color: #ffffff;
 }
 
 .song-list ol {
-    list-style: decimal;
-    color: #fff;
-    font-family: 'Oswald', Arial, sans-serif;
-    font-size: 1.08em;
-    padding-left: 1.125em;
+    list-style: none; /* Oculta el número automático */
+    counter-reset: track-number; /* Resetea contador */
+    padding-left: 0;
     margin: 0;
 }
+
 .song-list li {
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.063em solid #222;
-    padding: 0.063em 0;
+    border-bottom: 1px solid #222;
+    padding: 0.6em 0;
+    font-family: 'Oswald', Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.031em;
+    letter-spacing: 0.03em;
+    position: relative;
 }
+
+.song-list li::before {
+    counter-increment: track-number;
+    content: counter(track-number) ". ";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1em;
+}
+
 .titulo-track {
     cursor: pointer;
     transition: color 0.2s;
-    color: #fff;
+    color: #a09d9d;
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1em;
     font-weight: 700;
+    padding-left: 1.5em; /* Deja espacio para el número manual */
+    flex: 1;
 }
-.titulo-track:hover {
-    color: #e91e63;
-}
+
 .buy-track {
-    color: #fff;
-    font-size: 0.95em;
+    color: #ffffff;
+    font-size: 0.9em;
     text-decoration: underline;
-    margin-left: 0.625em;
     font-family: 'Open Sans', Arial, sans-serif;
     transition: color 0.2s;
     font-weight: 400;
     text-transform: none;
+    white-space: nowrap;
 }
-.buy-track:hover {
-    color: #e91e63;
-}
+
+
+
 /* --- SECCIÓN DISPONIBLE EN --- */
 .available-on {
     margin: 2.5em 0 0 0;
@@ -2005,24 +2017,31 @@ footer {
 .ticket {
     margin-top: 2.5em;
 }
-.ticket {
+.tickets {
     display: inline-block;
     background: transparent;
     color: #fff;
-    border: 0.125em solid #fff;
-    padding: 0.9em 4em;
+    border: 2px solid #fff;
+    padding: 1em 3em;
     font-family: 'Oswald', Arial, sans-serif;
-    font-size: 1.1em;
-    letter-spacing: 0.063em;
+    font-size: 1.2em;
+    letter-spacing: 0.08em;
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    transition: all 0.3s ease;
     margin-top: 1em;
     text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
-ticket:hover {
+
+.tickets:hover {
     background: #fff;
     color: #000;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    transform: scale(1.05);
 }
+
 .about-col {
     flex: 1 1 0;
     max-width: 60%;
