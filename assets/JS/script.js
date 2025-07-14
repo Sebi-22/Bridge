@@ -16,10 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 const dateItem = document.createElement("li");
                 dateItem.classList.add("date-item");
                 dateItem.innerHTML = `
-                    <div class="date">${fecha.date}</div>
-                    <div class="month-day">
-                        <div>${fecha.month}</div>
-                        <div>${fecha.day}</div>
+                    <div class="date-block">
+                        <div class="date">${fecha.date}</div>
+                        <div class="month-day">
+                            <span>${fecha.month}</span>
+                            <span>${fecha.day}</span>
+                        </div>
                     </div>
                     <div class="ciudad">${fecha.ciudad}</div>
                     <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
