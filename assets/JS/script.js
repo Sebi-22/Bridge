@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
         viewAllBtn.addEventListener("click", function (event) {
             event.preventDefault();
             const fechasAdicionales = [
-                { date: "22", month: "Jun", day: "Fri", ciudad: "London, England – O2 Arena", link: "#" },
-                { date: "27", month: "Jun", day: "Wed", ciudad: "Rome, Italy – Cola Arena", link: "#" },
-                { date: "29", month: "Jun", day: "Fri", ciudad: "Athens, Greece – PAOK Stadium", link: "#" },
-                { date: "03", month: "Jul", day: "Tue", ciudad: "Budapest, Hungary – Nagy Arena", link: "#" }
+                { date: "22", month: "Jun", day: "Fri", ciudad: "London, England – O2 Arena", link: "event.html" },
+                { date: "27", month: "Jun", day: "Wed", ciudad: "Rome, Italy – Cola Arena", link: "event.html" },
+                { date: "29", month: "Jun", day: "Fri", ciudad: "Athens, Greece – PAOK Stadium", link: "event.html" },
+                { date: "03", month: "Jul", day: "Tue", ciudad: "Budapest, Hungary – Nagy Arena", link: "event.html" }
             ];
             const section = document.getElementById("datos");
             const ul = section.querySelector("ul");
@@ -19,12 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="date-block">
                         <div class="date">${fecha.date}</div>
                         <div class="month-day">
-                            <span>${fecha.month}</span>
-                            <span>${fecha.day}</span>
+                            <span>${fecha.month.toUpperCase()}</span>
+                            <span>${fecha.day.toUpperCase()}</span>
                         </div>
                     </div>
-                    <div class="ciudad">${fecha.ciudad}</div>
-                    <a href="${fecha.link}" class="buy-tickets">Buy Tickets</a>
+                    <a href="${fecha.link}" class="ciudad-link">
+                        <div class="ciudad">${fecha.ciudad.toUpperCase()}</div>
+                    </a>
+                    <a href="#" class="buy-tickets">BUY TICKETS</a>
                 `;
                 ul.appendChild(dateItem);
             });
@@ -32,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
 
 // ========== MODAL VIDEO (NO DISPONIBLE) ==========
 document.addEventListener("DOMContentLoaded", function () {
