@@ -163,7 +163,6 @@ function initializeAlbumGallery() {
 // Invocar la función en ambas páginas
 initializeAlbumGallery();
 
-
 // ========== MODO OSCURO/CLARO ==========
 const toggleBtn = document.getElementById('toggle-dark-mode');
 toggleBtn.addEventListener('click', () => {
