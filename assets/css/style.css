@@ -670,7 +670,7 @@ body.dark-mode .texto {
 /* --- FECHAS DE EVENTOS --- */
   #datos.fechas {
     max-width: 75em;
-    margin: 6% auto 0 auto;
+    margin: 5% auto 0 auto;
     padding: 1.25em 0.938em;
     color: white;
   }
