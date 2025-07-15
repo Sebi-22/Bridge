@@ -292,19 +292,21 @@ header {
 
 .progress-bar-player {
     background: #ddd;
-    width: 7em;
+    width: 16em; /* AGRANDADO: Cambialo a 20em si la querés aún más larga */
     height: 0.375em;
     border-radius: 0.1875em;
     margin-right: 0.5em;
     position: relative;
+    overflow: hidden;
 }
 
 .progress-bar-fill-player {
     background: #222;
     height: 100%;
-    width: 0%;
+    width: 0%; 
     transition: width 0.2s;
 }
+
 
 .time-player {
     font-size: 0.9em;
@@ -1441,15 +1443,14 @@ footer {
 }
 
 .error {
-    color: #e91e63;
+    color: #dc3232;
     font-size: 0.95em;
     margin-bottom: 0;
     min-height: 1.125em;
 }
-
 .alert {
     color: #fff;
-    background: #e91e63;
+    background: #f1c40f;
     padding: 0.75em 1.125em;
     margin-top: 1.125em;
     border-radius: 0.188em;

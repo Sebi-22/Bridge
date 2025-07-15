@@ -65,56 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-// ========== AUDIO PRINCIPAL (BLACK HOLE SUN) ==========
-const playPauseBtn = document.getElementById("main-audio-play-pause");
-const progressBar = document.getElementById("main-audio-progress-bar");
-const progressBarFill = document.getElementById("main-audio-progress-bar-fill");
-const currentTimeEl = document.getElementById("main-audio-current-time");
-const durationEl = document.getElementById("main-audio-duration");
-const volumeSlider = document.getElementById("main-audio-volume-slider");
-const audio = new Audio("assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3");
-
-audio.addEventListener("loadedmetadata", () => {
-    durationEl.textContent = formatTime(audio.duration);
-});
-audio.addEventListener("timeupdate", () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    progressBarFill.style.width = `${progress}%`;
-    currentTimeEl.textContent = formatTime(audio.currentTime);
-});
-progressBar.addEventListener("click", (e) => {
-    const clickPosition = (e.offsetX / progressBar.offsetWidth) * audio.duration;
-    audio.currentTime = clickPosition;
-});
-playPauseBtn.addEventListener("click", () => {
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
-    }
-});
-audio.addEventListener("play", () => {
-    playPauseBtn.classList.remove("fa-play");
-    playPauseBtn.classList.add("fa-pause");
-});
-audio.addEventListener("pause", () => {
-    playPauseBtn.classList.remove("fa-pause");
-    playPauseBtn.classList.add("fa-play");
-});
-audio.addEventListener("ended", () => {
-    playPauseBtn.classList.remove("fa-pause");
-    playPauseBtn.classList.add("fa-play");
-});
-volumeSlider.addEventListener("input", () => {
-    audio.volume = volumeSlider.value;
-});
-function formatTime(seconds) {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60).toString().padStart(2, "0");
-    return `${mins}:${secs}`;
-}
-
 // ========== GALERÍA DE ÁLBUMES (OUR DISCOGRAPHY) ==========
 const newAlbums = [
     { src: "assets/images/album-5.jpg", title: "FALLEN", description: "Harmony" },
@@ -224,49 +174,96 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ========== REPRODUCTOR DE AUDIOS EN TRACKLIST ==========
-function initializeButtonVisibility() {
-    document.querySelectorAll('.fa-play').forEach(playButton => {
-        playButton.style.display = 'inline';
-    });
-    document.querySelectorAll('.fa-pause').forEach(pauseButton => {
-        pauseButton.style.display = 'none';
-    });
-}
-initializeButtonVisibility();
+/* ========================== AUDIO GLOBAL ========================== */
+const audio           = new Audio();
+audio.src             = "assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3";
 
-document.querySelectorAll('.fa-play').forEach(playButton => {
-    playButton.addEventListener('click', function() {
-        document.querySelectorAll('audio').forEach(audio => {
-            audio.pause();
-            audio.currentTime = 0;
-        });
-        document.querySelectorAll('.fa-play').forEach(button => {
-            button.style.display = 'inline';
-        });
-        document.querySelectorAll('.fa-pause').forEach(button => {
-            button.style.display = 'none';
-        });
-        document.querySelectorAll('.track-title').forEach(title => {
-            title.classList.remove('playing');
-        });
-        const audioId = this.getAttribute('data-audio');
-        const audio = document.getElementById(audioId);
-        audio.play();
-        this.closest('li').querySelector('.track-title').classList.add('playing');
-        this.style.display = 'none';
-        this.closest('li').querySelector('.fa-pause').style.display = 'inline';
-    });
+const playPauseBtn    = document.getElementById("main-audio-play-pause");
+const progressBar     = document.getElementById("main-audio-progress-bar");
+const progressBarFill = document.getElementById("main-audio-progress-bar-fill");
+const currentTimeEl   = document.getElementById("main-audio-current-time");
+const durationEl      = document.getElementById("main-audio-duration");
+const volumeSlider    = document.getElementById("main-audio-volume-slider");
+
+/* ------------------------- UTILIDADES ---------------------------- */
+const formatTime = secs => {
+  const m  = Math.floor(secs / 60);
+  const ss = Math.floor(secs % 60).toString().padStart(2, "0");
+  return `${m}:${ss}`;
+};
+
+function updatePlayIcons(state) {
+  /* Botón principal */
+  playPauseBtn.classList.toggle("fa-play",  state === "pause");
+  playPauseBtn.classList.toggle("fa-pause", state === "play");
+
+  /* Iconos del tracklist */
+  document.querySelectorAll(".track-icons").forEach(box => {
+    const play  = box.querySelector(".fa-play");
+    const pause = box.querySelector(".fa-pause");
+    const title = box.closest("li").querySelector(".track-title");
+    const isCurrent = box.dataset.src === audio.src;
+
+    if (isCurrent) {
+      play.style.display  = state === "pause" ? "inline" : "none";
+      pause.style.display = state === "play"  ? "inline" : "none";
+      title.classList.toggle("playing", state === "play");
+    } else {
+      play.style.display  = "inline";
+      pause.style.display = "none";
+      title.classList.remove("playing");
+    }
+  });
+}
+
+/* --------------------- METADATOS Y PROGRESO ---------------------- */
+audio.addEventListener("loadedmetadata", () => {
+  durationEl.textContent = formatTime(audio.duration);
 });
-document.querySelectorAll('.fa-pause').forEach(pauseButton => {
-    pauseButton.addEventListener('click', function() {
-        const audioId = this.getAttribute('data-audio');
-        const audio = document.getElementById(audioId);
-        audio.pause();
-        this.closest('li').querySelector('.track-title').classList.remove('playing');
-        this.style.display = 'none';
-        this.closest('li').querySelector('.fa-play').style.display = 'inline';
-    });
+audio.addEventListener("timeupdate", () => {
+  const pct = (audio.currentTime / audio.duration) * 100;
+  progressBarFill.style.width = `${pct}%`;
+  currentTimeEl.textContent   = formatTime(audio.currentTime);
 });
+progressBar.addEventListener("click", e => {
+  const pct = e.offsetX / progressBar.offsetWidth;
+  audio.currentTime = pct * audio.duration;
+});
+volumeSlider.addEventListener("input", () => {
+  audio.volume = volumeSlider.value;
+});
+
+/* ----------------------- BOTÓN PRINCIPAL ------------------------ */
+playPauseBtn.addEventListener("click", () => {
+  audio.paused ? audio.play() : audio.pause();
+});
+audio.addEventListener("play",  () => updatePlayIcons("play"));
+audio.addEventListener("pause", () => updatePlayIcons("pause"));
+audio.addEventListener("ended", () => updatePlayIcons("pause"));
+
+/* -------------------------- TRACKLIST --------------------------- */
+document.querySelectorAll(".track-icons").forEach(box => {
+  const playBtn  = box.querySelector(".fa-play");
+  const pauseBtn = box.querySelector(".fa-pause");
+  const src      = playBtn.dataset.src;   // archivo mp3
+
+  /* guarda src para la función updatePlayIcons */
+  box.dataset.src = src;
+
+  /* muestra sólo el icono de play inicialmente */
+  playBtn.style.display  = "inline";
+  pauseBtn.style.display = "none";
+
+  playBtn.addEventListener("click", () => {
+    if (audio.src !== src) audio.src = src; // cambia de canción
+    audio.play();
+  });
+
+  pauseBtn.addEventListener("click", () => {
+    if (audio.src === src) audio.pause();
+  });
+});
+
 
 // ========== MODAL PARA VIDEO EN TRACKLIST ==========
 document.addEventListener("DOMContentLoaded", function () {
