@@ -175,8 +175,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // ========== REPRODUCTOR DE AUDIOS EN TRACKLIST ==========
 /* ========================== AUDIO GLOBAL ========================== */
-const audio           = new Audio();
-audio.src             = "assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3";
+const audio = new Audio();
+audio.src = "assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3";
 
 const playPauseBtn    = document.getElementById("main-audio-play-pause");
 const progressBar     = document.getElementById("main-audio-progress-bar");
