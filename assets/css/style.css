@@ -519,10 +519,9 @@ header {
     content: "";
     display: block;
     width: 5.625em;
-    height:0.25em;
+    height:0.1em;
     background: #fff;
     margin-top: 0.5em;
-    border-radius: 0.125em;
 }
 
 .texto2 p {
@@ -687,102 +686,104 @@ body.dark-mode .texto {
     right: 0.625em;
   }
 /* --- FECHAS DE EVENTOS --- */
-  #datos.fechas {
-    max-width: 75em;
-    margin: 5% auto 0 auto;
-    padding: 1.25em 0.938em;
-    color: white;
-  }
-  #datos ul {
-    list-style: none;
-  }
-  .date-item {
-    align-items: center;
-    border-bottom: 0.063em solid #222222;
-    padding: 1.25em 0;
-    justify-content: space-between;
-  }
-  .date-block {
-    align-items: center;
-    min-width: 6.875em;
-  }
-  .date {
-    font-weight: 700;
-    font-size: 3em;
-    line-height: 1;
-    margin-right: 0.625em;
-    white-space: nowrap;
-  }
-  .month-day {
-    flex-direction: column;
-    font-weight: 400;
-    font-size: 0.75em;
-    line-height: 1.2;
-    letter-spacing: 0.1em;
-    color: #999999;
-    white-space: nowrap;
-    position: relative;
-  }
-  .month-day span {
-    text-transform: uppercase;
-  }
-  /* Vertical line extended */
-  .month-day::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 100%;
-    height: 3em; /* extended height */
-    width: 0.063em;
-    background-color: #222222;
-    margin-left: 0.938em;
-  }
-  .ciudad-link {
-    flex: 1;
-    text-decoration: none;
-    color: inherit;
-    padding-left: 0.938em;/* Remove border-left because vertical line is now on month-day */
-    align-items: center;
-  }
-  .ciudad {
-    font-weight: 400;
-    font-size: 0.875em;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    line-height: 1.3;
-  }
-  .buy-tickets {
-    font-weight: 700;
-    font-size: 0.875em;
-    color: #ffffff;
-    text-decoration: underline;
-    cursor: pointer;
-    white-space: nowrap;
-    margin-left: 1.25em;
-  }
-  .view-all {
-    text-align: center;
-    margin: 2.5em 0 0 0;
-  }
-  #view-all-btn {
-    background: transparent;
-    color: #fff;
-    padding: 0.8em 3em;
-    border-radius: 0;
-    border: 0.125em solid #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1em;
-    letter-spacing: 0.063em;
-    transition: background 0.2s, color 0.2s;
-    cursor: pointer;
-    box-shadow: none;
-    display: inline-block;
-  }
-  #view-all-btn:hover {
-    background: #fff;
-    color: #000;
-  }
+#datos.fechas {
+  max-width: 75em;
+  margin: 5% auto 0 auto;
+  padding: 1.25em 0.938em;
+  color: white;
+}
+#datos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.date-item {
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+  padding: 1.25em 0;
+}
+
+/* Bloque con fecha */
+.date-block {
+  align-items: center;
+  min-width: 6.875em;
+  margin-right: 1em;
+}
+.date {
+  font-weight: 700;
+  font-size: 2.5em;
+  line-height: 1;
+  margin-right: 0.5em;
+  white-space: nowrap;
+}
+.month-day {
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  position: relative;
+}
+.month-day::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 3em;
+  width: 1px;
+  background-color: #222;
+  margin-left: 1em;
+}
+/* Bloque con ciudad y lugar */
+.ciudad-link {
+  align-items: center;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  padding-left: 1.5em;
+}
+.ciudad {
+  font-size: 0.875em;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+/* Botón de tickets */
+.buy-tickets {
+  font-weight: 700;
+  font-size: 0.875em;
+  color: #fff;
+  text-decoration: underline;
+  white-space: nowrap;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+/* Botón Ver Todo */
+.view-all {
+  text-align: center;
+  margin-top: 2.5em;
+}
+#view-all-btn {
+  background: transparent;
+  color: #fff;
+  padding: 0.8em 3em;
+  border: 2px solid #fff;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.063em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#view-all-btn:hover {
+  background: #fff;
+  color: #000;
+}
 /* --- SECCIÓN DEL BLOG --- */
 .blog {
     width: 100vw;
@@ -950,16 +951,14 @@ body.dark-mode .texto {
     padding: 4em 5em;
     border-radius: 0.25em;
     width: 90%;
-    max-width: 800px;
-    height: 400px; /* AUMENTAMOS LA ALTURA */
+    max-width: 50em;
+    height: 25em; /* AUMENTAMOS LA ALTURA */
     text-align: center;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.8);
     position: relative;
     flex-direction: column;
     justify-content: center;
 }
-
-
 /* Texto de error más grande */
 .modal-contento .error-message {
     font-size: 3.5em;              /* Aumentado */
@@ -967,13 +966,11 @@ body.dark-mode .texto {
     color: #fff;
     margin: 0;
 }
-
 .modal-contento .error-subtext {
     font-size: 1.75em;/* Aumentado */
     color: #ccc;
     margin-top: 1em;
 }
-
 /* Botón cerrar */
 #cerrarModal {
     position: absolute;
@@ -1170,110 +1167,126 @@ body.dark-mode .texto {
 }
 /* --- FOOTER --- */
 footer {
-    background: #000;
-    color: #fff;
-    padding: 2em 0 0 0;
-    margin-top: 12%;
+  background: #000;
+  color: #fff;
+  padding: 2em 0 0 0;
+  margin-top: 12%;
 }
+
 .footer {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    max-width: 75em;
-    margin: 0 auto;
-    gap: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1em;
+  gap: 2em;
 }
+
 .footer-column {
-    flex: 1 1 12.5em;
-    margin-bottom: 1em;
-    min-width: 12.5em;
+  flex: 1 1 12.5em;
+  min-width: 12.5em;
+  margin-bottom: 1em;
 }
-.footer-column h2, .footer-column h3 {
-    font-family: 'Oswald', Arial, sans-serif;
-    margin-bottom: 0.7em;
-    font-size: 1.2em;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-}
+
+.footer-column h2,
 .footer-column h3 {
-    font-size: 2.2em;
-    margin-bottom: 0.3em;
+  font-family: 'Oswald', Arial, sans-serif;
+  margin-bottom: 0.7em;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
+
+.footer-column h3 {
+  font-size: 2.2em;
+  margin-bottom: 0.3em;
+}
+
 .footer-desc {
-    color: #bdbdbd;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    font-size: 1em;
-    margin-bottom: 1.5em;
-    line-height: 1.6;
-    max-width: 20em;
+  color: #bdbdbd;
+  font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+  max-width: 20em;
 }
+
 .social-icons {
-    margin-top: 1.2em;
-    gap: 1em;
+  display: flex;
+  gap: 0.8em;
+  margin-top: 1.5em;
 }
+
 .social-icons a {
-    color: #fff;
-    font-size: 1.3em;
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
-    border: 0.125em solid #fff;
-    border-radius: 50%;
-    width: 2.4em;
-    height: 2.4em;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    background: transparent;
-    box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1em;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 
 .social-icons a:hover {
-    color: #000000;
-    border-color: #000000;
-    background: #fff;
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+.social-icons a i {
+  display: inline-block;
+  font-size: 0.95em;
+  line-height: 1;
+  vertical-align: middle;
+  transform: translateX(0.5em); /* Ajuste sutil a la derecha */
+}
+/* Contacto */
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+  font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+  color: #fff;
+  font-size: 1em;
 }
 
-.social-icons a i {
-    align-items: center;
-    justify-content: center;
-    width: 1em;
-    height: 1em;
-    font-size: 1.1em;
-    line-height: 1;
-}
-.contact-info p {
-    margin-bottom: 0.5em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    color: #fff;
-    font-size: 1em;
-    align-items: center;
-    gap: 0.5em;
-}
 .footer-column a {
-    color: #fff;
-    font-family: 'Oswald', Arial, sans-serif;
-    font-size: 1em;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-bottom: 0.5em;
-    display: inline-block;
-    transition: color 0.2s;
+  color: #fff;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  transition: color 0.2s;
 }
+
 .footer-column a:hover {
-    color: #666666;
-    text-decoration: underline;
+  color: #666;
+  text-decoration: underline;
 }
+
+/* Footer inferior */
 .footer-bottom {
-    text-align: center;
-    padding: 1.2em 0 0.8em 0;
-    background: #000;
-    color: #aaa;
-    margin-top: 2em;
-    font-size: 1em;
-    letter-spacing: 0.03em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
-    border-top: 0.063em solid #444;
+  text-align: center;
+  padding: 1.2em 0 0.8em 0;
+  background: #000;
+  color: #aaa;
+  margin-top: 2em;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+  font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+  border-top: 0.063em solid #444;
 }
 /* --- CONTACTO --- */
 .contact {
