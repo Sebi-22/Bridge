@@ -2,9 +2,15 @@
 * {
     box-sizing: border-box;
 }
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button,.tracklist ol,.gallery,#datos ul.articulos,.articulos article,.foto,.about-album ul,.imagenes { 
     margin: 0;
     padding: 0;
+}
+.about-hero,.info-player,.progress-bar-player, .image,.blog-post-image-wrapper,.video-section,.albumes,.foto,.albumesss .image-foto,.accordion-content,.albumes {
+overflow:hidden;
+}
+.container.navbar,.nav-links,.background-image,.background-image2,.background-image3,.background-image4,.hero-content,.about-hero,.album-player,.left-player,.controls-player,.progress-container-player,.volume-control-player,.album-info,.album-cover,.apps,.tracklist li,.track-icons,.texto, .gallery, .modal-content,.date-item,.date-block,.month-day,.ciudad-link,.blog-posts,.blog-post,.video-section,.video-content,.nuevomodal,.modal-contento,.albums,.albumes,.articulos,.foto,.transparencia,.transparencia .social,.footer,.social-icons,.social-icons a,.social-icons a i,.contact-info p,.contact,.form,.info-contacto,.right-section,.albumesss,.albumesss .image-foto,.left-column,.about1,.accordion-header,.nav-icons,.controles,.controles > div,.track-info,.song-list li,.platform-icons,.video-container,.iconos-abajo,.flecha,.punto,.top-row,.img-col,.map-col,.bottom-row,.imagenes,.albumes{
+    display: flex;
 }
 body {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -13,7 +19,6 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
 /* --- HEADER Y NAVBAR --- */
 header {
     background:transparent;
@@ -28,7 +33,6 @@ header {
 }
 
 .container.navbar {
-    display: flex;
     align-items: center;
     justify-content: flex-start;
     max-width: 75em; /* 1200px */
@@ -49,7 +53,6 @@ header {
 }
 
 .nav-links {
-    display: flex;
     gap: 1em;
     position: relative;
     left: 28%;
@@ -102,7 +105,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 45em;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -115,7 +117,6 @@ header {
     background-position: center;
     min-height: 88vh;
     position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -128,7 +129,6 @@ header {
 }
 .hero-content {
     width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -187,10 +187,8 @@ header {
     width: 100vw;
     height: 26.25em;
     min-height: 21.875em;
-    display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .about-bg {
@@ -217,7 +215,6 @@ header {
 }
 /* --- REPRODUCTOR DE AUDIO --- */
 .album-player {
-    display: flex;
     align-items: center;
     background: #fff;
     padding: 0.5em 0 0.5em 0.5em;
@@ -230,7 +227,6 @@ header {
     font-family: 'Oswald', Arial, sans-serif;
 }
 .left-player {
-    display: flex;
     align-items: center;
     gap: 1em;
     min-width: 16em;
@@ -247,7 +243,6 @@ header {
     min-width: 8em;
     max-width: 12em;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.1;
 }
@@ -267,7 +262,6 @@ header {
 }
 
 .controls-player {
-    display: flex;
     align-items: center;
     gap: 1.5em;
     font-size: 1.4em;
@@ -289,7 +283,6 @@ header {
 }
 
 .progress-container-player {
-    display: flex;
     align-items: center;
     gap: 0.5em;
     width: 14em;
@@ -302,7 +295,6 @@ header {
     width: 7em;
     height: 0.375em;
     border-radius: 0.1875em;
-    overflow: hidden;
     margin-right: 0.5em;
     position: relative;
 }
@@ -329,7 +321,6 @@ header {
 }
 
 .volume-control-player {
-    display: flex;
     align-items: center;
     gap: 0.5em;
     padding-left: 1.5em;
@@ -350,7 +341,6 @@ header {
 
 /* --- ALBUM INFO SECCIÓN (HOME) --- */
 .album-info {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 4em;
@@ -362,7 +352,6 @@ header {
 }
 .album-cover {
     flex: 0 0 25em;
-    display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 8%;
@@ -395,7 +384,6 @@ header {
     text-align: left;
 }
 .apps {
-    display: flex;
     gap: 1em;
     margin-top: 1em;
 }
@@ -418,11 +406,8 @@ header {
 }
 .tracklist ol {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 .tracklist li {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 0.063em solid #222;
@@ -445,7 +430,6 @@ header {
     letter-spacing: 0.063em;
 }
 .track-icons {
-    display: flex;
     align-items: center;
     gap: 1em;
 }
@@ -475,7 +459,6 @@ header {
     margin: 0;
     padding: 4em 0 3em 7vw;
     box-sizing: border-box;
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -558,20 +541,57 @@ header {
 body.dark-mode .texto {
     background: #181818;
 }
+/* === MODAL VIDEO === */
+.video {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
 
+.modal-contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 40em;
+  margin: auto;
+  background: transparent;
+}
+
+.modal-contenedor iframe {
+  width: 100%;
+  height: 22.5em;
+  border: none;
+  border-radius: 0.5em;
+  display: block;
+}
+/* Estilo para la cruz de cierre */
+.cierre {
+  position: absolute;
+  right: 10px;
+  bottom: -1.875em;
+  font-size: 1.25em;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.cierre:hover {
+  transform: scale(1.2);
+}
   /* --- GALERÍA DE IMÁGENES --- */
   .gallery {
-    display: flex;
     flex-wrap: wrap;
     width: 100vw;
     max-width: 100vw;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
   }
 
   .image {
-    overflow: hidden;
     height: 20em;
     position: relative;
   }
@@ -621,7 +641,6 @@ body.dark-mode .texto {
     background: transparent;
     border: none;
     box-shadow: none;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -676,18 +695,14 @@ body.dark-mode .texto {
   }
   #datos ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
   }
   .date-item {
-    display: flex;
     align-items: center;
     border-bottom: 0.063em solid #222222;
     padding: 1.25em 0;
     justify-content: space-between;
   }
   .date-block {
-    display: flex;
     align-items: center;
     min-width: 6.875em;
   }
@@ -699,7 +714,6 @@ body.dark-mode .texto {
     white-space: nowrap;
   }
   .month-day {
-    display: flex;
     flex-direction: column;
     font-weight: 400;
     font-size: 0.75em;
@@ -728,7 +742,6 @@ body.dark-mode .texto {
     text-decoration: none;
     color: inherit;
     padding-left: 0.938em;/* Remove border-left because vertical line is now on month-day */
-    display: flex;
     align-items: center;
   }
   .ciudad {
@@ -792,11 +805,10 @@ body.dark-mode .texto {
 .blog h1::after {
     content: "";
     display: block;
-    width: 5em;
-    height: 0.25em;
+    width: 3em;
+    height: 0.1em;
     background: #fff;
     margin-top: 0.5em;
-    border-radius: 0.125em;
 }
 .blog-description {
     color: #bdbdbd;
@@ -810,7 +822,6 @@ body.dark-mode .texto {
     font-weight: 400;
 }
 .blog-posts {
-    display: flex;
     flex-wrap: nowrap;
     gap: 2em;
     justify-content: flex-start;
@@ -821,16 +832,14 @@ body.dark-mode .texto {
     border-radius: 0;
     box-shadow: none;
     padding: 0;
-    width: 25em;
+    width: 23em;
     text-align: left;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 .blog-post-image-wrapper {
     width: 100%;
     aspect-ratio: 1.2/1;
-    overflow: hidden;
     background: #222;
     display: block;
     margin-bottom: 1em;
@@ -867,11 +876,18 @@ body.dark-mode .texto {
     min-height: 32em;
     height: 60vh;
     max-height: 37.5em;
-    display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     background: #222;
+}
+/* Zoom suave al pasar el mouse sobre el play */
+.video-section:hover .video-bg {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+}
+/* Aseguramos que tenga transición aunque no esté en hover */
+.video-bg {
+    transition: transform 0.5s ease-in-out;
 }
 .video-bg {
     position: absolute;
@@ -896,7 +912,6 @@ body.dark-mode .texto {
     z-index: 3;
     width: 100%;
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -926,7 +941,6 @@ body.dark-mode .texto {
     height: 60vh;
     max-height: 37.5em;
     background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -942,7 +956,6 @@ body.dark-mode .texto {
     text-align: center;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
     position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -990,14 +1003,15 @@ body.dark-mode .texto {
     letter-spacing: 0.063em;
     text-align: left;
     display: block;
+    margin-left:0%;
 }
-
-.discography-underline {
-    width: 5em;
-    height: 0.25em;
+.our-discography h1::after {
+    content: "";
+    display: block;
+    width: 3em;
+    height: 0.1em;
     background: #fff;
-    border-radius: 0.125em;
-    margin: 0 0 2em 7vw;
+    margin-top: 0.5em;
 }
 .discography-description {
     color: #bdbdbd;
@@ -1009,19 +1023,17 @@ body.dark-mode .texto {
     max-width: 43.75em;
     text-align: left;
     font-weight: 400;
+    margin-left: 0;
 }
 .albums {
-    display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
 }
 .albumes {
     position: relative;
-    overflow: hidden;
     width: 16.25em;
     aspect-ratio: 1/1;
     background: #222;
-    display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0.5em 2em rgba(0,0,0,0.25), 0 0.094em 0.25em rgba(0,0,0,0.10);
@@ -1096,27 +1108,19 @@ body.dark-mode .texto {
 }
 /* --- ARTÍCULOS --- */
 .articulos {
-    display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 0;
     background: #111;
-    padding: 0;
-    margin: 0;
+
 }
 .articulos article {
     flex: 1 1 0;
-    margin: 0;
-    padding: 0;
 }
 .foto {
     position: relative;
-    margin: 0;
-    padding: 0;
     height: 100%;
-    overflow: hidden;
     aspect-ratio: 1/1;
-    display: flex;
 }
 .foto img {
     width: 100%;
@@ -1130,7 +1134,6 @@ body.dark-mode .texto {
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(0,0,0,0.6);
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1157,7 +1160,6 @@ body.dark-mode .texto {
 }
 
 .transparencia .social {
-    display: flex;
     gap: 0.7em;
 }
 .transparencia .social a {
@@ -1175,7 +1177,6 @@ footer {
     margin-top: 12%;
 }
 .footer {
-    display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
     max-width: 75em;
@@ -1209,7 +1210,6 @@ footer {
 }
 .social-icons {
     margin-top: 1.2em;
-    display: flex;
     gap: 1em;
 }
 .social-icons a {
@@ -1220,7 +1220,6 @@ footer {
     border-radius: 50%;
     width: 2.4em;
     height: 2.4em;
-    display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -1235,7 +1234,6 @@ footer {
 }
 
 .social-icons a i {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 1em;
@@ -1248,7 +1246,6 @@ footer {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #fff;
     font-size: 1em;
-    display: flex;
     align-items: center;
     gap: 0.5em;
 }
@@ -1281,7 +1278,6 @@ footer {
 }
 /* --- CONTACTO --- */
 .contact {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     background: #000000;
@@ -1320,7 +1316,6 @@ footer {
 }
 /* --- FORMULARIO DE CONTACTO --- */
 .form {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     background: #0a0a0a;
@@ -1356,7 +1351,6 @@ footer {
 }
 
 .info-contacto {
-    display: flex;
     gap: 3.75em;
 }
 
@@ -1381,7 +1375,6 @@ footer {
 .right-section {
     flex: 0 0 44%;
     max-width: 44%;
-    display: flex;
     flex-direction: column;
     gap: 1.375em;
     padding-left: 3%;
@@ -1454,7 +1447,6 @@ footer {
 }
 /* --- CONTENEDOR PRINCIPAL --- */
 .albumesss {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 2.5em 0 0 0;
@@ -1472,10 +1464,8 @@ footer {
     aspect-ratio: 1/1;
     margin: 0 auto 0 auto;
     background: #000;
-    display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .albumesss .image-foto img {
@@ -1487,7 +1477,6 @@ footer {
 }
 
 .left-column {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 26.25em;
@@ -1499,7 +1488,6 @@ footer {
     flex: 1 1 0;
     min-width: 21.25em;
     max-width: 37.5em;
-    display: flex;
     flex-direction: column;
     gap: 1.875em;
 }
@@ -1524,8 +1512,6 @@ footer {
 }
 .about-album ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 .about-album li {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
@@ -1579,7 +1565,6 @@ footer {
     background: transparent;
 }
 .accordion-header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: 'Oswald', Arial, sans-serif;
@@ -1602,7 +1587,6 @@ footer {
 }
 .accordion-content {
     max-height: 0;
-    overflow: hidden;
     transition: max-height 0.35s ease;
     background: transparent;
     font-family: 'Open Sans', monospace, Arial, sans-serif;
@@ -1666,7 +1650,6 @@ footer {
     position: absolute;
     bottom: 1.375em;
     right: 2em;
-    display: flex;
     gap: 0.625em;
 }
 .nav-button {
@@ -1694,14 +1677,12 @@ footer {
     margin-right:55% ;
 }
 .controles {
-    display: flex;
     border-bottom: 0.125em solid #888;
     height: 5em;
     background: #2a2a2a;
 }
 .controles > div {
     flex: 1 1 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 5em;
@@ -1720,7 +1701,6 @@ footer {
     color: #e91e63;
 }
 .track-info {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     background: #222;
@@ -1777,7 +1757,6 @@ footer {
 
 .song-list li {
     margin-bottom: 0;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #222;
@@ -1839,7 +1818,6 @@ footer {
     text-align: left;
 }
 .platform-icons {
-    display: flex;
     gap: 1.375em;
     align-items: center;
 }
@@ -1873,7 +1851,6 @@ footer {
     padding-left: 0.625em;
 }
 .video-container {
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1892,7 +1869,6 @@ footer {
     display: block;
 }
 .iconos-abajo {
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 40vw;
@@ -1906,7 +1882,6 @@ footer {
     cursor: pointer;
     user-select: none;
     transition: color 0.2s;
-    display: flex;
     align-items: center;
 }
 /* Cambiar el color de la selección de texto */
@@ -1919,7 +1894,6 @@ footer {
     color: #fff;
     text-decoration: none;
     transition: color 0.2s;
-    display: flex;
     align-items: center;
 }
 /* --- BREADCRUMB --- */
@@ -1949,7 +1923,6 @@ footer {
   margin-top: 10%;
 }
 .top-row {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 3em;
@@ -1957,7 +1930,6 @@ footer {
 }
 .img-col {
     flex: 0 0 21.875em;
-    display: flex;
     justify-content: flex-end;
 }
 .img-col img {
@@ -1969,7 +1941,6 @@ footer {
 }
 .map-col {
     flex: 0 0 50em;
-    display: flex;
     align-items: flex-start;
 }
 .map-col .map {
@@ -1981,7 +1952,6 @@ footer {
     background: #222;
 }
 .bottom-row {
-    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 3em;
@@ -2100,9 +2070,6 @@ footer {
 .imagenes {
     background: #000000;
     min-height: 100vh;
-    padding: 0;
-    margin: 0;
-    display: flex;
     justify-content: center;
     margin-top: 15%;
 }
@@ -2116,8 +2083,6 @@ footer {
     background: none;
     box-shadow: none;
     border-radius: 0;
-    overflow: hidden;
-    display: flex;
     align-items: center;
     justify-content: center;
 }

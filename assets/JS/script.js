@@ -269,29 +269,41 @@ document.querySelectorAll('.fa-pause').forEach(pauseButton => {
 });
 
 // ========== MODAL PARA VIDEO EN TRACKLIST ==========
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("videoModal");
-    const videoFrame = document.getElementById("videoFrame");
-    const videoIcons = document.querySelectorAll(".video-icon");
-    const closeModal = document.querySelector(".cierre");
-    videoIcons.forEach(icon => {
-        icon.addEventListener("click", function() {
-            const videoUrl = this.getAttribute("data-video");
-            videoFrame.src = videoUrl;
-            modal.style.display = "flex";
-        });
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("videoModal");
+  const videoFrame = document.getElementById("videoFrame");
+  const videoIcons = document.querySelectorAll(".video-icon");
+  const closeModal = document.querySelector(".cierre");
+
+  videoIcons.forEach((icon) => {
+    icon.addEventListener("click", function () {
+      const videoUrl = this.getAttribute("data-video");
+      videoFrame.src = videoUrl;
+      modal.style.display = "flex";
     });
-    closeModal.addEventListener("click", function() {
-        modal.style.display = "none";
-        videoFrame.src = "";
-    });
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-            videoFrame.src = "";
-        }
-    });
+  });
+
+  closeModal.addEventListener("click", function () {
+    modal.style.display = "none";
+    videoFrame.src = "";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+      videoFrame.src = "";
+    }
+  });
+
+  // Opcional: cerrar con ESC
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      modal.style.display = "none";
+      videoFrame.src = "";
+    }
+  });
 });
+
 
 // ========== GALERÍA DE FOTOS PRINCIPAL ==========
 document.addEventListener("DOMContentLoaded", function() {
