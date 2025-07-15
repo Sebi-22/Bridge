@@ -15,8 +15,20 @@ overflow:hidden;
 header,.nav-links a,#toggle-dark-mode,.tour-dates,.vertical-name,.about-title,.album-info,.titulo-album,.track-icons i:hover,.texto h1,.texto2 h1,.close,.arrow,.blog h1,.blog-post-title,.play-button,.modal-contento .error-message,#cerrarModal,.our-discography h1,.albumes figcaption,.show-more,.transparencia h3,.transparencia .social a,.contact-section h2,.left-section,.right-section input,.right-section textarea,.right-section button:hover,.alert,.about-album h2,.about-album li strong,.lyrics-section h1,.accordion.active .accordion-content,.review-section h2,.nav-button,.controles i,.track-titulo,.timer,.available-on h2,.latest-video h2,.flecha,.punto,.details-col h2,.tickets,.about-col h2,.follow h2,.follow a:hover,#scrollToTopBtn{
     color: #fff;
 }
-header,.hero-content,.album-cover img,.album-details img,.albumes img,.blog-post img,.video-bg,.about-bg,.background-image,.background-image2,.background-image3,.background-image4,.albumes figcaption h3,.albumes figcaption p,.texto p,.texto2 p,.blog-posts .blog-post img, .image img,.blog-post-image-wrapper,.blog-post img,.video-content,.albumes figcaption,.foto img,.contact,.form,.right-section input,.right-section textarea,.albumesss,.albumesss .image-foto,.albumesss .image-foto img,.lyrics-section,#accordion-container,.review-section,.musica,.song-list,.video-container,.video-container iframe,.albumes figure,.albumes img, .tracklist  {
+header,.hero-content,.album-cover img,.album-details img,.albumes img,.blog-post img,.video-bg,.about-bg,.background-image,.background-image2,.background-image3,.background-image4,.albumes figcaption h3,.albumes figcaption p,.texto p,.texto2 p,.blog-posts .blog-post img, .image img,.blog-post-image-wrapper,.blog-post img,.video-content,.albumes figcaption,.foto img,.contact,.form,.right-section input,.right-section textarea,.albumesss,.albumesss .image-foto,.albumesss .image-foto img,.lyrics-section,#accordion-container,.review-section,.musica,.song-list,.video-container,.video-container iframe,.albumes figure,.albumes img, .tracklist,.about-col h2   {
     width: 100%;
+}
+.vertical-name,.about-title,.album-player,.titulo-album,.track-title,.texto h1,.texto2 h1,.blog h1,.blog-post-title,.our-discography h1,.albumes figcaption,.show-more,.transparencia h3,.contact-section h2,.left-section h1,.info-contacto h2,.right-section button,.about-album h2,.about-album li strong,.lyrics-section h1,.accordion-header,.review-section h2,.review-source,.track-titulo,.song-list h1,.song-list li,.titulo-track,.available-on h2,.latest-video h2,.details-col h2,.tickets,.follow h2 {
+    font-family: 'Oswald', Arial, sans-serif;
+}
+.container.navbar,.album-player,.blog-posts,.albums,.album-info,.blog-posts,.blog-posts  {
+    gap: 2em;
+}
+header,.nav-links a::after,.vertical-name,.about-bg,.close,.arrow,.video-bg,.overlay,.play-button,.nuevomodal,#cerrarModal,.albumes img,.albumes figcaption,.transparencia,.nav-icons,.song-list li::before{
+    position: absolute;
+}
+#toggle-dark-mode,.controls-player i,.track-icons i,.image img,.close,.arrow,.play-button,#cerrarModal,.show-more,.right-section button,.accordion-header,.nav-button,.controles i,.titulo-track,.flecha,#scrollToTopBtn   {
+    cursor: pointer;
 }
 body {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -28,34 +40,28 @@ body {
 /* --- HEADER Y NAVBAR --- */
 header {
     background:transparent;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
     padding: 1em ;
     margin-top: 1%;
 }
-
 .container.navbar {
     align-items: center;
     justify-content: flex-start;
     max-width: 75em; /* 1200px */
     margin: 0 auto;
     padding: 0 2em;
-    gap: 2em;
 }
-
 .logo {
     margin-right: auto;
 }
-
 .logo img {
     height: 1.8em;
     width: auto;
     margin-right: 0;
     display: block;
 }
-
 .nav-links {
     gap: 1em;
     position: relative;
@@ -80,23 +86,18 @@ header {
     display: block;
     height: 0.125em;
     background-color: #fff;
-    position: absolute;
     left: 0;
     right: 0;
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a:hover::after,.nav-links a.active::after {
     transform: scaleX(1);
 }
-
 #toggle-dark-mode {
     background: none;
     border: none;
     font-size: 1.5em;
-    cursor: pointer;
     margin-left: 13em;
 }
 /* HERO / PORTADA */
@@ -141,12 +142,9 @@ header {
     margin: 0;
     text-shadow:0.125em 0.125em 0.5em rgba(0,0,0,0.7);
 }
-
 .vertical-name {
-    position: absolute;
     top: 40%;
     left: 10%;
-    font-family: 'Oswald', Arial, sans-serif;
     font-weight: bold;
     transform: translateY(-50%) rotate(180deg);
     font-size: 7.5em;
@@ -188,9 +186,7 @@ header {
     align-items: center;
     justify-content: center;
 }
-
 .about-bg {
-    position: absolute;
     width: 100%; 
     height: 100%;
     background-image: url('../images/about-title-area.jpg');
@@ -199,11 +195,9 @@ header {
     background-repeat: no-repeat;
     z-index: 1;
 }
-
 .about-title {
     position: relative;
     z-index: 2;
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.5em;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -219,9 +213,7 @@ header {
     margin: 0;
     max-width: 100vw;
     box-shadow: none;
-    gap: 2em;
     border-bottom: 0.125em solid #eee;
-    font-family: 'Oswald', Arial, sans-serif;
     margin: 0 auto;
 }
 .left-player {
@@ -267,14 +259,11 @@ header {
     border-right:0.063em solid #eee;
     padding: 0 1.5em 0 1.5em;
 }
-
 .controls-player i {
-    cursor: pointer;
     transition: color 0.2s;
     padding: 0.2em 0.4em;
     border-radius: 0.2em;
 }
-
 .controls-player i:hover {
     color: #007bff;
     background: #f2f2f2;
@@ -365,7 +354,6 @@ header {
     margin-top: 0.5em;
 }
 .titulo-album {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 0.5em;
@@ -422,7 +410,6 @@ header {
     flex: 1;
     font-size: 1em;
     text-align: left;
-    font-family: 'Oswald', Arial, sans-serif;
     letter-spacing: 0.063em;
 }
 .track-icons {
@@ -440,7 +427,6 @@ header {
     color: #bdbdbd;
     font-size: 1.1em;
     margin-left: 0.5em;
-    cursor: pointer;
     transition: color 0.2s;
 }
 /* --- TEXTO PROMOCIONAL --- */
@@ -455,7 +441,6 @@ header {
     justify-content: center;
 }
 .texto h1 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 3em;
     margin-bottom: 0.5em;
     font-weight: 500;
@@ -492,7 +477,6 @@ header {
 }
 
 .texto2 h1 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 3em;
     font-weight: 500;
     letter-spacing: 0.125em;
@@ -583,16 +567,13 @@ header {
   .image.large {
     width: 50%;
   }
-
   .image.small {
     width: 25%;
   }
-
   .image img {
     height: 100%;
     object-fit: cover;
     border-radius: 0;
-    cursor: pointer;
     box-shadow: none;
     transition: transform 0.2s, opacity 0.2s;
     display: block;
@@ -636,21 +617,17 @@ header {
     user-select: none;
   }
   .close {
-    position: absolute;
     top: 1em;
     right: 2em;
     font-size: 2.5em;
-    cursor: pointer;
     z-index: 10;
     user-select: none;
   }
   /* Flechas para slider */
   .arrow {
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 3em;
-    cursor: pointer;
     user-select: none;
     padding: 0 0.625em;
     background: rgba(0,0,0,0.3);
@@ -774,7 +751,6 @@ header {
     margin-top: 10%;
 }
 .blog h1 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.5em;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
@@ -804,7 +780,6 @@ header {
 }
 .blog-posts {
     flex-wrap: nowrap;
-    gap: 2em;
     justify-content: flex-start;
     margin: 0 0 2em 7vw;
 }
@@ -834,7 +809,6 @@ header {
     transform: scale(1.07);
 }
 .blog-post-title {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.1em;
     font-weight: 700;
     margin-bottom: 0.3em;
@@ -868,7 +842,6 @@ header {
     transition: transform 0.5s ease-in-out;
 }
 .video-bg {
-    position: absolute;
     top: 0; 
     left: 0; 
     width: 100%; 
@@ -877,7 +850,6 @@ header {
     z-index: 1;
 }
 .overlay {
-    position: absolute;
     top: 0; 
     left: 0; 
     right: 0; 
@@ -893,12 +865,10 @@ header {
     justify-content: center;
 }
 .play-button {
-    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 4em;
-    cursor: pointer;
     z-index: 4;
     transition: color 0.2s;
 }
@@ -908,7 +878,6 @@ header {
 /* MODAL VIDEO */
 .nuevomodal {
     display: none;
-    position: absolute;
     z-index: 5;
     top: 0;
     left: 0;
@@ -936,7 +905,7 @@ header {
 }
 /* Texto de error más grande */
 .modal-contento .error-message {
-    font-size: 3.5em;              /* Aumentado */
+    font-size: 3.5em;              
     font-weight: bold;
     margin: 0;
 }
@@ -947,11 +916,9 @@ header {
 }
 /* Botón cerrar */
 #cerrarModal {
-    position: absolute;
     bottom: 1.5em;
     right: 2em;
     font-size: 1.5em;
-    cursor: pointer;
     background: none;
     border: none;
 }
@@ -964,7 +931,6 @@ header {
     margin-left: 9%;
 }
 .our-discography h1 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.5em;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
@@ -1013,7 +979,6 @@ header {
     object-position: center center;
     transition: filter 0.3s, transform 0.4s cubic-bezier(.4,0,.2,1);
     display: block;
-    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -1023,7 +988,6 @@ header {
     transform: translate(-50%, -50%) scale(1.07);
 }
 .albumes figcaption {
-    position: absolute;
     left: 0;
     bottom: 0;
     padding: 1.2em 1em 1em 1em;
@@ -1032,7 +996,6 @@ header {
     transition: opacity 0.3s;
     z-index: 2;
     text-align: left;
-    font-family: 'Oswald', Arial, sans-serif;
 }
 .albumes:hover figcaption {
     opacity: 1;
@@ -1051,7 +1014,6 @@ header {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
 }
-
 .show-more {
     background: transparent;
     padding: 0.7em 2em;
@@ -1059,9 +1021,7 @@ header {
     border: 0.125em solid #fff;
     font-weight: 600;
     margin: 2em 0 0 7vw;
-    cursor: pointer;
     transition: background 0.2s, color 0.2s;
-    font-family: 'Oswald', Arial, sans-serif;
     letter-spacing: 0.05em;
     font-size: 1em;
     text-transform: uppercase;
@@ -1094,7 +1054,6 @@ header {
     transition: transform 0.5s ease;
 }
 .transparencia {
-    position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(0,0,0,0.6);
@@ -1108,7 +1067,6 @@ header {
     opacity: 1;
 }
 .transparencia h3 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.2em;
     font-weight: 700;
     text-transform: uppercase;
@@ -1271,16 +1229,13 @@ footer {
     padding: 0 1.25em;
     box-sizing: border-box;
 }
-
 .contact-section h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.3em;
     text-transform: uppercase;
     letter-spacing: 0.063em;
     margin-bottom: 1.75em;
     font-weight: 700;
 }
-
 .contact-section p {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #a09d9d;
@@ -1297,16 +1252,13 @@ footer {
     padding: 3.75em 0 5em 0;
     gap: 0;
 }
-
 .left-section {
     flex: 0 0 48%;
     max-width: 48%;
     padding-left: 7%;
     box-sizing: border-box;
 }
-
 .left-section h1 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.3em;
     text-transform: uppercase;
     margin-bottom: 1.875em;
@@ -1322,20 +1274,16 @@ footer {
     line-height: 1.7;
     max-width: 90%;
 }
-
 .info-contacto {
     gap: 3.75em;
 }
-
 .info-contacto h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.3em;
     text-transform: uppercase;
     margin-bottom: 1.125em;
     letter-spacing: 0.063em;
     font-weight: 700;
 }
-
 .info-contacto p {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
@@ -1367,8 +1315,7 @@ footer {
     resize: none;
 }
 
-.right-section input:focus,
-.right-section textarea:focus {
+.right-section input:focus,.right-section textarea:focus {
     border-color: #ffffff;
 }
 
@@ -1383,11 +1330,9 @@ footer {
     padding: 0.875em 0;
     background: #fff;
     color: #111;
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.08em;
     text-transform: uppercase;
     border: none;
-    cursor: pointer;
     font-weight: 500;
     letter-spacing: 0.063em;
     transition: background 0.2s, color 0.2s;
@@ -1453,9 +1398,7 @@ footer {
     flex-direction: column;
     gap: 1.875em;
 }
-
 .about-album h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     text-transform: uppercase;
     margin-bottom: 1.125em;
@@ -1482,7 +1425,6 @@ footer {
     letter-spacing: 0.063em;
 }
 .about-album li strong {
-    font-family: 'Oswald', Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 0.063em;
 }
@@ -1495,9 +1437,7 @@ footer {
     margin-left: 50%;
     margin-top: -10%;
 }
-
 .lyrics-section h1 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 0.063em;
@@ -1505,7 +1445,6 @@ footer {
     font-weight: 700;
     text-align: left;
 }
-
 #accordion-container {
     max-height: 16.25em;
     overflow-y: auto;
@@ -1524,11 +1463,9 @@ footer {
 .accordion-header {
     justify-content: space-between;
     align-items: center;
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1em;
     color: #ccc;
     padding: 0.75em 0;
-    cursor: pointer;
     transition: background 0.2s;
     text-transform: none;
     letter-spacing: 0.031em;
@@ -1577,14 +1514,12 @@ footer {
     margin-left:50%;
 }
 .review-section h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 0.063em;
     margin-bottom: 1.125em;
     font-weight: 700;
 }
-
 .review-text {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
@@ -1594,13 +1529,11 @@ footer {
     letter-spacing: 0.031em;
 }
 .review-source {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1em;
     font-weight: 700;
     margin-top: 0.625em;
 }
 .nav-icons {
-    position: absolute;
     bottom: 1.375em;
     right: 2em;
     gap: 0.625em;
@@ -1609,7 +1542,6 @@ footer {
     background: transparent;
     border: none;
     font-size: 1.2em;
-    cursor: pointer;
     padding: 0.25em 0.625em;
     transition: color 0.2s;
 }
@@ -1644,7 +1576,6 @@ footer {
 }
 .controles i {
     font-size: 1.5em;
-    cursor: pointer;
     transition: color 0.2s;
 }
 .controles i:hover {
@@ -1657,7 +1588,6 @@ footer {
     padding: 1.25em 1.75em 1em 1.75em;
 }
 .track-titulo {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.15em;
     font-weight: 700;
     margin-bottom: 0.25em;
@@ -1684,9 +1614,7 @@ footer {
     margin-left:11% ;
     color: #a09d9d;
 }
-
 .song-list h1 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.2em;
     text-transform: uppercase;
     margin-bottom: 0.8em;
@@ -1708,7 +1636,6 @@ footer {
     align-items: center;
     border-bottom: 1px solid #222;
     padding: 0.6em 0;
-    font-family: 'Oswald', Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -1718,23 +1645,18 @@ footer {
 .song-list li::before {
     counter-increment: track-number;
     content: counter(track-number) ". ";
-    position: absolute;
     left: 0;
     font-weight: bold;
     font-size: 1em;
 }
-
 .titulo-track {
-    cursor: pointer;
     transition: color 0.2s;
     color: #a09d9d;
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1em;
     font-weight: 700;
     padding-left: 1.5em; /* Deja espacio para el número manual */
     flex: 1;
 }
-
 .buy-track {
     color: #ffffff;
     font-size: 0.9em;
@@ -1752,7 +1674,6 @@ footer {
     margin-left: 2%;
 }
 .available-on h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 0.063em;
@@ -1782,7 +1703,6 @@ footer {
     padding: 0 0 1.875em 0;
 }
 .latest-video h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size:1.875em;
     line-height:2.5em;
     margin-left: 5%;
@@ -1819,7 +1739,6 @@ footer {
 }
 .flecha {
     font-size: 2em;
-    cursor: pointer;
     user-select: none;
     transition: color 0.2s;
     align-items: center;
@@ -1903,7 +1822,6 @@ footer {
     color: #bdbdbd;
 }
 .details-col h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     margin-bottom: 1em;
     letter-spacing: 0.063em;
@@ -1926,7 +1844,6 @@ footer {
     background: transparent;
     border: 2px solid #fff;
     padding: 1em 3em;
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.2em;
     letter-spacing: 0.08em;
     text-decoration: none;
@@ -1951,7 +1868,6 @@ footer {
     margin-left: 2em;
 }
 .about-col h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     margin-bottom: 0.7em;
     letter-spacing: 0.063em;
@@ -1967,7 +1883,6 @@ footer {
     margin-top: 2.5em;
 }
 .follow h2 {
-    font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
     margin-bottom: 0.7em;
     letter-spacing: 0.063em;
@@ -1991,7 +1906,6 @@ footer {
     width: 2.5em; /* 40px */
     height: 2.5em;
     font-size: 1.5em;
-    cursor: pointer;
     display: none;
     z-index: 1000;
     box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.15);
@@ -2005,7 +1919,6 @@ footer {
 .albums {
     display: grid;
     grid-template-columns: repeat(4, 0.2fr);
-    gap: 2em;
     margin: 2em 0;
 }
 .albumes {
@@ -2027,7 +1940,7 @@ footer {
     transition: transform 0.3s;
 }
 #scrollToTopBtn:hover {
-    background: #007bff;
+    background: #bcbcbc;
 }
 /* --- MODO OSCURO --- */
 body.dark-mode {
@@ -2100,7 +2013,6 @@ body.dark-mode #scrollToTopBtn:hover {
         .album-info {
         flex-direction: column;
         align-items: center;
-        gap: 2em;
         padding: 2em 1em;
     }
     .album-cover {
@@ -2116,7 +2028,6 @@ body.dark-mode #scrollToTopBtn:hover {
     }
         .blog-posts {
         flex-wrap: wrap;
-        gap: 2em;
         margin-left: 2vw;
     }
     .blog-post {
@@ -2169,7 +2080,6 @@ body.dark-mode #scrollToTopBtn:hover {
 @media (max-width: 1100px) {
     .blog-posts {
         flex-wrap: wrap;
-        gap: 2em;
         margin-left: 4vw;
     }
     .blog-post {
