@@ -225,6 +225,7 @@ header {
     gap: 2em;
     border-bottom: 0.125em solid #eee;
     font-family: 'Oswald', Arial, sans-serif;
+    margin: 0 auto;
 }
 .left-player {
     align-items: center;
