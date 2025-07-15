@@ -1,3 +1,48 @@
+// ========== GALERÍA DE ÁLBUMES (OUR DISCOGRAPHY - INICIAL) ==========
+document.addEventListener("DOMContentLoaded", function() {
+    const albums = [
+        { imgSrc: "assets/images/album-1.jpg", altText: "Album cover with neon lights and text 'Be - Doo Be - Doo'", title: "BE-DOO", artist: "Caller" },
+        { imgSrc: "assets/images/album-2.jpg", altText: "Album cover with a road sign and text 'Make It Go Away'", title: "FREE SPIRIT", artist: "Go Away" },
+        { imgSrc: "assets/images/album-3.jpg", altText: "Album cover with neon sign and text 'Today Was A Good Day'", title: "DEPRESSED DAYS", artist: "Ritual Spirit" },
+        { imgSrc: "assets/images/album-4.jpg", altText: "Album cover with a dancer and text 'FOND OF HER'", title: "WRONG MOTION", artist: "Love Hate" }
+    ];
+
+    const albumContainer = document.getElementById("album-container");
+    if (!albumContainer) {
+        console.error("El contenedor de álbumes no se encontró.");
+        return; // Salir de la función si no se encuentra el contenedor
+    }
+
+    albums.forEach(album => {
+        const article = document.createElement("article");
+        article.classList.add("albumes");
+        const figure = document.createElement("figure");
+        const img = document.createElement("img");
+        img.src = album.imgSrc;
+        img.alt = album.altText;
+
+        // Manejo de errores para la carga de imágenes
+        img.onerror = function() {
+            console.error(`Error al cargar la imagen: ${album.imgSrc}`);
+            img.src = "path/to/default-image.jpg"; // Ruta a una imagen por defecto
+        };
+
+        // Agregar figcaption con título y artista
+        const figcaption = document.createElement("figcaption");
+        const h3 = document.createElement("h3");
+        h3.textContent = album.title;
+        const p = document.createElement("p");
+        p.textContent = album.artist;
+        figcaption.appendChild(h3);
+        figcaption.appendChild(p);
+
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+        article.appendChild(figure);
+        albumContainer.appendChild(article);
+    });
+});
+
 
 
 // ========== BOTÓN SCROLL ARRIBA ==========

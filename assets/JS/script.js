@@ -148,7 +148,13 @@ document.addEventListener("DOMContentLoaded", function() {
         { imgSrc: "assets/images/album-3.jpg", altText: "Album cover with neon sign and text 'Today Was A Good Day'", title: "DEPRESSED DAYS", artist: "Ritual Spirit" },
         { imgSrc: "assets/images/album-4.jpg", altText: "Album cover with a dancer and text 'FOND OF HER'", title: "WRONG MOTION", artist: "Love Hate" }
     ];
+
     const albumContainer = document.getElementById("album-container");
+    if (!albumContainer) {
+        console.error("El contenedor de álbumes no se encontró.");
+        return; // Salir de la función si no se encuentra el contenedor
+    }
+
     albums.forEach(album => {
         const article = document.createElement("article");
         article.classList.add("albumes");
@@ -156,6 +162,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const img = document.createElement("img");
         img.src = album.imgSrc;
         img.alt = album.altText;
+
+        // Manejo de errores para la carga de imágenes
+        img.onerror = function() {
+            console.error(`Error al cargar la imagen: ${album.imgSrc}`);
+            img.src = "path/to/default-image.jpg"; // Ruta a una imagen por defecto
+        };
 
         // Agregar figcaption con título y artista
         const figcaption = document.createElement("figcaption");
@@ -172,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
         albumContainer.appendChild(article);
     });
 });
+
 
 // ========== REPRODUCTOR DE AUDIOS EN TRACKLIST ==========
 /* ========================== AUDIO GLOBAL ========================== */
