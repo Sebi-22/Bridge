@@ -12,6 +12,12 @@ overflow:hidden;
 .container.navbar,.nav-links,.background-image,.background-image2,.background-image3,.background-image4,.hero-content,.about-hero,.album-player,.left-player,.controls-player,.progress-container-player,.volume-control-player,.album-info,.album-cover,.apps,.tracklist li,.track-icons,.texto, .gallery, .modal-content,.date-item,.date-block,.month-day,.ciudad-link,.blog-posts,.blog-post,.video-section,.video-content,.nuevomodal,.modal-contento,.albums,.albumes,.articulos,.foto,.transparencia,.transparencia .social,.footer,.social-icons,.social-icons a,.social-icons a i,.contact-info p,.contact,.form,.info-contacto,.right-section,.albumesss,.albumesss .image-foto,.left-column,.about1,.accordion-header,.nav-icons,.controles,.controles > div,.track-info,.song-list li,.platform-icons,.video-container,.iconos-abajo,.flecha,.punto,.top-row,.img-col,.map-col,.bottom-row,.imagenes,.albumes{
     display: flex;
 }
+header,.nav-links a,#toggle-dark-mode,.tour-dates,.vertical-name,.about-title,.album-info,.titulo-album,.track-icons i:hover,.texto h1,.texto2 h1,.close,.arrow,.blog h1,.blog-post-title,.play-button,.modal-contento .error-message,#cerrarModal,.our-discography h1,.albumes figcaption,.show-more,.transparencia h3,.transparencia .social a,.contact-section h2,.left-section,.right-section input,.right-section textarea,.right-section button:hover,.alert,.about-album h2,.about-album li strong,.lyrics-section h1,.accordion.active .accordion-content,.review-section h2,.nav-button,.controles i,.track-titulo,.timer,.available-on h2,.latest-video h2,.flecha,.punto,.details-col h2,.tickets,.about-col h2,.follow h2,.follow a:hover,#scrollToTopBtn{
+    color: #fff;
+}
+header,.hero-content,.album-cover img,.album-details img,.albumes img,.blog-post img,.video-bg,.about-bg,.background-image,.background-image2,.background-image3,.background-image4,.albumes figcaption h3,.albumes figcaption p,.texto p,.texto2 p,.blog-posts .blog-post img, .image img,.blog-post-image-wrapper,.blog-post img,.video-content,.albumes figcaption,.foto img,.contact,.form,.right-section input,.right-section textarea,.albumesss,.albumesss .image-foto,.albumesss .image-foto img,.lyrics-section,#accordion-container,.review-section,.musica,.song-list,.video-container,.video-container iframe,.albumes figure,.albumes img, .tracklist  {
+    width: 100%;
+}
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #222;
@@ -22,11 +28,9 @@ body {
 /* --- HEADER Y NAVBAR --- */
 header {
     background:transparent;
-    color: #fff;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 100;
     padding: 1em ;
     margin-top: 1%;
@@ -57,9 +61,7 @@ header {
     position: relative;
     left: 28%;
 }
-
 .nav-links a {
-    color: #fff;
     text-transform: uppercase;
     position: relative;
     padding: 0.3125em 0;
@@ -93,7 +95,6 @@ header {
 #toggle-dark-mode {
     background: none;
     border: none;
-    color: #fff;
     font-size: 1.5em;
     cursor: pointer;
     margin-left: 13em;
@@ -128,12 +129,10 @@ header {
     background-image: url('../images/contact-us-title.jpg');
 }
 .hero-content {
-    width: 100%;
     justify-content: center;
     align-items: center;
 }
 .tour-dates {
-    color: #fff;
     font-family: 'Oswald', 'Open Sans', Arial, sans-serif;
     font-size: 3em;
     font-weight: 200;
@@ -155,7 +154,6 @@ header {
     text-orientation: mixed;
     margin-top: 8%;
     line-height: 1;
-    color: #fff;
     text-shadow: 0.125em 0.125em 0.5em #000;
     letter-spacing: 0.05em;
 }
@@ -205,7 +203,6 @@ header {
 .about-title {
     position: relative;
     z-index: 2;
-    color: #fff;
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.5em;
     font-weight: 500;
@@ -350,7 +347,6 @@ header {
     background: #0a0a0a url('../images/h1-img-8.jpg') center/cover no-repeat;
     padding: 4em 2em 3em 2em;
     min-height: 90vh;
-    color: #fff;
     position: relative;
 }
 .album-cover {
@@ -360,14 +356,12 @@ header {
     margin-left: 8%;
 }
 .album-cover img {
-    width: 100%;
     max-width: 25em;
     border-radius: 0.5em;
     box-shadow: 0 0.25em 1.5em rgba(0,0,0,0.5);
     margin-bottom: 2em;
 }
 .album-details {
-    width: 100%;
     margin-top: 0.5em;
 }
 .titulo-album {
@@ -375,7 +369,6 @@ header {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 0.5em;
-    color: #fff;
     letter-spacing: 0.063em;
     text-align: left;
 }
@@ -450,9 +443,6 @@ header {
     cursor: pointer;
     transition: color 0.2s;
 }
-.track-icons i:hover {
-    color: #fff;
-}
 /* --- TEXTO PROMOCIONAL --- */
 .texto {
     width: 99vw;
@@ -467,7 +457,6 @@ header {
 .texto h1 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 3em;
-    color: #fff;
     margin-bottom: 0.5em;
     font-weight: 500;
     letter-spacing: 0.063em;
@@ -505,7 +494,6 @@ header {
 .texto2 h1 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 3em;
-    color: #fff;
     font-weight: 500;
     letter-spacing: 0.125em;
     text-align: left;
@@ -601,7 +589,6 @@ header {
   }
 
   .image img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0;
@@ -652,7 +639,6 @@ header {
     position: absolute;
     top: 1em;
     right: 2em;
-    color: #fff;
     font-size: 2.5em;
     cursor: pointer;
     z-index: 10;
@@ -663,7 +649,6 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: #fff;
     font-size: 3em;
     cursor: pointer;
     user-select: none;
@@ -791,7 +776,6 @@ header {
 .blog h1 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.5em;
-    color: #fff;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
     letter-spacing: 0.063em;
@@ -835,14 +819,12 @@ header {
     align-items: flex-start;
 }
 .blog-post-image-wrapper {
-    width: 100%;
     aspect-ratio: 1.2/1;
     background: #222;
     display: block;
     margin-bottom: 1em;
 }
 .blog-post img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s cubic-bezier(.4,0,.2,1);
@@ -854,7 +836,6 @@ header {
 .blog-post-title {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.1em;
-    color: #fff;
     font-weight: 700;
     margin-bottom: 0.3em;
     text-transform: uppercase;
@@ -907,7 +888,6 @@ header {
 .video-content {
     position: relative;
     z-index: 3;
-    width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -918,7 +898,6 @@ header {
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 4em;
-    color: #fff;
     cursor: pointer;
     z-index: 4;
     transition: color 0.2s;
@@ -959,7 +938,6 @@ header {
 .modal-contento .error-message {
     font-size: 3.5em;              /* Aumentado */
     font-weight: bold;
-    color: #fff;
     margin: 0;
 }
 .modal-contento .error-subtext {
@@ -973,7 +951,6 @@ header {
     bottom: 1.5em;
     right: 2em;
     font-size: 1.5em;
-    color: #fff;
     cursor: pointer;
     background: none;
     border: none;
@@ -989,7 +966,6 @@ header {
 .our-discography h1 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.5em;
-    color: #fff;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
     letter-spacing: 0.063em;
@@ -1050,10 +1026,8 @@ header {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
     padding: 1.2em 1em 1em 1em;
     box-sizing: border-box;
-    color: #fff;
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 2;
@@ -1080,7 +1054,6 @@ header {
 
 .show-more {
     background: transparent;
-    color: #fff;
     padding: 0.7em 2em;
     border-radius: 0;
     border: 0.125em solid #fff;
@@ -1115,7 +1088,6 @@ header {
     aspect-ratio: 1/1;
 }
 .foto img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -1139,7 +1111,6 @@ header {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.2em;
     font-weight: 700;
-    color: #fff;
     text-transform: uppercase;
     margin: 0 0 0.2em 0;
     letter-spacing: 0.063em;
@@ -1155,7 +1126,6 @@ header {
     gap: 0.7em;
 }
 .transparencia .social a {
-    color: #fff;
     font-size: 1.3em;
 }
 .transparencia .social a:hover {
@@ -1289,7 +1259,6 @@ footer {
     justify-content: center;
     align-items: flex-start;
     padding: 4.375em 0 5.625em 0;
-    width: 100%;
     margin: 0;
     gap: 0;
 }
@@ -1306,7 +1275,6 @@ footer {
 .contact-section h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2.3em;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.063em;
     margin-bottom: 1.75em;
@@ -1327,14 +1295,12 @@ footer {
     align-items: flex-start;
     background: #0a0a0a;
     padding: 3.75em 0 5em 0;
-    width: 100%;
     gap: 0;
 }
 
 .left-section {
     flex: 0 0 48%;
     max-width: 48%;
-    color: #fff;
     padding-left: 7%;
     box-sizing: border-box;
 }
@@ -1389,12 +1355,9 @@ footer {
     box-sizing: border-box;
 }
 
-.right-section input,
-.right-section textarea {
-    width: 100%;
+.right-section input,.right-section textarea {
     background: transparent;
     border: 0.125em solid #fff;
-    color: #fff;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.08em;
     padding: 1em 0.875em;
@@ -1431,7 +1394,6 @@ footer {
 }
 .right-section button:hover {
     background: #000000;
-    color: #fff;
     border: 0.125em solid #fff;
 }
 
@@ -1442,7 +1404,6 @@ footer {
     min-height: 1.125em;
 }
 .alert {
-    color: #fff;
     background: #f1c40f;
     padding: 0.75em 1.125em;
     margin-top: 1.125em;
@@ -1456,7 +1417,6 @@ footer {
     justify-content: center;
     align-items: flex-start;
     padding: 2.5em 0 0 0;
-    width: 100%;
     max-width: 75em;
     margin: 0 auto;
     gap: 2.5em;
@@ -1465,7 +1425,6 @@ footer {
 
 /* --- COLUMNA IZQUIERDA --- */
 .albumesss .image-foto {
-    width: 100%;
     max-width: 32.5em;
     aspect-ratio: 1/1;
     margin: 0 auto 0 auto;
@@ -1473,7 +1432,6 @@ footer {
     justify-content: center;
 }
 .albumesss .image-foto img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -1503,7 +1461,6 @@ footer {
     margin-bottom: 1.125em;
     letter-spacing: 0.063em;
     font-weight: 700;
-    color: #fff;
 }
 
 .about-album p {
@@ -1525,7 +1482,6 @@ footer {
     letter-spacing: 0.063em;
 }
 .about-album li strong {
-    color: #fff;
     font-family: 'Oswald', Arial, sans-serif;
     font-weight: 700;
     letter-spacing: 0.063em;
@@ -1535,7 +1491,6 @@ footer {
 .lyrics-section {
     margin: 1.875em auto;
     max-width: 32.5em;
-    width: 100%;
     padding: 0 0.625em;
     margin-left: 50%;
     margin-top: -10%;
@@ -1544,7 +1499,6 @@ footer {
 .lyrics-section h1 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1.5em;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.063em;
     margin-bottom: 1.125em;
@@ -1553,7 +1507,6 @@ footer {
 }
 
 #accordion-container {
-    width: 100%;
     max-height: 16.25em;
     overflow-y: auto;
     padding-right: 0.25em;
@@ -1603,7 +1556,6 @@ footer {
 .accordion.active .accordion-content {
     padding: 0.875em 1.25em;
     border-left: 0.125em solid #fff;
-    color: #fff;
     max-height: 12.5em;
     overflow-y: auto;
     scrollbar-width: none;       /* Firefox */
@@ -1619,7 +1571,6 @@ footer {
     padding: 1.75em 2em 1.375em 2em;
     border-radius: 0.125em;
     max-width: 37.5em;
-    width: 100%;
     margin: 1.875em auto; /* Centrado sin margin-right */
     box-sizing: border-box;
     position: relative; /* Para posicionar los botones dentro */
@@ -1628,7 +1579,6 @@ footer {
 .review-section h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.063em;
     margin-bottom: 1.125em;
@@ -1645,7 +1595,6 @@ footer {
 }
 .review-source {
     font-family: 'Oswald', Arial, sans-serif;
-    color: #fff;
     font-size: 1em;
     font-weight: 700;
     margin-top: 0.625em;
@@ -1659,7 +1608,6 @@ footer {
 .nav-button {
     background: transparent;
     border: none;
-    color: #fff;
     font-size: 1.2em;
     cursor: pointer;
     padding: 0.25em 0.625em;
@@ -1670,7 +1618,6 @@ footer {
 }
 /* --- PLAYER --- */
 .musica {
-    width: 100%;
     max-width: 31.25em;
     background: #222;
     border-radius: 0.125em;
@@ -1696,7 +1643,6 @@ footer {
     border-right: none;
 }
 .controles i {
-    color: #fff;
     font-size: 1.5em;
     cursor: pointer;
     transition: color 0.2s;
@@ -1712,7 +1658,6 @@ footer {
 }
 .track-titulo {
     font-family: 'Oswald', Arial, sans-serif;
-    color: #fff;
     font-size: 1.15em;
     font-weight: 700;
     margin-bottom: 0.25em;
@@ -1726,14 +1671,12 @@ footer {
 }
 .timer {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
-    color: #fff;
     font-size: 1em;
     font-weight: 700;
     letter-spacing: 0.125em;
 }
 /* --- LISTA DE CANCIONES --- */
 .song-list {
-    width: 100%;
     max-width: 35.625em;
     margin: 5em auto 0 auto; /* Ajustar margen superior */
     background: transparent;
@@ -1810,7 +1753,6 @@ footer {
 }
 .available-on h2 {
     font-family: 'Oswald', Arial, sans-serif;
-    color: #fff;
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 0.063em;
@@ -1841,7 +1783,6 @@ footer {
 }
 .latest-video h2 {
     font-family: 'Oswald', Arial, sans-serif;
-    color: #fff;
     font-size:1.875em;
     line-height:2.5em;
     margin-left: 5%;
@@ -1855,13 +1796,11 @@ footer {
 .video-container {
     justify-content: center;
     align-items: center;
-    width: 100%;
     margin-bottom: 1.125em;
     background: #000; /* Fondo negro para el área del video */
     padding: 2em 0;
 }
 .video-container iframe {
-    width: 100%;
     max-width: 75em;
     aspect-ratio: 16/9;
     height: auto;
@@ -1879,7 +1818,6 @@ footer {
     min-height: 3.75em;
 }
 .flecha {
-    color: #fff;
     font-size: 2em;
     cursor: pointer;
     user-select: none;
@@ -1893,7 +1831,6 @@ footer {
 }
 .punto {
     font-size: 2em;
-    color: #fff;
     text-decoration: none;
     transition: color 0.2s;
     align-items: center;
@@ -1968,7 +1905,6 @@ footer {
 .details-col h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
-    color: #fff;
     margin-bottom: 1em;
     letter-spacing: 0.063em;
 }
@@ -1988,7 +1924,6 @@ footer {
 .tickets {
     display: inline-block;
     background: transparent;
-    color: #fff;
     border: 2px solid #fff;
     padding: 1em 3em;
     font-family: 'Oswald', Arial, sans-serif;
@@ -2018,7 +1953,6 @@ footer {
 .about-col h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
-    color: #fff;
     margin-bottom: 0.7em;
     letter-spacing: 0.063em;
 }
@@ -2035,7 +1969,6 @@ footer {
 .follow h2 {
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 2em;
-    color: #fff;
     margin-bottom: 0.7em;
     letter-spacing: 0.063em;
 }
@@ -2047,16 +1980,12 @@ footer {
     text-decoration: none;
     vertical-align: middle;
 }
-.follow a:hover {
-    color: #fff;
-}
 /* --- BOTÓN SCROLL ARRIBA --- */
 #scrollToTopBtn {
     position: fixed;
     bottom: 1.875em; /* 30px */
     right: 1.875em;
     background: #222;
-    color: #fff;
     border: none;
     border-radius: 50%;
     width: 2.5em; /* 40px */
@@ -2088,11 +2017,9 @@ footer {
 }
 .albumes figure {
     margin: 0;
-    width: 100%;
     height: 100%;
 }
 .albumes img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     aspect-ratio: 1/1;
@@ -2103,7 +2030,6 @@ footer {
     background: #007bff;
 }
 /* --- MODO OSCURO --- */
-
 body.dark-mode {
     background: #5e5e5e;
     color: #f1f1f1;
@@ -2180,9 +2106,6 @@ body.dark-mode #scrollToTopBtn:hover {
     .album-cover {
         max-width: 21.875em;
         margin-bottom: 2em;
-    }
-    .tracklist {
-        width: 100%;
     }
        .gallery {
         grid-template-columns: repeat(2, 1fr);
