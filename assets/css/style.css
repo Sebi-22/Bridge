@@ -457,7 +457,6 @@ header {
 .texto {
     width: 99vw;
     min-height: 25em;
-    background: #000;
     text-align: left;
     margin: 0;
     padding: 4em 0 3em 7vw;
@@ -499,7 +498,6 @@ header {
 /*texto2*/
 .texto2 {
     width: 100vw;
-    background: #0a0a0a;
     padding: 4em 0 5em 0;
     margin: 0;
 }
@@ -538,10 +536,6 @@ header {
     max-width: 85vw;
     text-align: left;
     font-weight: 400;
-}
-/* Modo oscuro */
-body.dark-mode .texto {
-    background: #181818;
 }
 /* === MODAL VIDEO === */
 .video {
@@ -790,7 +784,6 @@ body.dark-mode .texto {
 /* --- SECCIÓN DEL BLOG --- */
 .blog {
     width: 100vw;
-    background: #000;
     margin: 0;
     padding: 0 0 3em 0;
     margin-top: 10%;
@@ -1295,7 +1288,6 @@ footer {
 .contact {
     justify-content: center;
     align-items: flex-start;
-    background: #000000;
     padding: 4.375em 0 5.625em 0;
     width: 100%;
     margin: 0;
@@ -1477,11 +1469,9 @@ footer {
     max-width: 32.5em;
     aspect-ratio: 1/1;
     margin: 0 auto 0 auto;
-    background: #000;
     align-items: center;
     justify-content: center;
 }
-
 .albumesss .image-foto img {
     width: 100%;
     height: 100%;
@@ -1748,7 +1738,7 @@ footer {
     margin: 5em auto 0 auto; /* Ajustar margen superior */
     background: transparent;
     padding: 0 1em;
-    margin-left:5% ;
+    margin-left:11% ;
     color: #a09d9d;
 }
 
@@ -1812,9 +1802,6 @@ footer {
     text-transform: none;
     white-space: nowrap;
 }
-
-
-
 /* --- SECCIÓN DISPONIBLE EN --- */
 .available-on {
     margin: 2.5em 0 0 0;
@@ -1830,10 +1817,12 @@ footer {
     margin-bottom: 1.375em;
     font-weight: 700;
     text-align: left;
+    margin-left: 6%;
 }
 .platform-icons {
     gap: 1.375em;
     align-items: center;
+    margin-left: 5%;
 }
 .platform-icons a img {
     display: block;
@@ -1850,7 +1839,6 @@ footer {
     margin: 2.5em 0 0 0;
     padding: 0 0 1.875em 0;
 }
-
 .latest-video h2 {
     font-family: 'Oswald', Arial, sans-serif;
     color: #fff;
@@ -1931,7 +1919,6 @@ footer {
   width: 95vw;
   margin: 0 auto;
   padding: 2em 0 0 0;
-  background: #0a0a0a;
   color: #fff;
   font-family: 'Oswald', Arial, sans-serif;
   margin-top: 10%;
@@ -2082,7 +2069,6 @@ footer {
 }
 /* --- SECCIÓN DE IMÁGENES --- */
 .imagenes {
-    background: #000000;
     min-height: 100vh;
     justify-content: center;
     margin-top: 15%;
@@ -2117,19 +2103,31 @@ footer {
     background: #007bff;
 }
 /* --- MODO OSCURO --- */
+
 body.dark-mode {
-    background: #ffffff;
+    background: #5e5e5e;
     color: #f1f1f1;
+}
+.dark-mode .our-discography{
+    background: #5e5e5e;
+    color: #f1f1f1;
+}
+.dark-mode .form{
+    background: #454444;
+    color: #f1f1f1;
+}
+.dark-mode .texto .texto2{
+    color: #f1f1f1;
+    background-color: #5e5e5e;
+}
+.dark-mode .video-container{
+    background: #5e5e5e;
 }
 body.dark-mode footer {
-    background: #181818;
-    color: #f1f1f1;
+    background: #5e5e5e;
+    color: #ffffff;
 }
 body.dark-mode .nav-links a {
-    color: #f1f1f1;
-}
-body.dark-mode .album,body.dark-mode .album-info,body.dark-mode .tracklist li,body.dark-mode .blog-post,body.dark-mode .album-card,body.dark-mode .fechas ul,body.dark-mode .footer {
-    background: #232323;
     color: #f1f1f1;
 }
 body.dark-mode .progress-bar {
@@ -2139,26 +2137,25 @@ body.dark-mode .progress-bar-fill {
     background: #00bfff;
 }
 body.dark-mode .buy-tickets,body.dark-mode .show-more {
-    background: #00bfff;
-    color: #181818;
+    color: #ffffff;
 }
 body.dark-mode .buy-tickets:hover,body.dark-mode .show-more:hover {
-    background: #0099cc;
+    background: #ffffff;
 }
 body.dark-mode .footer-bottom {
-    background: #111;
-    color: #aaa;
+    background: #5e5e5e;
+    color: #ffffff;
 }
 body.dark-mode .modal-content,body.dark-mode .modal-contento {
     background: #232323;
     color: #f1f1f1;
 }
 body.dark-mode #scrollToTopBtn {
-    background: #00bfff;
+    background: #ffffff;
     color: #181818;
 }
 body.dark-mode #scrollToTopBtn:hover {
-    background: #0099cc;
+    background: #868686;
 }
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
