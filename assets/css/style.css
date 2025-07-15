@@ -166,7 +166,6 @@ header {
         .apps {
           justify-content:left;
           margin-top: 1.25em;
-
         }
 .apps img {
     margin: 0 0.5em;
@@ -236,7 +235,6 @@ header {
     text-overflow: ellipsis;
     line-height: 1.1;
 }
-
 .title-player {
     font-weight: bold;
     font-size: 1.1em;
@@ -244,13 +242,11 @@ header {
     color: #111;
     text-transform: uppercase;
 }
-
 .subtitle-player {
     color: #888;
     font-size: 0.95em;
     letter-spacing: 0.03em;
 }
-
 .controls-player {
     align-items: center;
     gap: 1.5em;
@@ -268,7 +264,6 @@ header {
     color: #007bff;
     background: #f2f2f2;
 }
-
 .progress-container-player {
     align-items: center;
     gap: 0.5em;
@@ -276,25 +271,21 @@ header {
     border-right: 0.063em solid #eee;
     padding: 0 1.5em 0 1.5em;
 }
-
 .progress-bar-player {
     background: #ddd;
-    width: 16em; /* AGRANDADO: Cambialo a 20em si la querés aún más larga */
+    width: 16em;
     height: 0.375em;
     border-radius: 0.1875em;
     margin-right: 0.5em;
     position: relative;
     overflow: hidden;
 }
-
 .progress-bar-fill-player {
     background: #222;
     height: 100%;
     width: 0%; 
     transition: width 0.2s;
 }
-
-
 .time-player {
     font-size: 0.9em;
     color: #888;
@@ -302,24 +293,20 @@ header {
     min-width: 2.7em;
     text-align: right;
 }
-
 .separator-player {
     color: #bbb;
     font-size: 0.9em;
     margin: 0 0.1em;
 }
-
 .volume-control-player {
     align-items: center;
     gap: 0.5em;
     padding-left: 1.5em;
 }
-
 .volume-control-player i {
     font-size: 1.1em;
     color: #222;
 }
-
 .volume-slider-player {
     width: 5em;
     accent-color: #222;
@@ -327,7 +314,6 @@ header {
     border-radius: 0.2em;
     height: 0.4em;
 }
-
 /* --- ALBUM INFO SECCIÓN (HOME) --- */
 .album-info {
     justify-content: center;
@@ -381,7 +367,6 @@ header {
 .apps img:hover {
     transform: scale(1.05);
 }
-
 /* TRACKLIST */
 .tracklist {
     flex: 1 1 21.875em;
@@ -475,7 +460,6 @@ header {
     padding: 4em 0 5em 0;
     margin: 0;
 }
-
 .texto2 h1 {
     font-size: 3em;
     font-weight: 500;
@@ -487,7 +471,6 @@ header {
     position: relative;
     display: inline-block;
 }
-
 .texto2 h1::after {
     content: "";
     display: block;
@@ -496,7 +479,6 @@ header {
     background: #fff;
     margin-top: 0.5em;
 }
-
 .texto2 p {
     color: #bdbdbd;
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
@@ -522,7 +504,6 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 .modal-contenedor {
   position: relative;
   width: 100%;
@@ -530,7 +511,6 @@ header {
   margin: auto;
   background: transparent;
 }
-
 .modal-contenedor iframe {
   width: 100%;
   height: 22.5em;
@@ -558,12 +538,10 @@ header {
     max-width: 100vw;
     box-sizing: border-box;
   }
-
   .image {
     height: 20em;
     position: relative;
   }
-
   .image.large {
     width: 50%;
   }
@@ -578,13 +556,10 @@ header {
     transition: transform 0.2s, opacity 0.2s;
     display: block;
   }
-
-  .image.large:hover img,
-  .image.small:hover img {
+  .image.large:hover img,.image.small:hover img {
     opacity: 0.5;
     transform: scale(1.05);
   }
-
   /* Modal básico */
   .modal {
     display: none;
@@ -662,7 +637,6 @@ header {
   border-bottom: 1px solid #222;
   padding: 1.25em 0;
 }
-
 /* Bloque con fecha */
 .date-block {
   align-items: center;
@@ -710,7 +684,6 @@ header {
   letter-spacing: 0.02em;
   line-height: 1.3;
 }
-
 /* Botón de tickets */
 .buy-tickets {
   font-weight: 700;
@@ -721,7 +694,6 @@ header {
   margin-left: 1em;
   cursor: pointer;
 }
-
 /* Botón Ver Todo */
 .view-all {
   text-align: center;
@@ -1037,7 +1009,6 @@ header {
     align-items: stretch;
     gap: 0;
     background: #111;
-
 }
 .articulos article {
     flex: 1 1 0;
@@ -1079,7 +1050,6 @@ header {
     margin: 0 0 1em 0;
     font-size: 1.1em;
 }
-
 .transparencia .social {
     gap: 0.7em;
 }
@@ -1096,7 +1066,6 @@ footer {
   padding: 2em 0 0 0;
   margin-top: 12%;
 }
-
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -1106,15 +1075,12 @@ footer {
   padding: 0 1em;
   gap: 2em;
 }
-
 .footer-column {
   flex: 1 1 12.5em;
   min-width: 12.5em;
   margin-bottom: 1em;
 }
-
-.footer-column h2,
-.footer-column h3 {
+.footer-column h2,.footer-column h3 {
   font-family: 'Oswald', Arial, sans-serif;
   margin-bottom: 0.7em;
   font-size: 1.2em;
@@ -1122,12 +1088,10 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
 .footer-column h3 {
   font-size: 2.2em;
   margin-bottom: 0.3em;
 }
-
 .footer-desc {
   color: #bdbdbd;
   font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
@@ -1136,13 +1100,11 @@ footer {
   line-height: 1.6;
   max-width: 20em;
 }
-
 .social-icons {
   display: flex;
   gap: 0.8em;
   margin-top: 1.5em;
 }
-
 .social-icons a {
   display: inline-flex;
   align-items: center;
@@ -1158,7 +1120,6 @@ footer {
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
 }
-
 .social-icons a:hover {
   background: #fff;
   color: #000;
@@ -1181,7 +1142,6 @@ footer {
   color: #fff;
   font-size: 1em;
 }
-
 .footer-column a {
   color: #fff;
   font-family: 'Oswald', Arial, sans-serif;
@@ -1194,12 +1154,10 @@ footer {
   display: inline-block;
   transition: color 0.2s;
 }
-
 .footer-column a:hover {
   color: #666;
   text-decoration: underline;
 }
-
 /* Footer inferior */
 .footer-bottom {
   text-align: center;
@@ -1220,7 +1178,6 @@ footer {
     margin: 0;
     gap: 0;
 }
-
 .contact-section {
     flex: 0 0 22%;
     max-width: 22%;
@@ -1265,7 +1222,6 @@ footer {
     letter-spacing: 0.063em;
     font-weight: 700;
 }
-
 .left-section > p {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #ccc;
@@ -1292,7 +1248,6 @@ footer {
     letter-spacing: 0.063em;
     line-height: 1.7;
 }
-
 .right-section {
     flex: 0 0 44%;
     max-width: 44%;
@@ -1302,7 +1257,6 @@ footer {
     padding-right: 7%;
     box-sizing: border-box;
 }
-
 .right-section input,.right-section textarea {
     background: transparent;
     border: 0.125em solid #fff;
@@ -1314,16 +1268,13 @@ footer {
     transition: border 0.3s;
     resize: none;
 }
-
 .right-section input:focus,.right-section textarea:focus {
     border-color: #ffffff;
 }
-
 .right-section textarea {
     min-height: 8.75em;
     max-height: 16.25em;
 }
-
 .right-section button {
     margin-top: 1.125em;
     width: 13.125em;
@@ -1341,7 +1292,6 @@ footer {
     background: #000000;
     border: 0.125em solid #fff;
 }
-
 .error {
     color: #dc3232;
     font-size: 0.95em;
@@ -1367,7 +1317,6 @@ footer {
     gap: 2.5em;
     margin-top: 10%;
 }
-
 /* --- COLUMNA IZQUIERDA --- */
 .albumesss .image-foto {
     max-width: 32.5em;
@@ -1382,7 +1331,6 @@ footer {
     display: block;
     border: none;
 }
-
 .left-column {
     flex-direction: column;
     align-items: flex-start;
@@ -1405,7 +1353,6 @@ footer {
     letter-spacing: 0.063em;
     font-weight: 700;
 }
-
 .about-album p {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #ccc;
@@ -1428,7 +1375,6 @@ footer {
     font-weight: 700;
     letter-spacing: 0.063em;
 }
-
 /* --- LYRICS SECTION (ACORDEÓN) --- */
 .lyrics-section {
     margin: 1.875em auto;
@@ -1495,8 +1441,8 @@ footer {
     border-left: 0.125em solid #fff;
     max-height: 12.5em;
     overflow-y: auto;
-    scrollbar-width: none;       /* Firefox */
-    -ms-overflow-style: none;    /* IE/Edge */
+    scrollbar-width: none;       
+    -ms-overflow-style: none;    
 }
 .accordion.active .accordion-content::-webkit-scrollbar {
     width: 0;
@@ -1622,14 +1568,12 @@ footer {
     letter-spacing: 0.08em;
     color: #ffffff;
 }
-
 .song-list ol {
     list-style: none; /* Oculta el número automático */
     counter-reset: track-number; /* Resetea contador */
     padding-left: 0;
     margin: 0;
 }
-
 .song-list li {
     margin-bottom: 0;
     justify-content: space-between;
@@ -1641,7 +1585,6 @@ footer {
     letter-spacing: 0.03em;
     position: relative;
 }
-
 .song-list li::before {
     counter-increment: track-number;
     content: counter(track-number) ". ";
@@ -1854,14 +1797,12 @@ footer {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
-
 .tickets:hover {
     background: #fff;
     color: #000;
     box-shadow: 0 0 20px rgba(255,255,255,0.4);
     transform: scale(1.05);
 }
-
 .about-col {
     flex: 1 1 0;
     max-width: 60%;
@@ -1997,6 +1938,41 @@ body.dark-mode #scrollToTopBtn:hover {
     background: #868686;
 }
 /* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+    .articulos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .articulos article {
+        width: 90vw;
+        max-width: 31.25em;
+        height: 25em;
+    }
+}
+
+@media (max-width: 1100px) {
+    .blog-posts {
+        flex-wrap: wrap;
+        margin-left: 4vw;
+    }
+    .blog-post {
+        width: 20em;
+    }
+    .albumesss {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .albumesss .image-foto, .musica, .song-list {
+        width: 100%;
+        max-width: 37.5em;
+    }
+    .about1 {
+        max-width: 100%;
+        padding: 0 1.25em;
+    }
+}
+
 @media (max-width: 900px) {
     .album-info, .footer, .albums, .blog-posts, .gallery {
         flex-direction: column;
@@ -2010,7 +1986,7 @@ body.dark-mode #scrollToTopBtn:hover {
         flex-direction: column;
         gap: 1em;
     }
-        .album-info {
+    .album-info {
         flex-direction: column;
         align-items: center;
         padding: 2em 1em;
@@ -2019,14 +1995,14 @@ body.dark-mode #scrollToTopBtn:hover {
         max-width: 21.875em;
         margin-bottom: 2em;
     }
-       .gallery {
+    .gallery {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
     .image {
         height: 12.5em;
     }
-        .blog-posts {
+    .blog-posts {
         flex-wrap: wrap;
         margin-left: 2vw;
     }
@@ -2034,16 +2010,17 @@ body.dark-mode #scrollToTopBtn:hover {
         width: 90vw;
         max-width: 25em;
     }
-     .top-row, .bottom-row {
-    flex-direction: column;
-    align-items: center;
-  }
-  .img-col img, .map-col .map {
-    max-width: 90vw;
-    height: 40vw;
-    min-height: 12.5em;
-  }
+    .top-row, .bottom-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-col img, .map-col .map {
+        max-width: 90vw;
+        height: 40vw;
+        min-height: 12.5em;
+    }
 }
+
 @media (max-width: 600px) {
     .album-cover img, .album-card img {
         width: 100%;
@@ -2068,45 +2045,11 @@ body.dark-mode #scrollToTopBtn:hover {
         align-items: flex-start;
         gap: 0.5em;
     }
-      .gallery {
+    .gallery {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 1fr);
     }
     .image {
         height: 11.25em;
-    }
-}
-/* Responsive */
-@media (max-width: 1100px) {
-    .blog-posts {
-        flex-wrap: wrap;
-        margin-left: 4vw;
-    }
-    .blog-post {
-        width: 20em;
-    }
-       .albumesss {
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-    }
-    .albumesss .image-foto,.musica,.song-list {
-        width: 100%;
-        max-width: 37.5em;
-    }
-    .about1 {
-        max-width: 100%;
-        padding: 0 1.25em;
-    }
-}
-@media (max-width: 1200px) {
-    .articulos {
-        flex-direction: column;
-        align-items: center;
-    }
-    .articulos article {
-        width: 90vw;
-        max-width: 31.25em;
-        height: 25em;
     }
 }
