@@ -1619,6 +1619,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.03em;
     position: relative;
+    font-size:1.2em;
 }
 .song-list li::before {
     counter-increment: track-number;
@@ -1630,7 +1631,7 @@ footer {
 .titulo-track {
     transition: color 0.2s;
     color: #a09d9d;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 700;
     padding-left: 1.5em; /* Deja espacio para el número manual */
     flex: 1;
