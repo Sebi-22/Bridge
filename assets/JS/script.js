@@ -186,10 +186,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// ========== REPRODUCTOR DE AUDIOS EN TRACKLIST ==========
 /* ========================== AUDIO GLOBAL ========================== */
 const audio = new Audio();
-audio.src = "assets/images/Soundgarden - Black Hole Sun_3mbBbFH9fAg.mp3";
+audio.src = "assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3";
 
 const playPauseBtn    = document.getElementById("main-audio-play-pause");
 const progressBar     = document.getElementById("main-audio-progress-bar");
@@ -197,6 +196,9 @@ const progressBarFill = document.getElementById("main-audio-progress-bar-fill");
 const currentTimeEl   = document.getElementById("main-audio-current-time");
 const durationEl      = document.getElementById("main-audio-duration");
 const volumeSlider    = document.getElementById("main-audio-volume-slider");
+
+const titlePlayer     = document.querySelector(".title-player");
+// const subtitlePlayer  = document.querySelector(".subtitle-player"); // Ya no lo usamos dinámicamente
 
 /* ------------------------- UTILIDADES ---------------------------- */
 const formatTime = secs => {
@@ -206,16 +208,18 @@ const formatTime = secs => {
 };
 
 function updatePlayIcons(state) {
-  /* Botón principal */
   playPauseBtn.classList.toggle("fa-play",  state === "pause");
   playPauseBtn.classList.toggle("fa-pause", state === "play");
 
-  /* Iconos del tracklist */
   document.querySelectorAll(".track-icons").forEach(box => {
     const play  = box.querySelector(".fa-play");
     const pause = box.querySelector(".fa-pause");
     const title = box.closest("li").querySelector(".track-title");
-    const isCurrent = box.dataset.src === audio.src;
+
+    const audioSrc = decodeURIComponent(audio.src.replace(location.origin + "/", ""));
+    const boxSrc   = box.dataset.src;
+
+    const isCurrent = audioSrc.endsWith(boxSrc);
 
     if (isCurrent) {
       play.style.display  = state === "pause" ? "inline" : "none";
@@ -248,8 +252,14 @@ volumeSlider.addEventListener("input", () => {
 
 /* ----------------------- BOTÓN PRINCIPAL ------------------------ */
 playPauseBtn.addEventListener("click", () => {
-  audio.paused ? audio.play() : audio.pause();
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
 });
+
+/* --------------------- EVENTOS GLOBALES -------------------------- */
 audio.addEventListener("play",  () => updatePlayIcons("play"));
 audio.addEventListener("pause", () => updatePlayIcons("pause"));
 audio.addEventListener("ended", () => updatePlayIcons("pause"));
@@ -258,25 +268,34 @@ audio.addEventListener("ended", () => updatePlayIcons("pause"));
 document.querySelectorAll(".track-icons").forEach(box => {
   const playBtn  = box.querySelector(".fa-play");
   const pauseBtn = box.querySelector(".fa-pause");
-  const src      = playBtn.dataset.src;   // archivo mp3
+  const src      = playBtn.dataset.src;
 
-  /* guarda src para la función updatePlayIcons */
   box.dataset.src = src;
-
-  /* muestra sólo el icono de play inicialmente */
   playBtn.style.display  = "inline";
   pauseBtn.style.display = "none";
 
   playBtn.addEventListener("click", () => {
-    if (audio.src !== src) audio.src = src; // cambia de canción
+    const newSrc = location.origin + "/" + src;
+    const currentSrc = decodeURIComponent(audio.src);
+
+    if (!currentSrc.endsWith(src)) {
+      audio.src = src;
+    }
+
+    // ⬇️ Solo actualizamos el título principal (el subtítulo se mantiene)
+    const trackTitle = box.closest("li").querySelector(".track-title").textContent.trim();
+    titlePlayer.textContent = trackTitle;
+
     audio.play();
   });
 
   pauseBtn.addEventListener("click", () => {
-    if (audio.src === src) audio.pause();
+    const currentSrc = decodeURIComponent(audio.src);
+    if (currentSrc.endsWith(src)) {
+      audio.pause();
+    }
   });
 });
-
 
 // ========== MODAL PARA VIDEO EN TRACKLIST ==========
 document.addEventListener("DOMContentLoaded", function () {
@@ -313,94 +332,83 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-
-// ========== GALERÍA DE FOTOS PRINCIPAL ==========
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const images = [
-    { src: "assets/images/h1-img-1.jpg", alt: "Band performing on stage with red lights", size: "large" },
-    { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting on an amplifier", size: "small" },
-    { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer performing", size: "small" },
-    { src: "assets/images/h1-img-4.jpg", alt: "Singer performing on stage with crowd", size: "small" },
-    { src: "assets/images/h1-img-5.jpg", alt: "Drummer playing drums", size: "small" },
-    { src: "assets/images/h1-img-6.jpg", alt: "Guitarist performing with green lights", size: "large" }
+    { src: "assets/images/h1-img-1.jpg", alt: "Band performing", size: "large" },
+    { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting", size: "small" },
+    { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer", size: "small" },
+    { src: "assets/images/h1-img-4.jpg", alt: "Singer with crowd", size: "small" },
+    { src: "assets/images/h1-img-5.jpg", alt: "Drummer", size: "small" },
+    { src: "assets/images/h1-img-6.jpg", alt: "Guitarist green lights", size: "large" }
   ];
+
   const galleryContainer = document.getElementById("gallery-container");
   const modal = document.getElementById("myModal");
-     // Verifica que el modal existe:
-     console.log(modal); // Debe mostrar el elemento HTML
   const modalImg = document.getElementById("modal-img");
-  const closeBtn = document.querySelector(".modal .cerrar");
+  const closeBtn = document.querySelector(".cerrar");
   const arrowLeft = document.querySelector(".arrow-left");
   const arrowRight = document.querySelector(".arrow-right");
+  const counter = document.getElementById("modal-counter");
+  const miniLeft = document.querySelector(".mini-left");
+  const miniRight = document.querySelector(".mini-right");
 
   let currentIndex = 0;
-
-  // Crear galería
-  images.forEach((image, index) => {
-    const imageDiv = document.createElement("div");
-    imageDiv.classList.add("image", image.size);
-    const img = document.createElement("img");
-    img.src = image.src;
-    img.alt = image.alt;
-    img.setAttribute("data-index", index);
-    img.addEventListener("click", function() {
-      currentIndex = index;
-      openModal(currentIndex);
-    });
-    imageDiv.appendChild(img);
-    galleryContainer.appendChild(imageDiv);
-  });
-
-  function openModal(index) {
-    modal.style.display = "flex";
-    updateModalImage(index);
-    document.body.style.overflow = "hidden"; // Evitar scroll de fondo
-  }
-
-     function closeModal() {
-       modal.style.display = "none";
-       console.log("Modal cerrado"); // Verifica en la consola
-       document.body.style.overflow = "";
-     }
-     
 
   function updateModalImage(index) {
     modalImg.src = images[index].src;
     modalImg.alt = images[index].alt;
+    counter.textContent = `${index + 1}/${images.length}`;
   }
 
-  closeBtn.addEventListener("click", closeModal);
+  function openModal(index) {
+    currentIndex = index;
+    modal.style.display = "flex";
+    updateModalImage(index);
+    document.body.style.overflow = "hidden";
+  }
 
-  window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
+  function closeModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+  }
 
-  // Navegación slider
-  arrowLeft.addEventListener("click", function() {
+  function goLeft() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateModalImage(currentIndex);
-  });
+  }
 
-  arrowRight.addEventListener("click", function() {
+  function goRight() {
     currentIndex = (currentIndex + 1) % images.length;
     updateModalImage(currentIndex);
+  }
+
+  images.forEach((img, index) => {
+    const imageDiv = document.createElement("div");
+    imageDiv.className = `image ${img.size}`;
+    const image = document.createElement("img");
+    image.src = img.src;
+    image.alt = img.alt;
+    image.addEventListener("click", () => openModal(index));
+    imageDiv.appendChild(image);
+    galleryContainer.appendChild(imageDiv);
   });
 
-  // Navegación con teclado
-  document.addEventListener("keydown", function(e) {
+  arrowLeft.addEventListener("click", goLeft);
+  miniLeft.addEventListener("click", goLeft);
+  arrowRight.addEventListener("click", goRight);
+  miniRight.addEventListener("click", goRight);
+  closeBtn.addEventListener("click", closeModal);
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
     if (modal.style.display === "flex") {
-      if (e.key === "ArrowLeft") {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateModalImage(currentIndex);
-      } else if (e.key === "ArrowRight") {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateModalImage(currentIndex);
-      } else if (e.key === "Escape") {
-        closeModal();
-      }
+      if (e.key === "ArrowLeft") goLeft();
+      else if (e.key === "ArrowRight") goRight();
+      else if (e.key === "Escape") closeModal();
     }
   });
 });
+

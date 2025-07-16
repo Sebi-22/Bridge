@@ -260,7 +260,7 @@ header {
     border-radius: 0.2em;
 }
 .controls-player i:hover {
-    color: #007bff;
+    color: #4f4f4f;
     background: #f2f2f2;
 }
 .progress-container-player {
@@ -362,53 +362,70 @@ header {
     width: auto;
     transition: transform 0.2s;
 }
-/* TRACKLIST */
+/* TRACKLIST GENERAL */
 .tracklist {
-    flex: 1 1 21.875em;
-    background: transparent;
-    margin-top: 0.5em;
+  flex: 0.5 1 21.875em;
+  background: transparent;
+  margin-top: 0.2em;
+  margin-left: 5%;
 }
 .tracklist ol {
-    list-style: none;
+  list-style: none;
 }
 .tracklist li {
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 0.063em solid #222;
-    padding: 0.8em;
-    color: #eee;
-    font-weight: 600;
-    font-size: 1em;
-    letter-spacing: 0.031em;
-    transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.063em solid #222;
+  padding: 0.8em 0;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 0.031em;
 }
-.tracklist li:last-child {
-    border-bottom: none;
-}
+/* TÍTULO DE LA CANCIÓN */
 .track-title {
-    color: #8e8e8e;
-    flex: 1;
-    font-size: 1em;
-    text-align: left;
-    letter-spacing: 0.063em;
+  color: #8e8e8e;
+  flex: 1;
+  font-size: 1.3em;
+  text-align: left;
+  letter-spacing: 0.063em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  margin-top: -2%;
 }
+/* Hover SOLO en el título */
+.track-title:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+/* Cuando está reproduciendo: brillo */
+.track-title.playing {
+  color: #fff;
+  text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
+  font-weight: 700;
+}
+/* ICONOS DERECHA */
 .track-icons {
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 .track-icons span {
-    color: #bdbdbd;
-    font-size: 0.95em;
-    margin-right: 0.5em;
-    min-width: 2.5em;
-    text-align: right;
+  color: #bdbdbd;
+  font-size: 0.95em;
+  min-width: 2.5em;
+  text-align: right;
 }
+
 .track-icons i {
-    color: #bdbdbd;
-    font-size: 1.1em;
-    margin-left: 0.5em;
-    transition: color 0.2s;
+  color: #bdbdbd;
+  font-size: 1.1em;
+  transition: color 0.2s ease;
 }
+
+.track-icons i:hover {
+  color: #ffffff;
+}
+
 /* --- TEXTO PROMOCIONAL --- */
 .texto {
     width: 99vw;
@@ -525,91 +542,130 @@ header {
 .cierre:hover {
   transform: scale(1.2);
 }
-  /* --- GALERÍA DE IMÁGENES --- */
-  .gallery {
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-  .image {
-    height: 20em;
-    position: relative;
-  }
-  .image.large {
-    width: 50%;
-  }
-  .image.small {
-    width: 25%;
-  }
-  .image img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0;
-    box-shadow: none;
-    transition: transform 0.2s, opacity 0.2s;
-    display: block;
-  }
-  .image.large:hover img,.image.small:hover img {
-    opacity: 0.5;
-  }
-  /* Modal básico */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.8);
-    align-items: center;
-  }
-  .modal-content {
-    max-width: 90vw;
-    max-height: 90vh;
-    margin: auto;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    align-items: center;
-    position: relative;
-  }
-  .modal-content img {
-    max-width: 100%;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 0.5em;
-    user-select: none;
-  }
-  .close {
-    top: 1em;
-    right: 2em;
-    font-size: 2.5em;
-    z-index: 10;
-    user-select: none;
-  }
-  /* Flechas para slider */
-  .arrow {
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3em;
-    user-select: none;
-    padding: 0 0.625em;
-    background: rgba(0,0,0,0.3);
-    border-radius: 50%;
-    transition: background 0.3s;
-    z-index: 10;
-  }
-  .arrow:hover {
-    background: rgba(0,0,0,0.6);
-  }
-  .arrow-left {
-    left: 0.625em;
-  }
-  .arrow-right {
-    right: 0.625em;
-  }
+/* --- GALERÍA --- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.image {
+  height: 20em;
+  position: relative;
+}
+.image.large {
+  width: 50%;
+}
+.image.small {
+  width: 25%;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.image:hover img {
+  opacity: 0.7;
+}
+
+/* --- MODAL --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-slider img {
+  max-height: 70vh;
+  border-radius: 0.5em;
+}
+/* Flechas grandes sobre la imagen */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8em;           /* flecha más pequeña */
+  color: white;
+  cursor: pointer;
+  padding: 0.2em;             /* menos padding */
+  width: 1.8em;               /* ancho del círculo */
+  height: 1.8em;              /* alto del círculo */
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+#myModal:hover .arrow-left,#myModal:hover .arrow-right {
+  opacity: 1;
+  pointer-events: auto;
+}
+.arrow-left {
+  left: 10px;
+}
+.arrow-right {
+  right: 10px;
+}
+/* --- Footer --- */
+.modal-footer {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+.modal-controls {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  color: white;
+  font-size: 1em;
+}
+.mini-arrow {
+  cursor: pointer;
+  font-size: 1.2em;
+  user-select: none;
+}
+.mini-arrow:hover {
+  color: red;
+}
+/* Botón cerrar abajo a la derecha */
+.cerrar {
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
 /* --- FECHAS DE EVENTOS --- */
 #datos.fechas {
   max-width: 75em;
@@ -636,7 +692,7 @@ header {
 }
 .date {
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 4em;
   line-height: 1;
   margin-right: 0.5em;
   white-space: nowrap;
@@ -644,7 +700,7 @@ header {
 .month-day {
   flex-direction: column;
   justify-content: center;
-  font-size: 0.75em;
+  font-size: 1em;
   text-transform: uppercase;
   color: #999;
   letter-spacing: 0.1em;
@@ -668,9 +724,10 @@ header {
   text-decoration: none;
   color: inherit;
   padding-left: 1.5em;
+  font-weight: 700;
+  font-size: 1em;
 }
 .ciudad {
-  font-size: 0.875em;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.3;
@@ -678,7 +735,7 @@ header {
 /* Botón de tickets */
 .buy-tickets {
   font-weight: 700;
-  font-size: 0.875em;
+  font-size: 1.2em;
   color: #fff;
   text-decoration: underline;
   white-space: nowrap;

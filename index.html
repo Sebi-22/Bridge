@@ -223,18 +223,29 @@
         </section>
 
 <section class="gallery">
-  <div class="gallery" id="gallery-container">
-    <!-- Las imágenes se agregarán dinámicamente aquí -->
-  </div>
-  <div class="modal" id="myModal" aria-modal="true" role="dialog" aria-label="Galería de imágenes ampliadas">
+  <div class="gallery" id="gallery-container"></div>
+
+  <div class="modal" id="myModal" role="dialog" aria-label="Galería de imágenes ampliadas">
     <div class="modal-content">
-      <span class="cerrar" role="button" aria-label="Cerrar modal">&times;</span>
-      <i class="arrow arrow-left" role="button" aria-label="Imagen anterior">&#10094;</i>
-      <img id="modal-img" src="" alt="Imagen ampliada" />
-      <i class="arrow arrow-right" role="button" aria-label="Imagen siguiente">&#10095;</i>
+      <div class="modal-slider">
+        <img id="modal-img" src="" alt="Imagen ampliada" />
+        <i class="arrow arrow-left">&#10094;</i>
+        <i class="arrow arrow-right">&#10095;</i>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-controls">
+          <i class="mini-arrow mini-left">&#10094;</i>
+          <span id="modal-counter">1/6</span>
+          <i class="mini-arrow mini-right">&#10095;</i>
+        </div>
+        <span class="cerrar" role="button" aria-label="Cerrar modal">&times;</span>
+      </div>
     </div>
   </div>
 </section>
+
+
 
 
 <section id="datos" class="fechas">
