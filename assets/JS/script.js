@@ -187,9 +187,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* ========================== AUDIO GLOBAL ========================== */
+// Creamos una nueva instancia de audio (un solo reproductor para todo)
 const audio = new Audio();
-audio.src = "assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3";
+audio.src = "assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3"; // Pista inicial
 
+// Elementos del reproductor principal
 const playPauseBtn    = document.getElementById("main-audio-play-pause");
 const progressBar     = document.getElementById("main-audio-progress-bar");
 const progressBarFill = document.getElementById("main-audio-progress-bar-fill");
@@ -197,16 +199,17 @@ const currentTimeEl   = document.getElementById("main-audio-current-time");
 const durationEl      = document.getElementById("main-audio-duration");
 const volumeSlider    = document.getElementById("main-audio-volume-slider");
 
+// Título dinámico (se actualiza al cambiar canción)
 const titlePlayer     = document.querySelector(".title-player");
-// const subtitlePlayer  = document.querySelector(".subtitle-player"); // Ya no lo usamos dinámicamente
 
-/* ------------------------- UTILIDADES ---------------------------- */
+/* ------------------------- UTILIDAD PARA FORMATO DE TIEMPO ---------------------------- */
 const formatTime = secs => {
   const m  = Math.floor(secs / 60);
   const ss = Math.floor(secs % 60).toString().padStart(2, "0");
   return `${m}:${ss}`;
 };
 
+/* ------------------------- ACTUALIZAR ICONOS PLAY/PAUSE EN TRACKLIST ------------------ */
 function updatePlayIcons(state) {
   playPauseBtn.classList.toggle("fa-play",  state === "pause");
   playPauseBtn.classList.toggle("fa-pause", state === "play");
@@ -233,7 +236,7 @@ function updatePlayIcons(state) {
   });
 }
 
-/* --------------------- METADATOS Y PROGRESO ---------------------- */
+/* ------------------------ CARGA DE METADATOS Y PROGRESO ------------------------------ */
 audio.addEventListener("loadedmetadata", () => {
   durationEl.textContent = formatTime(audio.duration);
 });
@@ -250,7 +253,7 @@ volumeSlider.addEventListener("input", () => {
   audio.volume = volumeSlider.value;
 });
 
-/* ----------------------- BOTÓN PRINCIPAL ------------------------ */
+/* -------------------------- BOTÓN DE PLAY/PAUSE PRINCIPAL ---------------------------- */
 playPauseBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
@@ -259,12 +262,15 @@ playPauseBtn.addEventListener("click", () => {
   }
 });
 
-/* --------------------- EVENTOS GLOBALES -------------------------- */
+/* ---------------------------- EVENTOS DE AUDIO GLOBALES ------------------------------ */
 audio.addEventListener("play",  () => updatePlayIcons("play"));
 audio.addEventListener("pause", () => updatePlayIcons("pause"));
-audio.addEventListener("ended", () => updatePlayIcons("pause"));
+audio.addEventListener("ended", () => {
+  updatePlayIcons("pause");
+  // (opcional: avanzar a la siguiente canción automáticamente)
+});
 
-/* -------------------------- TRACKLIST --------------------------- */
+/* -------------------------- TRACKLIST CLICK PARA REPRODUCIR --------------------------- */
 document.querySelectorAll(".track-icons").forEach(box => {
   const playBtn  = box.querySelector(".fa-play");
   const pauseBtn = box.querySelector(".fa-pause");
@@ -282,7 +288,7 @@ document.querySelectorAll(".track-icons").forEach(box => {
       audio.src = src;
     }
 
-    // ⬇️ Solo actualizamos el título principal (el subtítulo se mantiene)
+    // Actualizamos el título del reproductor
     const trackTitle = box.closest("li").querySelector(".track-title").textContent.trim();
     titlePlayer.textContent = trackTitle;
 
@@ -296,6 +302,58 @@ document.querySelectorAll(".track-icons").forEach(box => {
     }
   });
 });
+
+/* ========================= NAVEGACIÓN ADELANTE / ATRÁS ============================== */
+// Botones de control de pista
+const backwardBtn = document.getElementById("main-audio-backward");
+const forwardBtn  = document.getElementById("main-audio-forward");
+
+// Obtenemos el tracklist en orden
+const trackElements = Array.from(document.querySelectorAll(".track-icons"));
+const trackList = trackElements.map(el => el.dataset.src);
+
+// Guardamos el índice actual de la canción
+let currentTrackIndex = trackList.findIndex(src =>
+  decodeURIComponent(audio.src).endsWith(src)
+);
+
+// Función para cargar un track según su índice
+function loadTrackByIndex(index) {
+  if (index < 0 || index >= trackList.length) return;
+
+  const src = trackList[index];
+  audio.src = src;
+
+  // Actualiza el título en el reproductor
+  const trackEl = trackElements[index].closest("li");
+  const title = trackEl.querySelector(".track-title").textContent.trim();
+  titlePlayer.textContent = title;
+
+  currentTrackIndex = index;
+  audio.play();
+}
+
+// Botón siguiente: pasa a la siguiente canción si hay una
+forwardBtn.addEventListener("click", () => {
+  if (currentTrackIndex < trackList.length - 1) {
+    loadTrackByIndex(currentTrackIndex + 1);
+  }
+});
+
+// Botón anterior: retrocede una canción si no está en la primera
+backwardBtn.addEventListener("click", () => {
+  if (currentTrackIndex > 0) {
+    loadTrackByIndex(currentTrackIndex - 1);
+  }
+});
+
+// Siempre que suena una nueva canción, actualizamos el índice actual
+audio.addEventListener("play", () => {
+  currentTrackIndex = trackList.findIndex(src =>
+    decodeURIComponent(audio.src).endsWith(src)
+  );
+});
+
 
 // ========== MODAL PARA VIDEO EN TRACKLIST ==========
 document.addEventListener("DOMContentLoaded", function () {
