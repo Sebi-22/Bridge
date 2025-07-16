@@ -61,7 +61,6 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
 /* --- HEADER Y NAVBAR --- */
 header {
     background: transparent;
@@ -120,7 +119,6 @@ header {
     font-size: 1.5em;
     margin-left: 18em;
 }
-
 /* HERO / PORTADA */
 .background-image {
     background-image: url('../images/slider-img-1.jpg');
@@ -189,7 +187,6 @@ header {
 .apps img:hover, .apps img:hover, .image.large:hover img, .image.small:hover img, .video-section:hover .video-bg, .platform-icons a:hover img, .tickets:hover {
     transform: scale(1.05);
 }
-
 /* HERO SECTION */
 .about-hero {
     width: 100vw;
@@ -211,7 +208,6 @@ header {
     letter-spacing: 0.05em;
     text-align: center;
 }
-
 /* --- REPRODUCTOR DE AUDIO --- */
 .album-player {
     padding: 0.5em 0 0.5em 0.5em;
@@ -312,7 +308,6 @@ header {
     border-radius: 0.2em;
     height: 0.4em;
 }
-
 /* --- ALBUM INFO SECCIÓN (HOME) --- */
 .album-info {
     gap: 4em;
@@ -359,7 +354,6 @@ header {
     width: auto;
     transition: transform 0.2s;
 }
-
 /* TRACKLIST GENERAL */
 .tracklist {
     flex: 0.5 1 21.875em;
@@ -380,7 +374,6 @@ header {
     font-size: 1em;
     letter-spacing: 0.031em;
 }
-
 /* TÍTULO DE LA CANCIÓN */
 .track-title {
     color: #8e8e8e;
@@ -391,20 +384,17 @@ header {
     transition: color 0.3s ease, text-shadow 0.3s ease;
     margin-top: -2%;
 }
-
 /* Hover SOLO en el título */
 .track-title:hover {
     color: #ffffff;
     cursor: pointer;
 }
-
 /* Cuando está reproduciendo: brillo */
 .track-title.playing {
     color: #fff;
     text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
     font-weight: 700;
 }
-
 /* ICONOS DERECHA */
 .track-icons {
     display: flex;
@@ -425,7 +415,6 @@ header {
 .track-icons i:hover {
     color: #ffffff;
 }
-
 /* --- TEXTO PROMOCIONAL --- */
 .texto {
     width: 99vw;
@@ -461,7 +450,6 @@ header {
     word-break: break-word;
     margin-left: 3%;
 }
-
 /*texto2*/
 .texto2 {
     width: 100vw;
@@ -495,7 +483,6 @@ header {
     text-align: left;
     font-weight: 400;
 }
-
 /* === MODAL VIDEO === */
 .video {
     display: none;
@@ -522,7 +509,6 @@ header {
     border-radius: 0.5em;
     display: block;
 }
-
 /* Estilo para la cruz de cierre */
 .cierre {
     position: absolute;
@@ -536,7 +522,6 @@ header {
 .cierre:hover {
     transform: scale(1.2);
 }
-
 /* --- GALERÍA --- */
 .gallery {
     display: flex;
@@ -562,7 +547,6 @@ header {
 .image:hover img {
     opacity: 0.7;
 }
-
 /* --- MODAL --- */
 .modal {
     display: none;
@@ -592,7 +576,6 @@ header {
     max-height: 70vh;
     border-radius: 0.5em;
 }
-
 /* Flechas grandes sobre la imagen */
 .arrow {
     position: absolute;
@@ -620,12 +603,11 @@ header {
     pointer-events: auto;
 }
 .arrow-left {
-    left: 10px;
+    left: 0.625em;
 }
 .arrow-right {
-    right: 10px;
+    right: 0.625em;
 }
-
 /* --- Footer --- */
 .modal-footer {
     margin-top: 1em;
@@ -651,7 +633,6 @@ header {
 .mini-arrow:hover {
     color: red;
 }
-
 /* Botón cerrar abajo a la derecha */
 .cerrar {
     font-size: 1.8em;
@@ -659,7 +640,6 @@ header {
     cursor: pointer;
     user-select: none;
 }
-
 /* --- FECHAS DE EVENTOS --- */
 #datos.fechas {
     max-width: 75em;
@@ -678,7 +658,6 @@ header {
     border-bottom: 1px solid #222;
     padding: 1.25em 0;
 }
-
 /* Bloque con fecha */
 .date-block {
     align-items: center;
@@ -711,7 +690,6 @@ header {
     background-color: #222;
     margin-left: 1em;
 }
-
 /* Bloque con ciudad y lugar */
 .ciudad-link {
     align-items: center;
@@ -727,7 +705,6 @@ header {
     letter-spacing: 0.02em;
     line-height: 1.3;
 }
-
 /* Botón de tickets */
 .buy-tickets {
     font-weight: 700;
@@ -738,7 +715,6 @@ header {
     margin-left: 1em;
     cursor: pointer;
 }
-
 /* Botón Ver Todo */
 .view-all {
     text-align: center;
@@ -760,7 +736,6 @@ header {
     background: #fff;
     color: #000;
 }
-
 /* --- SECCIÓN DEL BLOG --- */
 .blog {
     width: 100vw;
@@ -829,7 +804,6 @@ header {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     margin-bottom: 0.5em;
 }
-
 /* --- VIDEO SECTION --- */
 .video-section {
     width: 100vw;
@@ -838,12 +812,10 @@ header {
     max-height: 37.5em;
     background: #222;
 }
-
 /* Zoom suave al pasar el mouse sobre el play */
 .video-section:hover .video-bg {
     transition: transform 0.5s ease-in-out;
 }
-
 /* Aseguramos que tenga transición aunque no esté en hover */
 .video-bg {
     transition: transform 0.5s ease-in-out;
@@ -876,7 +848,6 @@ header {
 .play-button:hover {
     color: #007bff;
 }
-
 /* MODAL VIDEO */
 .nuevomodal {
     display: none;
@@ -889,7 +860,6 @@ header {
     max-height: 37.5em;
     background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
 }
-
 /* Recuadro de modal ampliado */
 .modal-contento {
     background: #111;
@@ -901,7 +871,6 @@ header {
     text-align: center;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.8);
 }
-
 /* Texto de error más grande */
 .modal-contento .error-message {
     font-size: 3.5em;              
@@ -912,7 +881,6 @@ header {
     color: #ccc;
     margin-top: 1em;
 }
-
 /* Botón cerrar */
 #cerrarModal {
     bottom: 1.5em;
@@ -921,7 +889,6 @@ header {
     background: none;
     border: none;
 }
-
 /* --- DISCOGRAFÍA --- */
 .our-discography {
     width: 100vw;
@@ -1018,7 +985,6 @@ header {
 .show-more:hover {
     color: #000;
 }
-
 /* --- ARTÍCULOS --- */
 .articulos {
     align-items: stretch;
@@ -1055,7 +1021,6 @@ header {
     margin: 0 0 1em 0;
     font-size: 1.1em;
 }
-
 /* --- FOOTER --- */
 footer {
     background: #000;
@@ -1129,7 +1094,6 @@ footer {
     vertical-align: middle;
     transform: translateX(0.5em); /* Ajuste sutil a la derecha */
 }
-
 /* Contacto */
 .contact-info p {
     display: flex;
@@ -1156,7 +1120,6 @@ footer {
     color: #666;
     text-decoration: underline;
 }
-
 /* Footer inferior */
 .footer-bottom {
     text-align: center;
@@ -1169,7 +1132,6 @@ footer {
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     border-top: 0.063em solid #444;
 }
-
 /* --- CONTACTO --- */
 .contact {
     padding: 4.375em 0 5.625em 0;
@@ -1198,7 +1160,6 @@ footer {
     letter-spacing: 0.063em;
     word-break: break-all;
 }
-
 /* --- FORMULARIO DE CONTACTO --- */
 .form {
     background: #0a0a0a;
@@ -1302,7 +1263,6 @@ footer {
     text-align: center;
     font-family: 'Open Sans', Arial, sans-serif;
 }
-
 /* --- CONTENEDOR PRINCIPAL --- */
 .albumesss {
     padding: 2.5em 0 0 0;
@@ -1311,7 +1271,6 @@ footer {
     gap: 2.5em;
     margin-top: 10%;
 }
-
 /* --- COLUMNA IZQUIERDA --- */
 .albumesss .image-foto {
     max-width: 32.5em;
@@ -1326,7 +1285,6 @@ footer {
     margin-right: 0;
     gap: 1.875em;
 }
-
 /* --- COLUMNA DERECHA --- */
 .about1 {
     flex: 1 1 0;
@@ -1437,7 +1395,6 @@ footer {
     width: 0;
     background: transparent;
 }
-
 /* --- ALBUM REVIEWS --- */
 .review-section {
     background: #181818;
@@ -1450,7 +1407,6 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-left: 50%;
 }
-
 .review-section h2 {
     font-size: 2.2em;
     text-transform: uppercase;
@@ -1458,7 +1414,6 @@ footer {
     font-weight: 700;
     margin-bottom: 1em;
 }
-
 .review-text {
     font-family: 'Courier New', Courier, monospace;
     color: #ccc;
@@ -1466,14 +1421,12 @@ footer {
     margin-bottom: 1em;
     line-height: 1.7;
 }
-
 .review-source {
     font-size: 1.1em;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 2em;
 }
-
 .nav-icons {
     position: absolute;
     bottom: 1.5em;
@@ -1481,7 +1434,6 @@ footer {
     display: flex;
     gap: 0.5em;
 }
-
 .nav-button {
     background: transparent;
     border: none;
@@ -1490,11 +1442,9 @@ footer {
     cursor: pointer;
     transition: color 0.2s;
 }
-
 .nav-button:hover {
     color: #e91e63;
 }
-
 /* --- PLAYER --- */
 .musica {
     max-width: 31.25em;
@@ -1548,7 +1498,6 @@ footer {
     font-weight: 700;
     letter-spacing: 0.125em;
 }
-
 /* --- LISTA DE CANCIONES --- */
 .song-list {
     max-width: 35.625em;
@@ -1609,7 +1558,6 @@ footer {
     text-transform: none;
     white-space: nowrap;
 }
-
 /* --- SECCIÓN DISPONIBLE EN --- */
 .available-on {
     margin: 2.5em 0 0 0;
@@ -1635,7 +1583,6 @@ footer {
     object-fit: contain;
     transition: transform 0.2s;
 }
-
 /* --- SECCIÓN DEL VÍDEO --- */
 .latest-video {
     margin: 2.5em 0 0 0;
@@ -1676,7 +1623,6 @@ footer {
     user-select: none;
     transition: color 0.2s;
 }
-
 /* Cambiar el color de la selección de texto */
 ::selection {
     background-color: #ffffff; /* Color de fondo de la selección */
@@ -1687,7 +1633,6 @@ footer {
     text-decoration: none;
     transition: color 0.2s;
 }
-
 /* --- BREADCRUMB --- */
 .breadcrumb {
     margin-left: 9vw;
@@ -1704,7 +1649,6 @@ footer {
 .breadcrumb span {
     color: #bdbdbd;
 }
-
 /* --- CONTENT GRID --- */
 .content-grid {
     width: 95vw;
@@ -1820,7 +1764,6 @@ footer {
     text-decoration: none;
     vertical-align: middle;
 }
-
 /* --- BOTÓN SCROLL ARRIBA --- */
 #scrollToTopBtn {
     position: fixed;
@@ -1836,7 +1779,6 @@ footer {
     z-index: 1000;
     box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.15);
 }
-
 /* --- SECCIÓN DE IMÁGENES --- */
 .imagenes {
     min-height: 100vh;
@@ -1881,37 +1823,30 @@ body.dark-mode #scrollToTopBtn {
 body.dark-mode #scrollToTopBtn:hover {
     background: #868686;
 }
-
 /* --- RESPONSIVE DESIGN --- */
-
 /* Pantallas grandes (>1326px) ya están cubiertas en los estilos base */
-
 /* Tabletas (768px - 1024px) */
 @media (max-width: 1326px) {
     .container.navbar {
         flex-direction: column;
         padding: 1em;
     }
-    
     .nav-links {
         position: relative;
         left: auto;
         margin-top: 1em;
         justify-content: center;
     }
-    
     .album-info {
         flex-direction: column;
         gap: 2em;
         padding: 2em 1em;
         width: 150%;
     }
-    
     .album-cover {
         margin-right: 75%;
         align-items: center;
     }
-    
     .tracklist {
         margin-left: 32%;
         margin-top: -45em;
@@ -1922,115 +1857,91 @@ body.dark-mode #scrollToTopBtn:hover {
     .titulo-album {
         font-size: 1em;
     }
-    
     .texto, .texto2 {
         padding: 3em 2em;
     }
-    
     .texto h1, .texto2 h1, .blog h1 {
         margin-left: 0;
     }
-    
-    .blog-posts {
+     .blog-posts {
         justify-content: center;
         margin-left: 0;
     }
 }
-
 /* Tabletas pequeñas (600px - 768px) */
 @media (max-width: 1024px) {
     .vertical-name {
         font-size: 5em;
         left: 5%;
     }
-    
-    .new-album {
+     .new-album {
         margin-left: 30%;
-    }
-    
+    }   
     .gallery {
         grid-template-columns: 1fr 1fr;
-    }
-    
+    }  
     .image {
         height: 15em;
-    }
-    
+    }    
     .albumesss {
         flex-direction: column;
-    }
-    
+    }   
     .left-column {
         width: 100%;
-    }
-    
+    }   
     .musica {
         margin-top: 2em;
         margin-right: auto;
-    }
-    
+    }    
     .review-section {
         margin-left: auto;
     }
 }
-
 /* Celulares Samsung/iPhone (>600px) */
 @media (max-width: 767px) {
     .vertical-name {
         font-size: 3em;
         left: 3%;
-    }
-    
+    }    
     .new-album {
         margin-left: 20%;
-    }
-    
+    }    
     .new-album h2 {
         font-size: 2em;
-    }
-    
+    }    
     .apps {
         flex-wrap: wrap;
         justify-content: center;
-    }
-    
+    }    
     .album-cover img {
         max-width: 100%;
-    }
-    
+    }    
     .tracklist li {
         flex-direction: column;
         align-items: flex-start;
-    }
-    
+    }    
     .texto h1, .texto2 h1, .blog h1 {
         font-size: 2em;
-    }
-    
+    }   
     .gallery {
         grid-template-columns: 1fr;
-    }
-    
+    }    
     .albums {
         grid-template-columns: 1fr 1fr;
-    }
-    
+    }    
     .top-row, .bottom-row {
         flex-direction: column;
-    }
-    
+    }    
     .img-col img, .map-col .map {
         width: 100%;
         height: auto;
         aspect-ratio: 16/9;
     }
-    
     .details-col, .about-col {
         max-width: 100%;
         margin-right: 0;
     }
 }
-
 /* Celulares pequeños (<600px) */
 @media (max-width: 600px) {
     .vertical-name {
@@ -2041,96 +1952,78 @@ body.dark-mode #scrollToTopBtn:hover {
         margin: 1em 0;
         left: 0;
         text-align: center;
-    }
-    
+    }   
     .new-album {
         margin: 1em 0;
         text-align: center;
         width: 100%;
-    }
-    
+    }    
     .album-player {
         flex-direction: column;
         padding: 1em;
-    }
-    
+    }    
     .left-player {
         margin-left: 0;
         border-right: none;
         border-bottom: 1px solid #eee;
         padding-bottom: 1em;
         width: 100%;
-    }
-    
+    }    
     .controls-player {
         border-right: none;
         border-bottom: 1px solid #eee;
         padding: 1em 0;
         width: 100%;
         justify-content: center;
-    }
-    
+    }    
     .progress-container-player, .volume-control-player {
         border: none;
         padding: 1em 0;
         width: 100%;
-    }
-    
+    }    
     .progress-bar-player {
         width: 100%;
-    }
-    
+    }   
     .texto, .texto2 {
         padding: 2em 1em;
-    }
-    
+    }    
     .texto h1::after, .texto2 h1::after, .blog h1::after {
         margin-left: auto;
         margin-right: auto;
-    }
-    
+    }    
     .albumesss .image-foto {
         height: 25em;
     }
-    
     .lyrics-section {
         margin-left: 0;
         padding: 0 1em;
     }
-    
     .song-list {
         margin-left: 0;
     }
-    
     .available-on h2, .latest-video h2 {
         margin-left: 1em;
     }
-    
     .platform-icons {
         justify-content: center;
         margin-left: 0;
     }
 }
-
 /* Pequeños ajustes para iPhone (<375px) */
 @media (max-width: 374px) {
     .nav-links {
         flex-direction: column;
         align-items: center;
     }
-    
     .album-cover {
         flex: 0 0 auto;
     }
-    
     .track-title {
         font-size: 1em;
     }
-    
     .albumes {
         width: 100%;
     }
-    
     .footer-column {
         min-width: 100%;
     }
