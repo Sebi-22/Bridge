@@ -9,7 +9,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, foote
 .about-hero, .info-player, .progress-bar-player, .image, .blog-post-image-wrapper, .video-section, .albumes, .foto, .albumesss .image-foto, .accordion-content, .albumes {
     overflow: hidden;
 }
-.container.navbar, .nav-links, .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li, .track-icons, .texto, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .blog-post, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .transparencia .social, .footer, .social-icons, .social-icons a, .social-icons a i, .contact-info p, .contact, .form, .info-contacto, .right-section, .albumesss, .albumesss .image-foto, .left-column, .about1, .accordion-header, .nav-icons, .controles, .controles > div, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes, .albumes {
+.container.navbar,.nav-icons,.footer ,.modal-footer,.nav-links, .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li,.arrow ,.track-icons, .texto, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .blog-post, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .transparencia .social, .footer, .social-icons, .social-icons a,.social, .social-icons a i, .contact-info p, .contact, .contact-info p,.form, .info-contacto, .right-section, .albumesss, .albumesss .image-foto, .left-column, .about1, .accordion-header, .nav-icons, .controles, .controles > div, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes, .albumes,.modal-control {
     display: flex;
 }
 header, .nav-links a, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .transparencia .social a, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover, #scrollToTopBtn {
@@ -365,7 +365,6 @@ header {
     list-style: none;
 }
 .tracklist li {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 0.063em solid #222;
@@ -397,7 +396,6 @@ header {
 }
 /* ICONOS DERECHA */
 .track-icons {
-    display: flex;
     align-items: center;
     gap: 1em;
 }
@@ -524,7 +522,6 @@ header {
 }
 /* --- GALERÍA --- */
 .gallery {
-    display: flex;
     flex-wrap: wrap;
     width: 100vw;
     box-sizing: border-box;
@@ -563,12 +560,10 @@ header {
 .modal-content {
     max-width: 90vw;
     max-height: 90vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 .modal-slider {
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -590,7 +585,6 @@ header {
     border: 2px solid white;
     border-radius: 50%;
     background-color: transparent;
-    display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
@@ -612,14 +606,12 @@ header {
 .modal-footer {
     margin-top: 1em;
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
     box-sizing: border-box;
 }
 .modal-controls {
-    display: flex;
     align-items: center;
     gap: 1em;
     color: white;
@@ -1006,6 +998,10 @@ header {
     opacity: 0;
     transition: opacity 0.4s;
 }
+.social{
+    gap: 0.5em;
+    margin-top: 1em;
+}
 .articulos article:hover .transparencia {
     opacity: 1;
 }
@@ -1030,7 +1026,6 @@ footer {
     margin-top: 12%;
 }
 .footer {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 75em;
@@ -1064,7 +1059,6 @@ footer {
     max-width: 20em;
 }
 .social-icons {
-    display: flex;
     gap: 0.8em;
     margin-top: 1.5em;
 }
@@ -1097,7 +1091,6 @@ footer {
 }
 /* Contacto */
 .contact-info p {
-    display: flex;
     align-items: center;
     gap: 0.5em;
     margin-bottom: 0.5em;
@@ -1432,7 +1425,6 @@ footer {
     position: absolute;
     bottom: 1.5em;
     right: 2em;
-    display: flex;
     gap: 0.5em;
 }
 .nav-button {
