@@ -13,45 +13,68 @@ document.addEventListener("DOMContentLoaded", function() {
     const reviewSource = document.getElementById("review-source");
     const leftBtn = document.getElementById("leftBtn");
     const rightBtn = document.getElementById("rightBtn");
+    const sliderSection = document.getElementById("slider"); // contenedor principal del slider
 
-    // Asegura que todos los elementos estén presentes
-    if (!reviewText || !reviewSource || !leftBtn || !rightBtn) {
+    if (!reviewText || !reviewSource || !leftBtn || !rightBtn || !sliderSection) {
         console.error("Algunos de los elementos no se encontraron en el DOM");
         return;
     }
 
     // Actualiza el contenido del slider
-    function updateSliderContent(currentPos) {
-        // Asegura que el índice esté dentro del rango de la lista
-        currentPos = (currentPos + sliderContent.length) % sliderContent.length;
-
-        // Actualiza el texto y la fuente
-        reviewText.innerText = sliderContent[currentPos].text;
-        reviewSource.innerText = sliderContent[currentPos].source;
-
+    function updateSliderContent(pos) {
+        pos = (pos + sliderContent.length) % sliderContent.length;
+        reviewText.innerText = sliderContent[pos].text;
+        reviewSource.innerText = sliderContent[pos].source;
+        currentPos = pos; // actualizar posición global
         console.log(`Current position: ${currentPos}`);
     }
 
-    // Función que maneja los clics de los botones
+    // Maneja clicks en botones
     function handleButtonClick(event) {
         const direction = event.target.getAttribute("direction");
         const increment = direction === "left" ? -1 : 1;
-
-        // Actualiza la posición del slider
-        currentPos += increment;
-        console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);
-
-        // Actualiza el contenido del slider
-        updateSliderContent(currentPos);
+        updateSliderContent(currentPos + increment);
     }
 
-    // Asigna los eventos a los botones
     leftBtn.addEventListener("click", handleButtonClick);
     rightBtn.addEventListener("click", handleButtonClick);
 
-    // Inicializa el slider con la primera reseña
+    // Variables para controlar movimiento del mouse
+    let lastMouseX = null;
+    let debounceTimeout = null;
+    const threshold = 30; // píxeles mínimos para considerar movimiento
+
+    sliderSection.addEventListener("mousemove", function(event) {
+        if (lastMouseX === null) {
+            lastMouseX = event.clientX;
+            return;
+        }
+
+        const deltaX = event.clientX - lastMouseX;
+
+        if (Math.abs(deltaX) > threshold) {
+            if (debounceTimeout) return; // evita multiples saltos muy rapidos
+
+            if (deltaX > 0) {
+                // mouse se mueve a la derecha, avanzar
+                updateSliderContent(currentPos + 1);
+            } else {
+                // mouse se mueve a la izquierda, retroceder
+                updateSliderContent(currentPos - 1);
+            }
+
+            debounceTimeout = setTimeout(() => {
+                debounceTimeout = null;
+            }, 500); // medio segundo de espera para nuevo cambio
+
+            lastMouseX = event.clientX;
+        }
+    });
+
+    // Inicializa con la primera reseña
     updateSliderContent(currentPos);
 });
+
 
 const lyricsData = [
     {
@@ -141,40 +164,117 @@ function createAccordion() {
 
 createAccordion();
 
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("audio-player");
+  const playBtn = document.getElementById("play-button");
+  const pauseBtn = document.getElementById("pause-button");
+  const titlePlayer = document.getElementById("title-player");
+  const timerDisplay = document.getElementById("timer");
+  const trackSpans = Array.from(document.querySelectorAll(".titulo-track"));
+  const forwardBtn = document.getElementById("main-audio-forward");
+  const backwardBtn = document.getElementById("main-audio-backward");
 
+  let currentTrackIndex = -1;
 
+  function formatTime(seconds) {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60).toString().padStart(2, '0');
+    return `${min}:${sec}`;
+  }
 
-    const audioPlayer = document.getElementById('audio-player');
-    const trackTitle = document.querySelector('.track-titulo');
-    const playButton = document.getElementById('play-button');
+  function updateTimer() {
+    if (audio.duration) {
+      timerDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+    }
+  }
 
-    document.querySelectorAll('.titulo-track').forEach(track => {
-        track.addEventListener('click', function() {
-            const audioSrc = this.getAttribute('data-audio');
-            audioPlayer.src = audioSrc;
-            trackTitle.textContent = this.textContent; // Actualiza el título de la pista
-            audioPlayer.play();
-            playButton.classList.remove('fa-play');
-            playButton.classList.add('fa-pause');
-        });
+  function resetTrackNumbers() {
+    trackSpans.forEach((span, i) => {
+      const li = span.closest("li");
+      const numberSpan = li.querySelector(".track-number");
+      numberSpan.innerHTML = i + 1;
+      li.classList.remove("active");
     });
+  }
 
-    playButton.addEventListener('click', function() {
-        if (audioPlayer.paused) {
-            audioPlayer.play();
-            playButton.classList.remove('fa-play');
-            playButton.classList.add('fa-pause');
-        } else {
-            audioPlayer.pause();
-            playButton.classList.remove('fa-pause');
-            playButton.classList.add('fa-play');
-        }
-    });
+  function loadTrack(index) {
+    if (index < 0 || index >= trackSpans.length) return;
 
-    audioPlayer.addEventListener('ended', function() {
-        playButton.classList.remove('fa-pause');
-        playButton.classList.add('fa-play');
+    resetTrackNumbers();
+
+    const span = trackSpans[index];
+    const src = span.dataset.audio;
+    const title = span.textContent.trim();
+
+    audio.src = src;
+    audio.play();
+    titlePlayer.textContent = title;
+    currentTrackIndex = index;
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "inline";
+
+    // Reemplaza número por ícono y resalta
+    const li = span.closest("li");
+    const numberSpan = li.querySelector(".track-number");
+    numberSpan.innerHTML = `<i class="fas fa-play"></i>`;
+    li.classList.add("active");
+  }
+
+  trackSpans.forEach((span, index) => {
+    span.addEventListener("click", () => {
+      loadTrack(index);
     });
+  });
+
+  playBtn.addEventListener("click", () => {
+    if (audio.src) {
+      audio.play();
+    } else if (trackSpans.length > 0) {
+      loadTrack(0);
+    }
+  });
+
+  pauseBtn.addEventListener("click", () => {
+    audio.pause();
+  });
+
+  forwardBtn.addEventListener("click", () => {
+    if (currentTrackIndex < trackSpans.length - 1) {
+      loadTrack(currentTrackIndex + 1);
+    }
+  });
+
+  backwardBtn.addEventListener("click", () => {
+    if (currentTrackIndex > 0) {
+      loadTrack(currentTrackIndex - 1);
+    }
+  });
+
+  audio.addEventListener("play", () => {
+    playBtn.style.display = "none";
+    pauseBtn.style.display = "inline";
+    currentTrackIndex = trackSpans.findIndex(span =>
+      decodeURIComponent(audio.src).endsWith(span.dataset.audio)
+    );
+  });
+
+  audio.addEventListener("pause", () => {
+    pauseBtn.style.display = "none";
+    playBtn.style.display = "inline";
+  });
+
+  audio.addEventListener("timeupdate", updateTimer);
+  audio.addEventListener("loadedmetadata", updateTimer);
+
+  audio.addEventListener("ended", () => {
+    if (currentTrackIndex < trackSpans.length - 1) {
+      loadTrack(currentTrackIndex + 1);
+    } else {
+      resetTrackNumbers(); // Limpiar íconos si no hay más
+    }
+  });
+});
+
 
 // ========== MODO OSCURO/CLARO ==========
 const toggleBtn = document.getElementById('toggle-dark-mode');

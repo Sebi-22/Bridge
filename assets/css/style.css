@@ -1486,50 +1486,62 @@ footer {
 }
 /* --- ALBUM REVIEWS --- */
 .review-section {
-    background: #181818;
-    padding: 1.75em 2em 1.375em 2em;
-    border-radius: 0.125em;
-    max-width: 37.5em;
-    margin: 1.875em auto; /* Centrado sin margin-right */
-    box-sizing: border-box;
-    position: relative; /* Para posicionar los botones dentro */
-    margin-left:50%;
+  background: #181818;
+  padding: 5em 2.5em;
+  border-radius: 0.25em;
+  max-width: 600px;
+  margin: 2em auto;
+  box-sizing: border-box;
+  position: relative;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-left:52%;
 }
+
 .review-section h2 {
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 0.063em;
-    margin-bottom: 1.125em;
-    font-weight: 700;
+  font-size: 2.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  margin-bottom: 1em;
 }
+
 .review-text {
-    font-family: 'Open Sans', monospace, Arial, sans-serif;
-    color: #ccc;
-    font-size: 1em;
-    margin-bottom: 1.125em;
-    line-height: 1.7;
-    letter-spacing: 0.031em;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ccc;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  line-height: 1.7;
 }
+
 .review-source {
-    font-size: 1em;
-    font-weight: 700;
-    margin-top: 0.625em;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 2em;
 }
+
 .nav-icons {
-    bottom: 1.375em;
-    right: 2em;
-    gap: 0.625em;
+  position: absolute;
+  bottom: 1.5em;
+  right: 2em;
+  display: flex;
+  gap: 0.5em;
 }
+
 .nav-button {
-    background: transparent;
-    border: none;
-    font-size: 1.2em;
-    padding: 0.25em 0.625em;
-    transition: color 0.2s;
+  background: transparent;
+  border: none;
+  font-size: 1.2em;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
 }
+
 .nav-button:hover {
-    color: #e91e63;
+  color: #e91e63;
 }
+
 /* --- PLAYER --- */
 .musica {
     max-width: 31.25em;
@@ -1538,7 +1550,7 @@ footer {
     margin: 2.5em auto 0 auto;
     padding: 0;
     box-sizing: border-box;
-    margin-top: -25%;
+    margin-top: -38%;
     margin-right:55% ;
 }
 .controles {
@@ -1556,11 +1568,10 @@ footer {
     border-right: none;
 }
 .controles i {
-    font-size: 1.5em;
     transition: color 0.2s;
 }
 .controles i:hover {
-    color: #e91e63;
+    color: #939393;
 }
 .track-info {
     justify-content: space-between;
@@ -1627,6 +1638,9 @@ footer {
     left: 0;
     font-weight: bold;
     font-size: 1em;
+}
+.song-list li.active {
+  font-weight: bold;
 }
 .titulo-track {
     transition: color 0.2s;

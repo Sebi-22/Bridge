@@ -77,68 +77,82 @@
                 </div>
             </section>
 
-            <section class="musica">
-                <div class="controles">
-                    <div><i class="fas fa-backward"></i></div>
-                    <div><i class="fas fa-play" id="play-button"></i></div>
-                    <div><i class="fas fa-forward"></i></div>
-                </div>
-            
-                <div class="track-info">
-                    <div>
-                        <div class="track-titulo">BLACK HOLE SUN</div>
-                        <div class="artist-name">Ouia Princess</div>
-                    </div>
-                    <div class="timer">00:00/00:31</div>
-                </div>
-            </section>
-            
-            <section class="song-list">
-                <h1>Tracklist</h1>
-                <ol>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3">Black Hole Sun</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/Rihanna (feat (mp3cut.net).mp3"> Work</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/Lullaby (Remastered) (mp3cut.net).mp3">Lullaby</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3">The Passenger</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3">Celebrity Skin</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3">Creep</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3">Epic</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3">Reptilia</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3">Go With the Flow</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                    <li>
-                        <span class="titulo-track" data-audio="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3">Electric Version</span>
-                        <a href="#" class="buy-track">BUY TRACK</a>
-                    </li>
-                </ol>
-            </section>
-            <audio id="audio-player" src="" preload="auto"></audio>
+     <section class="musica">
+  <div class="controles">
+    <div><i class="fas fa-backward" id="main-audio-backward"></i></div>
+    <div>
+      <i class="fas fa-play" id="play-button"></i>
+      <i class="fas fa-pause" id="pause-button" style="display:none;"></i>
+    </div>
+    <div><i class="fas fa-forward" id="main-audio-forward"></i></div>
+  </div>
+
+  <div class="track-info">
+    <div>
+      <div class="track-titulo" id="title-player">BLACK HOLE SUN</div>
+      <div class="artist-name">Ouia Princess</div>
+    </div>
+    <div class="timer" id="timer">00:00 / 00:00</div>
+  </div>
+</section>
+
+<section class="song-list">
+  <h1>Tracklist</h1>
+  <ol>
+    <li>
+      <span class="track-number">1</span>
+      <span class="titulo-track" data-audio="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3">Black Hole Sun</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">2</span>
+      <span class="titulo-track" data-audio="assets/images/Rihanna (feat (mp3cut.net).mp3">Work</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">3</span>
+      <span class="titulo-track" data-audio="assets/images/Lullaby (Remastered) (mp3cut.net).mp3">Lullaby</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">4</span>
+      <span class="titulo-track" data-audio="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3">The Passenger</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">5</span>
+      <span class="titulo-track" data-audio="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3">Celebrity Skin</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">6</span>
+      <span class="titulo-track" data-audio="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3">Creep</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">7</span>
+      <span class="titulo-track" data-audio="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3">Epic</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">8</span>
+      <span class="titulo-track" data-audio="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3">Reptilia</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">9</span>
+      <span class="titulo-track" data-audio="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3">Go With the Flow</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+    <li>
+      <span class="track-number">10</span>
+      <span class="titulo-track" data-audio="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3">Electric Version</span>
+      <a href="#" class="buy-track">BUY TRACK</a>
+    </li>
+  </ol>
+</section>
+
+<audio id="audio-player" src="" preload="auto"></audio>
 
              <section class="available-on">
                 <h2>AVAILABLE ON</h2>
