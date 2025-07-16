@@ -269,7 +269,10 @@ audio.addEventListener("ended", () => {
   updatePlayIcons("pause");
   // (opcional: avanzar a la siguiente canción automáticamente)
 });
-
+/* -------------------------- HAMBURGUESA PARA MENÚ RESPONSIVO --------------------------- */
+document.getElementById('hamburger').onclick = function() {
+  document.getElementById('navLinks').classList.toggle('active');
+};
 /* -------------------------- TRACKLIST CLICK PARA REPRODUCIR --------------------------- */
 document.querySelectorAll(".track-icons").forEach(box => {
   const playBtn  = box.querySelector(".fa-play");

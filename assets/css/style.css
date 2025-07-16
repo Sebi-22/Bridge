@@ -50,7 +50,6 @@ header {
     margin-top: 1%;
 }
 .container.navbar {
-    align-items: center;
     justify-content: flex-start;
     max-width: 75em; /* 1200px */
     margin: 0 auto;
@@ -111,7 +110,6 @@ header {
     background-repeat: no-repeat;
     min-height: 45em;
     flex-direction: column;
-    align-items: center;
     position: relative;
     padding-top: 5.625em; /* 90px */
 }
@@ -122,7 +120,6 @@ header {
     min-height: 88vh;
     position: relative;
     flex-direction: column;
-    align-items: center;
 }
 .background-image3 {
     background-image: url('../images/about-title-area.jpg');
@@ -130,7 +127,7 @@ header {
 .background-image4 {
     background-image: url('../images/contact-us-title.jpg');
 }
-.hero-content {
+.hero-content,.background-image2,.background-image3,.background-image4,.background-image,.container.navbar,.about-hero,.album-player,.left-player,.controls-player,.progress-container-player,.volume-control-player,.album-cover,.video-section,.video-content,.nuevomodal,.albumes,.transparencia,.albumesss .image-foto,.accordion-header,.controles > div,.track-info,.song-list li,.platform-icons,.video-container,.iconos-abajo,.flecha,.punto,.albumes     { 
     align-items: center;
 }
 .tour-dates {
@@ -182,7 +179,6 @@ header {
     width: 100vw;
     height: 26.25em;
     min-height: 21.875em;
-    align-items: center;
 }
 .about-bg {
     width: 100%; 
@@ -204,7 +200,6 @@ header {
 }
 /* --- REPRODUCTOR DE AUDIO --- */
 .album-player {
-    align-items: center;
     background: #fff;
     padding: 0.5em 0 0.5em 0.5em;
     border-radius: 0;
@@ -215,7 +210,6 @@ header {
     margin: 0 auto;
 }
 .left-player {
-    align-items: center;
     gap: 1em;
     min-width: 16em;
     border-right: 0.063em solid #eee;
@@ -247,7 +241,6 @@ header {
     letter-spacing: 0.03em;
 }
 .controls-player {
-    align-items: center;
     gap: 1.5em;
     font-size: 1.4em;
     color: #111;
@@ -264,7 +257,6 @@ header {
     background: #f2f2f2;
 }
 .progress-container-player {
-    align-items: center;
     gap: 0.5em;
     width: 14em;
     border-right: 0.063em solid #eee;
@@ -298,7 +290,6 @@ header {
     margin: 0 0.1em;
 }
 .volume-control-player {
-    align-items: center;
     gap: 0.5em;
     padding-left: 1.5em;
 }
@@ -325,7 +316,6 @@ header {
 .album-cover {
     flex: 0 0 25em;
     flex-direction: column;
-    align-items: center;
     margin-left: 8%;
 }
 .album-cover img {
@@ -848,7 +838,6 @@ header {
     min-height: 32em;
     height: 60vh;
     max-height: 37.5em;
-    align-items: center;
     background: #222;
 }
 /* Zoom suave al pasar el mouse sobre el play */
@@ -879,7 +868,6 @@ header {
     position: relative;
     z-index: 3;
     height: 100%;
-    align-items: center;
 }
 .play-button {
     left: 50%;
@@ -903,7 +891,6 @@ header {
     height: 60vh;
     max-height: 37.5em;
     background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-    align-items: center;
 }
 /* Recuadro de modal ampliado */
 .modal-contento {
@@ -983,7 +970,6 @@ header {
     width: 16.25em;
     aspect-ratio: 1/1;
     background: #222;
-    align-items: center;
     box-shadow: 0 0.5em 2em rgba(0,0,0,0.25), 0 0.094em 0.25em rgba(0,0,0,0.10);
 }
 .albumes img {
@@ -1070,7 +1056,6 @@ header {
     width: 100%; height: 100%;
     background: rgba(0,0,0,0.6);
     flex-direction: column;
-    align-items: center;
     opacity: 0;
     transition: opacity 0.4s;
 }
@@ -1359,7 +1344,6 @@ footer {
     max-width: 32.5em;
     aspect-ratio: 1/1;
     margin: 0 auto 0 auto;
-    align-items: center;
 }
 .albumesss .image-foto img {
     height: 100%;
@@ -1444,7 +1428,6 @@ footer {
 }
 .accordion-header {
     justify-content: space-between;
-    align-items: center;
     font-size: 1em;
     color: #ccc;
     padding: 0.75em 0;
@@ -1495,7 +1478,7 @@ footer {
   position: relative;
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin-left:52%;
+  margin-left:50%;
 }
 
 .review-section h2 {
@@ -1560,7 +1543,6 @@ footer {
 }
 .controles > div {
     flex: 1 1 0;
-    align-items: center;
     height: 5em;
     border-right: 0.063em solid #888;
 }
@@ -1575,7 +1557,6 @@ footer {
 }
 .track-info {
     justify-content: space-between;
-    align-items: center;
     background: #222;
     padding: 1.25em 1.75em 1em 1.75em;
 }
@@ -1623,7 +1604,6 @@ footer {
 .song-list li {
     margin-bottom: 0;
     justify-content: space-between;
-    align-items: center;
     border-bottom: 1px solid #222;
     padding: 0.6em 0;
     font-weight: 700;
@@ -1677,7 +1657,6 @@ footer {
 }
 .platform-icons {
     gap: 1.375em;
-    align-items: center;
     margin-left: 5%;
 }
 .platform-icons a img {
@@ -1693,18 +1672,17 @@ footer {
     padding: 0 0 1.875em 0;
 }
 .latest-video h2 {
-    font-size:1.875em;
+    font-size:2em;
     line-height:2.5em;
-    margin-left: 5%;
+    margin-left:9%;
     text-transform: uppercase;
     letter-spacing: 0.063em;
-    margin-bottom: 1.125em;
+    margin-bottom: -2%;
     font-weight: 700;
     text-align: left;
     padding-left: 0.625em;
 }
 .video-container {
-    align-items: center;
     margin-bottom: 1.125em;
     background: #000; /* Fondo negro para el área del video */
     padding: 2em 0;
@@ -1719,7 +1697,6 @@ footer {
     display: block;
 }
 .iconos-abajo {
-    align-items: center;
     gap: 40vw;
     margin-top: 0.625em;
     margin-bottom: 0;
@@ -1729,7 +1706,6 @@ footer {
     font-size: 2em;
     user-select: none;
     transition: color 0.2s;
-    align-items: center;
 }
 /* Cambiar el color de la selección de texto */
 ::selection {
@@ -1740,7 +1716,6 @@ footer {
     font-size: 2em;
     text-decoration: none;
     transition: color 0.2s;
-    align-items: center;
 }
 /* --- BREADCRUMB --- */
 .breadcrumb {
@@ -1908,7 +1883,6 @@ footer {
     background: none;
     box-shadow: none;
     border-radius: 0;
-    align-items: center;
 }
 .albumes figure {
     margin: 0;
@@ -1978,7 +1952,7 @@ body.dark-mode #scrollToTopBtn {
 body.dark-mode #scrollToTopBtn:hover {
     background: #868686;
 }
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE SOLO --- */
 @media (max-width: 1200px) {
     .articulos {
         flex-direction: column;
