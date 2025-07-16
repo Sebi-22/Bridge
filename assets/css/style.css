@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
 }
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button,.tracklist ol,.gallery,#datos ul.articulos,.articulos article,.foto,.about-album ul,.imagenes { 
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button,.tracklist ol,.gallery,#datos ul.articulos,.articulos article,.foto,.about-album ul,.imagenes,.tour-dates,.about-title,.album-player,.texto,.texto2,.blog,.modal-contento .error-message,.albumes figcaption p,.contact,.song-list ol,.albumes figure{ 
     margin: 0;
     padding: 0;
 }
@@ -17,6 +17,9 @@ header,.nav-links a,#toggle-dark-mode,.tour-dates,.vertical-name,.about-title,.a
 }
 header,.hero-content,.album-cover img,.album-details img,.albumes img,.blog-post img,.video-bg,.about-bg,.background-image,.background-image2,.background-image3,.background-image4,.albumes figcaption h3,.albumes figcaption p,.texto p,.texto2 p,.blog-posts .blog-post img, .image img,.blog-post-image-wrapper,.blog-post img,.video-content,.albumes figcaption,.foto img,.contact,.form,.right-section input,.right-section textarea,.albumesss,.albumesss .image-foto,.albumesss .image-foto img,.lyrics-section,#accordion-container,.review-section,.musica,.song-list,.video-container,.video-container iframe,.albumes figure,.albumes img, .tracklist,.about-col h2   {
     width: 100%;
+}
+.about-bg,.progress-bar-fill-player,.blog-post img,.video-bg,.video-content,.albumes img,.foto,.foto img,.albumesss .image-foto img,.albumes figure,.albumes img   {
+    height: 100%;
 }
 .vertical-name,.about-title,.album-player,.titulo-album,.track-title,.texto h1,.texto2 h1,.blog h1,.blog-post-title,.our-discography h1,.albumes figcaption,.show-more,.transparencia h3,.contact-section h2,.left-section h1,.info-contacto h2,.right-section button,.about-album h2,.about-album li strong,.lyrics-section h1,.accordion-header,.review-section h2,.review-source,.track-titulo,.song-list h1,.song-list li,.titulo-track,.available-on h2,.latest-video h2,.details-col h2,.tickets,.follow h2 {
     font-family: 'Oswald', Arial, sans-serif;
@@ -44,6 +47,12 @@ background: #fff;
 }
 .nav-links,.image,.modal-slider ,.review-section ,.month-day ,.modal-content,.modal-contenedor,.nav-links a,.background-image,.background-image2,.background-image3,.background-image4,.about-hero,.about-title,.progress-bar-player,.album-info,.texto h1,.texto2 h1,.blog h1,.video-section,.video-content,.modal-contento,.albumes,.foto,.song-list li      {
 position: relative;
+}
+.left-player img,.blog-post img,.video-bg,.albumes img,.foto img,.albumesss .image-foto img,.img-col img,.albumes img  {
+      object-fit: cover;  
+}
+.albumes,.foto,.albumesss .image-foto,.albumes img{
+ aspect-ratio: 1/1;   
 }
 body {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -142,7 +151,6 @@ header {
     font-weight: 200;
     letter-spacing: 0.125em;
     text-align: center;
-    margin: 0;
     text-shadow:0.125em 0.125em 0.5em rgba(0,0,0,0.7);
 }
 .vertical-name {
@@ -187,7 +195,6 @@ header {
 }
 .about-bg {
     width: 100%; 
-    height: 100%;
     background-image: url('../images/about-title-area.jpg');
     background-position: center center;
     background-size: cover;
@@ -200,13 +207,11 @@ header {
     font-weight: 500;
     letter-spacing: 0.05em;
     text-align: center;
-    margin: 0;
 }
 /* --- REPRODUCTOR DE AUDIO --- */
 .album-player {
     padding: 0.5em 0 0.5em 0.5em;
     border-radius: 0;
-    margin: 0;
     max-width: 100vw;
     box-shadow: none;
     border-bottom: 0.125em solid #eee;
@@ -222,7 +227,6 @@ header {
 .left-player img {
     width: 3.5em;
     height: 4em;
-    object-fit: cover;
 }
 .info-player {
     min-width: 8em;
@@ -271,11 +275,9 @@ header {
     height: 0.375em;
     border-radius: 0.1875em;
     margin-right: 0.5em;
-    overflow: hidden;
 }
 .progress-bar-fill-player {
     background: #222;
-    height: 100%;
     width: 0%; 
     transition: width 0.2s;
 }
@@ -405,23 +407,19 @@ header {
   min-width: 2.5em;
   text-align: right;
 }
-
 .track-icons i {
   color: #bdbdbd;
   font-size: 1.1em;
   transition: color 0.2s ease;
 }
-
 .track-icons i:hover {
   color: #ffffff;
 }
-
 /* --- TEXTO PROMOCIONAL --- */
 .texto {
     width: 99vw;
     min-height: 25em;
     text-align: left;
-    margin: 0;
     padding: 4em 0 3em 7vw;
     box-sizing: border-box;
     flex-direction: column;
@@ -456,7 +454,6 @@ header {
 .texto2 {
     width: 100vw;
     padding: 4em 0 5em 0;
-    margin: 0;
 }
 .texto2 h1 {
     font-size: 3em;
@@ -743,7 +740,6 @@ header {
 /* --- SECCIÓN DEL BLOG --- */
 .blog {
     width: 100vw;
-    margin: 0;
     padding: 0 0 3em 0;
     margin-top: 10%;
 }
@@ -791,8 +787,6 @@ header {
     margin-bottom: 1em;
 }
 .blog-post img {
-    height: 100%;
-    object-fit: cover;
     transition: transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 .blog-post-image-wrapper:hover img {
@@ -831,8 +825,6 @@ header {
     top: 0; 
     left: 0; 
     width: 100%; 
-    height: 100%;
-    object-fit: cover;
     z-index: 1;
 }
 .overlay {
@@ -845,7 +837,6 @@ header {
 }
 .video-content {
     z-index: 3;
-    height: 100%;
 }
 .play-button {
     left: 50%;
@@ -877,7 +868,7 @@ header {
     border-radius: 0.25em;
     width: 90%;
     max-width: 50em;
-    height: 25em; /* AUMENTAMOS LA ALTURA */
+    height: 25em; 
     text-align: center;
     box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.8);
     flex-direction: column;
@@ -886,7 +877,6 @@ header {
 .modal-contento .error-message {
     font-size: 3.5em;              
     font-weight: bold;
-    margin: 0;
 }
 .modal-contento .error-subtext {
     font-size: 1.75em;/* Aumentado */
@@ -941,14 +931,11 @@ header {
 }
 .albumes {
     width: 16.25em;
-    aspect-ratio: 1/1;
     background: #222;
     box-shadow: 0 0.5em 2em rgba(0,0,0,0.25), 0 0.094em 0.25em rgba(0,0,0,0.10);
 }
 .albumes img {
     width: 120%;
-    height: 100%;
-    object-fit: cover;
     object-position: center center;
     transition: filter 0.3s, transform 0.4s cubic-bezier(.4,0,.2,1);
     left: 50%;
@@ -982,7 +969,6 @@ header {
 
 .albumes figcaption p {
     font-size: 1em;
-    margin: 0;
     font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
 }
@@ -1011,13 +997,7 @@ header {
 .articulos article {
     flex: 1 1 0;
 }
-.foto {
-    height: 100%;
-    aspect-ratio: 1/1;
-}
 .foto img {
-    height: 100%;
-    object-fit: cover;
     transition: transform 0.5s ease;
 }
 .transparencia {
@@ -1167,7 +1147,6 @@ footer {
 /* --- CONTACTO --- */
 .contact {
     padding: 4.375em 0 5.625em 0;
-    margin: 0;
     gap: 0;
 }
 .contact-section {
@@ -1307,12 +1286,9 @@ footer {
 /* --- COLUMNA IZQUIERDA --- */
 .albumesss .image-foto {
     max-width: 32.5em;
-    aspect-ratio: 1/1;
     margin: 0 auto 0 auto;
 }
 .albumesss .image-foto img {
-    height: 100%;
-    object-fit: cover;
     border: none;
 }
 .left-column {
@@ -1561,7 +1537,6 @@ footer {
     list-style: none; /* Oculta el número automático */
     counter-reset: track-number; /* Resetea contador */
     padding-left: 0;
-    margin: 0;
 }
 .song-list li {
     margin-bottom: 0;
@@ -1712,7 +1687,6 @@ footer {
 .img-col img {
     width: 21.875em;
     height: 26.25em;
-    object-fit: cover;
     background: #111;
 }
 .map-col {
@@ -1838,14 +1812,7 @@ footer {
     box-shadow: none;
     border-radius: 0;
 }
-.albumes figure {
-    margin: 0;
-    height: 100%;
-}
 .albumes img {
-    height: 100%;
-    object-fit: cover;
-    aspect-ratio: 1/1;
     transition: transform 0.3s;
 }
 #scrollToTopBtn:hover {
@@ -1885,7 +1852,6 @@ body.dark-mode #scrollToTopBtn:hover {
         height: 25em;
     }
 }
-
 @media (max-width: 1100px) {
     .blog-posts {
         flex-wrap: wrap;
@@ -1908,7 +1874,6 @@ body.dark-mode #scrollToTopBtn:hover {
         padding: 0 1.25em;
     }
 }
-
 @media (max-width: 900px) {
     .album-info, .footer, .albums, .blog-posts, .gallery {
         flex-direction: column;
@@ -1956,7 +1921,6 @@ body.dark-mode #scrollToTopBtn:hover {
         min-height: 12.5em;
     }
 }
-
 @media (max-width: 600px) {
     .album-cover img, .album-card img {
         width: 100%;
