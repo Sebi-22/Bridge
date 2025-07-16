@@ -13,68 +13,45 @@ document.addEventListener("DOMContentLoaded", function() {
     const reviewSource = document.getElementById("review-source");
     const leftBtn = document.getElementById("leftBtn");
     const rightBtn = document.getElementById("rightBtn");
-    const sliderSection = document.getElementById("slider"); // contenedor principal del slider
 
-    if (!reviewText || !reviewSource || !leftBtn || !rightBtn || !sliderSection) {
+    // Asegura que todos los elementos estén presentes
+    if (!reviewText || !reviewSource || !leftBtn || !rightBtn) {
         console.error("Algunos de los elementos no se encontraron en el DOM");
         return;
     }
 
     // Actualiza el contenido del slider
-    function updateSliderContent(pos) {
-        pos = (pos + sliderContent.length) % sliderContent.length;
-        reviewText.innerText = sliderContent[pos].text;
-        reviewSource.innerText = sliderContent[pos].source;
-        currentPos = pos; // actualizar posición global
+    function updateSliderContent(currentPos) {
+        // Asegura que el índice esté dentro del rango de la lista
+        currentPos = (currentPos + sliderContent.length) % sliderContent.length;
+
+        // Actualiza el texto y la fuente
+        reviewText.innerText = sliderContent[currentPos].text;
+        reviewSource.innerText = sliderContent[currentPos].source;
+
         console.log(`Current position: ${currentPos}`);
     }
 
-    // Maneja clicks en botones
+    // Función que maneja los clics de los botones
     function handleButtonClick(event) {
         const direction = event.target.getAttribute("direction");
         const increment = direction === "left" ? -1 : 1;
-        updateSliderContent(currentPos + increment);
+
+        // Actualiza la posición del slider
+        currentPos += increment;
+        console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);
+
+        // Actualiza el contenido del slider
+        updateSliderContent(currentPos);
     }
 
+    // Asigna los eventos a los botones
     leftBtn.addEventListener("click", handleButtonClick);
     rightBtn.addEventListener("click", handleButtonClick);
 
-    // Variables para controlar movimiento del mouse
-    let lastMouseX = null;
-    let debounceTimeout = null;
-    const threshold = 30; // píxeles mínimos para considerar movimiento
-
-    sliderSection.addEventListener("mousemove", function(event) {
-        if (lastMouseX === null) {
-            lastMouseX = event.clientX;
-            return;
-        }
-
-        const deltaX = event.clientX - lastMouseX;
-
-        if (Math.abs(deltaX) > threshold) {
-            if (debounceTimeout) return; // evita multiples saltos muy rapidos
-
-            if (deltaX > 0) {
-                // mouse se mueve a la derecha, avanzar
-                updateSliderContent(currentPos + 1);
-            } else {
-                // mouse se mueve a la izquierda, retroceder
-                updateSliderContent(currentPos - 1);
-            }
-
-            debounceTimeout = setTimeout(() => {
-                debounceTimeout = null;
-            }, 500); // medio segundo de espera para nuevo cambio
-
-            lastMouseX = event.clientX;
-        }
-    });
-
-    // Inicializa con la primera reseña
+    // Inicializa el slider con la primera reseña
     updateSliderContent(currentPos);
 });
-
 
 const lyricsData = [
     {
