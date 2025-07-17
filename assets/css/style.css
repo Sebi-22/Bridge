@@ -21,92 +21,64 @@
 * {
     box-sizing: border-box;
 }
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button {
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button, .tracklist ol, .gallery, #datos ul.articulos, .articulos article, .foto, .about-album ul, .imagenes, .tour-dates, .about-title, .album-player, .texto, .texto2, .blog, .modal-contento .error-message, .albumes figcaption p, .contact, .song-list ol, .albumes figure { 
     margin: 0;
     padding: 0;
 }
-.about-hero, .info-player, .progress-bar-player, .image, .blog-post-image-wrapper, .video-section, .albumes, .foto, .accordion-content {
+.about-hero, .info-player, .progress-bar-player, .image, .blog-post-image-wrapper, .video-section, .albumes, .foto, .albumesss .image-foto, .accordion-content, .albumes {
     overflow: hidden;
 }
-.container.navbar, .nav-icons, .footer, .modal-footer, .nav-links, .background-image, .hero-content, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li, .arrow, .track-icons, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .social, .footer, .social-icons, .contact-info p, .contact, .form, .info-contacto, .right-section, .albumesss, .left-column, .about1, .accordion-header, .controles, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes {
+.container.navbar,.nav-icons,.footer ,.modal-footer,.nav-links, .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li,.arrow ,.track-icons, .texto, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .blog-post, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .transparencia .social, .footer, .social-icons, .social-icons a,.social, .social-icons a i, .contact-info p, .contact, .contact-info p,.form, .info-contacto, .right-section, .albumesss, .albumesss .image-foto, .left-column, .about1, .accordion-header, .nav-icons, .controles, .controles > div, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes, .albumes,.modal-control {
     display: flex;
 }
-header, .nav-links a, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover {
-    color: var(--color-main);
+header, .nav-links a, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .transparencia .social a, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover, #scrollToTopBtn {
+    color: #fff;
 }
-header, .hero-content, .album-cover img, .album-details img, .albumes img, .blog-post img, .video-bg, .about-bg, .background-image, .background-image2, .background-image3, .background-image4, .albumes figcaption h3, .albumes figcaption p, .texto p, .texto2 p, .blog-posts .blog-post img, .image img, .blog-post-image-wrapper, .video-content, .foto img, .contact, .form, .right-section input, .right-section textarea, .albumesss, .albumesss .image-foto, .lyrics-section, #accordion-container, .review-section, .musica, .song-list, .video-container, .video-container iframe, .albumes figure, .tracklist, .about-col h2 {
+header, .hero-content, .album-cover img, .album-details img, .albumes img, .blog-post img, .video-bg, .about-bg, .background-image, .background-image2, .background-image3, .background-image4, .albumes figcaption h3, .albumes figcaption p, .texto p, .texto2 p, .blog-posts .blog-post img, .image img, .blog-post-image-wrapper, .blog-post img, .video-content, .albumes figcaption, .foto img, .contact, .form, .right-section input, .right-section textarea, .albumesss, .albumesss .image-foto, .albumesss .image-foto img, .lyrics-section, #accordion-container, .review-section, .musica, .song-list, .video-container, .video-container iframe, .albumes figure, .albumes img, .tracklist, .about-col h2 {
     width: 100%;
 }
-.about-bg, .progress-bar-fill-player, .blog-post img, .video-bg, .video-content, .albumes img, .foto, .albumesss .image-foto img {
+.about-bg, .progress-bar-fill-player, .blog-post img, .video-bg, .video-content, .albumes img, .foto, .foto img, .albumesss .image-foto img, .albumes figure, .albumes img {
     height: 100%;
 }
-.vertical-name, .about-title, .album-player, .content-grid, .titulo-album, .track-title, .texto h1, .texto2 h1, .blog h1, .blog-post-title, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .contact-section h2, .left-section h1, .info-contacto h2, .right-section button, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion-header, .review-section h2, .review-source, .track-titulo, .song-list h1, .song-list li, .titulo-track, .available-on h2, .latest-video h2, .details-col h2, .tickets, .follow h2, .footer-column h2, .footer-column h3, .footer-column a {
-    font-family: var(--font-heading);
+.vertical-name, .about-title, .album-player, .titulo-album, .track-title, .texto h1, .texto2 h1, .blog h1, .blog-post-title, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .contact-section h2, .left-section h1, .info-contacto h2, .right-section button, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion-header, .review-section h2, .review-source, .track-titulo, .song-list h1, .song-list li, .titulo-track, .available-on h2, .latest-video h2, .details-col h2, .tickets, .follow h2 {
+    font-family: 'Oswald', Arial, sans-serif;
 }
-.container.navbar, .album-player, .blog-posts, .albums, .album-info {
+.container.navbar, .album-player, .blog-posts, .albums, .album-info, .blog-posts, .blog-posts {
     gap: 2em;
 }
 header, .nav-links a::after, .vertical-name, .about-bg, .close, .arrow, .video-bg, .overlay, .play-button, .nuevomodal, #cerrarModal, .albumes img, .albumes figcaption, .transparencia, .nav-icons, .song-list li::before {
     position: absolute;
 }
-#toggle-dark-mode, .controls-player i, .track-icons i, .close,.cierre,.cerrar,  .arrow,.mini-arrow, .play-button, #cerrarModal, .show-more, .right-section button, .accordion-header, .nav-button, .controles i, .titulo-track, .flecha, #scrollToTopBtn,.track-title:hover,.buy-tickets,#view-all-btn,.nav-button {
+#toggle-dark-mode, .controls-player i, .track-icons i, .image img, .close, .arrow, .play-button, #cerrarModal, .show-more, .right-section button, .accordion-header, .nav-button, .controles i, .titulo-track, .flecha, #scrollToTopBtn {
     cursor: pointer;
 }
 .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-info, .texto, .modal, .modal-content, .video-section, .video-content, .nuevomodal, .modal-contento, .albumes, .articulos, .transparencia, .contact, .form, .albumesss .image-foto, .controles > div, .video-container, .iconos-abajo, .top-row, .imagenes, .albumes {
     justify-content: center;
 }
-.nav-links a::after, .texto h1::after, .texto2 h1::after, .blog h1, .blog h1::after, .blog-post-image-wrapper, .blog-post img, .our-discography h1, .our-discography h1::after, .albumes img, .foto img, .albumesss .image-foto img, .platform-icons a img, .video-container iframe, .img-col img, .map-col .map {
+.nav-links a::after, .texto h1::after, .texto2 h1::after, .blog h1, .blog h1::after, .blog-post-image-wrapper, .blog-post img, .our-discography h1, .our-discography h1::after, .albumes img, .foto img, .albumesss .image-foto img, .platform-icons a img, .video-container iframe, .img-col img, .map-col .map, .albumes img {
     display: block;
 }
-.album-info, .blog-post,::selection, .contact, .form, .albumesss, .left-column, .top-row, .map-col, .bottom-row {
+.album-info, .blog-post, .contact, .form, .albumesss, .left-column, .top-row, .map-col, .bottom-row {
     align-items: flex-start;
 }
-.album-player ,.texto h1::after,.nav-links a::after, .texto2 h1::after, .blog h1::after, .our-discography h1::after, #view-all-btn:hover, .show-more:hover, .right-section button, .tickets:hover,::selection {
+.album-player, .texto h1::after, .texto2 h1::after, .blog h1::after, .our-discography h1::after, .show-more:hover, .right-section button, .tickets:hover {
     background: #fff;
 }
 .nav-links, .image, .modal-slider, .review-section, .month-day, .modal-content, .modal-contenedor, .nav-links a, .background-image, .background-image2, .background-image3, .background-image4, .about-hero, .about-title, .progress-bar-player, .album-info, .texto h1, .texto2 h1, .blog h1, .video-section, .video-content, .modal-contento, .albumes, .foto, .song-list li {
     position: relative;
 }
-.left-player img, .blog-post img, .video-bg, .albumes img, .foto img, .albumesss .image-foto img, .img-col img {
+.left-player img, .blog-post img, .video-bg, .albumes img, .foto img, .albumesss .image-foto img, .img-col img, .albumes img {
     object-fit: cover;  
 }
-.albumes, .foto, .albumesss .image-foto {
+.albumes, .foto, .albumesss .image-foto, .albumes img {
     aspect-ratio: 1/1;   
 }
-.modal-contento .error-subtext, .transparencia p, .left-section > p, .info-contacto p, .about-album p, .about-album li, .accordion-header, .accordion-header i, .accordion-content, .review-text {
-    color: var(--color-main);
-}
-.album-description, .track-icons span, .track-icons i, .texto p, .texto2 p, .blog-description, .blog-post-date, .discography-description, .albumes figcaption p, .footer-desc, .breadcrumb, .breadcrumb a, .details-col, .details-col p, .details-col a, .details-col .link, .about-col p, .follow a {
-    color: var(--color-accent);
-}
-body, .tour-dates, .transparencia p, .buy-track, .artist-name, .left-section > p, .right-section input, .right-section textarea, .alert, .about-album p {
-    font-family: var(--font-main);
-}
-.buy-tickets, .footer-column a:hover, .buy-track, .details-col .link {
-    text-decoration: underline;
-}
-body.progress-bar-fill-player, .month-day::after,.blog-post-image-wrapper, .map-col .map, .volume-control-player i, .volume-slider-player{
-    color: var(--color-bg-dark);
-    accent-color: var(--color-bg-dark); 
-}
-.nav-links a,.timer.song-list li::before,.about-col p,.details-col p, .details-col a ,.album-description,.artist-name ,.accordion-content,.accordion-header i,.accordion-header,.about-album li,.about-album p ,.alert ,.footer-bottom,.footer-column a,.contact-info p ,.social-icons a,.footer-desc ,.show-more,.albumes figcaption p,.tracklist li,.blog-post-date ,.modal-controls,.month-day,.ciudad-link,#view-all-btn{
-    font-size:1em;
-}
-.title-player,.vertical-name,.song-list li.active,.song-list li::before,.titulo-album,.modal-contento .error-message,.albumes figcaption h3 {
-    font-weight: bold;
-}
-.track-title.playing,.nav-links a:hover,.new-album,::selection,#scrollToTopBtn:hover,.contact-info p,.content-grid,.nav-button, .social-icons a ,.cierre,.buy-tickets, .albumes figcaption h3, .albumes figcaption p, .albumes figcaption h3:hover, .albumes figcaption p:hover, .albumes figcaption h3:focus, .albumes figcaption p:focus,#view-all-btn,footer,.footer-column a  {
-    color: var(--color-main);
-}
-.nav-links a,.follow a ,.ciudad-link,#view-all-btn,.tickets ,.social-icons a,.footer-column a,.punto,.breadcrumb a  {
-    text-decoration: none;
-}
 body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #222;
+    background-color: #000;
     line-height: 1.6;
     overflow-x: hidden;
-    background: var(--color-bg);
-    border-color: var(--color-bg);
-    text-shadow: var(--color-bg);
 }
 /* --- HEADER Y NAVBAR --- */
 header {
@@ -123,8 +95,13 @@ header {
     padding: 0 2em;
     max-width: 98%;
 }
+.logo {
+    margin-right: auto; /* Empuja el resto hacia la derecha */
+}
 .logo img {
     height: 2.2em;
+    width: auto;
+    display: block;
 }
 .nav-links {
     gap: 1.2em;
@@ -134,13 +111,19 @@ header {
     text-transform: uppercase;
     padding: 0.3125em 0;
     transition: color 0.3s ease;
+    font-size: 1em;
+    text-decoration: none;
     font-weight: 600;
     border-radius: 0.1875em;
     letter-spacing: 0.05em;
 }
+.nav-links a:hover {
+    color: #f0f0f0;
+}
 .nav-links a::after {
     content: "";
     height: 0.125em;
+    background-color: #fff;
     left: 0;
     right: 0;
     transform: scaleX(0);
@@ -165,14 +148,12 @@ header {
     flex-direction: column;
     padding-top: 5.625em; /* 90px */
 }
-.background-image2,.background-image3, .background-image4 {
+.background-image2, .background-image3, .background-image4 {
+    background-image: url('../images/tour-title-area.jpg');
     background-size: cover;
     background-position: center;
     min-height: 88vh;
     flex-direction: column;
-}
-.background-image2 {
-    background-image: url('../images/tour-title-area.jpg');
 }
 .background-image3 {
     background-image: url('../images/about-title-area.jpg');
@@ -184,27 +165,30 @@ header {
     align-items: center;
 }
 .tour-dates {
+    font-family: 'Oswald', 'Open Sans', Arial, sans-serif;
     font-size: 3em;
     font-weight: 200;
     letter-spacing: 0.125em;
     text-align: center;
     text-shadow: 0.125em 0.125em 0.5em rgba(0,0,0,0.7);
-    margin-top: 15%;
 }
 .vertical-name {
     top: 40%;
     left: 10%;
+    font-weight: bold;
     transform: translateY(-50%) rotate(180deg);
     font-size: 7.5em;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     margin-top: 8%;
     line-height: 1;
+    text-shadow: 0.125em 0.125em 0.5em #000;
     letter-spacing: 0.05em;
 }
 .new-album {
     margin-top: 22%; 
     margin-left: 44%;       
+    color: white;
 }
 .new-album h2 {
     font-size: 3em;
@@ -219,7 +203,7 @@ header {
     box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.1);
     transition: transform 0.2s;
 }
-.apps img:hover {
+.apps img:hover, .apps img:hover, .image.large:hover img, .image.small:hover img, .video-section:hover .video-bg, .platform-icons a:hover img, .tickets:hover {
     transform: scale(1.05);
 }
 /* HERO SECTION */
@@ -249,7 +233,7 @@ header {
     border-radius: 0;
     max-width: 100vw;
     box-shadow: none;
-    border-bottom: 0.125em solid var(--color-border);
+    border-bottom: 0.125em solid #eee;
     margin: 0 auto;
 }
 .left-player {
@@ -271,6 +255,7 @@ header {
     line-height: 1.1;
 }
 .title-player {
+    font-weight: bold;
     font-size: 1.1em;
     letter-spacing: 0.03em;
     color: #111;
@@ -286,7 +271,7 @@ header {
     font-size: 1.4em;
     color: #111;
     border-right: 0.063em solid #eee;
-    padding: 0 1.5em;
+    padding: 0 1.5em 0 1.5em;
 }
 .controls-player i {
     transition: color 0.2s;
@@ -301,7 +286,7 @@ header {
     gap: 0.5em;
     width: 14em;
     border-right: 0.063em solid #eee;
-    padding: 0 1.5em;
+    padding: 0 1.5em 0 1.5em;
 }
 .progress-bar-player {
     background: #ddd;
@@ -311,6 +296,7 @@ header {
     margin-right: 0.5em;
 }
 .progress-bar-fill-player {
+    background: #222;
     width: 0%; 
     transition: width 0.2s;
 }
@@ -328,13 +314,15 @@ header {
 }
 .volume-control-player {
     gap: 0.5em;
-    padding-left : 1.5em;
+    padding-left: 1.5em;
 }
 .volume-control-player i {
     font-size: 1.1em;
+    color: #222;
 }
 .volume-slider-player {
     width: 5em;
+    accent-color: #222;
     background: transparent;
     border-radius: 0.2em;
     height: 0.4em;
@@ -342,13 +330,14 @@ header {
 /* --- ALBUM INFO SECCIÓN (HOME) --- */
 .album-info {
     gap: 4em;
-    background:url('../images/h1-img-8.jpg') center/cover no-repeat;
+    background: #0a0a0a url('../images/h1-img-8.jpg') center/cover no-repeat;
     padding: 4em 2em 3em 2em;
     min-height: 90vh;
 }
 .album-cover {
     flex: 0 0 25em;
     flex-direction: column;
+    margin-left: 8%;
 }
 .album-cover img {
     max-width: 25em;
@@ -361,14 +350,21 @@ header {
 }
 .titulo-album {
     font-size: 2em;
+    font-weight: bold;
     margin-bottom: 0.5em;
     letter-spacing: 0.063em;
     text-align: left;
 }
 .album-description {
+    color: #bdbdbd;
+    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 1.5em;
     text-align: left;
+}
+.apps {
+    gap: 1em;
+    margin-top: 1em;
 }
 .apps img {
     border-radius: 0.5em;
@@ -382,9 +378,9 @@ header {
     flex: 0.5 1 21.875em;
     background: transparent;
     margin-top: 0.2em;
-    margin-right: 10%;
+    margin-left: 5%;
 }
-.tracklist ol,#datos ul,.about-album ul,.song-list ol {
+.tracklist ol {
     list-style: none;
 }
 .tracklist li {
@@ -393,6 +389,7 @@ header {
     border-bottom: 0.063em solid #222;
     padding: 0.8em 0;
     font-weight: 600;
+    font-size: 1em;
     letter-spacing: 0.031em;
 }
 /* TÍTULO DE LA CANCIÓN */
@@ -408,10 +405,12 @@ header {
 /* Hover SOLO en el título */
 .track-title:hover {
     color: #ffffff;
+    cursor: pointer;
 }
 /* Cuando está reproduciendo: brillo */
 .track-title.playing {
-    text-shadow: 0 0 0.5em #ffffff, 0 0 0.75em #ffffff;
+    color: #fff;
+    text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
     font-weight: 700;
 }
 /* ICONOS DERECHA */
@@ -420,11 +419,13 @@ header {
     gap: 1em;
 }
 .track-icons span {
+    color: #bdbdbd;
     font-size: 0.95em;
     min-width: 2.5em;
     text-align: right;
 }
 .track-icons i {
+    color: #bdbdbd;
     font-size: 1.1em;
     transition: color 0.2s ease;
 }
@@ -456,6 +457,7 @@ header {
     margin-top: 0.5em;
 }
 .texto p {
+    color: #bdbdbd;
     font-size: 1.05em;
     margin-top: 0.5em;
     letter-spacing: 0.05em;
@@ -487,6 +489,8 @@ header {
     margin-top: 0.5em;
 }
 .texto2 p {
+    color: #bdbdbd;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     font-size: 1.1em;
     margin: 1.5em 0 0 0;
     margin-left: 7vw;
@@ -525,9 +529,11 @@ header {
 /* Estilo para la cruz de cierre */
 .cierre {
     position: absolute;
-    right: 0.625em;
+    right: 10px;
     bottom: -1.875em;
     font-size: 1.25em;
+    color: #fff;
+    cursor: pointer;
     transition: transform 0.2s;
 }
 .cierre:hover {
@@ -591,10 +597,11 @@ header {
     transform: translateY(-50%);
     font-size: 1.8em;           /* flecha más pequeña */
     color: white;
+    cursor: pointer;
     padding: 0.2em;             /* menos padding */
     width: 1.8em;               /* ancho del círculo */
     height: 1.8em;              /* alto del círculo */
-    border: 0.125em solid white;
+    border: 2px solid white;
     border-radius: 50%;
     background-color: transparent;
     align-items: center;
@@ -627,8 +634,10 @@ header {
     align-items: center;
     gap: 1em;
     color: white;
+    font-size: 1em;
 }
 .mini-arrow {
+    cursor: pointer;
     font-size: 1.2em;
     user-select: none;
 }
@@ -639,6 +648,7 @@ header {
 .cerrar {
     font-size: 1.8em;
     color: white;
+    cursor: pointer;
     user-select: none;
 }
 /* --- FECHAS DE EVENTOS --- */
@@ -649,13 +659,14 @@ header {
     color: white;
 }
 #datos ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 .date-item {
     align-items: center;
     justify-content: space-between;
-    border-bottom: 0.063em solid #222;
+    border-bottom: 1px solid #222;
     padding: 1.25em 0;
 }
 /* Bloque con fecha */
@@ -674,6 +685,7 @@ header {
 .month-day {
     flex-direction: column;
     justify-content: center;
+    font-size: 1em;
     text-transform: uppercase;
     color: #999;
     letter-spacing: 0.1em;
@@ -685,16 +697,19 @@ header {
     top: 0;
     left: 100%;
     height: 3em;
-    width: 0.063em;
+    width: 1px;
+    background-color: #222;
     margin-left: 1em;
 }
 /* Bloque con ciudad y lugar */
 .ciudad-link {
     align-items: center;
     flex: 1;
+    text-decoration: none;
     color: inherit;
     padding-left: 1.5em;
     font-weight: 700;
+    font-size: 1em;
 }
 .ciudad {
     text-transform: uppercase;
@@ -705,8 +720,11 @@ header {
 .buy-tickets {
     font-weight: 700;
     font-size: 1.2em;
+    color: #fff;
+    text-decoration: underline;
     white-space: nowrap;
     margin-left: 1em;
+    cursor: pointer;
 }
 /* Botón Ver Todo */
 .view-all {
@@ -715,13 +733,18 @@ header {
 }
 #view-all-btn {
     background: transparent;
+    color: #fff;
     padding: 0.8em 3em;
-    border: 0.125em solid #fff;
+    border: 2px solid #fff;
+    font-size: 1em;
     font-weight: 600;
     letter-spacing: 0.063em;
+    text-decoration: none;
+    cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
-#view-all-btn:hover, .show-more:hover {
+#view-all-btn:hover {
+    background: #fff;
     color: #000;
 }
 /* --- SECCIÓN DEL BLOG --- */
@@ -745,6 +768,8 @@ header {
     margin-top: 0.5em;
 }
 .blog-description {
+    color: #bdbdbd;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     font-size: 1.05em;
     margin: 2em 0 3em 7vw;
     letter-spacing: 0.05em;
@@ -769,6 +794,7 @@ header {
 }
 .blog-post-image-wrapper {
     aspect-ratio: 1.2/1;
+    background: #222;
     margin-bottom: 1em;
 }
 .blog-post img {
@@ -785,6 +811,9 @@ header {
     letter-spacing: 0.031em;
 }
 .blog-post-date {
+    color: #bdbdbd;
+    font-size: 1em;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     margin-bottom: 0.5em;
 }
 /* --- VIDEO SECTION --- */
@@ -793,6 +822,7 @@ header {
     min-height: 32em;
     height: 60vh;
     max-height: 37.5em;
+    background: #222;
 }
 /* Zoom suave al pasar el mouse sobre el play */
 .video-section:hover .video-bg {
@@ -828,9 +858,8 @@ header {
     transition: color 0.2s;
 }
 .play-button:hover {
-    color: #8d8d8d;
+    color: #007bff;
 }
-
 /* MODAL VIDEO */
 .nuevomodal {
     display: none;
@@ -857,14 +886,16 @@ header {
 /* Texto de error más grande */
 .modal-contento .error-message {
     font-size: 3.5em;              
+    font-weight: bold;
 }
 .modal-contento .error-subtext {
     font-size: 1.75em; /* Aumentado */
+    color: #ccc;
     margin-top: 1em;
 }
 /* Botón cerrar */
 #cerrarModal {
-    bottom: 1.5em ;
+    bottom: 1.5em;
     right: 2em;
     font-size: 1.5em;
     background: none;
@@ -873,6 +904,7 @@ header {
 /* --- DISCOGRAFÍA --- */
 .our-discography {
     width: 100vw;
+    background: #000;
     text-align: left;
     margin-top: 5em;
     margin-left: 9%;
@@ -892,6 +924,8 @@ header {
     margin-top: 0.5em;
 }
 .discography-description {
+    color: #bdbdbd;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     font-size: 1.05em;
     margin: 0 0 3em 7vw;
     letter-spacing: 0.05em;
@@ -907,6 +941,7 @@ header {
 }
 .albumes {
     width: 16.25em;
+    background: #222;
     box-shadow: 0 0.5em 2em rgba(0,0,0,0.25), 0 0.094em 0.25em rgba(0,0,0,0.10);
 }
 .albumes img {
@@ -923,11 +958,11 @@ header {
 }
 .albumes figcaption {
     left: 0;
-    bottom:  0;
+    bottom: 0;
     padding: 1.2em 1em 1em 1em;
     box-sizing: border-box;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ;
     z-index: 2;
     text-align: left;
 }
@@ -936,9 +971,15 @@ header {
 }
 .albumes figcaption h3 {
     font-size: 1.1em;
+    font-weight: bold;
     margin: 0 0 0.2em 0;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+}
+.albumes figcaption p {
+    font-size: 1em;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #bdbdbd;
 }
 .show-more {
     background: transparent;
@@ -949,8 +990,12 @@ header {
     margin: 2em 0 0 7vw;
     transition: background 0.2s, color 0.2s;
     letter-spacing: 0.05em;
+    font-size: 1em;
     text-transform: uppercase;
     margin-left: 35%;
+}
+.show-more:hover {
+    color: #000;
 }
 /* --- ARTÍCULOS --- */
 .articulos {
@@ -972,7 +1017,7 @@ header {
     opacity: 0;
     transition: opacity 0.4s;
 }
-.social {
+.social{
     gap: 0.5em;
     margin-top: 1em;
 }
@@ -987,11 +1032,15 @@ header {
     letter-spacing: 0.063em;
 }
 .transparencia p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #ccc;
     margin: 0 0 1em 0;
     font-size: 1.1em;
 }
-/*--- FOOTER --- */
+/* --- FOOTER --- */
 footer {
+    background: #000;
+    color: #fff;
     padding: 2em 0 0 0;
     margin-top: 12%;
 }
@@ -1009,6 +1058,7 @@ footer {
     margin-bottom: 1em;
 }
 .footer-column h2, .footer-column h3 {
+    font-family: 'Oswald', Arial, sans-serif;
     margin-bottom: 0.7em;
     font-size: 1.2em;
     font-weight: 700;
@@ -1020,6 +1070,9 @@ footer {
     margin-bottom: 0.3em;
 }
 .footer-desc {
+    color: #bdbdbd;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 1em;
     margin-bottom: 1.5em;
     line-height: 1.6;
     max-width: 20em;
@@ -1034,14 +1087,19 @@ footer {
     justify-content: center;
     width: 2em;
     height: 2em;
-    border: 0.125em solid #fff;
+    border: 2px solid #fff;
     border-radius: 50%;
+    color: #fff;
+    font-size: 1em;
     background: transparent;
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
 }
 .social-icons a:hover {
     background: #fff;
+    color: #000;
+    border-color: #000;
 }
 .social-icons a i {
     display: inline-block;
@@ -1055,25 +1113,36 @@ footer {
     align-items: center;
     gap: 0.5em;
     margin-bottom: 0.5em;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #fff;
+    font-size: 1em;
 }
 .footer-column a {
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 1em;
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    text-decoration: none;
     margin-bottom: 0.5em;
     display: inline-block;
     transition: color 0.2s;
 }
 .footer-column a:hover {
     color: #666;
+    text-decoration: underline;
 }
 /* Footer inferior */
 .footer-bottom {
     text-align: center;
     padding: 1.2em 0 0.8em 0;
+    background: #000;
     color: #aaa;
     margin-top: 2em;
+    font-size: 1em;
     letter-spacing: 0.03em;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     border-top: 0.063em solid #444;
 }
 /* --- CONTACTO --- */
@@ -1097,10 +1166,12 @@ footer {
     font-weight: 700;
 }
 .contact-section p {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #a09d9d;
     font-size: 0.9em;
     margin: 0 0 0.375em 0;
     letter-spacing: 0.063em;
+    word-break: break-all;
 }
 /* --- FORMULARIO DE CONTACTO --- */
 .form {
@@ -1122,6 +1193,8 @@ footer {
     font-weight: 700;
 }
 .left-section > p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #ccc;
     font-size: 1.13em;
     margin-bottom: 2.5em;
     line-height: 1.7;
@@ -1138,6 +1211,8 @@ footer {
     font-weight: 700;
 }
 .info-contacto p {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #ccc;
     font-size: 1.05em;
     margin: 0 0 0.625em 0;
     letter-spacing: 0.063em;
@@ -1155,6 +1230,7 @@ footer {
 .right-section input, .right-section textarea {
     background: transparent;
     border: 0.125em solid #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.08em;
     padding: 1em 0.875em;
     margin-bottom: 0;
@@ -1196,7 +1272,9 @@ footer {
     padding: 0.75em 1.125em;
     margin-top: 1.125em;
     border-radius: 0.188em;
+    font-size: 1em;
     text-align: center;
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 /* --- CONTENEDOR PRINCIPAL --- */
 .albumesss {
@@ -1236,11 +1314,20 @@ footer {
     font-weight: 700;
 }
 .about-album p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #ccc;
+    font-size: 1em;
     margin-bottom: 1.125em;
     line-height: 1.7;
     max-width: 95%;
 }
+.about-album ul {
+    list-style: none;
+}
 .about-album li {
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #ccc;
+    font-size: 1em;
     margin-bottom: 0.313em;
     letter-spacing: 0.063em;
 }
@@ -1248,6 +1335,7 @@ footer {
     font-weight: 700;
     letter-spacing: 0.063em;
 }
+
 /* --- LYRICS SECTION (ACORDEÓN) --- */
 .lyrics-section {
     margin: 1.875em auto;
@@ -1270,9 +1358,9 @@ footer {
     padding-right: 0.25em;
     scrollbar-width: none;      
     -ms-overflow-style: none;   
-    color: white;
 }
 #accordion-container::-webkit-scrollbar {
+    width: 0px;
     background: transparent;
 }
 .accordion {
@@ -1281,12 +1369,16 @@ footer {
 }
 .accordion-header {
     justify-content: space-between;
+    font-size: 1em;
+    color: #ccc;
     padding: 0.75em 0;
     transition: background 0.2s;
     text-transform: none;
     letter-spacing: 0.031em;
 }
 .accordion-header i {
+    font-size: 1em;
+    color: #ccc;
     margin-right: 1.25em;
     transition: transform 0.3s;
 }
@@ -1297,6 +1389,9 @@ footer {
     max-height: 0;
     transition: max-height 0.35s ease;
     background: transparent;
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    color: #ccc;
+    font-size: 1em;
     padding: 0 1.25em;
     line-height: 1.7;
     border-left: 0.125em solid #222;
@@ -1318,11 +1413,11 @@ footer {
     background: #181818;
     padding: 5em 2.5em;
     border-radius: 0.25em;
-    max-width: 37.5em;
+    max-width: 600px;
     margin: 2em auto;
     box-sizing: border-box;
     color: white;
-    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-left: 50%;
 }
 .review-section h2 {
@@ -1334,6 +1429,7 @@ footer {
 }
 .review-text {
     font-family: 'Courier New', Courier, monospace;
+    color: #ccc;
     font-size: 1.2em;
     margin-bottom: 1em;
     line-height: 1.7;
@@ -1354,71 +1450,65 @@ footer {
     background: transparent;
     border: none;
     font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
     transition: color 0.2s;
+}
+.nav-button:hover {
+    color: #e91e63;
 }
 /* --- PLAYER --- */
 .musica {
-  max-width: 31.25em;
-  font-family: 'Roboto Mono', monospace;
-  background-color: #1a1a1a;
-  border-radius: 0.125em;
-  box-sizing: border-box;
-  margin: -38% auto 0 auto;
-  margin-right: 55%;
-  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+    max-width: 31.25em;
+    background: #222;
+    border-radius: 0.125em;
+    margin: 2.5em auto 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: -38%;
+    margin-right: 55%;
 }
-/* Controles superiores (íconos) */
 .controles {
-  display: flex;
-  border-bottom: 0.125em solid #888;
-  height: 5em;
-  background: #2a2a2a;
+    border-bottom: 0.125em solid #888;
+    height: 5em;
+    background: #2a2a2a;
 }
 .controles > div {
-  flex: 1 1 0;
-  height: 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 0.063em solid #888;
-  cursor: pointer;
+    flex: 1 1 0;
+    height: 5em;
+    border-right: 0.063em solid #888;
 }
 .controles > div:last-child {
-  border-right: none;
+    border-right: none;
 }
 .controles i {
-  font-size: 1.5em;
-  color: white;
-  transition: color 0.2s;
+    transition: color 0.2s;
 }
 .controles i:hover {
-  color: #aaa;
+    color: #939393;
 }
-/* Información de la canción */
 .track-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25em 1.75em 1em 1.75em;
-  color: #888;
-  background-color: #1a1a1a;
+    justify-content: space-between;
+    background: #222;
+    padding: 1.25em 1.75em 1em 1.75em;
 }
 .track-titulo {
-  font-size: 1.15em;
-  font-weight: 700;
-  margin-bottom: 0.25em;
-  letter-spacing: 0.031em;
-  color: white;
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 0.25em;
+    letter-spacing: 0.031em;
 }
 .artist-name {
-  color: #aaa;
-  margin-top: 0.125em;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #aaa;
+    font-size: 1em;
+    margin-top: 0.125em;
 }
 .timer {
-  font-weight: 700;
-  letter-spacing: 0.125em;
-  color: #ccc;
+    font-family: 'Open Sans', monospace, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 0.125em;
 }
 /* --- LISTA DE CANCIONES --- */
 .song-list {
@@ -1438,13 +1528,14 @@ footer {
     color: #ffffff;
 }
 .song-list ol {
+    list-style: none; /* Oculta el número automático */
     counter-reset: track-number; /* Resetea contador */
     padding-left: 0;
 }
 .song-list li {
     margin-bottom: 0;
     justify-content: space-between;
-    border-bottom: 0.063em solid #222;
+    border-bottom: 1px solid #222;
     padding: 0.6em 0;
     font-weight: 700;
     text-transform: uppercase;
@@ -1455,6 +1546,11 @@ footer {
     counter-increment: track-number;
     content: counter(track-number) ". ";
     left: 0;
+    font-weight: bold;
+    font-size: 1em;
+}
+.song-list li.active {
+    font-weight: bold;
 }
 .titulo-track {
     transition: color 0.2s;
@@ -1467,6 +1563,8 @@ footer {
 .buy-track {
     color: #ffffff;
     font-size: 0.9em;
+    text-decoration: underline;
+    font-family: 'Open Sans', Arial, sans-serif;
     transition: color 0.2s;
     font-weight: 400;
     text-transform: none;
@@ -1487,7 +1585,7 @@ footer {
     text-align: left;
     margin-left: 6%;
 }
-.platform -icons {
+.platform-icons {
     gap: 1.375em;
     margin-left: 5%;
 }
@@ -1515,6 +1613,7 @@ footer {
 }
 .video-container {
     margin-bottom: 1.125em;
+    background: #000; /* Fondo negro para el área del video */
     padding: 2em 0;
 }
 .video-container iframe {
@@ -1523,6 +1622,7 @@ footer {
     height: auto;
     border: none;
     border-radius: 0;
+    background: #000;
 }
 .iconos-abajo {
     gap: 40vw;
@@ -1535,21 +1635,39 @@ footer {
     user-select: none;
     transition: color 0.2s;
 }
+/* Cambiar el color de la selección de texto */
+::selection {
+    background-color: #ffffff; /* Color de fondo de la selección */
+    color: #ffffff; /* Color del texto seleccionado */
+}
 .punto {
     font-size: 2em;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 /* --- BREADCRUMB --- */
 .breadcrumb {
     margin-left: 9vw;
     margin-top: 3em;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #bdbdbd;
     font-size: 1.05em;
     letter-spacing: 0.05em;
+}
+.breadcrumb a {
+    color: #bdbdbd;
+    text-decoration: none;
+}
+.breadcrumb span {
+    color: #bdbdbd;
 }
 /* --- CONTENT GRID --- */
 .content-grid {
     width: 95vw;
     margin: 0 auto;
     padding: 2em 0 0 0;
+    color: #fff;
+    font-family: 'Oswald', Arial, sans-serif;
     margin-top: 10%;
 }
 .top-row {
@@ -1573,6 +1691,7 @@ footer {
     height: 26.25em;
     border: none;
     filter: grayscale(1);
+    background: #222;
 }
 .bottom-row {
     justify-content: flex-start;
@@ -1583,6 +1702,8 @@ footer {
 .details-col {
     flex: 0 0 32%;
     max-width: 32%;
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #bdbdbd;
     margin-left: 2%;
 }
 .details-col h2 {
@@ -1591,8 +1712,14 @@ footer {
     letter-spacing: 0.063em;
 }
 .details-col p, .details-col a {
+    font-size: 1em;
+    color: #bdbdbd;
     margin: 0.3em 0;
     word-break: break-all;
+}
+.details-col .link {
+    color: #bdbdbd;
+    text-decoration: underline;
 }
 .ticket {
     margin-top: 2.5em;
@@ -1600,19 +1727,21 @@ footer {
 .tickets {
     display: inline-block;
     background: transparent;
-    border: 0.125em solid #fff;
+    border: 2px solid #fff;
     padding: 1em 3em;
     font-size: 1.2em;
     letter-spacing: 0.08em;
+    text-decoration: none;
     transition: all 0.3s ease;
     margin-top: 1em;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 0.313em;
-    box-shadow: 0 0 0.625em rgba(255,255,255,0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
 .tickets:hover {
-    box-shadow: 0 0 1.25em rgba(255,255,255,0.4);
+    color: #000;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 .about-col {
     flex: 1 1 0;
@@ -1625,6 +1754,9 @@ footer {
     letter-spacing: 0.063em;
 }
 .about-col p {
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    color: #bdbdbd;
+    font-size: 1em;
     margin-bottom: 2em;
     line-height: 1.7;
 }
@@ -1637,9 +1769,11 @@ footer {
     letter-spacing: 0.063em;
 }
 .follow a {
+    color: #bdbdbd;
     font-size: 1.5em;
     margin-right: 1.2em;
     transition: color 0.2s;
+    text-decoration: none;
     vertical-align: middle;
 }
 /* --- BOTÓN SCROLL ARRIBA --- */
