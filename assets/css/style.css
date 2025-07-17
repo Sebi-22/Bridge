@@ -26,7 +26,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, foote
 .container.navbar,.nav-icons,.footer ,.modal-footer,.nav-links, .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li,.arrow ,.track-icons, .texto, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .blog-post, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .transparencia .social, .footer, .social-icons, .social-icons a,.social, .social-icons a i, .contact-info p, .contact, .contact-info p,.form, .info-contacto, .right-section, .albumesss, .albumesss .image-foto, .left-column, .about1, .accordion-header, .nav-icons, .controles, .controles > div, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes, .albumes,.modal-control {
     display: flex;
 }
-header,.new-album,.modal,.our-discography ,.footer-column a,::selection,.contact-info p,.cierre,.social-icons a,.buy-tickets ,footer , .nav-links a,.track-icons i:hover,.track-title:hover, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .transparencia .social a, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover, #scrollToTopBtn,.track-title.playing,#view-all-btn {
+header,.new-album,.nav-button,.modal,.our-discography ,.footer-column a,::selection,.contact-info p,.cierre,.social-icons a,.buy-tickets ,footer , .nav-links a,.track-icons i:hover,.track-title:hover, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .transparencia .social a, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover, #scrollToTopBtn,.track-title.playing,#view-all-btn {
     color: #fff;
 }
 header,.about-bg,.nuevomodal,.blog,.texto2,.gallery ,.video-section,.video,.transparencia,.video-bg,.modal-footer ,.image img, .modal-contenedor iframe ,.modal-contenedor, .hero-content, .album-cover img, .album-details img, .albumes img, .blog-post img, .video-bg, .about-bg, .background-image, .background-image2, .background-image3, .background-image4, .albumes figcaption h3, .albumes figcaption p, .texto p, .texto2 p, .blog-posts .blog-post img, .image img, .blog-post-image-wrapper, .blog-post img, .video-content, .albumes figcaption, .foto img, .contact, .form, .right-section input, .right-section textarea, .albumesss, .albumesss .image-foto, .albumesss .image-foto img, .lyrics-section, #accordion-container, .review-section, .musica, .song-list, .video-container, .video-container iframe, .albumes figure, .albumes img, .tracklist, .about-col h2 {
@@ -105,11 +105,15 @@ header {
 .footer-column a,.about-col p ,.details-col p, .details-col a,.song-list li::before,.accordion-header i,.timer,.artist-name,.accordion-content ,.accordion-header,.about-album li ,.about-album p ,.alert,.footer-bottom,.contact-info p,.social-icons a ,.footer-desc ,.show-more,.nav-links,.album-description,.albumes figcaption p,.blog-post-date,#view-all-btn,.tracklist li,.tracklist li,.modal-controls,.month-day,.ciudad-link  {
     font-size: 1em;
 }
-.nav-links a {
+.nav-links a,.left-section h1,.tickets,.follow a,.ciudad-link,#view-all-btn,.social-icons a,.footer-column a,.punto,.breadcrumb a     {
+        text-decoration: none;
+}
+.nav-links a,.song-list h1,.tickets,.latest-video h2,.available-on h2,.song-list li ,.review-source,.review-section h2 ,.lyrics-section h1,.footer-column a,.right-section button ,.about-album h2 ,.info-contacto h2,.contact-section h2,.show-more,.footer-column h2, .footer-column h3 ,.transparencia h3 ,.title-player,.texto h1,.month-day,.ciudad,.blog-post-title,.albumes figcaption h3  {
     text-transform: uppercase;
+}
+.nav-links a {
     padding: 0.3125em 0;
     transition: color 0.3s ease;
-    text-decoration: none;
     font-weight: 600;
     border-radius: 0.1875em;
     letter-spacing: 0.05em;
@@ -252,7 +256,6 @@ header {
     font-size: 1.1em;
     letter-spacing: 0.03em;
     color: #111;
-    text-transform: uppercase;
 }
 .subtitle-player {
     color: #888;
@@ -424,7 +427,6 @@ header {
     margin-bottom: 0.5em;
     font-weight: 500;
     display: inline-block;
-    text-transform: uppercase;
     margin-left: 3%;
 }
 .texto h1::after {
@@ -624,7 +626,6 @@ header {
 }
 .month-day {
     flex-direction: column;
-    text-transform: uppercase;
     color: #999;
     letter-spacing: 0.1em;
     line-height: 1.2;
@@ -642,12 +643,10 @@ header {
 /* Bloque con ciudad y lugar */
 .ciudad-link {
     flex: 1;
-    text-decoration: none;
     color: inherit;
     padding-left: 1.5em;
 }
 .ciudad {
-    text-transform: uppercase;
     letter-spacing: 0.02em;
     line-height: 1.3;
 }
@@ -667,7 +666,6 @@ header {
     padding: 0.8em 3em;
     border: 0.125em solid #fff;
     font-weight: 600;
-    text-decoration: none;
     transition: background 0.2s, color 0.2s;
 }
 #view-all-btn:hover {
@@ -726,7 +724,6 @@ header {
 .blog-post-title {
     font-size: 1.1em;
     margin-bottom: 0.3em;
-    text-transform: uppercase;
     letter-spacing: 0.031em;
 }
 .blog-post-date {
@@ -878,7 +875,6 @@ header {
     font-size: 1.1em;
     margin: 0 0 0.2em 0;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
 }
 .albumes figcaption p {
     color: #bdbdbd;
@@ -892,7 +888,6 @@ header {
     margin: 2em 0 0 7vw;
     transition: background 0.2s, color 0.2s;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
     margin-left: 35%;
 }
 .show-more:hover {
@@ -926,7 +921,6 @@ header {
 }
 .transparencia h3 {
     font-size: 2.2em;
-    text-transform: uppercase;
     margin: 0 0 0.2em 0;
 }
 .transparencia p {
@@ -959,7 +953,6 @@ footer {
     margin-bottom: 0.7em;
     font-size: 1.2em;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
 }
 .footer-column h3 {
     font-size: 2.2em;
@@ -982,7 +975,6 @@ footer {
     border: 0.125em solid #fff;
     border-radius: 50%;
     background: transparent;
-    text-decoration: none;
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
 }
@@ -1006,8 +998,6 @@ footer {
     font-family: 'Oswald', Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
-    text-decoration: none;
     margin-bottom: 0.5em;
     display: inline-block;
     transition: color 0.2s;
@@ -1039,7 +1029,6 @@ footer {
 }
 .contact-section h2 {
     font-size: 2.3em;
-    text-transform: uppercase;
     margin-bottom: 1.75em;
 }
 .contact-section p {
@@ -1063,7 +1052,6 @@ footer {
 }
 .left-section h1 {
     font-size: 2.3em;
-    text-transform: uppercase;
     margin-bottom: 1.875em;
 }
 .left-section > p {
@@ -1079,7 +1067,6 @@ footer {
 }
 .info-contacto h2 {
     font-size: 1.3em;
-    text-transform: uppercase;
     margin-bottom: 1.125em;
 }
 .info-contacto p {
@@ -1120,7 +1107,6 @@ footer {
     padding: 0.875em 0;
     color: #111;
     font-size: 1.08em;
-    text-transform: uppercase;
     border: none;
     font-weight: 500;
     transition: background 0.2s, color 0.2s;
@@ -1173,7 +1159,6 @@ footer {
     gap: 1.875em;
 }
 .about-album h2 {
-    text-transform: uppercase;
     margin-bottom: 1.125em;
 }
 .about-album p {
@@ -1198,7 +1183,6 @@ footer {
 }
 .lyrics-section h1 {
     font-size: 1.5em;
-    text-transform: uppercase;
     margin-bottom: 1.125em;
 }
 #accordion-container {
@@ -1268,7 +1252,6 @@ footer {
 }
 .review-section h2 {
     font-size: 2.2em;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1em;
 }
@@ -1281,7 +1264,6 @@ footer {
 }
 .review-source {
     font-size: 1.1em;
-    text-transform: uppercase;
     margin-top: 2em;
 }
 .nav-icons {
@@ -1294,7 +1276,6 @@ footer {
     background: transparent;
     border: none;
     font-size: 1.2em;
-    color: #fff;
     transition: color 0.2s;
 }
 .nav-button:hover {
@@ -1360,7 +1341,6 @@ footer {
 }
 .song-list h1 {
     font-size: 1.2em;
-    text-transform: uppercase;
     margin-bottom: 0.8em;
     margin-top: 0;
     letter-spacing: 0.08em;
@@ -1375,7 +1355,6 @@ footer {
     justify-content: space-between;
     border-bottom: 0.063em solid #222;
     padding: 0.6em 0;
-    text-transform: uppercase;
     letter-spacing: 0.03em;
     font-size: 1.2em;
 }
@@ -1408,7 +1387,6 @@ footer {
     margin-left: 2%;
 }
 .available-on h2 {
-    text-transform: uppercase;
     margin-bottom: 1.375em;
     margin-left: 6%;
 }
@@ -1430,7 +1408,6 @@ footer {
 .latest-video h2 {
     line-height: 2.5em;
     margin-left: 9%;
-    text-transform: uppercase;
     margin-bottom: -2%;
     padding-left: 0.625em;
 }
@@ -1458,7 +1435,6 @@ footer {
     transition: color 0.2s;
 }
 .punto {
-    text-decoration: none;
     transition: color 0.2s;
 }
 /* --- BREADCRUMB --- */
@@ -1471,7 +1447,6 @@ footer {
 }
 .breadcrumb a {
     color: #bdbdbd;
-    text-decoration: none;
 }
 .breadcrumb span {
     color: #bdbdbd;
@@ -1542,10 +1517,8 @@ footer {
     padding: 1em 3em;
     font-size: 1.2em;
     letter-spacing: 0.08em;
-    text-decoration: none;
     transition: all 0.3s ease;
     margin-top: 1em;
-    text-transform: uppercase;
     border-radius: 0.313em;
     box-shadow: 0 0 0.625em rgba(255,255,255,0.1);
 }
@@ -1577,7 +1550,6 @@ footer {
     font-size: 1.5em;
     margin-right: 1.2em;
     transition: color 0.2s;
-    text-decoration: none;
     vertical-align: middle;
 }
 /* --- BOTÓN SCROLL ARRIBA --- */
