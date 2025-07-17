@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
             title: "BAD HOOD",
             artist: "Bad Day"
         }
+        
     ];
 
     // Selecciona el contenedor donde se agregarán los álbumes

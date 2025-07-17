@@ -36,7 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleButtonClick(event) {
         const direction = event.target.getAttribute("direction");
         const increment = direction === "left" ? -1 : 1;
-
+        /* let incr = 0;
+        if (direction === "left") {
+          incr-- 
+        } else {
+          incr++
+        } */
         // Actualiza la posición del slider
         currentPos += increment;
         console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);
@@ -253,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ========== MODO OSCURO/CLARO ==========
+// ========== MODO OSCURO/CLARO ==========//
 const toggleBtn = document.getElementById('toggle-dark-mode');
 toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
@@ -267,7 +272,7 @@ toggleBtn.addEventListener('click', () => {
     }
 });
 
-// ========== BOTÓN SCROLL ARRIBA ==========
+// ========== BOTÓN SCROLL ARRIBA ==========//
 const scrollBtn = document.getElementById('scrollToTopBtn');
 window.onscroll = function() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {

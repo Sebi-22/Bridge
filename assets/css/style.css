@@ -1795,9 +1795,13 @@ footer {
 }
 
 /* --- MODO OSCURO --- */
+/* .dark-mode {
+    --main-color: #f1f1f1
+}*/
 body.dark-mode, .dark-mode .our-discography, .dark-mode, .dark-mode .texto .texto2, .dark-mode .video-container, body.dark-mode footer, body.dark-mode .progress-bar, body.dark-mode .buy-tickets, body.dark-mode .show-more, body.dark-mode .footer-bottom {
     background: #5e5e5e;
     color: #f1f1f1;
+    /* color: var(--main-color) */
 }
 body.dark-mode .progress-bar-fill {
     background: #00bfff;
