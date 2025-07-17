@@ -10,12 +10,6 @@
     --color-alt: #ccc;
     --color-border: #eee;
     --color-border-dark: #444;
-    /* Textos y sombras */
-    --main-text-shadow: 0 0 8px #fff, 0 0 12px #fff;
-    --accent-text-shadow: 0 0 8px #bdbdbd, 0 0 12px #bdbdbd;
-    /* Selección */
-    --color-selection-bg: #ffffff;
-    --color-selection-text: #ffffff;
     /* Fuentes */
     --font-main: 'Open Sans', Arial, sans-serif;
     --font-heading: 'Oswald', Arial, sans-serif;
@@ -25,12 +19,6 @@
     --main-border-thin: 0.125em solid var(--color-main);
     --border-thin: 0.063em solid var(--color-bg-dark);
     --border-thick: 2px solid var(--color-main);
-    /* Sombras */
-    --shadow: 0 0.25em 1.5em rgba(0,0,0,0.5);
-    --shadow-footer: 0 0.5em 2em rgba(0,0,0,0.25), 0 0.094em 0.25em rgba(0,0,0,0.10);
-    /* Transiciones */
-    --transition: 0.2s;
-    --transition-long: 0.4s cubic-bezier(.4,0,.2,1);
     /* Modo oscuro */
     --dark-bg: #5e5e5e;
     --dark-bg-alt: #232323;
