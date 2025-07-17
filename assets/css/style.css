@@ -4,21 +4,10 @@
     --color-bg: #000;
     --color-bg-light: #111;
     --color-bg-dark: #222;
-    --color-bg-accent: #181818;
     --color-main: #fff;
-    --color-accent: #bdbdbd;
-    --color-alt: #ccc;
-    --color-border: #eee;
-    --color-border-dark: #444;
     /* Fuentes */
     --font-main: 'Open Sans', Arial, sans-serif;
     --font-heading: 'Oswald', Arial, sans-serif;
-    /* Bordes y radios */
-    --radius: 0.5em;
-    --main-border: 2px solid var(--color-main);
-    --main-border-thin: 0.125em solid var(--color-main);
-    --border-thin: 0.063em solid var(--color-bg-dark);
-    --border-thick: 2px solid var(--color-main);
     /* Modo oscuro */
     --dark-bg: #5e5e5e;
     --dark-bg-alt: #232323;
@@ -32,56 +21,56 @@
 * {
     box-sizing: border-box;
 }
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button, .tracklist ol, .gallery, #datos ul.articulos, .articulos article, .foto, .about-album ul, .imagenes, .tour-dates, .about-title, .album-player, .texto, .texto2, .blog, .modal-contento .error-message, .albumes figcaption p, .contact, .song-list ol, .albumes figure { 
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, footer, main, nav, button {
     margin: 0;
     padding: 0;
 }
-.about-hero, .info-player, .progress-bar-player, .image, .blog-post-image-wrapper, .video-section, .albumes, .foto, .albumesss .image-foto, .accordion-content {
+.about-hero, .info-player, .progress-bar-player, .image, .blog-post-image-wrapper, .video-section, .albumes, .foto, .accordion-content {
     overflow: hidden;
 }
-.container.navbar, .nav-icons, .footer, .modal-footer, .nav-links, .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li, .arrow, .track-icons, .texto, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .blog-post, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .transparencia .social, .footer, .social-icons, .social-icons a, .social, .social-icons a i, .contact-info p, .contact, .contact-info p, .form, .info-contacto, .right-section, .albumesss, .albumesss .image-foto, .left-column, .about1, .accordion-header, .nav-icons, .controles, .controles > div, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes, .albumes, .modal-control {
+.container.navbar, .nav-icons, .footer, .modal-footer, .nav-links, .background-image, .hero-content, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li, .arrow, .track-icons, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .social, .footer, .social-icons, .contact-info p, .contact, .form, .info-contacto, .right-section, .albumesss, .left-column, .about1, .accordion-header, .controles, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes {
     display: flex;
 }
-header,.nav-links a, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .transparencia .social a, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover, #scrollToTopBtn {
+header, .nav-links a, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover {
     color: var(--color-main);
 }
-header, .hero-content, .album-cover img, .album-details img, .albumes img, .blog-post img, .video-bg, .about-bg, .background-image, .background-image2, .background-image3, .background-image4, .albumes figcaption h3, .albumes figcaption p, .texto p, .texto2 p, .blog-posts .blog-post img, .image img, .blog-post-image-wrapper, .blog-post img, .video-content, .albumes figcaption, .foto img, .contact, .form, .right-section input, .right-section textarea, .albumesss, .albumesss .image-foto, .albumesss .image-foto img, .lyrics-section, #accordion-container, .review-section, .musica, .song-list, .video-container, .video-container iframe, .albumes figure, .albumes img, .tracklist, .about-col h2 {
+header, .hero-content, .album-cover img, .album-details img, .albumes img, .blog-post img, .video-bg, .about-bg, .background-image, .background-image2, .background-image3, .background-image4, .albumes figcaption h3, .albumes figcaption p, .texto p, .texto2 p, .blog-posts .blog-post img, .image img, .blog-post-image-wrapper, .video-content, .foto img, .contact, .form, .right-section input, .right-section textarea, .albumesss, .albumesss .image-foto, .lyrics-section, #accordion-container, .review-section, .musica, .song-list, .video-container, .video-container iframe, .albumes figure, .tracklist, .about-col h2 {
     width: 100%;
 }
-.about-bg, .progress-bar-fill-player, .blog-post img, .video-bg, .video-content, .albumes img, .foto, .foto img, .albumesss .image-foto img, .albumes figure, .albumes img {
+.about-bg, .progress-bar-fill-player, .blog-post img, .video-bg, .video-content, .albumes img, .foto, .albumesss .image-foto img {
     height: 100%;
 }
 .vertical-name, .about-title, .album-player, .content-grid, .titulo-album, .track-title, .texto h1, .texto2 h1, .blog h1, .blog-post-title, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .contact-section h2, .left-section h1, .info-contacto h2, .right-section button, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion-header, .review-section h2, .review-source, .track-titulo, .song-list h1, .song-list li, .titulo-track, .available-on h2, .latest-video h2, .details-col h2, .tickets, .follow h2, .footer-column h2, .footer-column h3, .footer-column a {
     font-family: var(--font-heading);
 }
-.container.navbar, .album-player, .blog-posts, .albums, .album-info, .blog-posts {
+.container.navbar, .album-player, .blog-posts, .albums, .album-info {
     gap: 2em;
 }
 header, .nav-links a::after, .vertical-name, .about-bg, .close, .arrow, .video-bg, .overlay, .play-button, .nuevomodal, #cerrarModal, .albumes img, .albumes figcaption, .transparencia, .nav-icons, .song-list li::before {
     position: absolute;
 }
-#toggle-dark-mode, .controls-player i, .track-icons i, .image img, .close, .arrow, .play-button, #cerrarModal, .show-more, .right-section button, .accordion-header, .nav-button, .controles i, .titulo-track, .flecha, #scrollToTopBtn {
+#toggle-dark-mode, .controls-player i, .track-icons i, .close, .arrow, .play-button, #cerrarModal, .show-more, .right-section button, .accordion-header, .nav-button, .controles i, .titulo-track, .flecha, #scrollToTopBtn {
     cursor: pointer;
 }
 .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-info, .texto, .modal, .modal-content, .video-section, .video-content, .nuevomodal, .modal-contento, .albumes, .articulos, .transparencia, .contact, .form, .albumesss .image-foto, .controles > div, .video-container, .iconos-abajo, .top-row, .imagenes, .albumes {
     justify-content: center;
 }
-.nav-links a::after, .texto h1::after, .texto2 h1::after, .blog h1, .blog h1::after, .blog-post-image-wrapper, .blog-post img, .our-discography h1, .our-discography h1::after, .albumes img, .foto img, .albumesss .image-foto img, .platform-icons a img, .video-container iframe, .img-col img, .map-col .map, .albumes img {
+.nav-links a::after, .texto h1::after, .texto2 h1::after, .blog h1, .blog h1::after, .blog-post-image-wrapper, .blog-post img, .our-discography h1, .our-discography h1::after, .albumes img, .foto img, .albumesss .image-foto img, .platform-icons a img, .video-container iframe, .img-col img, .map-col .map {
     display: block;
 }
-.album-info, .blog-post, .contact, .form, .albumesss, .left-column, .top-row, .map-col, .bottom-row {
+.album-info, .blog-post,::selection, .contact, .form, .albumesss, .left-column, .top-row, .map-col, .bottom-row {
     align-items: flex-start;
 }
-.album-player, .texto h1::after, .texto2 h1::after, .blog h1::after, .our-discography h1::after, #view-all-btn:hover, .show-more:hover, .right-section button, .tickets:hover {
+.album-player ,.texto h1::after,.nav-links a::after, .texto2 h1::after, .blog h1::after, .our-discography h1::after, #view-all-btn:hover, .show-more:hover, .right-section button, .tickets:hover {
     background: #fff;
 }
 .nav-links, .image, .modal-slider, .review-section, .month-day, .modal-content, .modal-contenedor, .nav-links a, .background-image, .background-image2, .background-image3, .background-image4, .about-hero, .about-title, .progress-bar-player, .album-info, .texto h1, .texto2 h1, .blog h1, .video-section, .video-content, .modal-contento, .albumes, .foto, .song-list li {
     position: relative;
 }
-.left-player img, .blog-post img, .video-bg, .albumes img, .foto img, .albumesss .image-foto img, .img-col img, .albumes img {
+.left-player img, .blog-post img, .video-bg, .albumes img, .foto img, .albumesss .image-foto img, .img-col img {
     object-fit: cover;  
 }
-.albumes, .foto, .albumesss .image-foto, .albumes img {
+.albumes, .foto, .albumesss .image-foto {
     aspect-ratio: 1/1;   
 }
 .modal-contento .error-subtext, .transparencia p, .left-section > p, .info-contacto p, .about-album p, .about-album li, .accordion-header, .accordion-header i, .accordion-content, .review-text {
@@ -93,12 +82,12 @@ header, .nav-links a::after, .vertical-name, .about-bg, .close, .arrow, .video-b
 body, .tour-dates, .transparencia p, .buy-track, .artist-name, .left-section > p, .right-section input, .right-section textarea, .alert, .about-album p {
     font-family: var(--font-main);
 }
-.buy-tickets,.footer-column a:hover,.buy-track,.details-col .link {
+.buy-tickets, .footer-column a:hover, .buy-track, .details-col .link {
     text-decoration: underline;
 }
-body.progress-bar-fill-player,.month-day::after,.track-info,.blog-post-image-wrapper,.map-col .map,.volume-control-player i,.volume-slider-player,.track-info,#scrollToTopBtn  {
-    color:var( --color-bg-dark);
-    accent-color:var( --color-bg-dark); 
+body.progress-bar-fill-player, .month-day::after, .track-info, .blog-post-image-wrapper, .map-col .map, .volume-control-player i, .volume-slider-player, .track-info{
+    color: var(--color-bg-dark);
+    accent-color: var(--color-bg-dark); 
 }
 body {
     line-height: 1.6;
@@ -122,13 +111,8 @@ header {
     padding: 0 2em;
     max-width: 98%;
 }
-.logo {
-    margin-right: auto; /* Empuja el resto hacia la derecha */
-}
 .logo img {
     height: 2.2em;
-    width: auto;
-    display: block;
 }
 .nav-links {
     gap: 1.2em;
@@ -150,7 +134,6 @@ header {
 .nav-links a::after {
     content: "";
     height: 0.125em;
-    background-color: #fff;
     left: 0;
     right: 0;
     transform: scaleX(0);
@@ -176,7 +159,6 @@ header {
     padding-top: 5.625em; /* 90px */
 }
 .background-image2, .background-image3, .background-image4 {
-    background-image: url('../images/tour-title-area.jpg');
     background-size: cover;
     background-position: center;
     min-height: 88vh;
@@ -228,7 +210,7 @@ header {
     box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.1);
     transition: transform 0.2s;
 }
-.apps img:hover, .apps img:hover, .image.large:hover img, .image.small:hover img, .video-section:hover .video-bg, .platform-icons a:hover img, .tickets:hover {
+.apps img:hover {
     transform: scale(1.05);
 }
 /* HERO SECTION */
@@ -277,7 +259,7 @@ header {
     max-width: 12em;
     white-space: nowrap;
     text-overflow: ellipsis;
-    line-height : 1.1;
+    line-height: 1.1;
 }
 .title-player {
     font-weight: bold;
@@ -338,7 +320,7 @@ header {
 }
 .volume-control-player {
     gap: 0.5em;
-    padding-left: 1.5em;
+    padding-left : 1.5em;
 }
 .volume-control-player i {
     font-size: 1.1em;
@@ -352,7 +334,7 @@ header {
 /* --- ALBUM INFO SECCIÓN (HOME) --- */
 .album-info {
     gap: 4em;
-    background: #0a0a0a url('../images/h1-img-8.jpg') center/cover no-repeat;
+    background:url('../images/h1-img-8.jpg') center/cover no-repeat;
     padding: 4em 2em 3em 2em;
     min-height: 90vh;
 }
@@ -383,10 +365,6 @@ header {
     margin-bottom: 1.5em;
     text-align: left;
 }
-.apps {
-    gap: 1em;
-    margin-top: 1em;
-}
 .apps img {
     border-radius: 0.5em;
     box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.2);
@@ -401,7 +379,7 @@ header {
     margin-top: 0.2em;
     margin-left: 5%;
 }
-.tracklist ol {
+.tracklist ol,#datos ul,.about-album ul,.song-list ol {
     list-style: none;
 }
 .tracklist li {
@@ -434,7 +412,6 @@ header {
     text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
     font-weight: 700;
 }
-
 /* ICONOS DERECHA */
 .track-icons {
     align-items: center;
@@ -676,7 +653,6 @@ header {
     color: white;
 }
 #datos ul {
-    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -732,6 +708,7 @@ header {
     letter-spacing: 0.02em;
     line-height: 1.3;
 }
+
 /* Botón de tickets */
 .buy-tickets {
     font-weight: 700;
@@ -868,6 +845,7 @@ header {
 .play-button:hover {
     color: #8d8d8d;
 }
+
 /* MODAL VIDEO */
 .nuevomodal {
     display: none;
@@ -961,7 +939,7 @@ header {
 }
 .albumes figcaption {
     left: 0;
-    bottom: 0;
+    bottom:  0;
     padding: 1.2em 1em 1em 1em;
     box-sizing: border-box;
     opacity: 0;
@@ -1033,7 +1011,7 @@ header {
     margin: 0 0 1em 0;
     font-size: 1.1em;
 }
-/* --- FOOTER --- */
+/*--- FOOTER --- */
 footer {
     color: #fff;
     padding: 2em 0 0 0;
@@ -1255,7 +1233,6 @@ footer {
     font-size: 1em;
     text-align: center;
 }
-
 /* --- CONTENEDOR PRINCIPAL --- */
 .albumesss {
     padding: 2.5em 0 0 0;
@@ -1298,9 +1275,6 @@ footer {
     margin-bottom: 1.125em;
     line-height: 1.7;
     max-width: 95%;
-}
-.about-album ul {
-    list-style: none;
 }
 .about-album li {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
@@ -1430,6 +1404,7 @@ footer {
 .nav-button:hover {
     color: #e91e63;
 }
+
 /* --- PLAYER --- */
 .musica {
     max-width: 31.25em;
@@ -1485,7 +1460,7 @@ footer {
     max-width: 35.625em;
     margin: 5em auto 0 auto; /* Ajustar margen superior */
     background: transparent;
- padding: 0 1em;
+    padding: 0 1em;
     margin-left: 11%;
     color: #a09d9d;
 }
@@ -1498,7 +1473,6 @@ footer {
     color: #ffffff;
 }
 .song-list ol {
-    list-style: none; /* Oculta el número automático */
     counter-reset: track-number; /* Resetea contador */
     padding-left: 0;
 }
@@ -1553,7 +1527,7 @@ footer {
     text-align: left;
     margin-left: 6%;
 }
-.platform-icons {
+.platform -icons {
     gap: 1.375em;
     margin-left: 5%;
 }
@@ -1563,6 +1537,7 @@ footer {
     object-fit: contain;
     transition: transform 0.2s;
 }
+
 /* --- SECCIÓN DEL VÍDEO --- */
 .latest-video {
     margin: 2.5em 0 0 0;
@@ -1603,13 +1578,11 @@ footer {
 }
 /* Cambiar el color de la selección de texto */
 ::selection {
-    background-color: #ffffff; /* Color de fondo de la selección */
     color: #ffffff; /* Color del texto seleccionado */
 }
 .punto {
     font-size: 2em;
     text-decoration: none;
-    transition: color 0.2s;
 }
 /* --- BREADCRUMB --- */
 .breadcrumb {
@@ -1728,14 +1701,24 @@ footer {
     position: fixed;
     bottom: 1.875em; /* 30px */
     right: 1.875em;
-    border: none;
-    border-radius: 50%;
     width: 2.5em; /* 40px */
     height: 2.5em;
+    border: 2px solid white;       /* borde blanco */
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7); /* fondo negro translúcido */
+    color: #ccc;                   /* color flecha gris claro */
     font-size: 1.5em;
     display: none;
     z-index: 1000;
-    box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.15);
+    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+#scrollToTopBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* leve efecto hover */
+    color: rgb(255, 255, 255); /* la flecha se pone blanca al pasar el mouse */
 }
 /* --- SECCIÓN DE IMÁGENES --- */
 .imagenes {
@@ -1777,7 +1760,7 @@ body.dark-mode #scrollToTopBtn:hover {
 }
 /* --- RESPONSIVE --- */
 @media (max-width: 1200px) {
-  .container.navbar, .album-info, .footer {
+  body.container.navbar, .album-info, .footer {
     flex-direction: column;
     gap: 1em;
     padding: 0 1em;
@@ -1791,7 +1774,7 @@ body.dark-mode #scrollToTopBtn:hover {
   }
 }
 @media (max-width: 900px) {
-  .container.navbar {
+  body.container.navbar {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 0.5em;
