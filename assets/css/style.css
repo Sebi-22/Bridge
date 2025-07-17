@@ -2,7 +2,6 @@
 :root {
     /* Colores principales */
     --color-bg: #000;
-    --color-bg-light: #111;
     --color-bg-dark: #222;
     --color-main: #fff;
     --color-accent:#a09d9d;    
@@ -50,7 +49,7 @@ header, .hero-content, .album-cover img, .album-details img, .albumes img, .blog
 header, .nav-links a::after, .vertical-name, .about-bg, .close, .arrow, .video-bg, .overlay, .play-button, .nuevomodal, #cerrarModal, .albumes img, .albumes figcaption, .transparencia, .nav-icons, .song-list li::before {
     position: absolute;
 }
-#toggle-dark-mode, .controls-player i, .track-icons i, .close, .arrow, .play-button, #cerrarModal, .show-more, .right-section button, .accordion-header, .nav-button, .controles i, .titulo-track, .flecha, #scrollToTopBtn {
+#toggle-dark-mode, .controls-player i, .track-icons i, .close,.cierre,.cerrar,  .arrow,.mini-arrow, .play-button, #cerrarModal, .show-more, .right-section button, .accordion-header, .nav-button, .controles i, .titulo-track, .flecha, #scrollToTopBtn,.track-title:hover,.buy-tickets,#view-all-btn,.nav-button {
     cursor: pointer;
 }
 .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-info, .texto, .modal, .modal-content, .video-section, .video-content, .nuevomodal, .modal-contento, .albumes, .articulos, .transparencia, .contact, .form, .albumesss .image-foto, .controles > div, .video-container, .iconos-abajo, .top-row, .imagenes, .albumes {
@@ -62,7 +61,7 @@ header, .nav-links a::after, .vertical-name, .about-bg, .close, .arrow, .video-b
 .album-info, .blog-post,::selection, .contact, .form, .albumesss, .left-column, .top-row, .map-col, .bottom-row {
     align-items: flex-start;
 }
-.album-player ,.texto h1::after,.nav-links a::after, .texto2 h1::after, .blog h1::after, .our-discography h1::after, #view-all-btn:hover, .show-more:hover, .right-section button, .tickets:hover {
+.album-player ,.texto h1::after,.nav-links a::after, .texto2 h1::after, .blog h1::after, .our-discography h1::after, #view-all-btn:hover, .show-more:hover, .right-section button, .tickets:hover,::selection {
     background: #fff;
 }
 .nav-links, .image, .modal-slider, .review-section, .month-day, .modal-content, .modal-contenedor, .nav-links a, .background-image, .background-image2, .background-image3, .background-image4, .about-hero, .about-title, .progress-bar-player, .album-info, .texto h1, .texto2 h1, .blog h1, .video-section, .video-content, .modal-contento, .albumes, .foto, .song-list li {
@@ -86,7 +85,7 @@ body, .tour-dates, .transparencia p, .buy-track, .artist-name, .left-section > p
 .buy-tickets, .footer-column a:hover, .buy-track, .details-col .link {
     text-decoration: underline;
 }
-body.progress-bar-fill-player, .month-day::after, .track-info, .blog-post-image-wrapper, .map-col .map, .volume-control-player i, .volume-slider-player, .track-info{
+body.progress-bar-fill-player, .month-day::after,.blog-post-image-wrapper, .map-col .map, .volume-control-player i, .volume-slider-player{
     color: var(--color-bg-dark);
     accent-color: var(--color-bg-dark); 
 }
@@ -96,8 +95,11 @@ body.progress-bar-fill-player, .month-day::after, .track-info, .blog-post-image-
 .title-player,.vertical-name,.song-list li.active,.song-list li::before,.titulo-album,.modal-contento .error-message,.albumes figcaption h3 {
     font-weight: bold;
 }
-.track-title.playing,.contact-info p,.content-grid,.nav-button, .social-icons a ,.cierre,.buy-tickets, .albumes figcaption h3, .albumes figcaption p, .albumes figcaption h3:hover, .albumes figcaption p:hover, .albumes figcaption h3:focus, .albumes figcaption p:focus,#view-all-btn,footer,.footer-column a  {
+.track-title.playing,.nav-links a:hover,.new-album,::selection,#scrollToTopBtn:hover,.contact-info p,.content-grid,.nav-button, .social-icons a ,.cierre,.buy-tickets, .albumes figcaption h3, .albumes figcaption p, .albumes figcaption h3:hover, .albumes figcaption p:hover, .albumes figcaption h3:focus, .albumes figcaption p:focus,#view-all-btn,footer,.footer-column a  {
     color: var(--color-main);
+}
+.nav-links a,.follow a ,.ciudad-link,#view-all-btn,.tickets ,.social-icons a,.footer-column a,.punto,.breadcrumb a  {
+    text-decoration: none;
 }
 body {
     line-height: 1.6;
@@ -132,13 +134,9 @@ header {
     text-transform: uppercase;
     padding: 0.3125em 0;
     transition: color 0.3s ease;
-    text-decoration: none;
     font-weight: 600;
     border-radius: 0.1875em;
     letter-spacing: 0.05em;
-}
-.nav-links a:hover {
-    color: #f0f0f0;
 }
 .nav-links a::after {
     content: "";
@@ -167,11 +165,14 @@ header {
     flex-direction: column;
     padding-top: 5.625em; /* 90px */
 }
-.background-image2, .background-image3, .background-image4 {
+.background-image2,.background-image3, .background-image4 {
     background-size: cover;
     background-position: center;
     min-height: 88vh;
     flex-direction: column;
+}
+.background-image2 {
+    background-image: url('../images/tour-title-area.jpg');
 }
 .background-image3 {
     background-image: url('../images/about-title-area.jpg');
@@ -188,6 +189,7 @@ header {
     letter-spacing: 0.125em;
     text-align: center;
     text-shadow: 0.125em 0.125em 0.5em rgba(0,0,0,0.7);
+    margin-top: 15%;
 }
 .vertical-name {
     top: 40%;
@@ -203,7 +205,6 @@ header {
 .new-album {
     margin-top: 22%; 
     margin-left: 44%;       
-    color: white;
 }
 .new-album h2 {
     font-size: 3em;
@@ -348,7 +349,6 @@ header {
 .album-cover {
     flex: 0 0 25em;
     flex-direction: column;
-    margin-right: 0%;
 }
 .album-cover img {
     max-width: 25em;
@@ -408,7 +408,6 @@ header {
 /* Hover SOLO en el título */
 .track-title:hover {
     color: #ffffff;
-    cursor: pointer;
 }
 /* Cuando está reproduciendo: brillo */
 .track-title.playing {
@@ -529,7 +528,6 @@ header {
     right: 0.625em;
     bottom: -1.875em;
     font-size: 1.25em;
-    cursor: pointer;
     transition: transform 0.2s;
 }
 .cierre:hover {
@@ -593,7 +591,6 @@ header {
     transform: translateY(-50%);
     font-size: 1.8em;           /* flecha más pequeña */
     color: white;
-    cursor: pointer;
     padding: 0.2em;             /* menos padding */
     width: 1.8em;               /* ancho del círculo */
     height: 1.8em;              /* alto del círculo */
@@ -632,7 +629,6 @@ header {
     color: white;
 }
 .mini-arrow {
-    cursor: pointer;
     font-size: 1.2em;
     user-select: none;
 }
@@ -643,7 +639,6 @@ header {
 .cerrar {
     font-size: 1.8em;
     color: white;
-    cursor: pointer;
     user-select: none;
 }
 /* --- FECHAS DE EVENTOS --- */
@@ -697,7 +692,6 @@ header {
 .ciudad-link {
     align-items: center;
     flex: 1;
-    text-decoration: none;
     color: inherit;
     padding-left: 1.5em;
     font-weight: 700;
@@ -707,14 +701,12 @@ header {
     letter-spacing: 0.02em;
     line-height: 1.3;
 }
-
 /* Botón de tickets */
 .buy-tickets {
     font-weight: 700;
     font-size: 1.2em;
     white-space: nowrap;
     margin-left: 1em;
-    cursor: pointer;
 }
 /* Botón Ver Todo */
 .view-all {
@@ -727,8 +719,6 @@ header {
     border: 0.125em solid #fff;
     font-weight: 600;
     letter-spacing: 0.063em;
-    text-decoration: none;
-    cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
 #view-all-btn:hover, .show-more:hover {
@@ -1047,7 +1037,6 @@ footer {
     border: 0.125em solid #fff;
     border-radius: 50%;
     background: transparent;
-    text-decoration: none;
     transition: all 0.2s ease-in-out;
     box-sizing: border-box;
 }
@@ -1071,7 +1060,6 @@ footer {
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    text-decoration: none;
     margin-bottom: 0.5em;
     display: inline-block;
     transition: color 0.2s;
@@ -1366,59 +1354,71 @@ footer {
     background: transparent;
     border: none;
     font-size: 1.2em;
-    cursor: pointer;
     transition: color 0.2s;
 }
-.nav-button:hover {
-    color: #e91e63;
-}
-
 /* --- PLAYER --- */
 .musica {
-    max-width: 31.25em;
-    border-radius: 0.125em;
-    margin: 2.5em auto 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: -38%;
-    margin-right: 55%;
+  max-width: 31.25em;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #1a1a1a;
+  border-radius: 0.125em;
+  box-sizing: border-box;
+  margin: -38% auto 0 auto;
+  margin-right: 55%;
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
+/* Controles superiores (íconos) */
 .controles {
-    border-bottom: 0.125em solid #888;
-    height: 5em;
-    background: #2a2a2a;
+  display: flex;
+  border-bottom: 0.125em solid #888;
+  height: 5em;
+  background: #2a2a2a;
 }
 .controles > div {
-    flex: 1 1 0;
-    height: 5em;
-    border-right: 0.063em solid #888;
+  flex: 1 1 0;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.063em solid #888;
+  cursor: pointer;
 }
 .controles > div:last-child {
-    border-right: none;
+  border-right: none;
 }
 .controles i {
-    transition: color 0.2s;
+  font-size: 1.5em;
+  color: white;
+  transition: color 0.2s;
 }
 .controles i:hover {
-    color: #939393;
+  color: #aaa;
 }
+/* Información de la canción */
 .track-info {
-    justify-content: space-between;
-    padding: 1.25em 1.75em 1em 1.75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25em 1.75em 1em 1.75em;
+  color: #888;
+  background-color: #1a1a1a;
 }
 .track-titulo {
-    font-size: 1.15em;
-    font-weight: 700;
-    margin-bottom: 0.25em;
-    letter-spacing: 0.031em;
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+  letter-spacing: 0.031em;
+  color: white;
 }
 .artist-name {
-    color: #aaa;
-    margin-top: 0.125em;
+  color: #aaa;
+  margin-top: 0.125em;
 }
 .timer {
-    font-weight: 700;
-    letter-spacing: 0.125em;
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  color: #ccc;
 }
 /* --- LISTA DE CANCIONES --- */
 .song-list {
@@ -1497,7 +1497,6 @@ footer {
     object-fit: contain;
     transition: transform 0.2s;
 }
-
 /* --- SECCIÓN DEL VÍDEO --- */
 .latest-video {
     margin: 2.5em 0 0 0;
@@ -1536,13 +1535,8 @@ footer {
     user-select: none;
     transition: color 0.2s;
 }
-/* Cambiar el color de la selección de texto */
-::selection {
-    color: #ffffff; /* Color del texto seleccionado */
-}
 .punto {
     font-size: 2em;
-    text-decoration: none;
 }
 /* --- BREADCRUMB --- */
 .breadcrumb {
@@ -1550,9 +1544,6 @@ footer {
     margin-top: 3em;
     font-size: 1.05em;
     letter-spacing: 0.05em;
-}
-.breadcrumb a {
-    text-decoration: none;
 }
 /* --- CONTENT GRID --- */
 .content-grid {
@@ -1613,7 +1604,6 @@ footer {
     padding: 1em 3em;
     font-size: 1.2em;
     letter-spacing: 0.08em;
-    text-decoration: none;
     transition: all 0.3s ease;
     margin-top: 1em;
     text-align: center;
@@ -1650,7 +1640,6 @@ footer {
     font-size: 1.5em;
     margin-right: 1.2em;
     transition: color 0.2s;
-    text-decoration: none;
     vertical-align: middle;
 }
 /* --- BOTÓN SCROLL ARRIBA --- */
@@ -1675,7 +1664,6 @@ footer {
 }
 #scrollToTopBtn:hover {
     background-color: rgba(255, 255, 255, 0.1); /* leve efecto hover */
-    color: rgb(255, 255, 255); /* la flecha se pone blanca al pasar el mouse */
 }
 /* --- SECCIÓN DE IMÁGENES --- */
 .imagenes {
