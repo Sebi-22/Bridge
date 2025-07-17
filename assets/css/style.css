@@ -5,7 +5,8 @@
     --color-bg-light: #111;
     --color-bg-dark: #222;
     --color-main: #fff;
-    /* Fuentes */
+    --color-accent:#a09d9d;    
+/* Fuentes */
     --font-main: 'Open Sans', Arial, sans-serif;
     --font-heading: 'Oswald', Arial, sans-serif;
     /* Modo oscuro */
@@ -89,6 +90,15 @@ body.progress-bar-fill-player, .month-day::after, .track-info, .blog-post-image-
     color: var(--color-bg-dark);
     accent-color: var(--color-bg-dark); 
 }
+.nav-links a,.timer.song-list li::before,.about-col p,.details-col p, .details-col a ,.album-description,.artist-name ,.accordion-content,.accordion-header i,.accordion-header,.about-album li,.about-album p ,.alert ,.footer-bottom,.footer-column a,.contact-info p ,.social-icons a,.footer-desc ,.show-more,.albumes figcaption p,.tracklist li,.blog-post-date ,.modal-controls,.month-day,.ciudad-link,#view-all-btn{
+    font-size:1em;
+}
+.title-player,.vertical-name,.song-list li.active,.song-list li::before,.titulo-album,.modal-contento .error-message,.albumes figcaption h3 {
+    font-weight: bold;
+}
+.track-title.playing,.contact-info p,.content-grid,.nav-button, .social-icons a ,.cierre,.buy-tickets, .albumes figcaption h3, .albumes figcaption p, .albumes figcaption h3:hover, .albumes figcaption p:hover, .albumes figcaption h3:focus, .albumes figcaption p:focus,#view-all-btn,footer,.footer-column a  {
+    color: var(--color-main);
+}
 body {
     line-height: 1.6;
     overflow-x: hidden;
@@ -122,7 +132,6 @@ header {
     text-transform: uppercase;
     padding: 0.3125em 0;
     transition: color 0.3s ease;
-    font-size: 1em;
     text-decoration: none;
     font-weight: 600;
     border-radius: 0.1875em;
@@ -183,7 +192,6 @@ header {
 .vertical-name {
     top: 40%;
     left: 10%;
-    font-weight: bold;
     transform: translateY(-50%) rotate(180deg);
     font-size: 7.5em;
     writing-mode: vertical-rl;
@@ -262,7 +270,6 @@ header {
     line-height: 1.1;
 }
 .title-player {
-    font-weight: bold;
     font-size: 1.1em;
     letter-spacing: 0.03em;
     color: #111;
@@ -341,7 +348,7 @@ header {
 .album-cover {
     flex: 0 0 25em;
     flex-direction: column;
-    margin-left: 8%;
+    margin-right: 0%;
 }
 .album-cover img {
     max-width: 25em;
@@ -354,13 +361,11 @@ header {
 }
 .titulo-album {
     font-size: 2em;
-    font-weight: bold;
     margin-bottom: 0.5em;
     letter-spacing: 0.063em;
     text-align: left;
 }
 .album-description {
-    font-size: 1em;
     line-height: 1.6;
     margin-bottom: 1.5em;
     text-align: left;
@@ -377,7 +382,7 @@ header {
     flex: 0.5 1 21.875em;
     background: transparent;
     margin-top: 0.2em;
-    margin-left: 5%;
+    margin-right: 10%;
 }
 .tracklist ol,#datos ul,.about-album ul,.song-list ol {
     list-style: none;
@@ -388,7 +393,6 @@ header {
     border-bottom: 0.063em solid #222;
     padding: 0.8em 0;
     font-weight: 600;
-    font-size: 1em;
     letter-spacing: 0.031em;
 }
 /* TÍTULO DE LA CANCIÓN */
@@ -408,8 +412,7 @@ header {
 }
 /* Cuando está reproduciendo: brillo */
 .track-title.playing {
-    color: #fff;
-    text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
+    text-shadow: 0 0 0.5em #ffffff, 0 0 0.75em #ffffff;
     font-weight: 700;
 }
 /* ICONOS DERECHA */
@@ -523,10 +526,9 @@ header {
 /* Estilo para la cruz de cierre */
 .cierre {
     position: absolute;
-    right: 10px;
+    right: 0.625em;
     bottom: -1.875em;
     font-size: 1.25em;
-    color: #fff;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -595,7 +597,7 @@ header {
     padding: 0.2em;             /* menos padding */
     width: 1.8em;               /* ancho del círculo */
     height: 1.8em;              /* alto del círculo */
-    border: 2px solid white;
+    border: 0.125em solid white;
     border-radius: 50%;
     background-color: transparent;
     align-items: center;
@@ -628,7 +630,6 @@ header {
     align-items: center;
     gap: 1em;
     color: white;
-    font-size: 1em;
 }
 .mini-arrow {
     cursor: pointer;
@@ -659,7 +660,7 @@ header {
 .date-item {
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #222;
+    border-bottom: 0.063em solid #222;
     padding: 1.25em 0;
 }
 /* Bloque con fecha */
@@ -678,7 +679,6 @@ header {
 .month-day {
     flex-direction: column;
     justify-content: center;
-    font-size: 1em;
     text-transform: uppercase;
     color: #999;
     letter-spacing: 0.1em;
@@ -690,7 +690,7 @@ header {
     top: 0;
     left: 100%;
     height: 3em;
-    width: 1px;
+    width: 0.063em;
     margin-left: 1em;
 }
 /* Bloque con ciudad y lugar */
@@ -701,7 +701,6 @@ header {
     color: inherit;
     padding-left: 1.5em;
     font-weight: 700;
-    font-size: 1em;
 }
 .ciudad {
     text-transform: uppercase;
@@ -713,7 +712,6 @@ header {
 .buy-tickets {
     font-weight: 700;
     font-size: 1.2em;
-    color: #fff;
     white-space: nowrap;
     margin-left: 1em;
     cursor: pointer;
@@ -725,10 +723,8 @@ header {
 }
 #view-all-btn {
     background: transparent;
-    color: #fff;
     padding: 0.8em 3em;
-    border: 2px solid #fff;
-    font-size: 1em;
+    border: 0.125em solid #fff;
     font-weight: 600;
     letter-spacing: 0.063em;
     text-decoration: none;
@@ -799,7 +795,6 @@ header {
     letter-spacing: 0.031em;
 }
 .blog-post-date {
-    font-size: 1em;
     margin-bottom: 0.5em;
 }
 /* --- VIDEO SECTION --- */
@@ -872,7 +867,6 @@ header {
 /* Texto de error más grande */
 .modal-contento .error-message {
     font-size: 3.5em;              
-    font-weight: bold;
 }
 .modal-contento .error-subtext {
     font-size: 1.75em; /* Aumentado */
@@ -952,13 +946,9 @@ header {
 }
 .albumes figcaption h3 {
     font-size: 1.1em;
-    font-weight: bold;
     margin: 0 0 0.2em 0;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-}
-.albumes figcaption p {
-    font-size: 1em;
 }
 .show-more {
     background: transparent;
@@ -969,7 +959,6 @@ header {
     margin: 2em 0 0 7vw;
     transition: background 0.2s, color 0.2s;
     letter-spacing: 0.05em;
-    font-size: 1em;
     text-transform: uppercase;
     margin-left: 35%;
 }
@@ -1013,7 +1002,6 @@ header {
 }
 /*--- FOOTER --- */
 footer {
-    color: #fff;
     padding: 2em 0 0 0;
     margin-top: 12%;
 }
@@ -1042,7 +1030,6 @@ footer {
     margin-bottom: 0.3em;
 }
 .footer-desc {
-    font-size: 1em;
     margin-bottom: 1.5em;
     line-height: 1.6;
     max-width: 20em;
@@ -1057,10 +1044,8 @@ footer {
     justify-content: center;
     width: 2em;
     height: 2em;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     border-radius: 50%;
-    color: #fff;
-    font-size: 1em;
     background: transparent;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -1081,12 +1066,8 @@ footer {
     align-items: center;
     gap: 0.5em;
     margin-bottom: 0.5em;
-    color: #fff;
-    font-size: 1em;
 }
 .footer-column a {
-    color: #fff;
-    font-size: 1em;
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -1104,7 +1085,6 @@ footer {
     padding: 1.2em 0 0.8em 0;
     color: #aaa;
     margin-top: 2em;
-    font-size: 1em;
     letter-spacing: 0.03em;
     border-top: 0.063em solid #444;
 }
@@ -1129,7 +1109,6 @@ footer {
     font-weight: 700;
 }
 .contact-section p {
-    font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #a09d9d;
     font-size: 0.9em;
     margin: 0 0 0.375em 0;
@@ -1171,7 +1150,6 @@ footer {
     font-weight: 700;
 }
 .info-contacto p {
-    font-family: 'Open Sans', monospace, Arial, sans-serif;
     font-size: 1.05em;
     margin: 0 0 0.625em 0;
     letter-spacing: 0.063em;
@@ -1230,7 +1208,6 @@ footer {
     padding: 0.75em 1.125em;
     margin-top: 1.125em;
     border-radius: 0.188em;
-    font-size: 1em;
     text-align: center;
 }
 /* --- CONTENEDOR PRINCIPAL --- */
@@ -1271,14 +1248,11 @@ footer {
     font-weight: 700;
 }
 .about-album p {
-    font-size: 1em;
     margin-bottom: 1.125em;
     line-height: 1.7;
     max-width: 95%;
 }
 .about-album li {
-    font-family: 'Open Sans', monospace, Arial, sans-serif;
-    font-size: 1em;
     margin-bottom: 0.313em;
     letter-spacing: 0.063em;
 }
@@ -1311,7 +1285,6 @@ footer {
     color: white;
 }
 #accordion-container::-webkit-scrollbar {
-    width: 0px;
     background: transparent;
 }
 .accordion {
@@ -1320,14 +1293,12 @@ footer {
 }
 .accordion-header {
     justify-content: space-between;
-    font-size: 1em;
     padding: 0.75em 0;
     transition: background 0.2s;
     text-transform: none;
     letter-spacing: 0.031em;
 }
 .accordion-header i {
-    font-size: 1em;
     margin-right: 1.25em;
     transition: transform 0.3s;
 }
@@ -1338,8 +1309,6 @@ footer {
     max-height: 0;
     transition: max-height 0.35s ease;
     background: transparent;
-    font-family: 'Open Sans', monospace, Arial, sans-serif;
-    font-size: 1em;
     padding: 0 1.25em;
     line-height: 1.7;
     border-left: 0.125em solid #222;
@@ -1361,11 +1330,11 @@ footer {
     background: #181818;
     padding: 5em 2.5em;
     border-radius: 0.25em;
-    max-width: 600px;
+    max-width: 37.5em;
     margin: 2em auto;
     box-sizing: border-box;
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.3);
     margin-left: 50%;
 }
 .review-section h2 {
@@ -1397,7 +1366,6 @@ footer {
     background: transparent;
     border: none;
     font-size: 1.2em;
-    color: #fff;
     cursor: pointer;
     transition: color 0.2s;
 }
@@ -1446,12 +1414,9 @@ footer {
 }
 .artist-name {
     color: #aaa;
-    font-size: 1em;
     margin-top: 0.125em;
 }
 .timer {
-    font-family: 'Open Sans', monospace, Arial, sans-serif;
-    font-size: 1em;
     font-weight: 700;
     letter-spacing: 0.125em;
 }
@@ -1479,7 +1444,7 @@ footer {
 .song-list li {
     margin-bottom: 0;
     justify-content: space-between;
-    border-bottom: 1px solid #222;
+    border-bottom: 0.063em solid #222;
     padding: 0.6em 0;
     font-weight: 700;
     text-transform: uppercase;
@@ -1490,11 +1455,6 @@ footer {
     counter-increment: track-number;
     content: counter(track-number) ". ";
     left: 0;
-    font-weight: bold;
-    font-size: 1em;
-}
-.song-list li.active {
-    font-weight: bold;
 }
 .titulo-track {
     transition: color 0.2s;
@@ -1599,7 +1559,6 @@ footer {
     width: 95vw;
     margin: 0 auto;
     padding: 2em 0 0 0;
-    color: #fff;
     margin-top: 10%;
 }
 .top-row {
@@ -1641,7 +1600,6 @@ footer {
     letter-spacing: 0.063em;
 }
 .details-col p, .details-col a {
-    font-size: 1em;
     margin: 0.3em 0;
     word-break: break-all;
 }
@@ -1651,7 +1609,7 @@ footer {
 .tickets {
     display: inline-block;
     background: transparent;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     padding: 1em 3em;
     font-size: 1.2em;
     letter-spacing: 0.08em;
@@ -1660,11 +1618,11 @@ footer {
     margin-top: 1em;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    border-radius: 0.313em;
+    box-shadow: 0 0 0.625em rgba(255,255,255,0.1);
 }
 .tickets:hover {
-    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    box-shadow: 0 0 1.25em rgba(255,255,255,0.4);
 }
 .about-col {
     flex: 1 1 0;
@@ -1677,7 +1635,6 @@ footer {
     letter-spacing: 0.063em;
 }
 .about-col p {
-    font-size: 1em;
     margin-bottom: 2em;
     line-height: 1.7;
 }
@@ -1703,7 +1660,7 @@ footer {
     right: 1.875em;
     width: 2.5em; /* 40px */
     height: 2.5em;
-    border: 2px solid white;       /* borde blanco */
+    border: 0.125em solid white;       /* borde blanco */
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.7); /* fondo negro translúcido */
     color: #ccc;                   /* color flecha gris claro */
@@ -1744,7 +1701,7 @@ body.dark-mode, .dark-mode .our-discography, .dark-mode, .dark-mode .texto .text
 body.dark-mode .progress-bar-fill {
     background: var(--dark-accent);
 }
-body.dark-mode .buy-tickets:hover, body.dark-mode .show-more:hover {
+body.dark-mode .buy-tickets:hover, body.dark-mode .show-more:hover,body.dark-mode #scrollToTopBtn {
     background: var(--dark-btn-bg);
 }
 body.dark-mode .modal-content, body.dark-mode .modal-contento, form {
@@ -1752,7 +1709,6 @@ body.dark-mode .modal-content, body.dark-mode .modal-contento, form {
     color: var(--dark-color);
 }
 body.dark-mode #scrollToTopBtn {
-    background: var(--dark-btn-bg);
     color: var(--dark-btn-hover-color);
 }
 body.dark-mode #scrollToTopBtn:hover {
@@ -1808,7 +1764,7 @@ body.dark-mode #scrollToTopBtn:hover {
 }
 @media (max-width: 600px) {
   body, html {
-    font-size: 15px;
+    font-size: 0.938em;
   }
   .container.navbar, .footer, .album-info, .albums, .gallery, .content-grid {
     flex-direction: column;
