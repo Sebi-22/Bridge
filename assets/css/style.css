@@ -347,9 +347,11 @@ header {
 .titulo-album,.about-album h2,.follow h2,.about-col h2,.available-on h2,.latest-video h2,.flecha,.punto,.details-col h2 {
     font-size: 2em;
 }
+.follow h2 ,.titulo-album,.about-col h2 ,.lyrics-section h1,.details-col h2,.latest-video h2 ,.available-on h2,.about-album li strong,.right-section button ,.about-album li,.about-album h2,.track-title,.info-contacto p ,.info-contacto h2 ,.left-section h1 ,.contact-section p,.contact-section h2,.transparencia h3,.texto h1,#view-all-btn,.blog h1,.our-discography h1 {
+    letter-spacing: 0.063em;
+}
 .titulo-album {
     margin-bottom: 0.5em;
-    letter-spacing: 0.063em;
 }
 .album-description {
     color: #bdbdbd;
@@ -373,7 +375,7 @@ header {
     margin-top: 0.2em;
     margin-left: 5%;
 }
-.tracklist ol {
+.tracklist ol,#datos ul,.about-album ul,.song-list ol  {
     list-style: none;
 }
 .tracklist li {
@@ -388,7 +390,6 @@ header {
     color: #8e8e8e;
     flex: 1;
     font-size: 1.3em;
-    letter-spacing: 0.063em;
     transition: color 0.3s ease, text-shadow 0.3s ease;
     margin-top: -2%;
 }
@@ -422,7 +423,6 @@ header {
     font-size: 3em;
     margin-bottom: 0.5em;
     font-weight: 500;
-    letter-spacing: 0.063em;
     display: inline-block;
     text-transform: uppercase;
     margin-left: 3%;
@@ -603,7 +603,6 @@ header {
     color: white;
 }
 #datos ul {
-    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -668,7 +667,6 @@ header {
     padding: 0.8em 3em;
     border: 0.125em solid #fff;
     font-weight: 600;
-    letter-spacing: 0.063em;
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
 }
@@ -685,7 +683,6 @@ header {
     font-size: 2.5em;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
-    letter-spacing: 0.063em;
 }
 .blog h1::after {
     content: "";
@@ -826,7 +823,6 @@ header {
     font-size: 2.5em;
     margin: 0 0 0.5em 7vw;
     font-weight: 500;
-    letter-spacing: 0.063em;
     margin-left: 0%;
 }
 .our-discography h1::after {
@@ -932,7 +928,6 @@ header {
     font-size: 2.2em;
     text-transform: uppercase;
     margin: 0 0 0.2em 0;
-    letter-spacing: 0.063em;
 }
 .transparencia p {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -1045,7 +1040,6 @@ footer {
 .contact-section h2 {
     font-size: 2.3em;
     text-transform: uppercase;
-    letter-spacing: 0.063em;
     margin-bottom: 1.75em;
 }
 .contact-section p {
@@ -1053,7 +1047,6 @@ footer {
     color: #a09d9d;
     font-size: 0.9em;
     margin: 0 0 0.375em 0;
-    letter-spacing: 0.063em;
     word-break: break-all;
 }
 /* --- FORMULARIO DE CONTACTO --- */
@@ -1072,7 +1065,6 @@ footer {
     font-size: 2.3em;
     text-transform: uppercase;
     margin-bottom: 1.875em;
-    letter-spacing: 0.063em;
 }
 .left-section > p {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -1089,14 +1081,12 @@ footer {
     font-size: 1.3em;
     text-transform: uppercase;
     margin-bottom: 1.125em;
-    letter-spacing: 0.063em;
 }
 .info-contacto p {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
     font-size: 1.05em;
     margin: 0 0 0.625em 0;
-    letter-spacing: 0.063em;
     line-height: 1.7;
 }
 .right-section {
@@ -1133,7 +1123,6 @@ footer {
     text-transform: uppercase;
     border: none;
     font-weight: 500;
-    letter-spacing: 0.063em;
     transition: background 0.2s, color 0.2s;
 }
 .right-section button:hover {
@@ -1186,7 +1175,6 @@ footer {
 .about-album h2 {
     text-transform: uppercase;
     margin-bottom: 1.125em;
-    letter-spacing: 0.063em;
 }
 .about-album p {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -1195,19 +1183,11 @@ footer {
     line-height: 1.7;
     max-width: 95%;
 }
-.about-album ul {
-    list-style: none;
-}
 .about-album li {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
     color: #ccc;
     margin-bottom: 0.313em;
-    letter-spacing: 0.063em;
 }
-.about-album li strong {
-    letter-spacing: 0.063em;
-}
-
 /* --- LYRICS SECTION (ACORDEÓN) --- */
 .lyrics-section {
     margin: 1.875em auto;
@@ -1219,7 +1199,6 @@ footer {
 .lyrics-section h1 {
     font-size: 1.5em;
     text-transform: uppercase;
-    letter-spacing: 0.063em;
     margin-bottom: 1.125em;
 }
 #accordion-container {
@@ -1388,7 +1367,6 @@ footer {
     color: #ffffff;
 }
 .song-list ol {
-    list-style: none; /* Oculta el número automático */
     counter-reset: track-number; /* Resetea contador */
     padding-left: 0;
 }
@@ -1431,7 +1409,6 @@ footer {
 }
 .available-on h2 {
     text-transform: uppercase;
-    letter-spacing: 0.063em;
     margin-bottom: 1.375em;
     margin-left: 6%;
 }
@@ -1454,7 +1431,6 @@ footer {
     line-height: 2.5em;
     margin-left: 9%;
     text-transform: uppercase;
-    letter-spacing: 0.063em;
     margin-bottom: -2%;
     padding-left: 0.625em;
 }
@@ -1546,7 +1522,6 @@ footer {
 }
 .details-col h2 {
     margin-bottom: 1em;
-    letter-spacing: 0.063em;
 }
 .details-col p, .details-col a {
     color: #bdbdbd;
@@ -1585,7 +1560,6 @@ footer {
 }
 .about-col h2 {
     margin-bottom: 0.7em;
-    letter-spacing: 0.063em;
 }
 .about-col p {
     color: #bdbdbd;
@@ -1597,7 +1571,6 @@ footer {
 }
 .follow h2 {
     margin-bottom: 0.7em;
-    letter-spacing: 0.063em;
 }
 .follow a {
     color: #bdbdbd;
