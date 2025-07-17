@@ -470,3 +470,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const posts = [
+  {
+    img: 'assets/images/blog-post-1.jpg',
+    alt: 'Blog 1',
+    title: 'THE BEST NIGHT IN BALTIMORE',
+    date: '10 April, 2018'
+  },
+  {
+    img: 'assets/images/blog-post-2.jpg',
+    alt: 'Blog 2',
+    title: 'THE BEST NIGHT IN DETROIT',
+    date: '10 April, 2018'
+  },
+  {
+    img: 'assets/images/blog-post-3.jpg',
+    alt: 'Blog 3',
+    title: 'THE BEST NIGHT IN NEW YORK',
+    date: '10 April, 2018'
+  }
+];
+
+const blogSection = document.querySelector('.blog-posts');
+
+posts.forEach(post => {
+  const article = document.createElement('article');
+  article.className = 'blog-post';
+  article.innerHTML = `
+    <div class="blog-post-image-wrapper">
+      <img src="${post.img}" alt="${post.alt}">
+    </div>
+    <div class="blog-post-title">${post.title}</div>
+    <div class="blog-post-date">${post.date}</div>
+  `;
+  blogSection.appendChild(article);
+});
