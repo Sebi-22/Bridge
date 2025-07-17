@@ -410,7 +410,7 @@ header {
 /* Cuando está reproduciendo: brillo */
 .track-title.playing {
     color: #fff;
-    text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
+    text-shadow: 0 0 0.5em #ffffff, 0 0 0.75em #ffffff;
     font-weight: 700;
 }
 /* ICONOS DERECHA */
@@ -490,7 +490,6 @@ header {
 }
 .texto2 p {
     color: #bdbdbd;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     font-size: 1.1em;
     margin: 1.5em 0 0 0;
     margin-left: 7vw;
@@ -529,7 +528,7 @@ header {
 /* Estilo para la cruz de cierre */
 .cierre {
     position: absolute;
-    right: 10px;
+    right: 0.625em;
     bottom: -1.875em;
     font-size: 1.25em;
     color: #fff;
@@ -601,7 +600,7 @@ header {
     padding: 0.2em;             /* menos padding */
     width: 1.8em;               /* ancho del círculo */
     height: 1.8em;              /* alto del círculo */
-    border: 2px solid white;
+    border: 0.125em solid white;
     border-radius: 50%;
     background-color: transparent;
     align-items: center;
@@ -666,7 +665,7 @@ header {
 .date-item {
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #222;
+    border-bottom: 0.063em solid #222;
     padding: 1.25em 0;
 }
 /* Bloque con fecha */
@@ -697,7 +696,7 @@ header {
     top: 0;
     left: 100%;
     height: 3em;
-    width: 1px;
+    width: 0.063em;
     background-color: #222;
     margin-left: 1em;
 }
@@ -735,7 +734,7 @@ header {
     background: transparent;
     color: #fff;
     padding: 0.8em 3em;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     font-size: 1em;
     font-weight: 600;
     letter-spacing: 0.063em;
@@ -769,7 +768,6 @@ header {
 }
 .blog-description {
     color: #bdbdbd;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     font-size: 1.05em;
     margin: 2em 0 3em 7vw;
     letter-spacing: 0.05em;
@@ -813,7 +811,6 @@ header {
 .blog-post-date {
     color: #bdbdbd;
     font-size: 1em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     margin-bottom: 0.5em;
 }
 /* --- VIDEO SECTION --- */
@@ -925,7 +922,6 @@ header {
 }
 .discography-description {
     color: #bdbdbd;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     font-size: 1.05em;
     margin: 0 0 3em 7vw;
     letter-spacing: 0.05em;
@@ -978,7 +974,6 @@ header {
 }
 .albumes figcaption p {
     font-size: 1em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
 }
 .show-more {
@@ -1071,7 +1066,6 @@ footer {
 }
 .footer-desc {
     color: #bdbdbd;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     font-size: 1em;
     margin-bottom: 1.5em;
     line-height: 1.6;
@@ -1087,7 +1081,7 @@ footer {
     justify-content: center;
     width: 2em;
     height: 2em;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     border-radius: 50%;
     color: #fff;
     font-size: 1em;
@@ -1113,7 +1107,6 @@ footer {
     align-items: center;
     gap: 0.5em;
     margin-bottom: 0.5em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #fff;
     font-size: 1em;
 }
@@ -1142,7 +1135,6 @@ footer {
     margin-top: 2em;
     font-size: 1em;
     letter-spacing: 0.03em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     border-top: 0.063em solid #444;
 }
 /* --- CONTACTO --- */
@@ -1360,7 +1352,7 @@ footer {
     -ms-overflow-style: none;   
 }
 #accordion-container::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
     background: transparent;
 }
 .accordion {
@@ -1413,11 +1405,11 @@ footer {
     background: #181818;
     padding: 5em 2.5em;
     border-radius: 0.25em;
-    max-width: 600px;
+    max-width: 37.5em;
     margin: 2em auto;
     box-sizing: border-box;
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.3);
     margin-left: 50%;
 }
 .review-section h2 {
@@ -1535,7 +1527,7 @@ footer {
 .song-list li {
     margin-bottom: 0;
     justify-content: space-between;
-    border-bottom: 1px solid #222;
+    border-bottom: 0.063em solid #222;
     padding: 0.6em 0;
     font-weight: 700;
     text-transform: uppercase;
@@ -1649,7 +1641,6 @@ footer {
 .breadcrumb {
     margin-left: 9vw;
     margin-top: 3em;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
     font-size: 1.05em;
     letter-spacing: 0.05em;
@@ -1702,7 +1693,6 @@ footer {
 .details-col {
     flex: 0 0 32%;
     max-width: 32%;
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
     margin-left: 2%;
 }
@@ -1727,7 +1717,7 @@ footer {
 .tickets {
     display: inline-block;
     background: transparent;
-    border: 2px solid #fff;
+    border: 0.125em solid #fff;
     padding: 1em 3em;
     font-size: 1.2em;
     letter-spacing: 0.08em;
@@ -1736,12 +1726,12 @@ footer {
     margin-top: 1em;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    border-radius: 0.313em;
+    box-shadow: 0 0 0.625em rgba(255,255,255,0.1);
 }
 .tickets:hover {
     color: #000;
-    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    box-shadow: 0 0 1.25em rgba(255,255,255,0.4);
 }
 .about-col {
     flex: 1 1 0;
@@ -1754,7 +1744,6 @@ footer {
     letter-spacing: 0.063em;
 }
 .about-col p {
-    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
     color: #bdbdbd;
     font-size: 1em;
     margin-bottom: 2em;
