@@ -1,10 +1,5 @@
 /* --- VARIABLES CSS --- */
 :root {
-    /* Colores principales */
-    --color-bg: #000;
-    --color-bg-dark: #222;
-    --color-main: #fff;
-    --color-accent:#a09d9d;    
 /* Fuentes */
     --font-main: 'Open Sans', Arial, sans-serif;
     --font-heading: 'Oswald', Arial, sans-serif;
@@ -31,7 +26,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img, div, section, header, foote
 .container.navbar,.nav-icons,.footer ,.modal-footer,.nav-links, .background-image, .background-image2, .background-image3, .background-image4, .hero-content, .about-hero, .album-player, .left-player, .controls-player, .progress-container-player, .volume-control-player, .album-info, .album-cover, .apps, .tracklist li,.arrow ,.track-icons, .texto, .gallery, .modal-content, .date-item, .date-block, .month-day, .ciudad-link, .blog-posts, .blog-post, .video-section, .video-content, .nuevomodal, .modal-contento, .albums, .albumes, .articulos, .foto, .transparencia, .transparencia .social, .footer, .social-icons, .social-icons a,.social, .social-icons a i, .contact-info p, .contact, .contact-info p,.form, .info-contacto, .right-section, .albumesss, .albumesss .image-foto, .left-column, .about1, .accordion-header, .nav-icons, .controles, .controles > div, .track-info, .song-list li, .platform-icons, .video-container, .iconos-abajo, .flecha, .punto, .top-row, .img-col, .map-col, .bottom-row, .imagenes, .albumes,.modal-control {
     display: flex;
 }
-header, .nav-links a, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .transparencia .social a, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover, #scrollToTopBtn {
+header,.footer-column a,.song-list h1,.nav-button,.contact-info p,.cierre,.social-icons a,.buy-tickets ,footer , .nav-links a,.track-icons i:hover,.track-title:hover, #toggle-dark-mode, .tour-dates, .vertical-name, .about-title, .album-info, .titulo-album, .track-icons i:hover, .texto h1, .texto2 h1, .close, .arrow, .blog h1, .blog-post-title, .play-button, .modal-contento .error-message, #cerrarModal, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .transparencia .social a, .contact-section h2, .left-section, .right-section input, .right-section textarea, .right-section button:hover, .alert, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion.active .accordion-content, .review-section h2, .nav-button, .controles i, .track-titulo, .timer, .available-on h2, .latest-video h2, .flecha, .punto, .details-col h2, .tickets, .about-col h2, .follow h2, .follow a:hover, #scrollToTopBtn,.track-title.playing,#view-all-btn {
     color: #fff;
 }
 header, .hero-content, .album-cover img, .album-details img, .albumes img, .blog-post img, .video-bg, .about-bg, .background-image, .background-image2, .background-image3, .background-image4, .albumes figcaption h3, .albumes figcaption p, .texto p, .texto2 p, .blog-posts .blog-post img, .image img, .blog-post-image-wrapper, .blog-post img, .video-content, .albumes figcaption, .foto img, .contact, .form, .right-section input, .right-section textarea, .albumesss, .albumesss .image-foto, .albumesss .image-foto img, .lyrics-section, #accordion-container, .review-section, .musica, .song-list, .video-container, .video-container iframe, .albumes figure, .albumes img, .tracklist, .about-col h2 {
@@ -41,7 +36,7 @@ header, .hero-content, .album-cover img, .album-details img, .albumes img, .blog
     height: 100%;
 }
 .vertical-name, .about-title, .album-player, .titulo-album, .track-title, .texto h1, .texto2 h1, .blog h1, .blog-post-title, .our-discography h1, .albumes figcaption, .show-more, .transparencia h3, .contact-section h2, .left-section h1, .info-contacto h2, .right-section button, .about-album h2, .about-album li strong, .lyrics-section h1, .accordion-header, .review-section h2, .review-source, .track-titulo, .song-list h1, .song-list li, .titulo-track, .available-on h2, .latest-video h2, .details-col h2, .tickets, .follow h2 {
-    font-family: 'Oswald', Arial, sans-serif;
+    font-family:var(--font-main);
 }
 .container.navbar, .album-player, .blog-posts, .albums, .album-info, .blog-posts, .blog-posts {
     gap: 2em;
@@ -61,7 +56,7 @@ header, .nav-links a::after, .vertical-name, .about-bg, .close, .arrow, .video-b
 .album-info, .blog-post, .contact, .form, .albumesss, .left-column, .top-row, .map-col, .bottom-row {
     align-items: flex-start;
 }
-.album-player, .texto h1::after, .texto2 h1::after, .blog h1::after, .our-discography h1::after, .show-more:hover, .right-section button, .tickets:hover {
+.album-player,.right-section input:focus, .right-section textarea:focus,.social-icons a:hover,#view-all-btn:hover, .texto h1::after,.nav-links a::after , .texto2 h1::after, .blog h1::after, .our-discography h1::after, .show-more:hover, .right-section button, .tickets:hover {
     background: #fff;
 }
 .nav-links, .image, .modal-slider, .review-section, .month-day, .modal-content, .modal-contenedor, .nav-links a, .background-image, .background-image2, .background-image3, .background-image4, .about-hero, .about-title, .progress-bar-player, .album-info, .texto h1, .texto2 h1, .blog h1, .video-section, .video-content, .modal-contento, .albumes, .foto, .song-list li {
@@ -123,7 +118,6 @@ header {
 .nav-links a::after {
     content: "";
     height: 0.125em;
-    background-color: #fff;
     left: 0;
     right: 0;
     transform: scaleX(0);
@@ -404,12 +398,10 @@ header {
 }
 /* Hover SOLO en el título */
 .track-title:hover {
-    color: #ffffff;
     cursor: pointer;
 }
 /* Cuando está reproduciendo: brillo */
 .track-title.playing {
-    color: #fff;
     text-shadow: 0 0 0.5em #ffffff, 0 0 0.75em #ffffff;
     font-weight: 700;
 }
@@ -428,9 +420,6 @@ header {
     color: #bdbdbd;
     font-size: 1.1em;
     transition: color 0.2s ease;
-}
-.track-icons i:hover {
-    color: #ffffff;
 }
 /* --- TEXTO PROMOCIONAL --- */
 .texto {
@@ -531,7 +520,6 @@ header {
     right: 0.625em;
     bottom: -1.875em;
     font-size: 1.25em;
-    color: #fff;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -719,7 +707,6 @@ header {
 .buy-tickets {
     font-weight: 700;
     font-size: 1.2em;
-    color: #fff;
     text-decoration: underline;
     white-space: nowrap;
     margin-left: 1em;
@@ -732,7 +719,6 @@ header {
 }
 #view-all-btn {
     background: transparent;
-    color: #fff;
     padding: 0.8em 3em;
     border: 0.125em solid #fff;
     font-size: 1em;
@@ -743,7 +729,6 @@ header {
     transition: background 0.2s, color 0.2s;
 }
 #view-all-btn:hover {
-    background: #fff;
     color: #000;
 }
 /* --- SECCIÓN DEL BLOG --- */
@@ -1035,7 +1020,6 @@ header {
 /* --- FOOTER --- */
 footer {
     background: #000;
-    color: #fff;
     padding: 2em 0 0 0;
     margin-top: 12%;
 }
@@ -1083,7 +1067,6 @@ footer {
     height: 2em;
     border: 0.125em solid #fff;
     border-radius: 50%;
-    color: #fff;
     font-size: 1em;
     background: transparent;
     text-decoration: none;
@@ -1091,7 +1074,6 @@ footer {
     box-sizing: border-box;
 }
 .social-icons a:hover {
-    background: #fff;
     color: #000;
     border-color: #000;
 }
@@ -1107,11 +1089,9 @@ footer {
     align-items: center;
     gap: 0.5em;
     margin-bottom: 0.5em;
-    color: #fff;
     font-size: 1em;
 }
 .footer-column a {
-    color: #fff;
     font-family: 'Oswald', Arial, sans-serif;
     font-size: 1em;
     font-weight: 600;
@@ -1229,9 +1209,6 @@ footer {
     outline: none;
     transition: border 0.3s;
     resize: none;
-}
-.right-section input:focus, .right-section textarea:focus {
-    border-color: #ffffff;
 }
 .right-section textarea {
     min-height: 8.75em;
@@ -1442,7 +1419,6 @@ footer {
     background: transparent;
     border: none;
     font-size: 1.2em;
-    color: #fff;
     cursor: pointer;
     transition: color 0.2s;
 }
@@ -1517,7 +1493,6 @@ footer {
     margin-bottom: 0.8em;
     margin-top: 0;
     letter-spacing: 0.08em;
-    color: #ffffff;
 }
 .song-list ol {
     list-style: none; /* Oculta el número automático */
