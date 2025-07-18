@@ -280,8 +280,10 @@ header {
     color: #4f4f4f;
     background: #f2f2f2;
 }
+.progress-container-player,.nav-icons ,.volume-control-player,.social,.contact-info p{
+ gap: 0.5em;
+}
 .progress-container-player {
-    gap: 0.5em;
     width: 14em;
     border-right: 0.063em solid #eee;
     padding: 0 1.5em 0 1.5em;
@@ -311,7 +313,6 @@ header {
     margin: 0 0.1em;
 }
 .volume-control-player {
-    gap: 0.5em;
     padding-left: 1.5em;
 }
 .volume-control-player i {
@@ -913,9 +914,6 @@ header {
     opacity: 0;
     transition: opacity 0.4s;
 }
-.social{
-    gap: 0.5em;
-}
 .articulos article:hover .transparencia {
     opacity: 1;
 }
@@ -990,7 +988,6 @@ footer {
 }
 /* Contacto */
 .contact-info p {
-    gap: 0.5em;
     margin-bottom: 0.5em;
 }
 .footer-column a {
@@ -1261,7 +1258,6 @@ footer {
     position: absolute;
     bottom: 1.5em;
     right: 2em;
-    gap: 0.5em;
 }
 .nav-button {
     background: transparent;
