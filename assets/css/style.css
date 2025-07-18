@@ -660,7 +660,7 @@ header {
     margin-left: 1em;
 }
 /* Botón Ver Todo */
-.view-all {
+.view-all,.ticket,.follow {
     margin-top: 2.5em;
 }
 #view-all-btn {
@@ -1490,9 +1490,6 @@ footer {
     color: #bdbdbd;
     text-decoration: underline;
 }
-.ticket {
-    margin-top: 2.5em;
-}
 .tickets {
     display: inline-block;
     background: transparent;
@@ -1520,9 +1517,6 @@ footer {
     color: #bdbdbd;
     margin-bottom: 2em;
     line-height: 1.7;
-}
-.follow {
-    margin-top: 2.5em;
 }
 .follow h2 {
     margin-bottom: 0.7em;
