@@ -132,10 +132,12 @@ header {
 .nav-links a:hover::after, .nav-links a.active::after {
     transform: scaleX(1);
 }
+#toggle-dark-mode,#cerrarModal,.lyrics-section h1,.follow a,#scrollToTopBtn  {
+    font-size: 1.5em;
+}
 #toggle-dark-mode {
     background: none;
     border: none;
-    font-size: 1.5em;
     margin-left: 18em;
 }
 /* HERO / PORTADA */
@@ -361,7 +363,7 @@ header {
     line-height: 1.6;
     margin-bottom: 1.5em;
 }
-.apps {
+.apps,.modal-footer,.modal-contento .error-subtext,.social,.tickets   {
     margin-top: 1em;
 }
 .apps img {
@@ -576,7 +578,6 @@ header {
 }
 /* --- Footer --- */
 .modal-footer {
-    margin-top: 1em;
     justify-content: space-between;
     padding: 0 1em;
     box-sizing: border-box;
@@ -710,10 +711,12 @@ header {
     width: 23em;
     flex-direction: column;
 }
+.blog-post-image-wrapper,.details-col h2 ,.footer-column,.review-section h2,.review-text   {
+        margin-bottom: 1em;
+}
 .blog-post-image-wrapper {
     aspect-ratio: 1.2/1;
     background: #222;
-    margin-bottom: 1em;
 }
 .blog-post img {
     transition: transform 0.4s cubic-bezier(.4,0,.2,1);
@@ -800,13 +803,11 @@ header {
 .modal-contento .error-subtext {
     font-size: 1.75em; /* Aumentado */
     color: #ccc;
-    margin-top: 1em;
 }
 /* Botón cerrar */
 #cerrarModal {
     bottom: 1.5em;
     right: 2em;
-    font-size: 1.5em;
     background: none;
     border: none;
 }
@@ -914,7 +915,6 @@ header {
 }
 .social{
     gap: 0.5em;
-    margin-top: 1em;
 }
 .articulos article:hover .transparencia {
     opacity: 1;
@@ -946,7 +946,6 @@ footer {
 .footer-column {
     flex: 1 1 12.5em;
     min-width: 12.5em;
-    margin-bottom: 1em;
 }
 .footer-column h2, .footer-column h3 {
     font-family: 'Oswald', Arial, sans-serif;
@@ -1065,9 +1064,11 @@ footer {
 .info-contacto {
     gap: 3.75em;
 }
+.info-contacto,.about-album h2,.about-album p,.lyrics-section h1,.video-container{
+        margin-bottom: 1.125em;
+}
 .info-contacto h2 {
     font-size: 1.3em;
-    margin-bottom: 1.125em;
 }
 .info-contacto p {
     font-family: 'Open Sans', monospace, Arial, sans-serif;
@@ -1158,13 +1159,9 @@ footer {
     flex-direction: column;
     gap: 1.875em;
 }
-.about-album h2 {
-    margin-bottom: 1.125em;
-}
 .about-album p {
     font-family: 'Open Sans', Arial, sans-serif;
     color: #ccc;
-    margin-bottom: 1.125em;
     line-height: 1.7;
     max-width: 95%;
 }
@@ -1180,10 +1177,6 @@ footer {
     padding: 0 0.625em;
     margin-left: 50%;
     margin-top: -10%;
-}
-.lyrics-section h1 {
-    font-size: 1.5em;
-    margin-bottom: 1.125em;
 }
 #accordion-container {
     max-height: 16.25em;
@@ -1253,13 +1246,11 @@ footer {
 .review-section h2 {
     font-size: 2.2em;
     letter-spacing: 0.05em;
-    margin-bottom: 1em;
 }
 .review-text {
     font-family: 'Courier New', Courier, monospace;
     color: #ccc;
     font-size: 1.2em;
-    margin-bottom: 1em;
     line-height: 1.7;
 }
 .review-source {
@@ -1412,7 +1403,6 @@ footer {
     padding-left: 0.625em;
 }
 .video-container {
-    margin-bottom: 1.125em;
     background: #000; /* Fondo negro para el área del video */
     padding: 2em 0;
 }
@@ -1495,9 +1485,6 @@ footer {
     color: #bdbdbd;
     margin-left: 2%;
 }
-.details-col h2 {
-    margin-bottom: 1em;
-}
 .details-col p, .details-col a {
     color: #bdbdbd;
     margin: 0.3em 0;
@@ -1518,7 +1505,6 @@ footer {
     font-size: 1.2em;
     letter-spacing: 0.08em;
     transition: all 0.3s ease;
-    margin-top: 1em;
     border-radius: 0.313em;
     box-shadow: 0 0 0.625em rgba(255,255,255,0.1);
 }
@@ -1547,7 +1533,6 @@ footer {
 }
 .follow a {
     color: #bdbdbd;
-    font-size: 1.5em;
     margin-right: 1.2em;
     transition: color 0.2s;
     vertical-align: middle;
@@ -1563,7 +1548,6 @@ footer {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.7); /* fondo negro translúcido */
     color: #ccc;                   /* color flecha gris claro */
-    font-size: 1.5em;
     display: none;
     z-index: 1000;
     box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
