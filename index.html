@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"> 
-   <title>BORING VACCINES</title>
+    <title>BORING VACCINES</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -16,14 +16,16 @@
                     <img src="assets/images/logo-1 (1).png" alt="Logo">
                 </a>
             </div>
-            <nav class="nav-links">
-                <a href="index.html" class="active">HOME</a>
-                <a href="about_us.html">ABOUT US</a>
-                <a href="tour.html">TOUR</a>
-                <a href="event.html">EVENT</a>
-                <a href="discography.html">DISCOGRAPHY</a>
-                <a href="album.html">ALBUM</a>
-                <a href="contact.html">CONTACT US</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="tour.html">TOUR</a></li>
+                    <li><a href="event.html">EVENT</a></li>
+                    <li><a href="discography.html">DISCOGRAPHY</a></li>
+                    <li><a href="album.html">ALBUM</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
             </nav>
             <button id="toggle-dark-mode" aria-label="Cambiar modo oscuro/claro">
                 <i class="fas fa-moon"></i>
@@ -36,389 +38,476 @@
             <h1 class="vertical-name">BORING VACCINES</h1>
             <div class="new-album">
                 <h2>NEW ALBUM IS OUT</h2>
-                <div class="apps">
-                    <a href="https://www.apple.com/itunes/" target="_blank">
-                        <img alt="Download on the App Store" height="50" src="assets/images/slider-img-2.png" width="150"/>
-                    </a>
-                    <a href="https://play.google.com/store/games?device=windows" target="_blank">
-                        <img alt="Get it on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
-                    </a>
+                <ul class="apps">
+                    <li>
+                        <a href="https://www.apple.com/itunes/" target="_blank" rel="noopener noreferrer">
+                            <img alt="Download on the App Store" height="50" src="assets/images/slider-img-2.png" width="150"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/games?device=windows" target="_blank" rel="noopener noreferrer">
+                            <img alt="Get it on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="album-player">
+            <div class="left-player">
+                <img src="assets/images/album-16-150x150.jpg" alt="Album Cover" />
+                <div class="info-player">
+                    <span class="title-player">BLACK HOLE SUN</span>
+                    <span class="subtitle-player">Terrible</span>
+                </div>
+            </div>
+
+            <div class="controls-player">
+                <button id="main-audio-backward" aria-label="Rewind">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button id="main-audio-play-pause" aria-label="Play/Pause">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="main-audio-forward" aria-label="Forward">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+
+            <div class="progress-container-player">
+                <div class="progress-bar-player" id="main-audio-progress-bar">
+                    <div class="progress-bar-fill-player" id="main-audio-progress-bar-fill"></div>
+                </div>
+                <span class="time-player" id="main-audio-current-time">00:00</span>
+                <span class="separator-player">/</span>
+                <span class="time-player" id="main-audio-duration">00:00</span>
+            </div>
+
+            <div class="volume-control-player">
+                <i class="fas fa-volume-up" aria-hidden="true"></i>
+                <input
+                    type="range"
+                    class="volume-slider-player"
+                    id="main-audio-volume-slider"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                    aria-label="Volume control"
+                />
+            </div>
+        </section>
+
+        <section class="album-info">
+            <div class="album-cover">
+                <img src="assets/images/album-17 (1).jpg" alt="Wheels Album Cover" />
+                <div class="album-details">
+                    <h2 class="titulo-album">THE KNOWING – 2018</h2>
+                    <p class="album-description">
+                        Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula eu
+                    </p>
+                    <ul class="apps">
+                        <li>
+                            <a href="https://www.apple.com/itunes/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/slider-img-2.png" alt="Download on the App Store" width="150" height="50" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/games?device=windows" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/slider-img-3.png" alt="Get it on Google Play" width="150" height="50" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tracklist">
+                <ol>
+                    <li>
+                        <span class="track-title">1. BLACK HOLE SUN</span>
+                        <div class="track-icons" data-src="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3">
+                            <span>0:32</span>
+                            <button class="track-play" data-src="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3" aria-label="Play Black Hole Sun">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">2. WORK</span>
+                        <div class="track-icons" data-src="assets/images/Rihanna (feat (mp3cut.net).mp3">
+                            <span>0:27</span>
+                            <button class="track-play" data-src="assets/images/Rihanna (feat (mp3cut.net).mp3" aria-label="Play Work">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">3. LULLABY</span>
+                        <div class="track-icons" data-src="assets/images/Lullaby (Remastered) (mp3cut.net).mp3">
+                            <span>0:30</span>
+                            <button class="track-play" data-src="assets/images/Lullaby (Remastered) (mp3cut.net).mp3" aria-label="Play Lullaby">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">4. THE PASSENGER</span>
+                        <div class="track-icons" data-src="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3">
+                            <span>0:30</span>
+                            <button class="track-play" data-src="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3" aria-label="Play The Passenger">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">5. CELEBRITY SKIN</span>
+                        <div class="track-icons" data-src="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3">
+                            <span>0:32</span>
+                            <button class="track-play" data-src="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3" aria-label="Play Celebrity Skin">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">6. CREEP</span>
+                        <div class="track-icons" data-src="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3">
+                            <span>0:30</span>
+                            <button class="track-play" data-src="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3" aria-label="Play Creep">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">7. EPIC</span>
+                        <div class="track-icons" data-src="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3">
+                            <span>0:30</span>
+                            <button class="track-play" data-src="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3" aria-label="Play Epic">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">8. REPTILIA</span>
+                        <div class="track-icons" data-src="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3">
+                            <span>0:30</span>
+                            <button class="track-play" data-src="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3" aria-label="Play Reptilia">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">9. GO WITH THE FLOW</span>
+                        <div class="track-icons" data-src="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3">
+                            <span>0:30</span>
+                            <button class="track-play" data-src="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3" aria-label="Play Go With The Flow">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="track-title">10. ELECTRIC VERSION</span>
+                        <div class="track-icons" data-src="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3">
+                            <span>0:31</span>
+                            <button class="track-play" data-src="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3" aria-label="Play Electric Version">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="track-pause" aria-label="Pause">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac" aria-label="Watch video">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div id="videoModal" class="video" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+                <div class="modal-contenedor">
+                    <button class="cierre" aria-label="Close video modal">&times;</button>
+                    <iframe id="videoFrame" title="Video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <section class="texto">
+            <h2>LISTEN TO OUR NEW ALBUM</h2>
+            <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.</p>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery" id="gallery-container"></div>
+
+            <div class="modal" id="myModal" role="dialog" aria-modal="true" aria-label="Galería de imágenes ampliadas">
+                <div class="modal-content">
+                    <div class="modal-slider">
+                        <img id="modal-img" src="" alt="Imagen ampliada" />
+                        <button class="arrow arrow-left" aria-label="Previous image">&#10094;</button>
+                        <button class="arrow arrow-right" aria-label="Next image">&#10095;</button>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="modal-controls">
+                            <button class="mini-arrow mini-left" aria-label="Previous">&#10094;</button>
+                            <span id="modal-counter">1/6</span>
+                            <button class="mini-arrow mini-right" aria-label="Next">&#10095;</button>
+                        </div>
+                        <button class="cerrar" aria-label="Cerrar modal">&times;</button>
+                    </div>
                 </div>
             </div>
         </section>
 
- <section class="album-player">
-    <div class="left-player">
-      <img src="assets/images/album-16-150x150.jpg" alt="Logo" />
-      <div class="info-player">
-        <span class="title-player">BLACK HOLE SUN</span><br />
-        <span class="subtitle-player">Terrible</span>
-      </div>
-    </div>
-
-    <div class="controls-player">
-      <i class="fas fa-step-backward" id="main-audio-backward" aria-label="Rewind"></i>
-      <i class="fas fa-play" id="main-audio-play-pause" aria-label="Play/Pause"></i>
-      <i class="fas fa-step-forward" id="main-audio-forward" aria-label="Forward"></i>
-    </div>
-
-    <div class="progress-container-player">
-      <div class="progress-bar-player" id="main-audio-progress-bar">
-        <div class="progress-bar-fill-player" id="main-audio-progress-bar-fill"></div>
-      </div>
-      <span class="time-player" id="main-audio-current-time">00:00</span>
-      <span class="separator-player">/</span>
-      <span class="time-player" id="main-audio-duration">00:00</span>
-    </div>
-
-    <div class="volume-control-player">
-      <i class="fas fa-volume-up"></i>
-      <input
-        type="range"
-        class="volume-slider-player"
-        id="main-audio-volume-slider"
-        min="0"
-        max="1"
-        step="0.01"
-        value="1"
-      />
-    </div>
-  </section>
-
-  <!-- ================= INFO DEL ÁLBUM + TRACKLIST ============ -->
-  <section class="album-info">
-    <div class="album-cover">
-      <img src="assets/images/album-17 (1).jpg" alt="Wheels" />
-      <div class="album-details">
-        <h1 class="titulo-album">THE KNOWING – 2018</h1>
-        <p class="album-description">
-          Alienum phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in mei. Mei an pericula eu
-        </p>
-        <div class="apps">
-          <a href="https://www.apple.com/itunes/" target="_blank">
-            <img src="assets/images/slider-img-2.png" alt="Download on the App Store" width="150" height="50" />
-          </a>
-          <a href="https://play.google.com/store/games?device=windows" target="_blank">
-            <img src="assets/images/slider-img-3.png" alt="Get it on Google Play" width="150" height="50" />
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="tracklist">
-      <ol>
-        <li>
-          <span class="track-title">1. BLACK HOLE SUN</span>
-          <div class="track-icons" data-src="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3">
-            <span>0:32</span>
-            <i class="fas fa-play"  data-src="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">2. WORK</span>
-          <div class="track-icons" data-src="assets/images/Rihanna (feat (mp3cut.net).mp3">
-            <span>0:27</span>
-            <i class="fas fa-play"  data-src="assets/images/Rihanna (feat (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">3. LULLABY</span>
-          <div class="track-icons" data-src="assets/images/Lullaby (Remastered) (mp3cut.net).mp3">
-            <span>0:30</span>
-            <i class="fas fa-play"  data-src="assets/images/Lullaby (Remastered) (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">4. THE PASSENGER</span>
-          <div class="track-icons" data-src="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3">
-            <span>0:30</span>
-            <i class="fas fa-play"  data-src="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">5. CELEBRITY SKIN</span>
-          <div class="track-icons" data-src="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3">
-            <span>0:32</span>
-            <i class="fas fa-play"  data-src="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">6. CREEP</span>
-          <div class="track-icons" data-src="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3">
-            <span>0:30</span>
-            <i class="fas fa-play"  data-src="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">7. EPIC</span>
-          <div class="track-icons" data-src="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3">
-            <span>0:30</span>
-            <i class="fas fa-play"  data-src="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">8. REPTILIA</span>
-          <div class="track-icons" data-src="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3">
-            <span>0:30</span>
-            <i class="fas fa-play"  data-src="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">9. GO WITH THE FLOW</span>
-          <div class="track-icons" data-src="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3">
-            <span>0:30</span>
-            <i class="fas fa-play"  data-src="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-
-        <li>
-          <span class="track-title">10. ELECTRIC VERSION</span>
-          <div class="track-icons" data-src="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3">
-            <span>0:31</span>
-            <i class="fas fa-play"  data-src="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3"></i>
-            <i class="fas fa-pause"></i>
-            <i class="fas fa-video video-icon" data-video="https://player.vimeo.com/video/33730560?h=3913acf0ac"></i>
-          </div>
-        </li>
-      </ol>
-    </div>
-  <!-- MODAL GLOBAL -->
-  <div id="videoModal" class="video">
-    <div class="modal-contenedor">
-      <span class="cierre">&times;</span>
-      <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-        </section>
-        
-        <section class="texto">
-            <h1>LISTEN TO OUR NEW ALBUM</h1>
-            <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.</p>
-        </section>
-
-<section class="gallery">
-  <div class="gallery" id="gallery-container"></div>
-
-  <div class="modal" id="myModal" role="dialog" aria-label="Galería de imágenes ampliadas">
-    <div class="modal-content">
-      <div class="modal-slider">
-        <img id="modal-img" src="" alt="Imagen ampliada" />
-        <i class="arrow arrow-left">&#10094;</i>
-        <i class="arrow arrow-right">&#10095;</i>
-      </div>
-
-      <div class="modal-footer">
-        <div class="modal-controls">
-          <i class="mini-arrow mini-left">&#10094;</i>
-          <span id="modal-counter">1/6</span>
-          <i class="mini-arrow mini-right">&#10095;</i>
-        </div>
-        <span class="cerrar" role="button" aria-label="Cerrar modal">&times;</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="datos" class="fechas">
-  <ul>
-    <li class="date-item">
-      <div class="date-block">
-        <div class="date">10</div>
-        <div class="month-day">
-          <span>JUN</span>
-          <span>SUN</span>
-        </div>
-      </div>
-     <a href="event.html" class="ciudad-link">
-        <div class="ciudad">GÄRDET OPEN AIR STOCKHOLM – SWEDEN</div>
-    </a>
-      <a href="#" class="buy-tickets">BUY TICKETS</a>
-    </li>
-
-    <li class="date-item">
-      <div class="date-block">
-        <div class="date">12</div>
-        <div class="month-day">
-          <span>JUN</span>
-          <span>TUE</span>
-        </div>
-      </div>
-      <a href="event.html" class="ciudad-link">
-      <div class="ciudad">HELSINKI, FINLAND – HARTWALL ARENA</div></a>
-      <a href="#" class="buy-tickets">BUY TICKETS</a>
-    </li>
-
-    <li class="date-item">
-      <div class="date-block">
-        <div class="date">14</div>
-        <div class="month-day">
-          <span>JUN</span>
-          <span>THU</span>
-        </div>
-      </div>
-      <a href="event.html" class="ciudad-link">
-      <div class="ciudad">RIGA, LATVIA – RIGA ARENA</div></a>
-      <a href="#" class="buy-tickets">BUY TICKETS</a>
-    </li>
-
-    <li class="date-item">
-      <div class="date-block">
-        <div class="date">15</div>
-        <div class="month-day">
-          <span>JUN</span>
-          <span>FRI</span>
-        </div>
-      </div>
-      <a href="event.html" class="ciudad-link">
-      <div class="ciudad">KAUNAS, LITHUANIA – ŽALGIRIO ARENA</div></a>
-      <a href="#" class="buy-tickets">BUY TICKETS</a>
-    </li>
-
-    <li class="date-item">
-      <div class="date-block">
-        <div class="date">18</div>
-        <div class="month-day">
-          <span>JUN</span>
-          <span>MON</span>
-        </div>
-      </div>
-      <a href="event.html" class="ciudad-link">
-      <div class="ciudad">MOSCOW, RUSSIA – OLIMPISKI</div></a>
-      <a href="#" class="buy-tickets">BUY TICKETS</a>
-    </li>
-
-    <li class="date-item">
-      <div class="date-block">
-        <div class="date">19</div>
-        <div class="month-day">
-          <span>JUN</span>
-          <span>TUE</span>
-        </div>
-      </div>
-      <a href="event.html" class="ciudad-link">
-      <div class="ciudad">PILTON, ENGLAND – GLASTONBURY</div></a>
-      <a href="#" class="buy-tickets">BUY TICKETS</a>
-    </li>
-  </ul>
-  <div class="view-all">
-    <a href="#" id="view-all-btn">VIEW ALL</a>
-  </div>
-</section>
-
-<section class="blog">
-  <h1>LATEST BLOG POSTS</h1>
-  <div class="blog-description">
-    Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
-  </div>
-  <article class="blog-posts"></article>
-</section>
-
-
-  <section class="video-section">
-    <img src="assets/images/h1-img-7.jpg" alt="Video Background" class="video-bg">
-    <div class="overlay"></div>
-    <div class="video-content">
-        <div class="play-button" id="abrirModal">
-            <i class="fas fa-play-circle"></i>
-        </div>
-    </div>
-    <div id="nuevomodal" class="nuevomodal">
-        <div class="modal-contento">
-            <div>
-                <p class="error-message">Sorry</p>
-                <p class="error-subtext">This video does not exist.</p>
+        <section id="datos" class="fechas">
+            <ul>
+                <li class="date-item">
+                    <div class="date-block">
+                        <time datetime="2018-06-10">
+                            <span class="date">10</span>
+                            <span class="month-day">
+                                <span>JUN</span>
+                                <span>SUN</span>
+                            </span>
+                        </time>
+                    </div>
+                    <a href="event.html" class="ciudad-link">
+                        <span class="ciudad">GÄRDET OPEN AIR STOCKHOLM – SWEDEN</span>
+                    </a>
+                    <a href="#" class="buy-tickets">BUY TICKETS</a>
+                </li>
+                <li class="date-item">
+                    <div class="date-block">
+                        <time datetime="2018-06-12">
+                            <span class="date">12</span>
+                            <span class="month-day">
+                                <span>JUN</span>
+                                <span>TUE</span>
+                            </span>
+                        </time>
+                    </div>
+                    <a href="event.html" class="ciudad-link">
+                        <span class="ciudad">HELSINKI, FINLAND – HARTWALL ARENA</span>
+                    </a>
+                    <a href="#" class="buy-tickets">BUY TICKETS</a>
+                </li>
+                <li class="date-item">
+                    <div class="date-block">
+                        <time datetime="2018-06-14">
+                            <span class="date">14</span>
+                            <span class="month-day">
+                                <span>JUN</span>
+                                <span>THU</span>
+                            </span>
+                        </time>
+                    </div>
+                    <a href="event.html" class="ciudad-link">
+                        <span class="ciudad">RIGA, LATVIA – RIGA ARENA</span>
+                    </a>
+                    <a href="#" class="buy-tickets">BUY TICKETS</a>
+                </li>
+                <li class="date-item">
+                    <div class="date-block">
+                        <time datetime="2018-06-15">
+                            <span class="date">15</span>
+                            <span class="month-day">
+                                <span>JUN</span>
+                                <span>FRI</span>
+                            </span>
+                        </time>
+                    </div>
+                    <a href="event.html" class="ciudad-link">
+                        <span class="ciudad">KAUNAS, LITHUANIA – ŽALGIRIO ARENA</span>
+                    </a>
+                    <a href="#" class="buy-tickets">BUY TICKETS</a>
+                </li>
+                <li class="date-item">
+                    <div class="date-block">
+                        <time datetime="2018-06-18">
+                            <span class="date">18</span>
+                            <span class="month-day">
+                                <span>JUN</span>
+                                <span>MON</span>
+                            </span>
+                        </time>
+                    </div>
+                    <a href="event.html" class="ciudad-link">
+                        <span class="ciudad">MOSCOW, RUSSIA – OLIMPISKI</span>
+                    </a>
+                    <a href="#" class="buy-tickets">BUY TICKETS</a>
+                </li>
+                <li class="date-item">
+                    <div class="date-block">
+                        <time datetime="2018-06-19">
+                            <span class="date">19</span>
+                            <span class="month-day">
+                                <span>JUN</span>
+                                <span>TUE</span>
+                            </span>
+                        </time>
+                    </div>
+                    <a href="event.html" class="ciudad-link">
+                        <span class="ciudad">PILTON, ENGLAND – GLASTONBURY</span>
+                    </a>
+                    <a href="#" class="buy-tickets">BUY TICKETS</a>
+                </li>
+            </ul>
+            <div class="view-all">
+                <a href="#" id="view-all-btn">VIEW ALL</a>
             </div>
-            <button id="cerrarModal">X</button>
-        </div>
-    </div>
-</section>
+        </section>
 
+        <section class="blog">
+            <h2>LATEST BLOG POSTS</h2>
+            <p class="blog-description">
+                Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
+            </p>
+            <div class="blog-posts"></div>
+        </section>
 
-     <section class="our-discography">
-    <h1>OUR DISCOGRAPHY</h1>
-    <p class="discography-description">
-        Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
-    </p>
-    <article class="albums" id="album-container">
-        <!-- Los álbumes se insertan aquí por JS -->
-    </article>
-    <button id="show-more" class="show-more">SHOW MORE</button>
-</section>
+        <section class="video-section">
+            <img src="assets/images/h1-img-7.jpg" alt="Video Background" class="video-bg">
+            <div class="overlay"></div>
+            <div class="video-content">
+                <button class="play-button" id="abrirModal" aria-label="Play video">
+                    <i class="fas fa-play-circle"></i>
+                </button>
+            </div>
+            <div id="nuevomodal" class="nuevomodal" role="dialog" aria-modal="true">
+                <div class="modal-contento">
+                    <div>
+                        <p class="error-message">Sorry</p>
+                        <p class="error-subtext">This video does not exist.</p>
+                    </div>
+                    <button id="cerrarModal" aria-label="Close">X</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-discography">
+            <h2>OUR DISCOGRAPHY</h2>
+            <p class="discography-description">
+                Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil. expetendis in mei. Mei an pericula euripidis, hinc partem ei est.
+            </p>
+            <div class="albums" id="album-container"></div>
+            <button id="show-more" class="show-more">SHOW MORE</button>
+        </section>
     </main>
 
-  <footer>
-    <div class="footer">
-        <div class="footer-column">
-            <h3>BRIDGE</h3>
-            <p class="footer-desc">
-                Alienum phaedrum torquatos nec eu, vis detraxitssa periculiser ex, nihil expetendis in mei eis an pericula es aperiri.
-            </p>
-            <div class="social-icons" aria-label="Social media links">
-                <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                </a>
-                <a href="https://x.com/home?lang=es" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                </a>
+    <footer>
+        <div class="footer">
+            <div class="footer-column">
+                <h3>BRIDGE</h3>
+                <p class="footer-desc">
+                    Alienum phaedrum torquatos nec eu, vis detraxitssa periculiser ex, nihil expetendis in mei eis an pericula es aperiri.
+                </p>
+                <ul class="social-icons" aria-label="Social media links">
+                    <li>
+                        <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/home?lang=es" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>CONTACT</h3>
+                <address class="contact-info">
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+1234567890">+(123) 456 -7890</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+1234567890">+(123) 456 -7890</a></p>
+                    <p><i class="fas fa-edit" aria-hidden="true"></i> <a href="#">Download Resume</a></p>
+                </address>
+            </div>
+            <div class="footer-column">
+                <h3>USEFUL LINKS</h3>
+                <nav>
+                    <ul>
+                        <li><a href="discography.html">DISCOGRAPHY</a></li>
+                        <li><a href="tour.html">TOUR DATES</a></li>
+                        <li><a href="about_us.html">ABOUT US</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3>INSTAGRAM</h3>
             </div>
         </div>
-        <div class="footer-column">
-            <h2>CONTACT</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> +(123) 456 -7890</p>
-                <p><i class="fas fa-envelope"></i> info@yoursite.com</p>
-                <p><i class="fas fa-phone"></i> +(123) 456 -7890</p>
-                <p><i class="fas fa-edit"></i>Download Resume</p>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright Qode Interactive</p>
         </div>
-        <div class="footer-column">
-            <h2>USEFUL LINKS</h2>
-            <a href="discography.html">DISCOGRAPHY</a><br>
-            <a href="tour.html">TOUR DATES</a><br>
-            <a href="about_us.html">ABOUT US</a><br>
-            <a href="contact.html">CONTACT US</a>
-        </div>
-        <div class="footer-column">
-            <h2>INSTAGRAM</h2>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        © Copyright Qode Interactive
-    </div>
-</footer>
+    </footer>
 
-    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+    <button id="scrollToTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+    <audio id="audio-player" preload="auto"></audio>
     <script src="assets/JS/script.js" defer></script>
 </body>
 </html>
