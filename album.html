@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BORING VACCINES</title>
+    <title>Album - BORING VACCINES</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,216 +14,266 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
-   <div class="container navbar">
+        <div class="container navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo-1 (1).png" alt="Logo">
+                    <img src="assets/images/logo-1 (1).png" alt="Boring Vaccines Logo">
                 </a>
             </div>
-    <nav class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="about_us.html">ABOUT US</a>
-                <a href="tour.html">TOUR</a>
-                <a href="event.html">EVENT</a>
-                <a href="discography.html">DISCOGRAPHY</a>
-                <a href="album.html"class="active">ALBUM</a>
-                <a href="contact.html">CONTACT US</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="tour.html">TOUR</a></li>
+                    <li><a href="event.html">EVENT</a></li>
+                    <li><a href="discography.html">DISCOGRAPHY</a></li>
+                    <li><a href="album.html" class="active">ALBUM</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
             </nav>
-            <button id="toggle-dark-mode" aria-label="Cambiar modo oscuro/claro">
-                <i class="fas fa-moon"></i>
+            <button id="toggle-dark-mode" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
             </button>
         </div>
-  <section class="breadcrumb">
-    <a href="index.html">Home</a> &gt; <span>Ouia Princess</span>
-  </section>
-</header>
 
-            <section class="albumesss">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li aria-current="page">Ouia Princess</li>
+            </ol>
+        </nav>
+    </header>
 
+    <main>
+        <section class="albumesss">
             <div class="image-foto">
                 <img src="assets/images/album-19.jpg" alt="Concert scene with bright lights and a crowd raising their hands">
             </div>
-                    <div class="about1">
+
+            <div class="about1">
                 <div class="about-album">
                     <h2>ABOUT ALBUM</h2>
                     <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-                    <ul>
-                        <li><strong>Artist:</strong> Guia Princess</li>
-                        <li><strong>Label:</strong> Island</li>
-                        <li><strong>Release Date:</strong> April 29, 2018</li>
-                        <li><strong>People:</strong> Jack Jones, Madonna, Root, DJ Sample</li>
-                    </ul>
+                    <dl>
+                        <dt><strong>Artist:</strong></dt>
+                        <dd>Guia Princess</dd>
+                        
+                        <dt><strong>Label:</strong></dt>
+                        <dd>Island</dd>
+                        
+                        <dt><strong>Release Date:</strong></dt>
+                        <dd><time datetime="2018-04-29">April 29, 2018</time></dd>
+                        
+                        <dt><strong>People:</strong></dt>
+                        <dd>Jack Jones, Madonna, Root, DJ Sample</dd>
+                    </dl>
                 </div>
-            </section>
-            
-           <section class="lyrics-section">
-           <h1>AVAILABLE LYRICS</h1>
-           <div id="accordion-container"></div>
-           </section>
+            </div>
+        </section>
+           
+        <section class="lyrics-section">
+            <h2>AVAILABLE LYRICS</h2>
+            <div id="accordion-container"></div>
+        </section>
 
-<section class="review-section" id="slider">
-    <h2>ALBUM REVIEWS</h2>
-    <p class="review-text" id="review-text">« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »</p>
-    <p class="review-source" id="review-source">- NYLON MAGAZINE</p>
+        <section class="review-section" id="slider">
+            <h2>ALBUM REVIEWS</h2>
+            <blockquote>
+                <p class="review-text" id="review-text">« Vin invidunt efficiendi eam eu son veniam percipit dignitate, an eum suas laudem. Duis ipsum dolor sit amet, est ad graeci principes. »</p>
+                <cite class="review-source" id="review-source">- NYLON MAGAZINE</cite>
+            </blockquote>
 
-    <div class="nav-icons">
-        <button id="leftBtn" class="nav-button" direction="left" aria-label="Previous review">&lt;</button>
-        <button id="rightBtn" class="nav-button" direction="right" aria-label="Next review">&gt;</button>
-    </div>
-</section>
+            <div class="nav-icons">
+                <button id="leftBtn" class="nav-button" data-direction="left" aria-label="Previous review">&lt;</button>
+                <button id="rightBtn" class="nav-button" data-direction="right" aria-label="Next review">&gt;</button>
+            </div>
+        </section>
 
-     <section class="musica">
-  <div class="controles">
-    <div><i class="fas fa-backward" id="main-audio-backward"></i></div>
-    <div>
-      <i class="fas fa-play" id="play-button"></i>
-      <i class="fas fa-pause" id="pause-button" style="display:none;"></i>
-    </div>
-    <div><i class="fas fa-forward" id="main-audio-forward"></i></div>
-  </div>
+        <section class="musica">
+            <div class="controles">
+                <div>
+                    <button id="main-audio-backward" aria-label="Previous track">
+                        <i class="fas fa-backward" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div>
+                    <button id="play-button" aria-label="Play">
+                        <i class="fas fa-play" aria-hidden="true"></i>
+                    </button>
+                    <button id="pause-button" style="display:none;" aria-label="Pause">
+                        <i class="fas fa-pause" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div>
+                    <button id="main-audio-forward" aria-label="Next track">
+                        <i class="fas fa-forward" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
 
-  <div class="track-info">
-    <div>
-      <div class="track-titulo" id="title-player">BLACK HOLE SUN</div>
-      <div class="artist-name">Ouia Princess</div>
-    </div>
-    <div class="timer" id="timer">00:00 / 00:00</div>
-  </div>
-</section>
+            <div class="track-info">
+                <div>
+                    <div class="track-titulo" id="title-player">BLACK HOLE SUN</div>
+                    <div class="artist-name">Ouia Princess</div>
+                </div>
+                <div class="timer" id="timer">00:00 / 00:00</div>
+            </div>
+        </section>
 
-<section class="song-list">
-  <h1>Tracklist</h1>
-  <ol>
-    <li>
-      <span class="track-number">1</span>
-      <span class="titulo-track" data-audio="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3">Black Hole Sun</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">2</span>
-      <span class="titulo-track" data-audio="assets/images/Rihanna (feat (mp3cut.net).mp3">Work</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">3</span>
-      <span class="titulo-track" data-audio="assets/images/Lullaby (Remastered) (mp3cut.net).mp3">Lullaby</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">4</span>
-      <span class="titulo-track" data-audio="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3">The Passenger</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">5</span>
-      <span class="titulo-track" data-audio="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3">Celebrity Skin</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">6</span>
-      <span class="titulo-track" data-audio="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3">Creep</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">7</span>
-      <span class="titulo-track" data-audio="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3">Epic</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">8</span>
-      <span class="titulo-track" data-audio="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3">Reptilia</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">9</span>
-      <span class="titulo-track" data-audio="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3">Go With the Flow</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-    <li>
-      <span class="track-number">10</span>
-      <span class="titulo-track" data-audio="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3">Electric Version</span>
-      <a href="#" class="buy-track">BUY TRACK</a>
-    </li>
-  </ol>
-</section>
+        <section class="song-list">
+            <h2>Tracklist</h2>
+            <ol>
+                <li>
+                    <span class="track-number">1</span>
+                    <span class="titulo-track" data-audio="assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3">Black Hole Sun</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">2</span>
+                    <span class="titulo-track" data-audio="assets/images/Rihanna (feat (mp3cut.net).mp3">Work</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">3</span>
+                    <span class="titulo-track" data-audio="assets/images/Lullaby (Remastered) (mp3cut.net).mp3">Lullaby</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">4</span>
+                    <span class="titulo-track" data-audio="assets/images/The Passenger (Originally Performed by David Hasselhoff) (Instrumental Version) [_VrjH1N6r9c] (mp3cut.net).mp3">The Passenger</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">5</span>
+                    <span class="titulo-track" data-audio="assets/images/Hole - Celebrity Skin (instrumental) (mp3cut.net).mp3">Celebrity Skin</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">6</span>
+                    <span class="titulo-track" data-audio="assets/images/Radiohead  Creep (CC)  [Karaoke] [Instrumental Lyrics] (mp3cut.net).mp3">Creep</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">7</span>
+                    <span class="titulo-track" data-audio="assets/images/Epic Cinematic Background Music For Videos (mp3cut.net).mp3">Epic</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">8</span>
+                    <span class="titulo-track" data-audio="assets/images/The Strokes - Reptilia (Instrumental) (mp3cut.net).mp3">Reptilia</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">9</span>
+                    <span class="titulo-track" data-audio="assets/images/Go with the Flow (Instrumental) - Queens of the Stone Age (mp3cut.net).mp3">Go With the Flow</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+                <li>
+                    <span class="track-number">10</span>
+                    <span class="titulo-track" data-audio="assets/images/ELECTRIC CALLBOY - Hypa Hypa  Instrumental Version [Studio Quality] (Prod (mp3cut.net).mp3">Electric Version</span>
+                    <a href="#" class="buy-track">BUY TRACK</a>
+                </li>
+            </ol>
+        </section>
 
-<audio id="audio-player" src="" preload="auto"></audio>
+        <audio id="audio-player" src="" preload="auto"></audio>
 
-             <section class="available-on">
-                <h2>AVAILABLE ON</h2>
-                <div class="platform-icons">
-                    <a href="https://www.apple.com/itunes/" target="_blank">
+        <section class="available-on">
+            <h2>AVAILABLE ON</h2>
+            <ul class="platform-icons">
+                <li>
+                    <a href="https://www.apple.com/itunes/" target="_blank" rel="noopener noreferrer">
                         <img alt="Available on iTunes" height="50" src="assets/images/slider-img-2.png" width="150"/>
                     </a>
-                    <a href="https://play.google.com/store/games?device=windows" target="_blank">
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/games?device=windows" target="_blank" rel="noopener noreferrer">
                         <img alt="Available on Google Play" height="50" src="assets/images/slider-img-3.png" width="150"/>
                     </a>
-                </section>
+                </li>
+            </ul>
+        </section>
             
-                 <!-- Latest Video Section -->
-     <section class="latest-video">
-        <h2>LATEST VIDEO</h2>
-        <div class="video-container">
-            <iframe title="vimeo-player" src="https://player.vimeo.com/video/33730560?h=3913acf0ac" width="640" height="360" frameborder="0"  allowfullscreen></iframe>        </div>
-      <div class="iconos-abajo">
-    <span class="flecha izquierda"><i class="fas fa-chevron-left"></i></span>
-    <a href="discography.html" class="punto">
-        <i class="fas fa-th-large"></i>
-    </a>
-    <span class="flecha derecha"><i class="fas fa-chevron-right"></i></span>
-</div>
-    </section>
+        <section class="latest-video">
+            <h2>LATEST VIDEO</h2>
+            <div class="video-container">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/33730560?h=3913acf0ac" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <nav class="iconos-abajo" aria-label="Video navigation">
+                <button class="flecha izquierda" aria-label="Previous video">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <a href="discography.html" class="punto" aria-label="View all videos">
+                    <i class="fas fa-th-large" aria-hidden="true"></i>
+                </a>
+                <button class="flecha derecha" aria-label="Next video">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </section>
+    </main>
 
-<footer>
-    <div class="footer">
-        <div class="footer-column">
-            <h3>BRIDGE</h3>
-            <p class="footer-desc">
-                Alienum phaedrum torquatos nec eu, vis detraxitssa periculiser ex, nihil expetendis in mei eis an pericula es aperiri.
-            </p>
-            <div class="social-icons" aria-label="Social media links">
-                <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                </a>
-                <a href="https://x.com/home?lang=es" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                </a>
+    <footer>
+        <div class="footer">
+            <div class="footer-column">
+                <h2>BRIDGE</h2>
+                <p class="footer-desc">
+                    Alienum phaedrum torquatos nec eu, vis detraxitssa periculiser ex, nihil expetendis in mei eis an pericula es aperiri.
+                </p>
+                <ul class="social-icons" aria-label="Social media links">
+                    <li>
+                        <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/home?lang=es" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>CONTACT</h2>
+                <address class="contact-info">
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+1234567890">+(123) 456-7890</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                    <p><i class="fas fa-edit" aria-hidden="true"></i> <a href="#">Download Resume</a></p>
+                </address>
+            </div>
+            <div class="footer-column">
+                <h2>USEFUL LINKS</h2>
+                <nav aria-label="Footer navigation">
+                    <ul>
+                        <li><a href="discography.html">DISCOGRAPHY</a></li>
+                        <li><a href="tour.html">TOUR DATES</a></li>
+                        <li><a href="about_us.html">ABOUT US</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h2>INSTAGRAM</h2>
             </div>
         </div>
-        <div class="footer-column">
-            <h2>CONTACT</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> +(123) 456 -7890</p>
-                <p><i class="fas fa-envelope"></i> info@yoursite.com</p>
-                <p><i class="fas fa-phone"></i> +(123) 456 -7890</p>
-                <p><i class="fas fa-edit"></i>Download Resume</p>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright Qode Interactive</p>
         </div>
-        <div class="footer-column">
-            <h2>USEFUL LINKS</h2>
-            <a href="discography.html">DISCOGRAPHY</a><br>
-            <a href="tour.html">TOUR DATES</a><br>
-            <a href="about_us.html">ABOUT US</a><br>
-            <a href="contact.html">CONTACT US</a>
-        </div>
-        <div class="footer-column">
-            <h2>INSTAGRAM</h2>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        © Copyright Qode Interactive
-    </div>
-</footer>
-    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+    </footer>
+
+    <button id="scrollToTopBtn" aria-label="Scroll to top">↑</button>
     <script src="assets/js/album.js" defer></script>
 </body>
 </html>
