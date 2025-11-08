@@ -17,14 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 dateItem.classList.add("date-item");
                 dateItem.innerHTML = `
                     <div class="date-block">
-                        <div class="date">${fecha.date}</div>
-                        <div class="month-day">
-                            <span>${fecha.month.toUpperCase()}</span>
-                            <span>${fecha.day.toUpperCase()}</span>
-                        </div>
+                        <time datetime="2018-${fecha.month.toLowerCase()}-${fecha.date}">
+                            <span class="date">${fecha.date}</span>
+                            <span class="month-day">
+                                <span>${fecha.month.toUpperCase()}</span>
+                                <span>${fecha.day.toUpperCase()}</span>
+                            </span>
+                        </time>
                     </div>
                     <a href="${fecha.link}" class="ciudad-link">
-                        <div class="ciudad">${fecha.ciudad.toUpperCase()}</div>
+                        <span class="ciudad">${fecha.ciudad.toUpperCase()}</span>
                     </a>
                     <a href="#" class="buy-tickets">BUY TICKETS</a>
                 `;
@@ -41,28 +43,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const cerrarModal = document.getElementById("cerrarModal");
     const modal = document.getElementById("nuevomodal");
 
-    // Inicializa el modal como oculto
-    modal.style.display = "none";
-
-    // Abre el modal
-    abrirModal.addEventListener("click", () => {
-        modal.style.display = "flex";
-        abrirModal.style.display = "none"; // Oculta el botón de reproducción
-    });
-
-    // Cierra el modal
-    cerrarModal.addEventListener("click", () => {
+    if (abrirModal && cerrarModal && modal) {
+        // Inicializa el modal como oculto
         modal.style.display = "none";
-        abrirModal.style.display = "block"; // Muestra el botón de reproducción
-    });
 
-    // Cierra el modal al hacer clic fuera de él
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
+        // Abre el modal
+        abrirModal.addEventListener("click", () => {
+            modal.style.display = "flex";
+            abrirModal.style.display = "none";
+        });
+
+        // Cierra el modal
+        cerrarModal.addEventListener("click", () => {
             modal.style.display = "none";
-            abrirModal.style.display = "block"; // Muestra el botón de reproducción
-        }
-    });
+            abrirModal.style.display = "block";
+        });
+
+        // Cierra el modal al hacer clic fuera de él
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                abrirModal.style.display = "block";
+            }
+        });
+    }
 });
 
 // ========== GALERÍA DE ÁLBUMES (OUR DISCOGRAPHY) ==========
@@ -110,32 +114,39 @@ function initializeAlbumGallery() {
     });
 }
 
-// Invocar la función en ambas páginas
+// Invocar la función
 initializeAlbumGallery();
 
 // ========== MODO OSCURO/CLARO ==========
 const toggleBtn = document.getElementById('toggle-dark-mode');
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const icon = toggleBtn.querySelector('i');
-    if (document.body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    }
-});
+if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = toggleBtn.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    });
+}
 
 // ========== BOTÓN SCROLL ARRIBA ==========
 const scrollBtn = document.getElementById('scrollToTopBtn');
-window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
-    }
-};
+if (scrollBtn) {
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "flex";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+    
+    scrollBtn.addEventListener('click', scrollToTop);
+}
+
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -151,8 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const albumContainer = document.getElementById("album-container");
     if (!albumContainer) {
-        console.error("El contenedor de álbumes no se encontró.");
-        return; // Salir de la función si no se encuentra el contenedor
+        return;
     }
 
     albums.forEach(album => {
@@ -163,13 +173,11 @@ document.addEventListener("DOMContentLoaded", function() {
         img.src = album.imgSrc;
         img.alt = album.altText;
 
-        // Manejo de errores para la carga de imágenes
         img.onerror = function() {
             console.error(`Error al cargar la imagen: ${album.imgSrc}`);
-            img.src = "path/to/default-image.jpg"; // Ruta a una imagen por defecto
+            img.src = "path/to/default-image.jpg";
         };
 
-        // Agregar figcaption con título y artista
         const figcaption = document.createElement("figcaption");
         const h3 = document.createElement("h3");
         h3.textContent = album.title;
@@ -185,323 +193,351 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 /* ========================== AUDIO GLOBAL ========================== */
-// Creamos una nueva instancia de audio (un solo reproductor para todo)
 const audio = new Audio();
-audio.src = "assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3"; // Pista inicial
+audio.src = "assets/images/Soundgarden - Black Hole Sun (Instrumental) (mp3cut.net).mp3";
 
 // Elementos del reproductor principal
-const playPauseBtn    = document.getElementById("main-audio-play-pause");
-const progressBar     = document.getElementById("main-audio-progress-bar");
+const playPauseBtn = document.getElementById("main-audio-play-pause");
+const progressBar = document.getElementById("main-audio-progress-bar");
 const progressBarFill = document.getElementById("main-audio-progress-bar-fill");
-const currentTimeEl   = document.getElementById("main-audio-current-time");
-const durationEl      = document.getElementById("main-audio-duration");
-const volumeSlider    = document.getElementById("main-audio-volume-slider");
-
-// Título dinámico (se actualiza al cambiar canción)
-const titlePlayer     = document.querySelector(".title-player");
+const currentTimeEl = document.getElementById("main-audio-current-time");
+const durationEl = document.getElementById("main-audio-duration");
+const volumeSlider = document.getElementById("main-audio-volume-slider");
+const titlePlayer = document.querySelector(".title-player");
 
 /* ------------------------- UTILIDAD PARA FORMATO DE TIEMPO ---------------------------- */
 const formatTime = secs => {
-  const m  = Math.floor(secs / 60);
-  const ss = Math.floor(secs % 60).toString().padStart(2, "0");
-  return `${m}:${ss}`;
+    const m = Math.floor(secs / 60);
+    const ss = Math.floor(secs % 60).toString().padStart(2, "0");
+    return `${m}:${ss}`;
 };
 
 /* ------------------------- ACTUALIZAR ICONOS PLAY/PAUSE EN TRACKLIST ------------------ */
 function updatePlayIcons(state) {
-  playPauseBtn.classList.toggle("fa-play",  state === "pause");
-  playPauseBtn.classList.toggle("fa-pause", state === "play");
-
-  document.querySelectorAll(".track-icons").forEach(box => {
-    const play  = box.querySelector(".fa-play");
-    const pause = box.querySelector(".fa-pause");
-    const title = box.closest("li").querySelector(".track-title");
-
-    const audioSrc = decodeURIComponent(audio.src.replace(location.origin + "/", ""));
-    const boxSrc   = box.dataset.src;
-
-    const isCurrent = audioSrc.endsWith(boxSrc);
-
-    if (isCurrent) {
-      play.style.display  = state === "pause" ? "inline" : "none";
-      pause.style.display = state === "play"  ? "inline" : "none";
-      title.classList.toggle("playing", state === "play");
-    } else {
-      play.style.display  = "inline";
-      pause.style.display = "none";
-      title.classList.remove("playing");
+    if (playPauseBtn) {
+        const icon = playPauseBtn.querySelector('i');
+        if (icon) {
+            icon.classList.toggle("fa-play", state === "pause");
+            icon.classList.toggle("fa-pause", state === "play");
+        }
     }
-  });
+
+    document.querySelectorAll(".track-icons").forEach(box => {
+        const playBtn = box.querySelector(".track-play");
+        const pauseBtn = box.querySelector(".track-pause");
+        const title = box.closest("li").querySelector(".track-title");
+
+        if (!playBtn || !pauseBtn || !title) return;
+
+        const audioSrc = decodeURIComponent(audio.src.replace(location.origin + "/", ""));
+        const boxSrc = playBtn.dataset.src;
+
+        const isCurrent = audioSrc.endsWith(boxSrc);
+
+        if (isCurrent) {
+            playBtn.style.display = state === "pause" ? "inline-block" : "none";
+            pauseBtn.style.display = state === "play" ? "inline-block" : "none";
+            title.classList.toggle("playing", state === "play");
+        } else {
+            playBtn.style.display = "inline-block";
+            pauseBtn.style.display = "none";
+            title.classList.remove("playing");
+        }
+    });
 }
 
 /* ------------------------ CARGA DE METADATOS Y PROGRESO ------------------------------ */
-audio.addEventListener("loadedmetadata", () => {
-  durationEl.textContent = formatTime(audio.duration);
-});
-audio.addEventListener("timeupdate", () => {
-  const pct = (audio.currentTime / audio.duration) * 100;
-  progressBarFill.style.width = `${pct}%`;
-  currentTimeEl.textContent   = formatTime(audio.currentTime);
-});
-progressBar.addEventListener("click", e => {
-  const pct = e.offsetX / progressBar.offsetWidth;
-  audio.currentTime = pct * audio.duration;
-});
-volumeSlider.addEventListener("input", () => {
-  audio.volume = volumeSlider.value;
-});
+if (audio && durationEl) {
+    audio.addEventListener("loadedmetadata", () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+}
+
+if (audio && progressBarFill && currentTimeEl) {
+    audio.addEventListener("timeupdate", () => {
+        const pct = (audio.currentTime / audio.duration) * 100;
+        progressBarFill.style.width = `${pct}%`;
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+}
+
+if (progressBar && audio) {
+    progressBar.addEventListener("click", e => {
+        const pct = e.offsetX / progressBar.offsetWidth;
+        audio.currentTime = pct * audio.duration;
+    });
+}
+
+if (volumeSlider && audio) {
+    volumeSlider.addEventListener("input", () => {
+        audio.volume = volumeSlider.value;
+    });
+}
 
 /* -------------------------- BOTÓN DE PLAY/PAUSE PRINCIPAL ---------------------------- */
-playPauseBtn.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-});
+if (playPauseBtn && audio) {
+    playPauseBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+}
 
 /* ---------------------------- EVENTOS DE AUDIO GLOBALES ------------------------------ */
-audio.addEventListener("play",  () => updatePlayIcons("play"));
-audio.addEventListener("pause", () => updatePlayIcons("pause"));
-audio.addEventListener("ended", () => {
-  updatePlayIcons("pause");
-  // (opcional: avanzar a la siguiente canción automáticamente)
-});
+if (audio) {
+    audio.addEventListener("play", () => updatePlayIcons("play"));
+    audio.addEventListener("pause", () => updatePlayIcons("pause"));
+    audio.addEventListener("ended", () => {
+        updatePlayIcons("pause");
+    });
+}
+
 /* -------------------------- TRACKLIST CLICK PARA REPRODUCIR --------------------------- */
 document.querySelectorAll(".track-icons").forEach(box => {
-  const playBtn  = box.querySelector(".fa-play");
-  const pauseBtn = box.querySelector(".fa-pause");
-  const src      = playBtn.dataset.src;
+    const playBtn = box.querySelector(".track-play");
+    const pauseBtn = box.querySelector(".track-pause");
+    
+    if (!playBtn || !pauseBtn) return;
+    
+    const src = playBtn.dataset.src;
+    box.dataset.src = src;
 
-  box.dataset.src = src;
-  playBtn.style.display  = "inline";
-  pauseBtn.style.display = "none";
+    playBtn.addEventListener("click", () => {
+        const newSrc = location.origin + "/" + src;
+        const currentSrc = decodeURIComponent(audio.src);
 
-  playBtn.addEventListener("click", () => {
-    const newSrc = location.origin + "/" + src;
-    const currentSrc = decodeURIComponent(audio.src);
+        if (!currentSrc.endsWith(src)) {
+            audio.src = src;
+        }
 
-    if (!currentSrc.endsWith(src)) {
-      audio.src = src;
-    }
+        const trackTitle = box.closest("li").querySelector(".track-title");
+        if (trackTitle && titlePlayer) {
+            titlePlayer.textContent = trackTitle.textContent.trim();
+        }
 
-    // Actualizamos el título del reproductor
-    const trackTitle = box.closest("li").querySelector(".track-title").textContent.trim();
-    titlePlayer.textContent = trackTitle;
+        audio.play();
+    });
 
-    audio.play();
-  });
-
-  pauseBtn.addEventListener("click", () => {
-    const currentSrc = decodeURIComponent(audio.src);
-    if (currentSrc.endsWith(src)) {
-      audio.pause();
-    }
-  });
+    pauseBtn.addEventListener("click", () => {
+        const currentSrc = decodeURIComponent(audio.src);
+        if (currentSrc.endsWith(src)) {
+            audio.pause();
+        }
+    });
 });
 
 /* ========================= NAVEGACIÓN ADELANTE / ATRÁS ============================== */
-// Botones de control de pista
 const backwardBtn = document.getElementById("main-audio-backward");
-const forwardBtn  = document.getElementById("main-audio-forward");
+const forwardBtn = document.getElementById("main-audio-forward");
 
-// Obtenemos el tracklist en orden
 const trackElements = Array.from(document.querySelectorAll(".track-icons"));
 const trackList = trackElements.map(el => el.dataset.src);
 
-// Guardamos el índice actual de la canción
 let currentTrackIndex = trackList.findIndex(src =>
-  decodeURIComponent(audio.src).endsWith(src)
+    decodeURIComponent(audio.src).endsWith(src)
 );
 
-// Función para cargar un track según su índice
 function loadTrackByIndex(index) {
-  if (index < 0 || index >= trackList.length) return;
+    if (index < 0 || index >= trackList.length) return;
 
-  const src = trackList[index];
-  audio.src = src;
+    const src = trackList[index];
+    audio.src = src;
 
-  // Actualiza el título en el reproductor
-  const trackEl = trackElements[index].closest("li");
-  const title = trackEl.querySelector(".track-title").textContent.trim();
-  titlePlayer.textContent = title;
+    const trackEl = trackElements[index].closest("li");
+    const title = trackEl.querySelector(".track-title");
+    if (title && titlePlayer) {
+        titlePlayer.textContent = title.textContent.trim();
+    }
 
-  currentTrackIndex = index;
-  audio.play();
+    currentTrackIndex = index;
+    audio.play();
 }
 
-// Botón siguiente: pasa a la siguiente canción si hay una
-forwardBtn.addEventListener("click", () => {
-  if (currentTrackIndex < trackList.length - 1) {
-    loadTrackByIndex(currentTrackIndex + 1);
-  }
-});
+if (forwardBtn) {
+    forwardBtn.addEventListener("click", () => {
+        if (currentTrackIndex < trackList.length - 1) {
+            loadTrackByIndex(currentTrackIndex + 1);
+        }
+    });
+}
 
-// Botón anterior: retrocede una canción si no está en la primera
-backwardBtn.addEventListener("click", () => {
-  if (currentTrackIndex > 0) {
-    loadTrackByIndex(currentTrackIndex - 1);
-  }
-});
+if (backwardBtn) {
+    backwardBtn.addEventListener("click", () => {
+        if (currentTrackIndex > 0) {
+            loadTrackByIndex(currentTrackIndex - 1);
+        }
+    });
+}
 
-// Siempre que suena una nueva canción, actualizamos el índice actual
-audio.addEventListener("play", () => {
-  currentTrackIndex = trackList.findIndex(src =>
-    decodeURIComponent(audio.src).endsWith(src)
-  );
-});
-
+if (audio) {
+    audio.addEventListener("play", () => {
+        currentTrackIndex = trackList.findIndex(src =>
+            decodeURIComponent(audio.src).endsWith(src)
+        );
+    });
+}
 
 // ========== MODAL PARA VIDEO EN TRACKLIST ==========
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("videoModal");
-  const videoFrame = document.getElementById("videoFrame");
-  const videoIcons = document.querySelectorAll(".video-icon");
-  const closeModal = document.querySelector(".cierre");
+    const modal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+    const videoIcons = document.querySelectorAll(".video-icon");
+    const closeModal = document.querySelector(".cierre");
 
-  videoIcons.forEach((icon) => {
-    icon.addEventListener("click", function () {
-      const videoUrl = this.getAttribute("data-video");
-      videoFrame.src = videoUrl;
-      modal.style.display = "flex";
-    });
-  });
-
-  closeModal.addEventListener("click", function () {
-    modal.style.display = "none";
-    videoFrame.src = "";
-  });
-
-  window.addEventListener("click", function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-      videoFrame.src = "";
+    if (videoIcons && modal && videoFrame) {
+        videoIcons.forEach((icon) => {
+            icon.addEventListener("click", function () {
+                const videoUrl = this.getAttribute("data-video");
+                videoFrame.src = videoUrl;
+                modal.style.display = "flex";
+            });
+        });
     }
-  });
 
-  // Opcional: cerrar con ESC
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      modal.style.display = "none";
-      videoFrame.src = "";
+    if (closeModal && modal && videoFrame) {
+        closeModal.addEventListener("click", function () {
+            modal.style.display = "none";
+            videoFrame.src = "";
+        });
     }
-  });
+
+    if (modal && videoFrame) {
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                videoFrame.src = "";
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                modal.style.display = "none";
+                videoFrame.src = "";
+            }
+        });
+    }
 });
 
+// ========== GALERÍA DE IMÁGENES ==========
 document.addEventListener("DOMContentLoaded", function () {
-  const images = [
-    { src: "assets/images/h1-img-1.jpg", alt: "Band performing", size: "large" },
-    { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting", size: "small" },
-    { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer", size: "small" },
-    { src: "assets/images/h1-img-4.jpg", alt: "Singer with crowd", size: "small" },
-    { src: "assets/images/h1-img-5.jpg", alt: "Drummer", size: "small" },
-    { src: "assets/images/h1-img-6.jpg", alt: "Guitarist green lights", size: "large" }
-  ];
+    const images = [
+        { src: "assets/images/h1-img-1.jpg", alt: "Band performing", size: "large" },
+        { src: "assets/images/h1-img-2.jpg", alt: "Guitarist sitting", size: "small" },
+        { src: "assets/images/h1-img-3.jpg", alt: "Guitarist and singer", size: "small" },
+        { src: "assets/images/h1-img-4.jpg", alt: "Singer with crowd", size: "small" },
+        { src: "assets/images/h1-img-5.jpg", alt: "Drummer", size: "small" },
+        { src: "assets/images/h1-img-6.jpg", alt: "Guitarist green lights", size: "large" }
+    ];
 
-  const galleryContainer = document.getElementById("gallery-container");
-  const modal = document.getElementById("myModal");
-  const modalImg = document.getElementById("modal-img");
-  const closeBtn = document.querySelector(".cerrar");
-  const arrowLeft = document.querySelector(".arrow-left");
-  const arrowRight = document.querySelector(".arrow-right");
-  const counter = document.getElementById("modal-counter");
-  const miniLeft = document.querySelector(".mini-left");
-  const miniRight = document.querySelector(".mini-right");
+    const galleryContainer = document.getElementById("gallery-container");
+    if (!galleryContainer) return;
 
-  let currentIndex = 0;
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".cerrar");
+    const arrowLeft = document.querySelector(".arrow-left");
+    const arrowRight = document.querySelector(".arrow-right");
+    const counter = document.getElementById("modal-counter");
+    const miniLeft = document.querySelector(".mini-left");
+    const miniRight = document.querySelector(".mini-right");
 
-  function updateModalImage(index) {
-    modalImg.src = images[index].src;
-    modalImg.alt = images[index].alt;
-    counter.textContent = `${index + 1}/${images.length}`;
-  }
+    let currentIndex = 0;
 
-  function openModal(index) {
-    currentIndex = index;
-    modal.style.display = "flex";
-    updateModalImage(index);
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeModal() {
-    modal.style.display = "none";
-    document.body.style.overflow = "";
-  }
-
-  function goLeft() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateModalImage(currentIndex);
-  }
-
-  function goRight() {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateModalImage(currentIndex);
-  }
-
-  images.forEach((img, index) => {
-    const imageDiv = document.createElement("div");
-    imageDiv.className = `image ${img.size}`;
-    const image = document.createElement("img");
-    image.src = img.src;
-    image.alt = img.alt;
-    image.addEventListener("click", () => openModal(index));
-    imageDiv.appendChild(image);
-    galleryContainer.appendChild(imageDiv);
-  });
-
-  arrowLeft.addEventListener("click", goLeft);
-  miniLeft.addEventListener("click", goLeft);
-  arrowRight.addEventListener("click", goRight);
-  miniRight.addEventListener("click", goRight);
-  closeBtn.addEventListener("click", closeModal);
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (modal.style.display === "flex") {
-      if (e.key === "ArrowLeft") goLeft();
-      else if (e.key === "ArrowRight") goRight();
-      else if (e.key === "Escape") closeModal();
+    function updateModalImage(index) {
+        modalImg.src = images[index].src;
+        modalImg.alt = images[index].alt;
+        counter.textContent = `${index + 1}/${images.length}`;
     }
-  });
+
+    function openModal(index) {
+        currentIndex = index;
+        modal.style.display = "flex";
+        updateModalImage(index);
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+    }
+
+    function goLeft() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateModalImage(currentIndex);
+    }
+
+    function goRight() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateModalImage(currentIndex);
+    }
+
+    images.forEach((img, index) => {
+        const imageDiv = document.createElement("div");
+        imageDiv.className = `image ${img.size}`;
+        const image = document.createElement("img");
+        image.src = img.src;
+        image.alt = img.alt;
+        image.addEventListener("click", () => openModal(index));
+        imageDiv.appendChild(image);
+        galleryContainer.appendChild(imageDiv);
+    });
+
+    if (arrowLeft) arrowLeft.addEventListener("click", goLeft);
+    if (miniLeft) miniLeft.addEventListener("click", goLeft);
+    if (arrowRight) arrowRight.addEventListener("click", goRight);
+    if (miniRight) miniRight.addEventListener("click", goRight);
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (modal.style.display === "flex") {
+            if (e.key === "ArrowLeft") goLeft();
+            else if (e.key === "ArrowRight") goRight();
+            else if (e.key === "Escape") closeModal();
+        }
+    });
 });
 
+// ========== BLOG POSTS ==========
 const posts = [
-  {
-    img: 'assets/images/blog-post-1.jpg',
-    alt: 'Blog 1',
-    title: 'THE BEST NIGHT IN BALTIMORE',
-    date: '10 April, 2018'
-  },
-  {
-    img: 'assets/images/blog-post-2.jpg',
-    alt: 'Blog 2',
-    title: 'THE BEST NIGHT IN DETROIT',
-    date: '10 April, 2018'
-  },
-  {
-    img: 'assets/images/blog-post-3.jpg',
-    alt: 'Blog 3',
-    title: 'THE BEST NIGHT IN NEW YORK',
-    date: '10 April, 2018'
-  }
+    {
+        img: 'assets/images/blog-post-1.jpg',
+        alt: 'Blog 1',
+        title: 'THE BEST NIGHT IN BALTIMORE',
+        date: '10 April, 2018'
+    },
+    {
+        img: 'assets/images/blog-post-2.jpg',
+        alt: 'Blog 2',
+        title: 'THE BEST NIGHT IN DETROIT',
+        date: '10 April, 2018'
+    },
+    {
+        img: 'assets/images/blog-post-3.jpg',
+        alt: 'Blog 3',
+        title: 'THE BEST NIGHT IN NEW YORK',
+        date: '10 April, 2018'
+    }
 ];
 
 const blogSection = document.querySelector('.blog-posts');
-
-posts.forEach(post => {
-  const article = document.createElement('article');
-  article.className = 'blog-post';
-  article.innerHTML = `
-    <div class="blog-post-image-wrapper">
-      <img src="${post.img}" alt="${post.alt}">
-    </div>
-    <div class="blog-post-title">${post.title}</div>
-    <div class="blog-post-date">${post.date}</div>
-  `;
-  blogSection.appendChild(article);
-});
+if (blogSection) {
+    posts.forEach(post => {
+        const article = document.createElement('article');
+        article.className = 'blog-post';
+        article.innerHTML = `
+            <div class="blog-post-image-wrapper">
+                <img src="${post.img}" alt="${post.alt}">
+            </div>
+            <div class="blog-post-title">${post.title}</div>
+            <div class="blog-post-date">${post.date}</div>
+        `;
+        blogSection.appendChild(article);
+    });
+}

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { text: "« Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In venenatis urna at fermentum. »", source: "- BILLBOARD" }
     ];
 
-    let currentPos = 0;  // Posición inicial del slider
+    let currentPos = 0;
 
     // Referencia a los elementos del DOM
     const reviewText = document.getElementById("review-text");
@@ -22,31 +22,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Actualiza el contenido del slider
     function updateSliderContent(currentPos) {
-        // Asegura que el índice esté dentro del rango de la lista
         currentPos = (currentPos + sliderContent.length) % sliderContent.length;
-
-        // Actualiza el texto y la fuente
         reviewText.innerText = sliderContent[currentPos].text;
         reviewSource.innerText = sliderContent[currentPos].source;
-
-        console.log(`Current position: ${currentPos}`);
     }
 
     // Función que maneja los clics de los botones
     function handleButtonClick(event) {
-        const direction = event.target.getAttribute("direction");
+        const button = event.currentTarget;
+        const direction = button.getAttribute("data-direction");
         const increment = direction === "left" ? -1 : 1;
-        /* let incr = 0;
-        if (direction === "left") {
-          incr-- 
-        } else {
-          incr++
-        } */
-        // Actualiza la posición del slider
         currentPos += increment;
-        console.log(`Button clicked: ${direction}, Current position: ${currentPos}`);
-
-        // Actualiza el contenido del slider
         updateSliderContent(currentPos);
     }
 
@@ -58,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateSliderContent(currentPos);
 });
 
+// ========== LYRICS ACCORDION ==========
 const lyricsData = [
     {
         title: "BLACK HOLE SUN",
@@ -115,17 +102,21 @@ const lyricsData = [
 
 function createAccordion() {
     const container = document.getElementById('accordion-container');
+    if (!container) return;
 
     lyricsData.forEach(item => {
         const accordion = document.createElement('div');
         accordion.classList.add('accordion');
 
-        const header = document.createElement('div');
+        const header = document.createElement('button');
         header.classList.add('accordion-header');
+        header.setAttribute('type', 'button');
+        header.setAttribute('aria-expanded', 'false');
         header.innerHTML = `<span>${item.title}</span><i class="fas fa-chevron-down"></i>`;
 
         const content = document.createElement('div');
         content.classList.add('accordion-content');
+        content.setAttribute('role', 'region');
         content.innerHTML = item.content;
 
         accordion.appendChild(header);
@@ -134,10 +125,15 @@ function createAccordion() {
 
         header.addEventListener('click', () => {
             const isActive = accordion.classList.toggle('active');
+            header.setAttribute('aria-expanded', isActive);
 
             document.querySelectorAll('.accordion').forEach(otherAccordion => {
                 if (otherAccordion !== accordion) {
                     otherAccordion.classList.remove('active');
+                    const otherHeader = otherAccordion.querySelector('.accordion-header');
+                    if (otherHeader) {
+                        otherHeader.setAttribute('aria-expanded', 'false');
+                    }
                 }
             });
         });
@@ -146,141 +142,172 @@ function createAccordion() {
 
 createAccordion();
 
+// ========== REPRODUCTOR DE AUDIO ==========
 document.addEventListener("DOMContentLoaded", () => {
-  const audio = document.getElementById("audio-player");
-  const playBtn = document.getElementById("play-button");
-  const pauseBtn = document.getElementById("pause-button");
-  const titlePlayer = document.getElementById("title-player");
-  const timerDisplay = document.getElementById("timer");
-  const trackSpans = Array.from(document.querySelectorAll(".titulo-track"));
-  const forwardBtn = document.getElementById("main-audio-forward");
-  const backwardBtn = document.getElementById("main-audio-backward");
+    const audio = document.getElementById("audio-player");
+    const playBtn = document.getElementById("play-button");
+    const pauseBtn = document.getElementById("pause-button");
+    const titlePlayer = document.getElementById("title-player");
+    const timerDisplay = document.getElementById("timer");
+    const trackSpans = Array.from(document.querySelectorAll(".titulo-track"));
+    const forwardBtn = document.getElementById("main-audio-forward");
+    const backwardBtn = document.getElementById("main-audio-backward");
 
-  let currentTrackIndex = -1;
+    if (!audio) return;
 
-  function formatTime(seconds) {
-    const min = Math.floor(seconds / 60);
-    const sec = Math.floor(seconds % 60).toString().padStart(2, '0');
-    return `${min}:${sec}`;
-  }
+    let currentTrackIndex = -1;
 
-  function updateTimer() {
-    if (audio.duration) {
-      timerDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+    function formatTime(seconds) {
+        const min = Math.floor(seconds / 60);
+        const sec = Math.floor(seconds % 60).toString().padStart(2, '0');
+        return `${min}:${sec}`;
     }
-  }
 
-  function resetTrackNumbers() {
-    trackSpans.forEach((span, i) => {
-      const li = span.closest("li");
-      const numberSpan = li.querySelector(".track-number");
-      numberSpan.innerHTML = i + 1;
-      li.classList.remove("active");
+    function updateTimer() {
+        if (audio.duration && timerDisplay) {
+            timerDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+        }
+    }
+
+    function resetTrackNumbers() {
+        trackSpans.forEach((span, i) => {
+            const li = span.closest("li");
+            if (!li) return;
+            const numberSpan = li.querySelector(".track-number");
+            if (numberSpan) {
+                numberSpan.innerHTML = i + 1;
+            }
+            li.classList.remove("active");
+        });
+    }
+
+    function loadTrack(index) {
+        if (index < 0 || index >= trackSpans.length) return;
+
+        resetTrackNumbers();
+
+        const span = trackSpans[index];
+        const src = span.dataset.audio;
+        const title = span.textContent.trim();
+
+        audio.src = src;
+        audio.play();
+        
+        if (titlePlayer) {
+            titlePlayer.textContent = title;
+        }
+        
+        currentTrackIndex = index;
+        
+        if (playBtn) playBtn.style.display = "none";
+        if (pauseBtn) pauseBtn.style.display = "inline";
+
+        // Reemplaza número por ícono y resalta
+        const li = span.closest("li");
+        if (li) {
+            const numberSpan = li.querySelector(".track-number");
+            if (numberSpan) {
+                numberSpan.innerHTML = `<i class="fas fa-play"></i>`;
+            }
+            li.classList.add("active");
+        }
+    }
+
+    trackSpans.forEach((span, index) => {
+        span.addEventListener("click", () => {
+            loadTrack(index);
+        });
     });
-  }
 
-  function loadTrack(index) {
-    if (index < 0 || index >= trackSpans.length) return;
+    if (playBtn) {
+        playBtn.addEventListener("click", () => {
+            if (audio.src) {
+                audio.play();
+            } else if (trackSpans.length > 0) {
+                loadTrack(0);
+            }
+        });
+    }
 
-    resetTrackNumbers();
+    if (pauseBtn) {
+        pauseBtn.addEventListener("click", () => {
+            audio.pause();
+        });
+    }
 
-    const span = trackSpans[index];
-    const src = span.dataset.audio;
-    const title = span.textContent.trim();
+    if (forwardBtn) {
+        forwardBtn.addEventListener("click", () => {
+            if (currentTrackIndex < trackSpans.length - 1) {
+                loadTrack(currentTrackIndex + 1);
+            }
+        });
+    }
 
-    audio.src = src;
-    audio.play();
-    titlePlayer.textContent = title;
-    currentTrackIndex = index;
-    playBtn.style.display = "none";
-    pauseBtn.style.display = "inline";
+    if (backwardBtn) {
+        backwardBtn.addEventListener("click", () => {
+            if (currentTrackIndex > 0) {
+                loadTrack(currentTrackIndex - 1);
+            }
+        });
+    }
 
-    // Reemplaza número por ícono y resalta
-    const li = span.closest("li");
-    const numberSpan = li.querySelector(".track-number");
-    numberSpan.innerHTML = `<i class="fas fa-play"></i>`;
-    li.classList.add("active");
-  }
-
-  trackSpans.forEach((span, index) => {
-    span.addEventListener("click", () => {
-      loadTrack(index);
+    audio.addEventListener("play", () => {
+        if (playBtn) playBtn.style.display = "none";
+        if (pauseBtn) pauseBtn.style.display = "inline";
+        currentTrackIndex = trackSpans.findIndex(span =>
+            decodeURIComponent(audio.src).endsWith(span.dataset.audio)
+        );
     });
-  });
 
-  playBtn.addEventListener("click", () => {
-    if (audio.src) {
-      audio.play();
-    } else if (trackSpans.length > 0) {
-      loadTrack(0);
-    }
-  });
+    audio.addEventListener("pause", () => {
+        if (pauseBtn) pauseBtn.style.display = "none";
+        if (playBtn) playBtn.style.display = "inline";
+    });
 
-  pauseBtn.addEventListener("click", () => {
-    audio.pause();
-  });
+    audio.addEventListener("timeupdate", updateTimer);
+    audio.addEventListener("loadedmetadata", updateTimer);
 
-  forwardBtn.addEventListener("click", () => {
-    if (currentTrackIndex < trackSpans.length - 1) {
-      loadTrack(currentTrackIndex + 1);
-    }
-  });
-
-  backwardBtn.addEventListener("click", () => {
-    if (currentTrackIndex > 0) {
-      loadTrack(currentTrackIndex - 1);
-    }
-  });
-
-  audio.addEventListener("play", () => {
-    playBtn.style.display = "none";
-    pauseBtn.style.display = "inline";
-    currentTrackIndex = trackSpans.findIndex(span =>
-      decodeURIComponent(audio.src).endsWith(span.dataset.audio)
-    );
-  });
-
-  audio.addEventListener("pause", () => {
-    pauseBtn.style.display = "none";
-    playBtn.style.display = "inline";
-  });
-
-  audio.addEventListener("timeupdate", updateTimer);
-  audio.addEventListener("loadedmetadata", updateTimer);
-
-  audio.addEventListener("ended", () => {
-    if (currentTrackIndex < trackSpans.length - 1) {
-      loadTrack(currentTrackIndex + 1);
-    } else {
-      resetTrackNumbers(); // Limpiar íconos si no hay más
-    }
-  });
+    audio.addEventListener("ended", () => {
+        if (currentTrackIndex < trackSpans.length - 1) {
+            loadTrack(currentTrackIndex + 1);
+        } else {
+            resetTrackNumbers();
+        }
+    });
 });
 
-
-// ========== MODO OSCURO/CLARO ==========//
+// ========== MODO OSCURO/CLARO ==========
 const toggleBtn = document.getElementById('toggle-dark-mode');
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const icon = toggleBtn.querySelector('i');
-    if (document.body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-    }
-});
+if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = toggleBtn.querySelector('i');
+        if (icon) {
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+    });
+}
 
-// ========== BOTÓN SCROLL ARRIBA ==========//
+// ========== BOTÓN SCROLL ARRIBA ==========
 const scrollBtn = document.getElementById('scrollToTopBtn');
-window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
-    }
-};
+if (scrollBtn) {
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollBtn.style.display = "flex";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+    
+    scrollBtn.addEventListener('click', scrollToTop);
+}
+
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
