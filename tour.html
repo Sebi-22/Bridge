@@ -9,24 +9,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
-    <header>
+ <header>
         <div class="navbar container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/images/logo-1 (1).png" alt="Logo">
+                    <img src="assets/images/logo-1 (1).png" alt="Boring Vaccines Logo">
                 </a>
             </div>
-            <nav class="nav-links">
-                <a href="index.html">HOME</a>
-                <a href="about_us.html">ABOUT US</a>
-                <a href="tour.html" class="active">TOUR</a>
-                <a href="event.html">EVENT</a>
-                <a href="discography.html">DISCOGRAPHY</a>
-                <a href="album.html">ALBUM</a>
-                <a href="contact.html">CONTACT US</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="tour.html"class="active">TOUR</a></li>
+                    <li><a href="event.html">EVENT</a></li>
+                    <li><a href="discography.html">DISCOGRAPHY</a></li>
+                    <li><a href="album.html">ALBUM</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
             </nav>
-            <button id="toggle-dark-mode" aria-label="Cambiar modo oscuro/claro">
-                <i class="fas fa-moon"></i>
+            <button id="toggle-dark-mode" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
             </button>
         </div>
     </header>

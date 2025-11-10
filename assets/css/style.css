@@ -2444,112 +2444,337 @@ body.dark-mode #scrollToTopBtn:hover {
     background: var(--dark-btn-hover-bg);
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
+//* ==========================================
+   RESPONSIVE DESIGN - MEJORADO
 ========================================== */
 
-/* Tablets y pantallas medianas */
+/* ==========================================
+   TABLETS GRANDES (max-width: 1400px)
+========================================== */
+@media (max-width: 1400px) {
+    .container.navbar {
+        max-width: 95%;
+    }
+
+    nav[aria-label="Main navigation"] {
+        left: 25%;
+    }
+
+    #toggle-dark-mode {
+        margin-left: 10em;
+    }
+
+    .left-player {
+        margin-left: 5%;
+    }
+
+    .album-info {
+        padding: 3em 1em;
+    }
+
+    .album-cover {
+        margin-left: 3%;
+    }
+
+    .tracklist {
+        margin-left: 2%;
+    }
+}
+
+/* ==========================================
+   TABLETS MEDIANAS (max-width: 1200px)
+========================================== */
 @media (max-width: 1200px) {
+    /* HEADER */
     .container.navbar {
         flex-direction: column;
-        gap: 1em;
-        padding: 0 1em;
+        align-items: flex-start;
+        gap: 1.5em;
+        padding: 1em;
     }
 
     nav[aria-label="Main navigation"] {
         position: static;
+        width: 100%;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1em;
     }
 
     #toggle-dark-mode {
         margin-left: 0;
+        position: absolute;
+        top: 1em;
+        right: 1em;
     }
 
-    .album-info,
-    .footer {
+    /* HERO */
+    .vertical-name {
+        font-size: 5em;
+        left: 5%;
+    }
+
+    .new-album {
+        margin-top: 30%;
+        margin-left: 20%;
+    }
+
+    /* REPRODUCTOR */
+    .album-player {
+        flex-wrap: wrap;
+        padding: 1em;
+    }
+
+    .left-player {
+        margin-left: 0;
+        border-right: none;
+        border-bottom: 0.063em solid #eee;
+        padding-bottom: 1em;
+        min-width: 100%;
+    }
+
+    .controls-player,
+    .progress-container-player,
+    .volume-control-player {
+        border-right: none;
+        padding: 0.5em 0;
+    }
+
+    /* ALBUM INFO */
+    .album-info {
         flex-direction: column;
-        gap: 1em;
-        padding: 0 1em;
+        gap: 2em;
+        padding: 2em 1em;
     }
 
     .album-cover {
         margin-left: 0;
         max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .album-cover img {
+        max-width: 100%;
     }
 
     .tracklist {
         margin-left: 0;
+        flex: 1 1 100%;
+    }
+
+    /* TEXTO SECTIONS */
+    .texto,
+    .texto2 {
+        padding: 3em 1em;
+        margin-left: 0;
+    }
+
+    .texto h2,
+    .texto2 h2 {
+        margin-left: 0;
+    }
+
+    .texto p,
+    .texto2 p {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    /* GALERÍA */
+    .image.large {
+        width: 100%;
+    }
+
+    .image.small {
+        width: 50%;
+    }
+
+    /* FECHAS */
+    .date-item {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .ciudad-link {
+        flex: 1 1 100%;
+        padding-left: 0;
+    }
+
+    .buy-tickets {
+        margin-left: 0;
+    }
+
+    /* BLOG */
+    .blog {
+        margin-left: 0;
+        padding: 2em 1em;
+    }
+
+    .blog h2 {
+        margin-left: 0;
+    }
+
+    .blog-description {
+        margin-left: 0;
+    }
+
+    .blog-posts {
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+
+    .blog-post {
+        width: calc(50% - 1em);
+    }
+
+    /* DISCOGRAPHY */
+    .our-discography {
+        margin-left: 0;
+        padding: 2em 1em;
+    }
+
+    .albums {
+        flex-wrap: wrap;
+    }
+
+    .albumes {
+        width: calc(33.33% - 1.5em);
+    }
+
+    .imagenes .albums {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 0 1em;
+    }
+
+    .footer-column {
+        flex: 1 1 calc(50% - 1em);
+    }
+}
+
+/* ==========================================
+   TABLETS PEQUEÑAS (max-width: 900px)
+========================================== */
+@media (max-width: 900px) {
+    /* HEADER */
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5em;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.5em 0;
+    }
+
+    /* HERO */
+    .background-image,
+    .background-image2,
+    .background-image3,
+    .background-image4 {
+        min-height: 50vh;
+    }
+
+    .vertical-name {
+        font-size: 3.5em;
+        left: 3%;
+        top: 30%;
+    }
+
+    .new-album {
+        margin-top: 40%;
+        margin-left: 10%;
+    }
+
+    .new-album h2 {
+        font-size: 2em;
+    }
+
+    .apps {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* REPRODUCTOR */
+    .album-player {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .controls-player {
+        width: 100%;
+        justify-content: center;
+        gap: 2em;
+        padding: 1em 0;
+    }
+
+    .progress-container-player {
+        width: 100%;
+        padding: 0;
+    }
+
+    .volume-control-player {
+        width: 100%;
+        justify-content: center;
+        padding: 1em 0;
+    }
+
+    /* TEXTO */
+    .texto h2,
+    .texto2 h2 {
+        font-size: 2.5em;
+    }
+
+    /* GALERÍA */
+    .image.small {
+        width: 100%;
+    }
+
+    /* FECHAS */
+    .date {
+        font-size: 3em;
+    }
+
+    .month-day::after {
+        display: none;
+    }
+
+    /* BLOG */
+    .blog-post {
+        width: 100%;
+    }
+
+    /* DISCOGRAPHY */
+    .albumes {
+        width: calc(50% - 1em);
     }
 
     .imagenes .albums {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .left-player {
-        margin-left: 0;
-    }
-
-    .texto,
-    .texto2,
-    .blog,
-    .our-discography {
-        margin-left: 0;
-        padding-left: 2em;
-    }
-}
-
-/* Móviles */
-@media (max-width: 900px) {
-    .container.navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 0.5em;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        gap: 0.5em;
-    }
-
-    .album-info {
-        flex-direction: column;
-        gap: 2em;
-        padding: 2em 0.5em;
-    }
-
-    .album-cover img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .imagenes .albums {
-        grid-template-columns: 1fr;
-    }
-
-    .footer {
-        flex-direction: column;
-        gap: 1em;
-        padding: 0 0.5em;
-    }
-
-    .footer-column {
-        min-width: 100%;
-        margin-bottom: 1em;
-    }
-
-    .blog-posts {
-        flex-direction: column;
-        gap: 1em;
-        margin-left: 2em;
-    }
-
-    .blog-post {
-        width: 100%;
-    }
-
+    /* TEAM (ABOUT) */
     .articulos {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
+    .articulos article {
+        flex: 1 1 calc(50% - 0.5em);
+    }
+
+    /* CONTACT */
     .contact {
         flex-direction: column;
         padding: 2em 1em;
@@ -2559,8 +2784,10 @@ body.dark-mode #scrollToTopBtn:hover {
         flex: 1 1 100%;
         max-width: 100%;
         margin-bottom: 2em;
+        padding: 0;
     }
 
+    /* FORM */
     .form {
         flex-direction: column;
         padding: 2em 1em;
@@ -2570,8 +2797,7 @@ body.dark-mode #scrollToTopBtn:hover {
     .right-section {
         flex: 1 1 100%;
         max-width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
     }
 
     .info-contacto {
@@ -2579,6 +2805,42 @@ body.dark-mode #scrollToTopBtn:hover {
         gap: 2em;
     }
 
+    /* ALBUM PAGE */
+    .albumesss {
+        flex-direction: column;
+        padding: 2em 1em;
+        gap: 2em;
+    }
+
+    .image-foto,
+    .about1 {
+        max-width: 100%;
+    }
+
+    .lyrics-section,
+    .review-section,
+    .musica {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 0 1em;
+    }
+
+    .song-list {
+        margin-left: 0;
+        padding: 0 1em;
+    }
+
+    .available-on {
+        margin-left: 0;
+        padding-left: 1em;
+    }
+
+    .platform-icons {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    /* EVENT PAGE */
     .top-row {
         flex-direction: column;
         gap: 2em;
@@ -2589,10 +2851,14 @@ body.dark-mode #scrollToTopBtn:hover {
         flex: 1 1 100%;
     }
 
-    .img-col img,
-    .map-col .map {
+    .img-col img {
         width: 100%;
         height: auto;
+    }
+
+    .map-col .map {
+        width: 100%;
+        height: 20em;
     }
 
     .bottom-row {
@@ -2606,45 +2872,323 @@ body.dark-mode #scrollToTopBtn:hover {
     .about-col {
         flex: 1 1 100%;
         max-width: 100%;
-        margin: 0;
+        margin: 0 0 2em 0;
     }
 
-    .albumesss {
+    /* FOOTER */
+    .footer {
         flex-direction: column;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        min-width: 100%;
+        margin-bottom: 2em;
+    }
+}
+
+/* ==========================================
+   MÓVILES (max-width: 600px)
+========================================== */
+@media (max-width: 600px) {
+    /* BASE */
+    body,
+    html {
+        font-size: 0.875em;
+    }
+
+    /* HEADER */
+    header {
+        padding: 0.5em;
+        margin-top: 0;
+    }
+
+    .container.navbar {
+        padding: 0.5em;
+    }
+
+    .logo img {
+        height: 1.8em;
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+    }
+
+    #toggle-dark-mode {
+        font-size: 1.2em;
+        top: 0.5em;
+        right: 0.5em;
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+        margin-left: 1em;
+        margin-top: 1.5em;
+        font-size: 0.9em;
+    }
+
+    /* HERO */
+    .background-image,
+    .background-image2,
+    .background-image3,
+    .background-image4 {
+        min-height: 40vh;
+        padding-top: 2em;
+    }
+
+    .tour-dates {
+        font-size: 2em;
+    }
+
+    .vertical-name {
+        display: none; /* Ocultar en móviles muy pequeños */
+    }
+
+    .new-album {
+        margin-top: 10%;
+        margin-left: 5%;
+        text-align: center;
+    }
+
+    .new-album h2 {
+        font-size: 1.5em;
+    }
+
+    /* REPRODUCTOR */
+    .left-player img {
+        width: 3em;
+        height: 3em;
+    }
+
+    .info-player {
+        font-size: 0.9em;
+    }
+
+    .controls-player {
+        font-size: 1.2em;
+        gap: 1em;
+    }
+
+    .progress-bar-player {
+        width: 100%;
+    }
+
+    .volume-control-player {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .volume-slider-player {
+        width: 100%;
+    }
+
+    /* ALBUM INFO */
+    .titulo-album {
+        font-size: 1.5em;
+    }
+
+    .track-title {
+        font-size: 1em;
+    }
+
+    .track-icons {
+        gap: 0.5em;
+    }
+
+    /* TEXTO */
+    .texto h2,
+    .texto2 h2 {
+        font-size: 2em;
+    }
+
+    .texto p,
+    .texto2 p {
+        font-size: 1em;
+    }
+
+    /* MODAL */
+    .modal-slider img {
+        max-height: 50vh;
+    }
+
+    .arrow {
+        font-size: 1.5em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    /* FECHAS */
+    .date-item {
+        padding: 1em 0;
+    }
+
+    .date {
+        font-size: 2.5em;
+    }
+
+    .date-block {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+
+    .ciudad {
+        font-size: 0.9em;
+    }
+
+    .buy-tickets {
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-top: 0.5em;
+    }
+
+    #view-all-btn {
+        width: 100%;
+        padding: 0.8em 1em;
+    }
+
+    /* BLOG */
+    .blog h2 {
+        font-size: 2em;
+    }
+
+    .blog-post-title {
+        font-size: 1em;
+    }
+
+    /* VIDEO SECTION */
+    .video-section {
+        min-height: 20em;
+    }
+
+    .play-button {
+        font-size: 3em;
+    }
+
+    .modal-contento {
         padding: 2em 1em;
-        margin-top: 5%;
+        max-width: 95%;
     }
 
-    .image-foto {
-        max-width: 100%;
+    .modal-contento .error-message {
+        font-size: 2em;
     }
 
-    .lyrics-section,
+    .modal-contento .error-subtext {
+        font-size: 1.2em;
+    }
+
+    /* DISCOGRAPHY */
+    .our-discography h2 {
+        font-size: 2em;
+    }
+
+    .albumes {
+        width: 100%;
+    }
+
+    .show-more {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .imagenes .albums {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    /* TEAM */
+    .articulos article {
+        flex: 1 1 100%;
+    }
+
+    .transparencia h3 {
+        font-size: 1.5em;
+    }
+
+    /* CONTACT */
+    .contact-section h2 {
+        font-size: 1.8em;
+    }
+
+    .left-section h2 {
+        font-size: 1.8em;
+    }
+
+    .right-section input,
+    .right-section textarea {
+        font-size: 1em;
+    }
+
+    .right-section button {
+        width: 100%;
+    }
+
+    /* ALBUM PAGE */
+    .about-album h2 {
+        font-size: 1.5em;
+    }
+
+    .lyrics-section h2 {
+        font-size: 1.3em;
+    }
+
     .review-section {
-        margin-left: 0;
-        max-width: 100%;
-        padding: 0 1em;
+        padding: 2em 1em;
     }
 
-    .musica {
-        margin: 2em auto;
-        max-width: 100%;
+    .review-section h2 {
+        font-size: 1.8em;
     }
 
-    .song-list {
-        margin-left: 0;
-        max-width: 100%;
+    .review-text {
+        font-size: 1em;
     }
 
-    .available-on {
+    .nav-icons {
+        bottom: 1em;
+        right: 1em;
+    }
+
+    .controles {
+        height: 3.5em;
+    }
+
+    .controles > div {
+        height: 3.5em;
+    }
+
+    .track-titulo {
+        font-size: 1em;
+    }
+
+    .song-list h2 {
+        font-size: 1.1em;
+    }
+
+    .song-list li {
+        font-size: 1em;
+        padding: 0.8em 0;
+    }
+
+    .titulo-track {
+        font-size: 1em;
+    }
+
+    .buy-track {
+        font-size: 0.8em;
+    }
+
+    .available-on h2 {
+        font-size: 1.5em;
         margin-left: 0;
-        padding-left: 1em;
     }
 
     .platform-icons {
-        flex-direction: column;
         gap: 1em;
-        margin-left: 0;
     }
 
     .platform-icons a img {
@@ -2652,115 +3196,76 @@ body.dark-mode #scrollToTopBtn:hover {
         height: auto;
     }
 
-    .iconos-abajo {
-        gap: 20vw;
-    }
-}
-
-/* Móviles pequeños */
-@media (max-width: 600px) {
-    body,
-    html {
-        font-size: 0.938em;
-    }
-
-    .vertical-name {
-        font-size: 4em;
-        left: 5%;
-    }
-
-    .new-album {
-        margin-top: 30%;
-        margin-left: 10%;
-    }
-
-    .new-album h2 {
-        font-size: 2em;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 0.2em;
-        width: 100%;
-    }
-
-    .nav-links li {
-        width: 100%;
-    }
-
-    .nav-links a {
-        font-size: 1em;
-        padding: 0.5em 0;
-        width: 100%;
-        text-align: left;
-    }
-
-    .album-player {
-        flex-direction: column;
-        gap: 0.5em;
-        padding: 0.5em;
-    }
-
-    .controls-player,
-    .progress-container-player,
-    .left-player {
-        flex-direction: column;
-        gap: 0.5em;
-        padding: 0.5em 0;
-        min-width: 100%;
-        border: none;
-    }
-
-    .texto h2,
-    .texto2 h2,
-    .blog h2,
-    .our-discography h2 {
-        font-size: 2em;
-    }
-
-    .show-more,
-    #view-all-btn,
-    .tickets {
-        width: 100%;
+    .latest-video h2 {
+        font-size: 1.5em;
         margin-left: 0;
-        padding: 0.5em 0;
-        font-size: 1em;
     }
 
-    .date {
-        font-size: 3em;
+    .iconos-abajo {
+        gap: 10vw;
     }
 
-    .ciudad-link {
+    .flecha,
+    .punto {
+        font-size: 1.5em;
+    }
+
+    /* EVENT PAGE */
+    .content-grid {
+        padding: 1em 0;
+        margin-top: 5%;
+    }
+
+    .details-col h2 {
+        font-size: 1.5em;
+    }
+
+    .details-col dl {
         font-size: 0.9em;
     }
 
-    .buy-tickets {
+    .tickets {
+        width: 100%;
+        padding: 0.8em 1em;
         font-size: 1em;
     }
 
-    .tour-dates {
-        font-size: 2em;
+    .about-col h2 {
+        font-size: 1.5em;
     }
 
-    .background-image,
-    .background-image2,
-    .background-image3,
-    .background-image4 {
-        min-height: 40vh;
+    .follow h3 {
+        font-size: 1.5em;
     }
 
-    .controles {
-        height: 4em;
+    .follow a {
+        font-size: 1.3em;
     }
 
-    .controles > div {
-        height: 4em;
+    /* FOOTER */
+    .footer-column h2 {
+        font-size: 1.1em;
     }
 
+    .footer-desc {
+        font-size: 0.9em;
+    }
+
+    .social-icons a {
+        width: 1.8em;
+        height: 1.8em;
+        font-size: 0.9em;
+    }
+
+    .footer-bottom {
+        font-size: 0.85em;
+        padding: 1em 0.5em;
+    }
+
+    /* SCROLL BUTTON */
     #scrollToTopBtn {
-        width: 2em;
-        height: 2em;
+        width: 2.2em;
+        height: 2.2em;
         font-size: 1.2em;
         bottom: 1em;
         right: 1em;
@@ -2768,53 +3273,143 @@ body.dark-mode #scrollToTopBtn:hover {
 }
 
 /* ==========================================
-   UTILIDADES Y MEJORAS DE ACCESIBILIDAD
+   MÓVILES MUY PEQUEÑOS (max-width: 400px)
 ========================================== */
+@media (max-width: 400px) {
+    body,
+    html {
+        font-size: 0.813em;
+    }
 
-/* Focus visible para navegación con teclado */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
-    outline: 2px solid var(--dark-accent);
-    outline-offset: 2px;
-}
+    .tour-dates {
+        font-size: 1.5em;
+    }
 
-/* Reduce motion para usuarios con preferencias de accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+    .new-album h2 {
+        font-size: 1.3em;
+    }
+
+    .texto h2,
+    .texto2 h2,
+    .blog h2,
+    .our-discography h2 {
+        font-size: 1.5em;
+    }
+
+    .date {
+        font-size: 2em;
+    }
+
+    .controls-player {
+        gap: 0.5em;
+    }
+
+    .track-title {
+        font-size: 0.9em;
+    }
+
+    .blog-post-title {
+        font-size: 0.9em;
+    }
+
+    .modal-contento .error-message {
+        font-size: 1.5em;
+    }
+
+    .transparencia h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-section h2,
+    .left-section h2,
+    .about-album h2,
+    .details-col h2,
+    .about-col h2 {
+        font-size: 1.3em;
     }
 }
 
-/* Screen reader only class */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+/* ==========================================
+   LANDSCAPE MÓVILES (orientación horizontal)
+========================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .background-image,
+    .background-image2,
+    .background-image3,
+    .background-image4 {
+        min-height: 100vh;
+    }
+
+    .vertical-name {
+        display: none;
+    }
+
+    .new-album {
+        margin-top: 5%;
+    }
+
+    .video-section {
+        min-height: 100vh;
+    }
 }
 
-/* Mejora de contraste en modo claro */
-::selection {
-    background: var(--color-white);
-    color: var(--color-black);
+/* ==========================================
+   UTILIDADES RESPONSIVE
+========================================== */
+
+/* Ocultar elementos en móviles */
+@media (max-width: 600px) {
+    .hide-mobile {
+        display: none !important;
+    }
 }
 
-/* Asegurar que los botones tengan un área de clic mínima */
-button,
-.nav-links a,
-.social-icons a {
-    min-height: 44px;
-    min-width: 44px;
+/* Mostrar solo en móviles */
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .show-mobile {
+        display: block;
+    }
+}
+
+/* Contenedores fluidos */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+/* Tipografía fluida */
+@media (max-width: 900px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.75em; }
+    h3 { font-size: 1.5em; }
+    h4 { font-size: 1.25em; }
+    h5 { font-size: 1.1em; }
+    h6 { font-size: 1em; }
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Videos responsivos */
+iframe {
+    max-width: 100%;
+}
+
+/* Tablas responsivas */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
