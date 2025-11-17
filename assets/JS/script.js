@@ -540,4 +540,64 @@ if (blogSection) {
         `;
         blogSection.appendChild(article);
     });
+    // ========== STICKY AUDIO PLAYER ==========
+(function initStickyPlayer() {
+    const player = document.querySelector('.album-player');
+    
+    if (!player) return; // Si no existe el player, salir
+    
+    // Crear placeholder para evitar saltos
+    const placeholder = document.createElement('div');
+    placeholder.className = 'player-placeholder';
+    player.parentNode.insertBefore(placeholder, player.nextSibling);
+    
+    // Guardar posición inicial
+    let playerTop = 0;
+    let playerHeight = 0;
+    
+    function updateDimensions() {
+        playerTop = player.offsetTop;
+        playerHeight = player.offsetHeight;
+    }
+    
+    updateDimensions();
+    
+    // Handler del scroll
+    function handleScroll() {
+        const scrollY = window.scrollY || window.pageYOffset;
+        
+        if (scrollY > playerTop && !player.classList.contains('is-sticky')) {
+            // Activar sticky
+            player.classList.add('is-sticky');
+            placeholder.classList.add('active');
+            placeholder.style.height = playerHeight + 'px';
+        } else if (scrollY <= playerTop && player.classList.contains('is-sticky')) {
+            // Desactivar sticky
+            player.classList.remove('is-sticky');
+            placeholder.classList.remove('active');
+        }
+    }
+    
+    // Optimizar scroll con requestAnimationFrame
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true }); // passive mejora performance
+    
+    // Recalcular al cambiar tamaño de ventana
+    window.addEventListener('resize', function() {
+        if (!player.classList.contains('is-sticky')) {
+            updateDimensions();
+        }
+    });
+    
+    // Verificar estado inicial
+    handleScroll();
+})();
 }
