@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// ========== GALERÍA DE ÁLBUMES (OUR DISCOGRAPHY) ==========
+// ========== GALERÍA DE ÁLBUMES (SHOW MORE) ==========
 const newAlbums = [
     { src: "assets/images/album-5.jpg", title: "FALLEN", description: "Harmony" },
     { src: "assets/images/album-6.jpg", title: "JOY", description: "Eclipse" },
@@ -83,20 +83,23 @@ function initializeAlbumGallery() {
         if (showMoreButton) {
             showMoreButton.addEventListener("click", function (event) {
                 event.preventDefault();
-                const albumsContainer = document.querySelector(".albums");
+                const albumsContainer = document.getElementById("album-container"); // CAMBIO AQUÍ
                 if (albumsContainer) {
                     newAlbums.forEach(album => {
                         const article = document.createElement("article");
-                        article.classList.add("albumes");
+                        article.classList.add("album-card"); // CAMBIO: era "albumes"
+                        
                         const figure = document.createElement("figure");
                         const img = document.createElement("img");
                         img.src = album.src;
                         img.alt = `Album cover for '${album.title}'`;
+                        
                         const figcaption = document.createElement("figcaption");
                         const h3 = document.createElement("h3");
                         h3.textContent = album.title;
                         const p = document.createElement("p");
                         p.textContent = album.description;
+                        
                         figcaption.appendChild(h3);
                         figcaption.appendChild(p);
                         figure.appendChild(img);
@@ -105,16 +108,12 @@ function initializeAlbumGallery() {
                         albumsContainer.appendChild(article);
                     });
                     showMoreButton.style.display = "none";
-                    setTimeout(() => {
-                        showMoreButton.style.display = "block";
-                    }, 300);
                 }
             });
         }
     });
 }
 
-// Invocar la función
 initializeAlbumGallery();
 
 // ========== MODO OSCURO/CLARO ==========
@@ -526,6 +525,8 @@ const posts = [
     }
 ];
 
+// Línea ~550 aproximadamente - BUSCAR Y REEMPLAZAR TODO DESDE AQUÍ
+
 const blogSection = document.querySelector('.blog-posts');
 if (blogSection) {
     posts.forEach(post => {
@@ -540,7 +541,9 @@ if (blogSection) {
         `;
         blogSection.appendChild(article);
     });
-    // ========== STICKY AUDIO PLAYER ==========
+}
+
+// ========== STICKY AUDIO PLAYER ==========
 (function initStickyPlayer() {
     const player = document.querySelector('.album-player');
     
@@ -600,4 +603,3 @@ if (blogSection) {
     // Verificar estado inicial
     handleScroll();
 })();
-}
